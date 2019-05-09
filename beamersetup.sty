@@ -36,6 +36,10 @@
 %\usetheme{Szeged}
 %\usetheme{Warsaw}
 
+\makeatletter%%see https://tex.stackexchange.com/questions/411987/how-to-fix-hypertargets-directing-links-to-the-line-after-the-target-it-looks-l
+ \newcommand{\linkdest}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
+\makeatother
+
 \hypersetup{pdfpagemode=FullScreen}
 
 \addtobeamertemplate{block begin}{%
@@ -107,7 +111,7 @@
     \leavevmode%
     \hbox{%Refintro
 \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-            \hyperlink{part:reg}{RegLez}
+            \hyperlink{part:reg}{RegLez}:\hyperlink{febbraio}{feb}-\hyperlink{marzo}{mar}-\hyperlink{aprile}{apr}-\hyperlink{maggio}{mag}
         \end{beamercolorbox}%
 
  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 1
@@ -119,7 +123,7 @@
         \end{beamercolorbox}%Equazioni struttura stellare
         
 \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 3
-            \hyperlink{part:reactions}{Reacts}
+            \hyperlink{evolution}{Evol}:\hyperlink{part:reactions}{(pre)MS}-
         \end{beamercolorbox}%Equazioni struttura stellare
         
 \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 1
@@ -136,5 +140,6 @@
     \makeatother
 
 %%Display section subsection (title page) at beginning section subsection
+\AtBeginSection{\frame{\partpage}}
 \AtBeginSection{\frame{\sectionpage}}
 \AtBeginSubsection{\frame{\subsectionpage}}
