@@ -1,148 +1,3 @@
-\section{Equazioni struttura di equilibrio}
-
-\begin{wordonframe}{da fare: kippenhahn wiegert}
-\begin{itemize}
-\item strutture autogravitanti 1-62' (43)
-\item metodi numerici 77'-84(44-48)
-\item esistenza e unicit\'a 85'-99'(48-56)
-\item Properties of stellar matter: ideal gas with radiation, ionization, degenerate electron gas, equazione di stato, opacit\'a 102'-144'(57-78)
-\item produzione energia reazioni nucleari:  146'-172'(79-92)
-\item politrope 174'-190' (93-102)
-\end{itemize}
-\end{wordonframe}
-
-\begin{frame}{Trasporto radiativo e convettivo: \'e valida approx idrostatica}
-
-\end{frame}
-
-\begin{frame}{Equazioni struttura di equilibrio}
-Determino la struttura solare integrando numericamente le equazioni fondamentali della struttura stellare
-\begin{subequations}\label{subeqn:stellarstructure}
-\begin{align}
-&\TDy{r}{m}=4\pi r^2\rho\\
-&\TDy{r}{P}=-\frac{Gm(r)\rho(r)}{r^2}\\
-&\TDy{r}{T}=\nabla\frac{T}{p}\TDy{r}{p}\\
-&\TDy{r}{L}=4\pi r^2[\rho(\epsilon-\epsilon_{\nu})-\rho\TDof{t}u+\frac{P}{\rho}\TDy{t}{\rho}]
-\end{align}
-
-\begin{equation}
-\PDy{t}{n_i}+\frac{1}{r^2}\PDof{r}(r^2n_iv_i)=\Dcvar{\PDy{t}{n_i}}{Nucl}\label{eq:difffusionchange}
-\end{equation}
-\end{subequations}
-con $v_i$ velocit\'a di diffusione della specie i. Ottengo il profilo radiale delle grandezze $\{P,m,T,L,X_i\}$, note la metallicit\'a iniziale Z, l'equazione di stato $P(\rho,T,X_i)$, l'opacit\'a $\kappa(P,T,X_i)$, il rate di produzione di energia nucleare per grammo $\epsilon(P,T,X_i)$.
-\end{frame}
-
-\begin{frame}{Energia gravitazionale}
-
-\end{frame}
-
-\subsection{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}
-
-\begin{frame}{Atmosfera e subatmosfera}
-
-\end{frame}
-
-\begin{frame}{Metodo del fitting}
-
-\end{frame}
-
-\begin{frame}{Metodo di Henyey}
-
-\end{frame}
-
-\subsection{Relazioni approssimate per grandezze stellari fondamentali}
-
-\begin{frame}{Teorema del viriale}
-
-\end{frame}
-
-\begin{frame}{Relazione massa, densit\'a, temperatura/ massa, peso molecolare, opacit\'a}
-
-\end{frame}
-
-\subsection{Approssimazione politropa}
-
-\begin{frame}{Equazione Lane-Emden}
-
-\end{frame}
-
-\begin{frame}{Strutture isoterme e modello solare}
-
-\end{frame}
-
-\section{Trasporto (di energia)}
-
-\subsection{Radiativo}
-
-\begin{frame}{Trasporto radiativo}
-media di rosseland
-\end{frame}
-
-\begin{frame}{Opacit\'a radiativa (analitico)}
-Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione H-
-\end{frame}
-
-\begin{frame}{Criterio di stabilit\'a per convezione}
-
-\end{frame}
-
-\subsection{Conduzione}
-
-\begin{frame}{Diffusione per conduzione}
-stima opacit\'a per conduzione gas degenere NR
-\end{frame}
-
-\subsection{Convezione}
-
-\begin{frame}{Criterio di \sch e Ledoux}
-
-\end{frame}
-
-\begin{frame}{Mixing length per esterni stellari}
-Calcolo altezza scala di pressione, flusso convettivo e gradiente ambientale in funzione della velocit\'a media degli elementi
-\end{frame}
-
-\section{Equazione di stato}
-
-\begin{frame}{Approssimazione gas perfetto monoatomico}
-
-\end{frame}
-
-\begin{frame}{Degenerazione e- ed effetti coulombiani. Equazione di saha}
-
-\end{frame}
-
-\section{Fonti di energia}
-
-\begin{frame}{Sezione d'urto nucleare}
-schermaggio elettronico nelle stelle
-\end{frame}
-
-\begin{frame}{Catena PP}
-dipendenza da T
-flusso neutrini
-\end{frame}
-
-\begin{frame}{Biciclo CNO}
-dipendenza da T
-flusso neutrini
-Modalit\'a combustione H in He: sequenza principale inferiore/superiore
-\end{frame}
-
-\begin{frame}{Combustion He}
-
-\end{frame}
-
-\begin{frame}{Produzione nuclei fino al Fe56}
-3$\alpha$: $He4+\alpha\to C12$, $C12+\alpha\to O16$
-Produzione neutroni liberi
-Fusione $C12$, fotodisintegrzione $Ne20$, fusione $O16$, fotodisintegrzione $Si28$, catture $\alpha$ su nuclei fino a produzione $Fe56$
-\end{frame}
-
-\begin{frame}{Cattura neutronica: processi r e s}
-picchi r e s nella nella curva universale delle abbondanze
-\end{frame}
-
 \section{Evoluzione stellare}
 
 \begin{wordonframe}{da fare: kippenhahn wiegert}
@@ -171,10 +26,6 @@ Primo/secondo core di Larson; Evoluzione di PMS sulla traccia di Hayashi; ruolo 
 \begin{frame}{Approccio alla ZAMS per stelle di sequenza superiori/inferiori}
 dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determinazione $DY/DZ$ dal confronto teoria-osservazione per stelle di disco locale parallassate; dipendenza massa minima di transizione dall'abbondanza di He e metalli; influenza sulla ZAMS dell'incertezza degli input fisici e dell'efficienza della convezione
 \end{frame}
-
-\subsection{Lower main sequence}
-
-\subsection{Upper Main sequence}
 
 \subsection{Evoluzione di sequenza principale}
 
@@ -234,13 +85,64 @@ Ciclo CN-NO
 \end{column}\end{columns}
 \end{frame}
 
+
+\subsection{Lower main sequence ($M^*\leq1.3\msun{}$)}
+
+\begin{frame}{Da ZAMS a TO for $M^*\leq1.3\msun{}$}
+\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HDR-LMS}\label{fig:HDR-LMS}\end{figure}
+\end{column}\begin{column}{0.5\textwidth}
+ZAMS: first MS model fully supported by H-burning in which secondary elements are in equilibrium:
+\begin{itemize}
+\item $^3He$ production in central zones: si forma piccolo core convettivo
+\[\TDy{t}{N_3}=N_1N_2\exv{\sigma v}_{12}-2\frac{(N_3)^2}{2}\exv{\sigma v}_{33}-N_3N_4\exv{\sigma v}_{34}\]
+\item La stella continua a contrarsi fino alla partenza della reazione $^3He(^3He,2^1H)^4He$ e il core convettivo svanisce con l'espandersi della regione in cui \'e prodotto $^3He$
+\end{itemize}
+Struttura: H-burn in central radiative core (Small T-dep of $\epsilon_{PP}$), convective core (large opacity associated to partial ionized H, He)
+Evoluzione: $\#$ free particles $\arrowdown$, \xaumenta{\mu} per HE \xaumenta{T}
+, \xdiminuisce{R} quindi $L^*$ aumenta lentamente.
+TO is hottest point in evolutionary track: H exhausted 
+\end{column}\end{columns}
+\end{frame}
+
+
+\subsection{Upper main sequence ($M^*\geq1.2-1.3\msun{}$)}
+
+\begin{frame}{Da ZAMS a Overall contraction}
+\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HDR-UMS}\label{fig:HDR-UMS}\end{figure}
+\end{column}\begin{column}{0.5\textwidth}
+Higher T: CNO dominant: $\epsilon_{CNO}$ steeper:convective core (\xaumenta{M^*}, \xaumenta{M_{con}}, \xaumenta{P_{rad}}, \xdiminuisce{\nad{}}.
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Problem of convective core boundary: Overshooting}
+\begin{block}{What increases convective core}
+\begin{itemize}
+\item Changes in physical input
+\item Stellar rotation
+\item Physical overshooting
+\end{itemize}
+\end{block}
+\begin{block}{Effects of increased convective core}
+\begin{itemize}
+\item \xaumenta{M_c}, \xaumenta{\mu} (involve more mass), \xaumenta{L}
+\item Longer central H-burning
+\item Larger He core at end of MS: brighter He-burning phase star, shorted lifetime
+\end{itemize}
+\end{block}
+\begin{block}{\sch vs Ledoux in-stability criterion}
+In radiative region the retracting convective core leave chem composition gradient; but \xaumenta{He}, \xdiminuisce{\kappa}
+\end{block}
+\end{frame}
+
 \subsection{Easurimento H centrale}
 
 \begin{frame}{Esaurimento H per stelle di S superiore/inferiore}
 
 \end{frame}
 
-\subsection{Combustine He}
+\subsection{Combustione He}
 
 \begin{frame}{Fase subgigante rossa (SGB): H-burning shell}
 Turnoff; overall contraction;Gap di hertzsprung;
