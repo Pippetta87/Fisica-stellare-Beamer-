@@ -1,4 +1,4 @@
-\ProvidesPackage{beamersetup}
+7\ProvidesPackage{beamersetup}
 
 %%%Usefull link
 %tikz-equations:
@@ -130,7 +130,7 @@
     \setbeamerfont{section title}{size=\Large,series=\bfseries}
     \setbeamerfont{subsection title}{size=\large,series=\bfseries}
     
-    %\AtBeginDocument{%
+%\AtBeginDocument{%
 %\addtolength\abovedisplayskip{-0.5\baselineskip}%
 %\addtolength\belowdisplayskip{-1\baselineskip}%
 %\addtolength\abovedisplayshortskip{-0.5\baselineskip}%
@@ -162,25 +162,21 @@
     \leavevmode%
     \hbox{%Refintro
 \begin{beamercolorbox}[wd=.1\paperwidth,ht=3.25ex,dp=1ex,center]{author in head/foot}%
-            \hyperlink{part:reg}{RegLez}:\hyperlink{febbraio}{feb}-\hyperlink{marzo}{mar}-\hyperlink{aprile}{apr}-\hyperlink{maggio}{mag}
+            \hyperlink{reglez}{RegLez}:\hyperlink{febbraio}{feb}-\hyperlink{marzo}{mar}-\hyperlink{aprile}{apr}-\hyperlink{maggio}{mag}
         \end{beamercolorbox}%
 
  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 1
-            \hyperlink{part:gaxpops}{Galaxies/Populations}
+            \hyperlink{constraints}{(tight)}|\hyperlink{gals}{G}:\hyperlink{BBN}{BBN}|\hyperlink{mw}{MW}:\hyperlink{MWoverview}{formation}|\hyperlink{starpop}{pop}:\hyperlink{colormagnitude}{CMobs}-\hyperlink{spcpx}{SCpop}-\hyperlink{cluster}{cluind}-\hyperlink{starformation}{IMF}
         \end{beamercolorbox}%Popolazione stellare/ Galassia
 
  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 2
-            \hyperlink{part:starstruct}{struttura}
-        \end{beamercolorbox}%Equazioni struttura stellare
-        
+            \hyperlink{}{modelinput}:\hyperlink{equilibrium}{ES}(\hyperlink{stellarstructure}{$*$eqs}-\hyperlink{nummod}{solve}-\hyperlink{omrel}{rude})\hyperlink{transport}{trans}(\hyperlink{trarad}{rad}-\hyperlink{tracond}{cond}-\hyperlink{traconv}{$\alpha$}-\hyperlink{diffusion}{diff})-\hyperlink{descstellarmatter}{pl$*$}(\hyperlink{eos}{eos}-\hyperlink{nuclearreactions}{$\epsilon$})
+        \end{beamercolorbox}%Equazioni struttura stellare, input, stabilit\'a
+
 \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 3
             \hyperlink{evolution}{Evol}:\hyperlink{part:reactions}{(pre)MS}-
         \end{beamercolorbox}%Equazioni struttura stellare
-        
-\begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%refs Part 1
-            \hyperlink{part:evolphs}{EvolPhs}
-        \end{beamercolorbox}%Equazioni struttura stellare
-        
+
         \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
             %   \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
             \insertframenumber{} \hspace*{2ex}  / \hspace*{2ex} \inserttotalframenumber
