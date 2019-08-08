@@ -21,6 +21,43 @@
 \newenvironment{wordonframe}[1]{\comment}{\endcomment}
 \fi
 
+%%% COUNTERS
+\newcounter{cherrykey}%conta le keyword totali per auto ref
+\newcounter{cherrysectionlist}% conta le key prima di keywordlist
+
+\newcommand\headinginfo[1]{%
+  \addcontentsline{key-\thecherrysectionlist}{heading}{{#1}}%
+  \addtocontents{key-\thecherrysectionlist}{\vspace{5pt}}}
+%% expert approach to keywords
+ \makeatletter
+\newcommand\keyword[2][target-\thecherrykey]{%
+\addtocounter{cherrykey}{1}
+\noindent{%
+\color{keyword}{#2}%
+}%
+\phantomsection% comment out if hyperref is not used
+  \linkdest{#1}%
+\addcontentsline{key-\thecherrysectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
+}
+\makeatother
+  
+\makeatletter
+\newcommand{\listofkeywordsbasic}{%
+  \@starttocorig{key-\thecherrysectionlist}
+}
+%%frameintoc
+\newcommand\listofframes{\@starttoc{lbf}}
+\newcommand\listofframesname{List of keywords}
+\makeatother
+
+\newcommand\listkeywordsname{KEYWORDS}
+\newcommand\listofkeywords{%
+\subsubsection{\listkeywordsname}\listofkeywordsbasic}
+%%frameintoc
+\newcommand\frameintoc{%
+%\subsubsection{\insertframetitle}
+\addcontentsline{lbf}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%
+}
 
 %% helper macros for celestial-sphere
 

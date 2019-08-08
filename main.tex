@@ -1,3 +1,7 @@
+\makeatletter%stellare
+\let\@starttocorig\@starttoc
+\makeatother%%
+
 \documentclass[10pt,xcolor={usenames},fleqn,mathserif,serif]{beamer}
 
 %% colors
@@ -18,6 +22,7 @@
 \definecolor{almond}{rgb}{0.94, 0.87, 0.8}
 \definecolor{bf}{RGB}{88, 86, 88}
 \definecolor{bb}{RGB}{177, 177, 177}
+\definecolor{keyword}{rgb}{0.25, 0.25, 0.28}
 
 %beamer setup
 \usepackage{beamersetup}
@@ -63,6 +68,10 @@
 \begin{frame}[label={argomenti}]{Fisica stellare: argomenti del corso}
 \tableofcontents[onlyparts]
 \end{frame}
+
+\begin{wordonframe}{Meta.}
+???
+\end{wordonframe}
 
 \begin{wordonframe}{Perch\'e studio queste cose?? Sviluppi; futuro.}
 
