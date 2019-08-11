@@ -415,10 +415,20 @@ As convection zone goes deeper the H-burning shell takes less time to cross chem
 combustion di He per stelle medio-grandi; clump He; loop He; Esaurimento He centrale: , semiconvezione e pulsi convettivi
 \end{frame}
 
+\begin{frame}{He-burning reactions}
+	\begin{align*}
+	&3\alpha (T\gtrsim\SI{1.2e8}{\kelvin}):\\ &^4He+^4He\to^8Be\tag*{$\tau_{1/2}\approx\SI{e-16}{\second}$}\\
+	&^8Be+^4He\to^{12}C+\gamma\tag*{$\SI{7.27}{\mega\ev}$, $\tau_H\approx100\tau_{He}$}\\
+	&\epsilon_{3\alpha}\approx\begin{array}{c}T^{40}: T\approx\SI{e8}{\kelvin}\\T^{20}: T\approx\SI{2e8}{\kelvin}\end{array}\\
+	&^{12}C+\alpha\to^{16}O+\gamma\\
+	&^{16}O+\alpha\to^{20}Ne+\gamma\\
+	&^{20}Ne+\alpha\to^{24}Mg+\gamma\\
+	&^{24}Mg+\alpha\to^{28}Si+\gamma
+	\end{align*}
+
+\end{frame}
+
 \begin{frame}{ZAHB: equilibrium model and nuclear reaction sunto}
-\begin{columns}[T]
-\begin{column}{0.45\textwidth}
-\begin{block}{equilibrium model}
 \begin{itemize}
 \item $\tau_{He-Flash}\approx\SI{e6}{\year}$: after that time of He-burning the \Pelectron degeneracy is removed (small obser. prob). Some authors start He-core evolution sequence from C enriched equilibrium model
 \item \keyword{ZAHB}: model where He is burnt into chem homo-core and H in shell with chem stratification He-flash like
@@ -426,22 +436,6 @@ combustion di He per stelle medio-grandi; clump He; loop He; Esaurimento He cent
 \item Rotation (dalayed He-flash): \xaumenta{M_{cHe}}, \xdiminuisce{M_*} (mass loss), \xaumenta{T^{ZAHB}}/\xaumenta{L^{ZAHB}}
 %\xaumenta{\epsilon_{He}}/\xdiminuisce{\epsilon_H}
 \end{itemize}
-\end{block}
-\end{column}
-\begin{column}{0.55\textwidth}
-\begin{block}{He-burning reactions}
-\begin{align*}
-&3\alpha (T\gtrsim\SI{1.2e8}{\kelvin}):\\ &^4He+^4He\to^8Be\tag*{$\tau_{1/2}\approx\SI{e-16}{\second}$}\\
-&^8Be+^4He\to^{12}C+\gamma\tag*{$\SI{7.27}{\mega\ev}$, $\tau_H\approx100\tau_{He}$}\\
-&\epsilon_{3\alpha}\approx\begin{array}{c}T^{40}: T\approx\SI{e8}{\kelvin}\\T^{20}: T\approx\SI{2e8}{\kelvin}\end{array}\\
-&^{12}C+\alpha\to^{16}O+\gamma\\
-&^{16}O+\alpha\to^{20}Ne+\gamma\\
-&^{20}Ne+\alpha\to^{24}Mg+\gamma\\
-&^{24}Mg+\alpha\to^{28}Si+\gamma
-\end{align*}
-\end{block}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{ZAHB in HDR}
@@ -476,7 +470,8 @@ combustion di He per stelle medio-grandi; clump He; loop He; Esaurimento He cent
 \end{frame}
 
 \subsection{Core He-burning in low-mass stars}
-
+%\TDy{}{}=\alpha\frac{dP}{P}-\delta\frac{dT}{T}+\phi\frac{d\mu}{\mu}
+%dq=c_PdT-\frac{\delta}{\rho}\,dP
 \begin{frame}{HB evolution in HDR}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
@@ -493,21 +488,55 @@ combustion di He per stelle medio-grandi; clump He; loop He; Esaurimento He cent
 \end{frame}
 
 \begin{frame}{Mixing processes and physical properties evolution}
-\begin{columns}[T]
-	\begin{column}{0.5\textwidth}
 \begin{block}{Convective instability}
 Mixing processes in convective He-burning core: $\tau_{con}\ll\tau_{nuc}$, as $^4He\to^{12}C$, \xaumenta{\kappa_{ff}} ($\propto X_iZ_i^2$), \xaumenta{\nrad{}} - growing discontinuity in T gradient at convective core boundary - overshoot cause mixing with radiative shell: \xaumenta{\kappa} - convective instability of boundary - selfdriving mechanism for extension of convective core - Convective boundary is established where $\nabla_{ad}=\nabla_{rad}$
 \end{block}
 \begin{block}{semi-convection}
 $\nrad{}$ show a minimum due to outward shift in He-rich environment (complex behaviour of $\nrad$ due to local L, T, $\kappa$, P) - physical/chemical coupling convective zone outside minimum and mass of surrounding radiative layers - mixing of radiative shell: \xdiminuisce{\nad{}} in convective envelope (He-rich matter/properties of mixed shell) - convective core/convective shell not fully mixed: extended partially mixed semi-convection zone outside convective core between $\nrad$ minimum and radiative region
 \end{block}
- 	\end{column}
-	\begin{column}{0.5\textwidth}
-		\begin{figure}[!ht]
-			%\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.37\textheight]{ffiig}\label{fig:ffiigg}
-		\end{figure}
-	\end{column}
+\end{frame}
+
+\begin{frame}{Evolution of radiative gradient and convective zones boundaries in HB}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Growing discontinuity of $\nrad$ at boundary of convective core for He-burning star low mass star as stellar model evolve from 1 to 5
+\item (a) with increasing chem discontinuity; (b) convective overshoot
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]
+%\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.37\textheight]{ffiig}\label{fig:ffiigg}
+%\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.37\textheight]{ffiig}\label{fig:ffiigg}
+\end{figure}
+\end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}{Semi-convective region}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Time sequence which result in appearance of semi-convection region
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]
+%\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.37\textheight]{ffiig}\label{fig:ffiigg}
+\end{figure}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Breathing pulse and observative consequences}
+\begin{block}{Core convective instability}
+3 breathing pulses are needed to completely exhaust He in core: when $Y_c\approx0.1$ occurs core convective instability - when $^{12}C+\alpha\to^{16}O$ overcome $^{12}C$ production by $3\alpha$ \xaumenta{\kappa} quindi aumenta la dimensione della zona convettiva quindi \xaumenta{Y_c}, \xaumenta{L}(\xaumenta{\epsilon_{He}}), \xaumenta{\nrad} e a catena umenta zona convettiva (\keyword{breathing pulses}: after each pulse star readjust to burn He steadly).
+\end{block}
+\begin{block}{Effects of BP}
+i) Loop in HDR at each pulse ii) He burning time increased iii) $M_{cc}$ increased
+\end{block}
+\begin{block}{R" parameter}
+R2 is ratio of number of star in AGB to stars in HB (lifetime ratio): $=0.12-0.15$ without BP, $0.8-0.14$ with BP - observed R2 in globular cluster ([36], [44]): BP efficiency very low, BP cloud be due to breakdown in instantaneous mixing approx in stellar models when convection setin in late HB stages
+\end{block}
 \end{frame}
 
 \begin{frame}{Discussioni parametri che influenzano HB}
