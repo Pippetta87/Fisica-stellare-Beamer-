@@ -676,27 +676,88 @@ CI=color index. Tight relation between mass and surface luminosity of stars at b
 Ingresso in agb: clump. AGB manqu\'e. Secondo Dredge-up; pulsi termici; terzo dredge-up
 \end{frame}
 
-\begin{frame}{Evoluzione in AGB}
+\begin{frame}{Evoluzione in AGB: EAGB}
 \begin{columns}[T]
 	\begin{column}{0.55\textwidth}
 	\begin{itemize}
-	\item AGB we He becomes low enough star move in HDR toward lower $T_e$/ larger $L$ (Asymptotic for $M_*<2.5\msun$): $T_e-L$ relationship similar to RGB (Hayashi track).
-	\item He-burning shift to shell around CO-core of increasing mass due to $He\to C/O$ in shell; H-burning shell is turned off due to expansion caused by He-burning shell (T drops) 
+	\item End of He-burning: He-core becomes low enough star move in HDR toward lower $T_e$/ larger $L$ (Asymptotic for $M_*<2.5\msun$): $T_e-L$ relationship similar to RGB (Hayashi track).
+	\item Early AGB: He-burning shift to shell moving outward in He-core around CO-core of increasing mass due to $He\to C/O$ in shell; H-burning shell is turned off due to expansion caused by He-burning shell (T drops)
+	\item \keyword{AGB clump}: in low $M_*$ onset of He-burning shell causes H-shell to switch off: \xdiminuisce{L_s} per ri-aumentare as \xaumenta{M_c} - stars cross 3-times same HDR region - well populated old galactic stellar system
 	\end{itemize}
 	\end{column}
 	\begin{column}{0.45\textwidth}
-		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{HB-cCIS}\label{fig:HB-cCIS}
-		\end{figure}
+	\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{PMS2AGB-lowM}\label{fig:PMS2AGB-lowM}
+	\end{figure}
+\keyword{Early AGB} and \keyword{second dredge-up}: for $M_*>3-5\msun$ expansion of layers above and cooling let the outer convection penetrate H-depleted zone: up $1\msun$ of dredged-up material ($He$, $^{12}C$, $^{16}O\to^{14}N$); reduction of H-depleted region prevent formation of massive WD
 \end{column}\end{columns}
 \end{frame}
 
-\begin{frame}{Early AGB: Low mass star}
+\begin{frame}{CO-core state at end of HE-burning}
+\begin{itemize}
+\item Plasma neutrino loss: $M_*<8-10\msun$ compact CO-core with $\rho_C\approx\SIrange{e5}{e8}{\gram\per\cubic\cm}$ highly degenerate - plasma neutrino loss is balanced by contraction and cooling: cooling is max at center - $T_M$ moves outward
+\item Limit mass $M_{up}$ where \Pelectron degeneracy prevent CO-core ignition: depends strongly on initial composition - for solar composition $M_{up}\approx8\msun$, has minimum for $Z\approx0.001$ at $M_{up}\approx4\msun$
+\item $M_*>M_{up}$: CO-core ignites (quitely/flash)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thermally Pulsating AGB phase}
+\begin{columns}[T]
+	\begin{column}{0.48\textwidth}
+ 	When He-burning shell encounters H/He discontinuity dies - after rapid contraction H-burning shell provide star's energy needs - He ashes accreted on CO-core are compressed/heated until a critical mass is reached - $\approx\num{e-3}\msun$ for $0.8\msun$ CO-core - He ignited in runaway manner due to geometrical thickness of the shell - $L_{peak}\approx\numrange{e7}{e8}\lsun$.
+	H-burning shell is turned of by expansion/cooling due to He-Burning - convective envelope from He-burning shell up to H/He discontinuity
+	\end{column}
+	\begin{column}{0.52\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.38\textheight]{TPAGB-LTe}\label{fig:TPAGB-LTe}
+		\end{figure}
+	As \xdiminuisce{\epsilon_{He}} \xdiminuisce{L_{He}}: for $M_c>0.7\msun$ decrese in L causes convective shell to disappear - for lower mass convection extends to incomplete He-burning regions: steady state nuclear burning and energy outflow.
+\end{column}\end{columns}
+After all product of H-shell is burnt H-burning shell turn on again (many repetition): pulse amplitude grows to asymptotic regime: $\epsilon_H$ depends on mass of He-core - $M_{cHe}-L_s$ relationship (as in RGB)
+\end{frame}
+
+\begin{frame}{\keyword{Properties of burning shell}}
+Refs: [115], [155] - In a shell of thickness s located at r:
+\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{align*}
+&\frac{dP}{P}=4\frac{s}{r}\frac{d\rho}{\rho}\\
+&(4\frac{s}{r}-\alpha)\frac{d\rho}{\rho}=\beta\frac{dT}{T}
+\end{align*}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&\frac{dP}{P}=\alpha\frac{d\rho}{\rho}+\beta\frac{dT}{T}
+\end{align*} 
+\end{column}\end{columns}
+Stable burning requires $4\frac{s}{r}>\alpha$ so if shell is too shallow an expansion causes \xdiminuisce{\rho} e \xaumenta{T}.
+\end{frame}
+
+\begin{frame}{Convective phenomena during TPAGB}
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+\item After He-shell reignition convective envelope can move inward and cross H/He discontinuity: during \keyword{Dredge-up III} He-burning product/s-elements are dredged-up to surface (\keyword{C-star}: $O/C\ll1$ in photosphere) - \xaumenta{M_{DU}} as \xaumenta{M_C}, after maximum, \xdiminuisce{M_{DU}} as \xdiminuisce{M_e} - \xdiminuisce{Z}, DUIII penetrates deeper (diff sufrace abundance galactic AGB-Z poor AGB)
+\item Convection penetrates deeper when pulse is stronger (more expansion/cooling): determined by thermal condition at bottom of He-rich layers - \xdiminuisce{\epsilon_H} maggiore \'e la densit\'a sul fondo di He-shell stronger TP - $\epsilon_H$ deps on $M_e$, H-exhausted region mass, chem-comp
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{TPAGB-3DU}\label{fig:TPAGB-3DU}
+\end{figure}
+Minimum for DUIII $M_e\approx0.4\msun$: $M_{ZAMS}<1.4-1.5\msun$ don't have DUIII - we don't expect C-rich stars in old pop
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Nucleosintesi in AGB: s-elements}
+Elementi s:tasca C13. Produzione di Li
+\end{frame}
+
+\begin{frame}{Hot-bottom burning}
 
 \end{frame}
 
-\begin{frame}{Index - Nucleosintesi in AGB}
-Elementi s:tasca C13. Produzione di Li
+\begin{frame}{AGB termination}
+	contenu...
 \end{frame}
 
 \subsection{Destino finale di stelle massicce}
