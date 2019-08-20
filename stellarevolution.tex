@@ -737,7 +737,7 @@ Stable burning requires $4\frac{s}{r}>\alpha$ so if shell is too shallow an expa
 \begin{column}{0.55\textwidth}
 \begin{itemize}
 \item After He-shell reignition convective envelope can move inward and cross H/He discontinuity: during \keyword{Dredge-up III} He-burning product/s-elements are dredged-up to surface (\keyword{C-star}: $O/C\ll1$ in photosphere) - \xaumenta{M_{DU}} as \xaumenta{M_C}, after maximum, \xdiminuisce{M_{DU}} as \xdiminuisce{M_e} - \xdiminuisce{Z}, DUIII penetrates deeper (diff sufrace abundance galactic AGB-Z poor AGB)
-\item Convection penetrates deeper when pulse is stronger (more expansion/cooling): determined by thermal condition at bottom of He-rich layers - \xdiminuisce{\epsilon_H} maggiore \'e la densit\'a sul fondo di He-shell stronger TP - $\epsilon_H$ deps on $M_e$, H-exhausted region mass, chem-comp
+\item Convection penetrates deeper when pulse is stronger (more expansion/cooling): determined by thermal condition at bottom of He-rich layers - \xdiminuisce{\epsilon_H} maggiore \'e la densit\'a sul fondo di He-shell stronger TP - $\epsilon_H$ deps on $M_e$ (wind, burnt), H-exhausted region mass, chem-comp
 \end{itemize}
 \end{column}
 \begin{column}{0.45\textwidth}
@@ -749,15 +749,70 @@ Minimum for DUIII $M_e\approx0.4\msun$: $M_{ZAMS}<1.4-1.5\msun$ don't have DUIII
 \end{frame}
 
 \begin{frame}{Nucleosintesi in AGB: s-elements}
-Elementi s:tasca C13. Produzione di Li
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+\item Spectroscopical obs: AGB surface enriched of \keyword{s-elements} (Sr, Y, Zr, Ba, La, Ce, Pr, Nd) produced via ''slow'' neutron capture - $^{99}Tc$ on surface $\tau\approx\SI{2e5}{\year}$ prove it's not pollution due to accretion of primeval material
+\item During first inter-shell mixing N(circa 5 volte l'abbondanza di elementi CNO iniziale) $^{14}N\to^{22}Ne$
+\item if at TP at base of intershell $T>\SI{3.5e8}{\kelvin}$ first neutron production reaction take place as in int-M AGB ([103]), for $M_*<3\msun$ $T>\SI{9e7}{\kelvin}$ for second reaction
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+n production ([30,32]):
+\begin{align*}
+&^{22}Ne(\alpha,n)^{25}Mg\\
+&^{13}C(\alpha,n)^{16}O
+\end{align*}
+[208]: 2nd fully burn in rad region between 2P (\num{e7} n). Rimozione di N (which capture n) da inter-shell:
+\begin{align*}
+&^{14}N(\alpha,\gamma)^{18}F(\beta^+,\nu)^{18}O(\alpha,\gamma)^{22}Ne
+\end{align*}
+Produzione/distruzione di $^{13}C$
+\begin{align*}
+&^{12}C(H,\gamma)^{13}N(\beta^+,\nu)^{13}C\\
+&^{13}C(H,\gamma)^{14}N
+\end{align*}
+\end{column}\end{columns}
+\keyword{Tasca di $^{13}C$}: In inter-shell after convective episode is present $^{12}C$ but not $^{14}N$ - $^{13}C$ can be produced if right amount of H (diffusion, overshoot, rotational mixing, gravity waves) - [104]: after DUIII (\keyword{post-flash dip}) sharp disc. between H-rich env/He-/C-rich intershell until H-reignition (\SI{e4}{\year}) and then heated up form $^{13}C$
 \end{frame}
 
-\begin{frame}{Hot-bottom burning}
-
+\begin{frame}{Hot-bottom burning ([209])}
+$M_*>6-7\msun$ at base of convective zone ($T\approx\SI{8e7}{\kelvin}$) happens significant burn: \xaumenta{L_s} (breaks of $M_c-L$ relation) - s composition is strongly affected: $C\to N$, Li production through \keyword{Cameron-Fowler mechanism} [33] - when envelope has $T\approx\SI{e8}{\kelvin}$ $^3He+^4He\to^7Be+\gamma$ very efficiently then $^7Be+\Pelectron\to^7Li+\Pnue$: $^7Li$ can survive $T<\SI{2.5e6}{\kelvin}$. Amount of surface-Li after envelope retreats is determined by balance of $^7Be$ transported toward surface and Li produced at $T<T_b$ transported inside. [231]: Brightest long period variables (TPAGP experiencing large amplitude pulsation) are super-Li object (3 O.M. then expected)
 \end{frame}
 
 \begin{frame}{AGB termination}
-	contenu...
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+	\begin{itemize}
+	\item $M_*>1.4\msun$ (Chandrasekhar limit): C-ignition, AGB ends - we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
+	\item When $M_e<\num{e-3}\msun$, $\epsilon_H\to0$, \xaumenta{T_e} - \keyword{superwind} terminate AGB phase - brightest AGB in different systems show same luminosity: mass loss strongly increases at AGB's end ($\num{e-4}\msun\si{\per\year}$)
+	\item Evolution of low mass star: TPAGB to WD - once $M_e$ below critical limit star move \xaumenta{T_e} at constant L - burning H in thin shell until bluest point then both H-/He-rich envelope contracts rapidly. Thermal envelope conditions determine which: i) nuclear burning dies (WD) ii) Heating He-shell burn-again AGB (runaway He-burning then quite):
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{lateevol-MS2WD}\label{fig:lateevol-MS2WD}
+\end{figure}
+star evolve to blue side (FG-sagittae) with timescale 3 times that of H-shell burning. iii) Heating-burning of H envelope in runaway manner: \keyword{selfinduced nova}/\keyword{planetary nebula}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Pulsating AGB stars: Empirical Mass loss-Period relation}
+\keyword{Mira-variable star}: during AGB stars have large amplitude pulsation - Strong correlation between pulsation and mass loss: compression favour molecules/grains formation (Radiation-driven mass loss: $\numrange{e-8}{e-4}\msun\si{\per\year}$)
+Empirical mass loss-$\Pi$ relation:
+\begin{align*}
+&\Pi<500[\si{\day}]:\\
+&\log(\TDy{t}{M})\approx-11.4+0.0123\log(\Pi)\\
+&\Pi>500[\si{\day}]:\\
+&\TDy{t}{M}\approx\num{6.07023e-3}\frac{L}{cv_e}
+\end{align*}
+\end{frame}
+
+\begin{frame}{AGB termination:Self-induced novae-Planetary nebulae}
+\begin{itemize}
+\item a) violent ejection H-rich envelope: WD without H on surface (non DA/DB WD), b) After quite H-burning cools down to WD: non-DA (wind).
+\item After super-wind the ejecta of TPAGB composition keep expanding - when $T_e\geq\SI{3e4}{\kelvin}$ are ionized: assume characteristics and shape of PN
+\end{itemize}
 \end{frame}
 
 \subsection{Destino finale di stelle massicce}
