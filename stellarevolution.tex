@@ -816,17 +816,122 @@ Empirical mass loss-$\Pi$ relation:
 \end{itemize}
 \end{frame}
 
-\subsection{Evoluzione in nane bianche}\linkdest{WD}
+\subsection{Evoluzione in nane bianche e evoluzione di stelle massicce}\linkdest{WD-intmM}
 
-\begin{frame}{Evoluzione di nane bianche}
+\begin{frame}{Chandrasekhar limit-mass e CO-core close to $M_{up}$}
+$M_{Ch}$ upper mass limit for fully relativistic degenerate core in HE [59] - $M_*>M_{up}$ don't develop degenerate CO-core
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+\begin{block}{Equazione di stato elettroni degeneri}
+\begin{align*}
+&P_e=K_{NR}(\frac{\rho}{\mu_e})\expy{\frac{5}{3}}\\
+&P_e=K_R(\frac{\rho}{\mu_e})\expy{\frac{4}{3}}
+\end{align*}
+\end{block}
+\begin{block}{Massa limite per CO-core}
+Per CO-core $\mu_e=\approx2$ ($n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum\frac{X_iZ_i}{A_i}$)
+\begin{align*}
+&M_{Ch}=1.459(\frac{2}{\mu_e})^2\msun=1.46\msun
+\end{align*}
+\end{block}
+\end{column}
+\begin{column}{0.6\textwidth}
+\begin{itemize}
+\item No WD observed near $M_{Ch}$
+\item WD most commond end of stellar evolution ($95\%$ of galaxy's stars)
+\item Evolution of CO-core similar to degenerate He-core in RGB for low-$M_*$
+\item Prop of CO-core unaffected by envelope as long as has not enough mass to nuclear burning
+\item \xaumenta{M_{CO}}, \xaumenta{\rho_c} as He-burning in shell [pg 89']: flusso di plasma neutrini dalla parte centrale \xaumenta{\epsilon_{\nu}}(segno meno nel energy equation) - $\epsilon_C\to\epsilon_{\nu}$ per $M_*\to M_{Ch}$
+\item \xaumenta{M_{CO}} \xaumenta{\epsilon_C} - Explosive CO-burning: \keyword{SN-I-1/2}
 
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Caratteristiche WD}
+\begin{columns}[T]
+	\begin{column}{0.55\textwidth}
+		\begin{itemize}
+		\item $\exv{M}_WD\approx\numrange{0.55}{0.6}\msun$, faintest $L\approx\num{e-4.5}\msun$, $\frac{R}{\rsun}\approx0.01(\frac{\msun}{M})\expy{1/3}$: large $\exv{\rho}$, $\large{g_s}$, low $L_s$
+		\item Uncertainty in progenitor mass is due to uncertainty in mass loss
+		\item M-R rel: $P_c\approx P_e$ NR-deg - $\frac{M\expy{5/3}}{R^5\mu_e\expy{5/3}}\propto\frac{GM^2}{R^4}$ quindi $R\propto\frac{1}{G\mu_e\expy{5/3}}M\expy{-1/3}$
+		\item \xaumenta{M_{WD}}, \xaumenta{\tau_{cool}}: per $L\approx\num{e-3}\lsun$ $\tau_{cool}\approx\SI{e9}{\year}$
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.45\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.38\textheight]{WD-ML}\label{fig:WD-ML}
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.38\textheight]{WD-MR}\label{fig:WD-MR}
+		\end{figure}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Simplified WD model: $L-T_c$ relation and envelope size}
+\begin{block}{$L-T_c$ relation}
+m-continuity + HE - $\frac{M}{R^3}\propto\exv{\rho}$ - considering radiative envelope: $\frac{HE}{RT}=P\,dP=\frac{4ac}{3}\frac{4\pi GMk}{\kappa_0L\mu m_H}T\expy{7.5}\,dT$ (EOS: perfect gas, opacity: $\kappa=\kappa_0\rho T\expy{-3.5}$, $m_r\approx M$) - integrating from surface we have enevelope $P(T)$ and via EOS: $\rho=\sqrt{\frac{32\pi acGM\mu_{env}m_H}{8.5*3\kappa_0Lk}}T\expy{3.25}$ - at envelope/degenerate boundary $P_e^d=P_e^{perf}$: $\frac{\rho_bkT_b}{\mu_em_H}=\num{1.0036e13}(\frac{\rho_b}{\mu_e})\expy{5/3}$ (cgs) quindi $\frac{L}{\lsun}=\num{6.4e-3}\frac{\mu}{\mu_e}\frac{M}{\msun}\frac{T_b\expy{3.5}}{\kappa_0}$. CO WD deg.-core is isothermal $T_b\approx T_c$ - $L\approx\numrange{e-3}{e-4}\lsun$ so $T_c<\SI{e7}{\kelvin}$ - detailed $L-T_c$ relation [177]
+\end{block}
+\begin{block}{Envelope size}
+Rad+Kramers - $\TDy{r}{T}=-\frac{3\kappa_0\rho^2}{4acT\expy{6.5}}\frac{L}{4\pi r^2}$ -+above $\rho$: $\frac{dr}{r^2}=4.25\frac{k}{\mu Gm_H}\frac{dT}{M}$ - Integrata da s a $r_b$: $T_b=\frac{1}{4.25}\frac{\mu Gm_H}{k}\frac{M}{R}(\frac{R}{r_b}-1)$ - $T_b\approx\SIrange{e6}{e7}{\kelvin}$ cio\'e $r_b\approx0.99R$
+\end{block}
+\end{frame}
+
+\begin{frame}{Simplified WD model: Cooling law - legge di Mestel}
+Luminosity is equals rate of decrease of thermal energy of ions - in e-deg core $C_VT=\frac{3}{2}kT$ per ion/ total thermal energy $E_i=\frac{3}{2}kT\frac{M}{\mu_im_H}$ ($\frac{M}{\mu_im_H}$ total number of ions in core) - $T\approx\SI{e7}{\kelvin}$, $E_i\approx\SI{e48}{\erg}$:
+\begin{align*}
+&L=-\TDy{t}{E_i}=\alpha MT\expy{7/2}\ \Rightarrow\ \alpha T\expy{7/2}=-\TDy{t}{T}\frac{3k}{2\mu_im_H}\\
+&t-t_0=\frac{3k}{5\alpha\mu_im_H}(T\expy{-5/2}-T_0\expy{-5/2})
+\end{align*}
+when $T_0\gg T$: $\Delta t=t-t_0=\approx\frac{3kT\expy{-5/2}}{5\alpha\mu_im_H}$ quindi \keyword{Legge di Mestel}:
+\begin{equation*}
+\Delta t[\si{\year}]\propto(\frac{L}{M})\expy{-5/7}\approx\frac{\num{4.5e7}}{\mu_i}(\frac{L\msun}{M\lsun})\expy{-5/7}
+\end{equation*}
+Effects not included in Mestel law: i) Crystallinization ii) Envelope: possible H-burning, opacity evolution as degenerate core cools causes convective instability in envelope, contribute to energy budget by slow contraction
+\end{frame}
+
+\begin{frame}{Crystallization}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+ion phase transition: liquid phase for $1<\Gamma<180$ and solid phase for $\Gamma>180$ - correction due to coulomb interaction, oscillation around lattice equilibrium position and quantum correction $\theta=\frac{\theta_D}{T}>1$ (\keyword{Debye temperature}: $\theta_D=\num{4e3}\rho\expy{1/2}\si{\kelvin}$). $c_v\approx\frac{3}{2}K$ per $\Gamma<1$, as \xdiminuisce{T} \xaumenta{\Gamma} and \xaumenta{c_v} until maximum at $\Gamma\approx180$ then decreases from $T\approx\theta_D$ as $c_v\propto T^3$
+	\end{column}
+	\begin{column}{0.5\textwidth}
+	\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-phasetransition}\label{fig:WD-phasetransition}
+	\end{figure}
+\end{column}\end{columns}
+Free-energy: ideal eos (no coulomb $C_V=\frac{3}{2}k$) + correction $F_C$
+\begin{align*}
+&F_C=NkT(-0.89752\Gamma+3.78176\Gamma\expy{1/4}-0.71816\Gamma\expy{-1/4}\\
+&+2.19951\ln\Gamma-3.30108)\tag*{liquid}\\
+&F_C=NkT(-4.29706+4.5\ln\Gamma-\frac{1490}{\Gamma^2})\tag*{solid}
+\end{align*}
+\end{frame}
+
+\begin{frame}{detailed computation}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+		\item $\rho$ higher in center so crystallization front move outward as $\Gamma\geq180$: release latent heat $q\approx kT$ (difference in S between phases) per ion (cooling slow down resp to M-law)
+		\item Cr. start for $1\msun$ at $\log(\frac{L}{\lsun})\approx-2.7$ and reaches boundary of deg core at $\log(\frac{L}{\lsun})\approx-4.2$: \xdiminuisce{M_{WD}} crystallization start at lower L (lower $T_c$) as \xdiminuisce{\rho_c} $\Gamma\approx180$ when they are cooler
+		\item earlier cryst. shorter cooling delay: $\Delta t\approx\frac{\Delta E}{L}$
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-Xopostcry}\label{fig:WD-Xopostcry}
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-coolingMvsfm}\label{fig:WD-coolingMvsfm}
+		\end{figure}
+	\end{column}\end{columns}
 \end{frame}
 
 \subsection{Destino finale di stelle massicce}\linkdest{SN}
 
+
 \begin{frame}{Destino finale di stelle di varia massa}
 nane bianche di He, C/O, O/Ne; supernovae di tipo II da deflagrazione del carbonio e cattura elettronica su nuclei; supernovae di tipo II da fotodisintegrazione del ferro; Caratteristiche di pre-SN; Neutronizzazione esplosiva e esplosione ritardata; classificazione SN in base a spettro e morfologia curva di luce
 \end{frame}
+
+
 
 \begin{frame}{Caratterizzazione SNII}
 $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milioni di anni; Interazione neutrini-nucleo denso: intrappolamento e tempi scala emissione; stima energia emessa: neutrini, fotoni, fronte di shock; SN1987A: flusso di neutrini e osservazione in bande EM
