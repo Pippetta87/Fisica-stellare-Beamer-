@@ -851,15 +851,17 @@ Per CO-core $\mu_e=\approx2$ ($n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum\
 
 \begin{frame}{Caratteristiche WD}
 \begin{columns}[T]
-	\begin{column}{0.55\textwidth}
+	\begin{column}{0.61\textwidth}
 		\begin{itemize}
 		\item $\exv{M}_WD\approx\numrange{0.55}{0.6}\msun$, faintest $L\approx\num{e-4.5}\msun$, $\frac{R}{\rsun}\approx0.01(\frac{\msun}{M})\expy{1/3}$: large $\exv{\rho}$, $\large{g_s}$, low $L_s$
 		\item Uncertainty in progenitor mass is due to uncertainty in mass loss
 		\item M-R rel: $P_c\approx P_e$ NR-deg - $\frac{M\expy{5/3}}{R^5\mu_e\expy{5/3}}\propto\frac{GM^2}{R^4}$ quindi $R\propto\frac{1}{G\mu_e\expy{5/3}}M\expy{-1/3}$
 		\item \xaumenta{M_{WD}}, \xaumenta{\tau_{cool}}: per $L\approx\num{e-3}\lsun$ $\tau_{cool}\approx\SI{e9}{\year}$
+		\item He-WD: RGB stars that have lost envelope (mass loss, mass transfer) - $M_{WD}\approx\numrange{0.15}{0.5}\msun$ - brighter at fixed age as \xdiminuisce{\mu}
+		\item O-Ne WD endpoint of $M_*\approx8-11\msun$ at end of C-burning ($M_{WD}^{ONe}\approx\numrange{1}{1.2}\msun$)[78] - shorter cooling due to \xaumenta{\mu}; cryst. at higher T [91]
 		\end{itemize}
 	\end{column}
-	\begin{column}{0.45\textwidth}
+	\begin{column}{0.39\textwidth}
 		\begin{figure}[!ht]
 			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.38\textheight]{WD-ML}\label{fig:WD-ML}
 			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.38\textheight]{WD-MR}\label{fig:WD-MR}
@@ -907,22 +909,64 @@ Free-energy: ideal eos (no coulomb $C_V=\frac{3}{2}k$) + correction $F_C$
 \end{align*}
 \end{frame}
 
-\begin{frame}{detailed computation}
+\begin{frame}{detailed computation: phase transition latent heat}
 \begin{columns}[T]
 	\begin{column}{0.5\textwidth}
 		\begin{itemize}
-		\item $\rho$ higher in center so crystallization front move outward as $\Gamma\geq180$: release latent heat $q\approx kT$ (difference in S between phases) per ion (cooling slow down resp to M-law)
 		\item Cr. start for $1\msun$ at $\log(\frac{L}{\lsun})\approx-2.7$ and reaches boundary of deg core at $\log(\frac{L}{\lsun})\approx-4.2$: \xdiminuisce{M_{WD}} crystallization start at lower L (lower $T_c$) as \xdiminuisce{\rho_c} $\Gamma\approx180$ when they are cooler
-		\item earlier cryst. shorter cooling delay: $\Delta t\approx\frac{\Delta E}{L}$
 		\end{itemize}
 	\end{column}
 	\begin{column}{0.5\textwidth}
 		\begin{figure}[!ht]
 		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-Xopostcry}\label{fig:WD-Xopostcry}
-		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-coolingMvsfm}\label{fig:WD-coolingMvsfm}
 		\end{figure}
 	\end{column}\end{columns}
 \end{frame}
+
+\begin{frame}{detailed computation: cooling law}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item $\rho$ higher in center so crystallization front move outward as $\Gamma\geq180$: release latent heat $q\approx kT$ (difference in S between phases) per ion (cooling slow down resp to M-law)
+			\item earlier cryst. shorter cooling delay: $\Delta t\approx\frac{\Delta E}{L}$ ($\Delta E$ injected at cryst.)
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-coolingMvsfm}\label{fig:WD-coolingMvsfm}
+		\end{figure}
+\end{column}\end{columns}
+Hot WD: faster cooling then M-law ($L_S+L_{\nu}$) -when $\log(\frac{L}{\lsun})\leq-1.0$ cooling slow down and becomes longer slow envelope contraction and \xaumenta{c_v} until $\theta_D$ in core - \xaumenta{M_{WD}}, \xaumenta{\tau_{cool}},core reaches $\theta_D$ at higher luminosity \xdiminuisce{\tau_{cool}} shorter then M-law at low L
+\end{frame}
+
+
+\begin{frame}{detailed computation: chem separation [77,107]}
+\begin{columns}[T]
+	\begin{column}{0.65\textwidth}
+		\begin{itemize}
+			\item given ratio $\frac{X_C}{X_O}$ CO mixture in gas/liquid phase at cryst. can't be mainteined due to not fully miscibility in solid phase - suppose $X_1<X_2$ as in central regions of CO core and that phase diagram told us that $X_1$ in crystallized phase is lowered then at liquid-cryst boundary $X_1$ increased quindi \xdiminuisce{\mu} in above layers e si ha instabilit\'a convettiva and mixing with above layers so final profile isn't homogeneous
+			\item changes of $\mu$: $\epsilon_g=\TDy{\mu}{U}|_{T,V}\TDy{t}{\mu}$ - \xaumenta{\tau_{cool}}($10\%$)
+			\item At end of AGB: O-profile flat until end of convective He-core, bump outside due to He-burning shell crossing semiconvective CO-enriched regions ($^{12}C+\alpha\to^{16}O+\gamma$) - convective instability at beginning of WD will make layer below the bump homogeneous - beyond O is accumulated as He-burning shell advance
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.35\textwidth}
+		\begin{figure}[!ht]
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-Xopostcry}\label{fig:WD-Xopostcry}
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-AGBXo}\label{fig:WD-AGBXo}
+		\end{figure}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{detailed computation: envelope}
+
+		\begin{itemize}
+			\item $M_{He}\approx\num{e-2}M_*$, $M_H\approx\num{e-2}M_*$, $Z_s\approx0$ - He-envelope (\keyword{Non-DA-WD}), H-envelope (\keyword{DA-WD}), $\frac{DA}{DB}\approx4$
+			\item Evolution during cooling phase: intrplay between diffusion, radiative levitation and convective mixing
+			\item Slow envelope contraction: $\epsilon_g$ - if $M_H>\num{e-4}\msun$, $M_{WD}\approx1\msun$ H-burning at bottom
+			\item \xdiminuisce{T_e}, convective envelope (when $T_e<\SI{6000}{\kelvin}$ boundary conditions based on grey $T(\tau)$ relation no longer good approx: need full non-grey atmosphere model)
+		\end{itemize}
+\end{frame}
+
 
 \subsection{Destino finale di stelle massicce}\linkdest{SN}
 
