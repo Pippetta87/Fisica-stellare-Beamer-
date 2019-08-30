@@ -816,7 +816,7 @@ Empirical mass loss-$\Pi$ relation:
 \end{itemize}
 \end{frame}
 
-\subsection{Evoluzione in nane bianche e evoluzione di stelle massicce}\linkdest{WD-intmM}
+\subsection{Evoluzione di nane bianche}\linkdest{WD}
 
 \begin{frame}{Chandrasekhar limit-mass e CO-core close to $M_{up}$}
 $M_{Ch}$ upper mass limit for fully relativistic degenerate core in HE [59] - $M_*>M_{up}$ don't develop degenerate CO-core
@@ -958,33 +958,112 @@ Hot WD: faster cooling then M-law ($L_S+L_{\nu}$) -when $\log(\frac{L}{\lsun})\l
 \end{frame}
 
 \begin{frame}{detailed computation: envelope}
-
-		\begin{itemize}
+	\begin{itemize}
 			\item $M_{He}\approx\num{e-2}M_*$, $M_H\approx\num{e-2}M_*$, $Z_s\approx0$ - He-envelope (\keyword{Non-DA-WD}), H-envelope (\keyword{DA-WD}), $\frac{DA}{DB}\approx4$
 			\item Evolution during cooling phase: intrplay between diffusion, radiative levitation and convective mixing
 			\item Slow envelope contraction: $\epsilon_g$ - if $M_H>\num{e-4}\msun$, $M_{WD}\approx1\msun$ H-burning at bottom
 			\item \xdiminuisce{T_e}, convective envelope (when $T_e<\SI{6000}{\kelvin}$ boundary conditions based on grey $T(\tau)$ relation no longer good approx: need full non-grey atmosphere model)
-		\end{itemize}
+	\end{itemize}
 \end{frame}
 
+\subsection{evoluzione di stelle massicce}\linkdest{lateintM}
 
-\subsection{Destino finale di stelle massicce}\linkdest{SN}
-
-\begin{frame}{Fasi finali stelle massicce: core mass, nurning time and HDR evolution}
+\begin{frame}{Fasi finali stelle massicce [234]: HDR evolution}
 \begin{columns}[T]
 	\begin{column}{0.65\textwidth}
 		\begin{itemize}
-			\item 
+		\item $M_*>M_{up}$
+		\item Sensitivity of location in HDR to mass loss
+		\item Models based on \sch spend more time on B side of HDR than models based on Ledoux
+		\item Phases after He-burning are so fast that surface properties doesn't change much until star explode
 		\end{itemize}
 	\end{column}
 	\begin{column}{0.35\textwidth}
 		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-Xopostcry}\label{fig:WD-Xopostcry}
-			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{WD-AGBXo}\label{fig:WD-AGBXo}
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.4\textheight]{latephase-massive}\label{fig:latephase-massive}
 		\end{figure}
 \end{column}\end{columns}
 \end{frame}
 
+\begin{frame}{Stelle massicce: nuclear burning time scale and core masses}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+		\item $M_{cHe}$ fixed by H-burning in CC and in shell, $M_{cHe}$ fixed by CC
+		\item \Pnue mediated KH-contraction of CO-core
+		\end{itemize}
+	\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.39\textheight]{latephace-CburningTcrhoc}\label{fig:latephace-CburningTcrhoc}
+	\end{figure}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.8\textheight]{latephase-massive-taumburningmnext}\label{fig:latephase-massive-taumburningmnext}
+		\end{figure}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Stelle massicce: C-burning}
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item At He-exhaustion CO-core contracts until $T_c\geq\SI{5e8}{\kelvin}$ -region in $T_C-\rho_c$ diagram where \Pnue-losses due to pair annihilation are important
+			\item $\epsilon_c$ doesn't supply enough energy and we have rapid core contraction
+			\item $M_*\geq15-30\msun$: $T_c\approx\SIrange{0.3}{1.2}{\kelvin}$
+			\begin{alignat*}{2}
+			&^{12}C+^{12}C\to^{24}Mg^*&\to^{23}Mg+n\\
+			&&\to^{20}Ne+\alpha\\
+			&&\to^{23}Na+\Pproton
+			\end{alignat*}
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{latephase-CburningLsLnepsilonC}\label{fig:latephase-massive-taumburningmnext}
+		\end{figure}
+\end{column}\end{columns}
+			\begin{itemize}
+	\item \xaumenta{X_C},\xaumenta{\epsilon_c}: convective core if $\epsilon_C>\epsilon_{\nu}$
+	\item \xaumenta{M_*}, \xdiminuisce{M_{CC}}, \xaumenta{T_c}, \xaumenta{\rho_c}, \xaumenta{\epsilon_{\nu}}: at large enough mass convective core disappears
+	\item C-burning in shell quitely after C-exhaustion in core - convective shell episode(s)
+	\item Significant s-elements production: neutron source $^{22}Ne(\alpha,n)^{25}Mg$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stelle massicce: Ne-burning}
+\begin{itemize}
+\item Composition after C-exhaustion: $X_O=0.7$, $X_{Ne}=0.2-0.3$, $^{24}Mg$
+\item $^{20}Ne(\gamma,\alpha)^{16}O$ (allowed by HE-$\gamma$) but whole set exothermic- core Ne-burning at $T_c=1.2-1.9\SI{e9}{\kelvin}$ - convective core while burning rate overcomes \Pnue-losses
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stelle massicce: O-burning}
+\begin{itemize}
+	\item End of Ne-burning core composition: $^{16}O$, $^{24}Mg$, $^{28}Si$
+	\item In $M_*=15-30\msun$ O-burning ignites at $T_c=1.5-2.6\SI{e9}{\kelvin}$
+	\begin{alignat*}{2}
+	&^{16}O+^{16}O\to^{32}S^*&\to^{31}Si+n\\
+	&&\to^{31}P+\Pproton\\
+	&&\to^{30}P+^2D\\
+	&&\to^{28}Si+\alpha
+	\end{alignat*}
+	\item O-burning in convective core ($\epsilon_O>\epsilon_{\Pnue}$) - $M_{CoO}\approx1\msun$ - fast evolution timescale: shell frozen except Ne-shell
+	\item Production of neutron-rich nuclei: $^{30}S$, $^{35}S$, $^{37}Cl$ - $^{30}P(\APelectron,\Pnue)^{30}S$, $^{35}Cl(\Pelectron,\Pnue)^{35}S$, $^{37}Ar(\Pelectron,\Pnue)^{37}Cl$ - \keyword{level of neutronization} increases
+	\item Near end of O-burning $T_c=\numrange{2.5}{2.9}\SI{e9}{\kelvin}$: formation of quasi-equilibrium cluster of nuclei $^{29}Si(\Pproton,\gamma)^{30}P$ - O-burning in shell can activate couple of convective episode
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stelle massicce: SI-burning}
+\begin{itemize}
+	\item $T_c\approx\SI{2.3e9}{\kelvin}$ - photodissociation
+	\[^{28}Si(\gamma,\alpha)^{24}Mg(\gamma,\alpha)^{20}Ne(\gamma,\alpha)^{16}O(\gamma,\alpha)^{12}C(\gamma,2\alpha)\alpha\]
+	\item $[30]$: radiative-core Si-burning $^{28}Si\to^{30}Si$ - \xdiminuisce{M_*}, \xaumenta{^{30}Si}
+	\item SI-burning strongly affected by level of neutronization as this affects nucleosynthesis - increasing efficiency of weak interactions
+	\item when $L_{Si}>L_{\Pnue}$ (weak interaction: \Pelectron-capture): convective core ($M_c\approx1\msun$) - \xaumenta{^{28}Si} - At end of Si-burning all reactions are balanced by inverse: stellar material is in \keyword{Nuclear statistical equilibrium} - Central core of $^{56}Fe$, $^{52}Cr$ - last convective episode in SI-burning shell set boundary between strongly neutronized matter and not
+\end{itemize}
+\end{frame}
+
+\subsection{Destino finale di stelle massicce}\linkdest{SN}
 
 \begin{frame}{Destino finale di stelle di varia massa}
 nane bianche di He, C/O, O/Ne; supernovae di tipo II da deflagrazione del carbonio e cattura elettronica su nuclei; supernovae di tipo II da fotodisintegrazione del ferro; Caratteristiche di pre-SN; Neutronizzazione esplosiva e esplosione ritardata; classificazione SN in base a spettro e morfologia curva di luce
@@ -996,6 +1075,57 @@ nane bianche di He, C/O, O/Ne; supernovae di tipo II da deflagrazione del carbon
 $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milioni di anni; Interazione neutrini-nucleo denso: intrappolamento e tempi scala emissione; stima energia emessa: neutrini, fotoni, fronte di shock; SN1987A: flusso di neutrini e osservazione in bande EM
 \end{frame}
 
+\begin{frame}{Final core collapse and explosion: \keyword{core-collapse/type II SN}
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+	\begin{itemize}
+	\item In core of massive stars after NSE photodisintegration processes and relativistic effects decreases $\gamma<4/3$: core becomes dynamically unstable and starts to collapse - at beginnings on KH-$\tau$
+	\item collapse accelerate as: i)\xaumenta{\rho_c} neutronizzazione aumenta e vengono rimossi gli elettroni liberi che sono il contributo principale alla pressione ii) increasing efficiency of photodisintegration increases $\alpha$ - gravitational binding energy is lowered: star can't get enough energy from contraction and collapse accelerates
+	\item At density of \SI{e14}{\gram\per\cubic\cm} materials become incompressible and collapse stop in central regions
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.45\textwidth}
+	\begin{itemize}
+	\item Prompt explosion scenario: layers collapsing above core rebounds with enough kinetic energy to escape - impossible: i) shock wave heats up infalling layers and induce photodisintegration losing energy; ii) emission of neutrino behind shock wave cool front 
+	\item $[59]$: additional energy source is neutrino energy deposition - in the core \Pnue diffusion velocity becomes less the collapse velocity - \keyword{neutrino trapping surface} below which neutrinos deposite energy in materials
+	\item $M_*<25\msun$ produce NS, more massive produce BH
+	\end{itemize}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Nuclesynthesis during SNII explosion}
+\begin{itemize}
+\item Conditions for explosive nucleosynthesis are determined by max T at shock passage and how long materials remain at - same product of O,Si,Ne,C burning but diff isotopic ratio due to diff timescale
+\item \keyword{\Pnue-trasmutation} produce $^7Li$, $^{11}B$, $^{19}F$, $^{26}Al$
+\item \keyword{r-processes}
+\item Present computation use mass-cut as free-parameter (point outside which envelope is ejected) - core-collapse SN are main contributors of $\alpha$-elements production
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scenario for $M_*>100\msun$ (primeval POPIII stars)}
+\begin{itemize}
+\item $M_{cHe}>40\msun$: after He-burning \Pelectron-\APelectron pair production can reduce $\gamma<4/3$ - runaway collapse
+\item prompt explosion $[232]$ and BH 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{SN type-I: observations}
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item SN-spectrum: no H (type I), Ia (presence of SiII absorption line around \SI{6150}{\angstrom} and late Fe emission), Ib/Ic (absence of Si lines and presence or not of strong HeI lines around \SI{5876}{\angstrom})
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{latephase-CburningLsLnepsilonC}\label{fig:latephase-massive-taumburningmnext}
+		\end{figure}
+\end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{SNI-explosion mechanism}
+	contenu...
+\end{frame}
 
 \subsection{Modello Solare standar}
 
