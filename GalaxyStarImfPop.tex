@@ -76,26 +76,93 @@ m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lamb
 \end{columns}
 \end{frame}
 
-\subsection{Popolazioni semplici e complesse}\linkdest{spcpx}
+
+\subsection{Popolazioni semplici}\linkdest{spcpx}
+
+\begin{frame}{Empirical IMF}
+\begin{align*}
+&dn=CM\expy{-x}\,dM\\
+&C=(2-x)\frac{M_t}{M_u\expy{2-x}-M_l\expy{2-x}}\\
+&C=\frac{M_t}{\ln(\frac{M_u}{M_l})}
+\end{align*}
+\end{frame}
 
 \begin{frame}{SSP: theoretical isochrones}
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
-\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{isochr}\label{fig:isochr}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{isochr}\label{fig:isochr}
+\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-isoMSAGB}\label{fig:SSP-isoMSAGB}
 \end{figure}
 \end{column}
 \begin{column}{0.6\textwidth}
-Object born at same time in burst of negligible duration with same initial composition; theoretical CMD of SSP is an isochrone at given age.
+\begin{itemize}
+\item Object born at same time in burst of negligible duration with same initial composition; theoretical CMD of SSP is an isochrone at given age.
+\item s coordinata lungo isocrona: $\TDy{s}{M}|_t=-\TDy{t}{M}|_s\TDy{s}{t}|_M$ - if rightside close to zero mass evolving in that particular phase is constant
+\end{itemize}
 \end{column}
 \end{columns}
-
 \end{frame}
 
-\begin{frame}{Complex Stellar Population}
-    
+\begin{frame}{Old SSP: globular cluster and halo star}
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-iso10GyrHB}\label{fig:SSP-iso10GyrHB}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-CMDalpha}\label{fig:SSP-CMDalpha}
+		\end{figure}
+\end{column}
+\begin{column}{0.6\textwidth}
+		\begin{itemize}
+		\item Fig 9.3 shows a \SI{10}{\giga\year} isochrone for metal-poor chem comp typical of globular cluster
+		\item $[\alpha/Fe]=0.4$ tipical MW halo - at low Z isochrones are identical - scaled solar are redder and fainter at given Z when traslated to CMD
+		\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
-\subsection{cluster stellari}\linkdest{cluster}
+\begin{frame}{Old SSP: effect of ages and Zs}
+\begin{columns}[T]
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-HDRCMDZpoorMSHB}\label{fig:SSP-HDRCMDZpoorMSHB}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item Props of fig 9.4: lower-MS (starting from \SI{2}{\mag} below TO) and RGB unaffected by age but sensitive to Z: lower MS have very long $\tau$ and are still on ZAMS - increasing t-iso lower $M_*$ are at TO hence \xdiminuisce{L_{TO}} - \xaumenta{Z} \xdiminuisce{L_{MS}} compensate the fact that higher Z SSP have higher $M_*$ at TO; RGB depends weakly on $M_*$ and strongly on Z which strongly affect T of RGB; brightness of ZAHB unaffected by age but deps on Z - mostly deps on $M_{cHe}$ at He flash: \xaumenta{Z}, \xdiminuisce{M{cHe}}, age doesn't affect He-core mass for evolving stars RGB stars older than \SI{4}{\giga\year} ($M_*\leq1.2-1.3\msun$);
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Popolazioni in galassie esterne}
+star formation history; popo non risolte semplici e complesse
+\end{frame}
+
+\subsection{Indicatori d'et\'a}\linkdest{ageindicator}
+
+\begin{frame}{indicatori di et\'a}
+Turn-off/overall contraction: Isocrone di ammassi giovani/vecchi; metodo orizzontale e vertical per ammassi antichi; Lithium depletion boundary per datazione di ammassi giovani
+\end{frame}
+
+\begin{frame}{Indicatori di et\'a: metodo verticale}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-agevert}\label{fig:SSP-agevert}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+		\item Comparison between observed and theretical $\Delta V=V_{TO}-V_{ZAHB}$ difference between TO point and ZAHB point at instability strip region around $\log(T_e)\approx3.85$ ($(B-V\approx0.3)$)
+		\item ZAHB is unaffected by age: changes of age at given $Fe/H$ changes $\Delta V$ through change in TO-brightness
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Indicatori di distanza}\linkdest{distanceindicator}
 
 \begin{frame}{Distanza ammassi}
 main sequence fitting
@@ -106,16 +173,14 @@ RR lyrae
 cefeidi
 \end{frame}
 
-\begin{frame}{indicatori di et\'a}
-Turn-off/overall contraction: Isocrone di ammassi giovani/vecchi; metodo orizzontale e vertical per ammassi antichi; Lithium depletion boundary per datazione di ammassi giovani
+\subsection{Popolazioni stellari composite (CSP)}
+
+\begin{frame}{Complex Stellar Population}
+    
 \end{frame}
+
+
 
 \begin{frame}{Indicatori di He (e Z??)}
 ??
-\end{frame}
-
-\subsection{Star formation - IMF}\linkdest{starformation}
-
-\begin{frame}{Popolazioni in galassie esterne}
-star formation history; popo non risolte semplici e complesse
 \end{frame}

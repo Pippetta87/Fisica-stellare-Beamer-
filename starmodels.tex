@@ -14,24 +14,23 @@
 \subsection{Struttura di equilibrio}\linkdest{stellarstructure}
 
 \begin{frame}{Equazioni struttura di equilibrio}
-Determino la struttura solare integrando numericamente le equazioni fondamentali della struttura stellare
-\begin{subequations}\label{subeqn:stellarstructure}
-\begin{align*}
-&\TDy{r}{m}=4\pi r^2\rho\\
-&\TDy{r}{P}=-\frac{Gm(r)\rho(r)}{r^2}\\
-&\TDy{r}{T}=\nabla\frac{T}{p}\TDy{r}{p}\\
-&\TDy{r}{L}=4\pi r^2[\rho(\epsilon-\epsilon_{\nu})-\rho\TDof{t}u+\frac{P}{\rho}\TDy{t}{\rho}]
-\end{align*}
 
-\begin{equation*}
-\PDy{t}{n_i}+\frac{1}{r^2}\PDof{r}(r^2n_iv_i)=\Dcvar{\PDy{t}{n_i}}{Nucl}\label{eq:difffusionchange}
-\end{equation*}
-\end{subequations}
-con $v_i$ velocit\'a di diffusione della specie i. Ottengo il profilo radiale delle grandezze $\{P,m,T,L,X_i\}$, note la metallicit\'a iniziale Z, l'equazione di stato $P(\rho,T,X_i)$, l'opacit\'a $\kappa(P,T,X_i)$, il rate di produzione di energia nucleare per grammo $\epsilon(P,T,X_i)$.
+\begin{align*}
+&\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
+&\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}}\\
+&\TDy{m}{T}=-\nabla\frac{T}{p}\frac{Gm}{4\pi r^4}\\
+&\TDy{m}{L}=\epsilon-\epsilon_{\nu} \underbrace{-c_P[\TDy{t}{T}-\nad\frac{T}{P}\TDy{t}{P}]}_{-c_P\PDy{t}{T}+\frac{\delta}{\rho}\PDy{t}{P}}\\
+&\TDy{t}{X_s}\frac{1}{A_s}=\sum_{production}\rho^{n_h+n_k-1}n_p\frac{X_h^{n_h}X_k^{n_k}}{A_h^{n_h}A_k^{n_k}}\frac{\exv{\sigma v}_{hk}}{m_H^{n_h+n_k-1}n_h!n_k!}\\
+&-\sum_{distruction}\rho^{n_d+n_j-1}n_d\frac{X_s^{n_d}X_j^{n_j}}{A_s^{n_d}A_j^{n_j}}\frac{\exv{\sigma v}_{sj}}{m_H^{n_d+n_j-1}n_d!n_j!}
+\end{align*}
 \end{frame}
 
-\begin{frame}{Energia gravitazionale}
+\begin{wordonframe}{Chemical evolution: nuclear burning, diffusion and convective mixing}\linkdest{diffusion}\
 
+\end{wordonframe}
+
+\begin{frame}{Energia gravitazionale}
+$(\TDy{r}{L}=4\pi r^2[\rho\epsilon-\rho\TDof{t}(\frac{u}{\rho}+\frac{P}{\rho}\TDy{t}{\rho})])$
 \end{frame}
 
 \begin{frame}{Trasporto radiativo e convettivo: \'e valida approx idrostatica}
@@ -230,8 +229,6 @@ cubic equation for $(\nabla-\nabla_e)$
 
 \end{wordonframe}
 
-\subsection{Diffusion}\linkdest{diffusion}
-
 \subsection{Approssimazione politropa}\linkdest{poly}
 
 \begin{frame}{Trasformazioni politropiche}
@@ -299,7 +296,51 @@ picchi r e s nella nella curva universale delle abbondanze
 
 \section{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}\linkdest{nummod}
 
-\begin{frame}{Atmosfera e subatmosfera}
+
+\begin{frame}{Equazioni struttura di equilibrio}
+
+\begin{align*}
+&\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
+&\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}}\\
+&\TDy{m}{T}=-\nabla\frac{T}{p}\frac{Gm}{4\pi r^4}\\
+&\TDy{m}{L}=\epsilon-\epsilon_{\nu} \underbrace{-c_P[\TDy{t}{T}-\nad\frac{T}{P}\TDy{t}{P}]}_{-c_P\PDy{t}{T}+\frac{\delta}{\rho}\PDy{t}{P}: \tkh}\\
+&\TDy{t}{X_s}\frac{1}{A_s}=\sum_{production}\rho^{n_h+n_k-1}n_p\frac{X_h^{n_h}X_k^{n_k}}{A_h^{n_h}A_k^{n_k}}\frac{\exv{\sigma v}_{hk}}{m_H^{n_h+n_k-1}n_h!n_k!}\\
+&-\sum_{distruction}\rho^{n_d+n_j-1}n_d\frac{X_s^{n_d}X_j^{n_j}}{A_s^{n_d}A_j^{n_j}}\frac{\exv{\sigma v}_{sj}}{m_H^{n_d+n_j-1}n_d!n_j!}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Equazioni struttura di equilibrio: condizioni al bordo}
+\begin{itemize}
+\item Le 4+I equazioni determinano $r$, $P$, $T$, $L$, $X_s$ specificata la massa e composizione iniziale (omogenea)
+\item $\tau_n\gg\tkh\gg\tau_{dyn}$: solve 4 structure equations at time t - do time step $\Delta t$ and determine new composition - solve structure at $t+\Delta t$ with new composition
+\item Solution of 4 structure equations require 4 boundary condition: 2 at surface (atmospere model without diffusion approx, PP geometry), parametri $\rho_c,T_c$; 2 at center (via Taylor expansion for $m=m'$)
+\end{itemize}
+\begin{columns}[T]
+\begin{column}{0.65\textwidth}
+\begin{align*}
+&r=(\frac{3}{4\pi\rho_c})\expy{1/3}{m'}\expy{1/3}\\
+&P=P_c-\frac{3G}{8\pi}(\frac{4\pi\rho_c}{3})\expy{4/3}{m'}\expy{2/3}\\
+&L=\epsilon_cm'\\
+&T^4=T_c^4-\frac{1}{2ac}(\frac{3}{4\pi})\expy{2/3}\kappa_c\epsilon_c\rho_c\expy{4/3}{m'}\expy{2/3}\tag*{rad}\\
+&\ln{T}=\ln{T_c}-(\frac{\pi}{6})\expy{1/3}G\frac{{\nad}_c\rho_c\expy{4/3}}{P_c}{m'}\expy{2/3}\tag*{con}
+\end{align*}
+\end{column}
+\begin{column}{0.35\textwidth}
+At surface $m=M$, $L=L_s$, atmospheric model for $P$, $T$ - atmosphere defined by $g=\frac{GM}{R^2}$, $T_e$, composition: provides $P_s$ at $\tau$ where diffusion approx. starts to be valid
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Simplified atmosferic model: grey atmosphere}
+Atmosphere model: usually PP geometry and solve HE equation using non grey radiative transport and EOS and convection if needed
+\begin{align*}
+&\TDy{\tau}{P}=\frac{g}{\kappa}\tag*{HE using $\tau$ as indip var}\\
+&T^4=\frac{3}{4}T_e^4(\tau+\frac{2}{3})\tag*{or solar $T(\tau)$ empirical relation}
+\end{align*}
+integration from $\tau\approx0$ where $T\approx0$, $P\approx0$ down to $\tau=\frac{2}{3}$ where $T=T_e$ - using shooting method.
+\end{frame}
+
+\begin{frame}{Chemical mixing: diffusion and convection}
 
 \end{frame}
 
@@ -307,6 +348,61 @@ picchi r e s nella nella curva universale delle abbondanze
 
 \end{frame}
 
-\begin{frame}{Metodo di Henyey}
+\begin{frame}{Metodo di Henyey $[96]$}
+N mass-shell with boundaries at $m_j$ $m_1=0,m_2=m',\ldots,m_N=M$
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&\frac{r_{j+1}-r_j}{m_{j+1}-m_j}=\frac{1}{4\pi r_{j+1/2}^2\rho_{j+1/2}}\\
+&\frac{P_{j+1}-P_j}{m_{j+1}-m_j}=-\frac{Gm_{j+1/2}}{4\pi r_{j+1/2}}\\
+&\frac{L_{j+1}-L_j}{m_{j+1}-m_j}=\epsilon_n(T_{j+1/2},\rho_{j+1/2},X_{s,j+1/2})+!!!\\
+&\frac{T_{j+1}-T_j}{m_{j+1}-m_j}=-\frac{T_{j+1/2}}{P_{j+1/2}}\nabla_{j+1/2}\frac{Gm_{j+1/2}}{4\pi r^4_{j+1/2}}
+\end{align*}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&(Y^1=r, y^2=P, y^3=T, y^4=L)\\
+&E_j^{i=1,\ldots,4}=\frac{y_{j+1}^i-y^i_j}{m_{j+1}^i-m^i_j}\\
+&-f_i(y_{j+1/2}^1,\ldots,y_{j+1/2}^4)=0
+\end{align*}
+$j=2,\ldots,N-2$: 4N-8 vincoli e le condizioni al bordo
+\begin{align*}
+&J=N: S_1=y_N^2-f_S(y_N^1,y_N^4)=0\\
+&S_2:y^3_N-g_S(y_N^1,y_N^4)=0\\
+&j=1: C_i(y^1_2,y_2^2,y_2^3,y_2^4,y_1^2,y_1^3)=0\\
+&y_1^1=y_1^4=0
+\end{align*}
+\end{column}
+\end{columns}
+$4N-2$ equazioni in $4N-2$ incognite
+\end{frame}
 
+\begin{frame}{Metodo di Henyey: solve system of algebraic equations}
+\'A la Newton-Rapshon - Trial solution (solution at step $t-\Delta t$): $(S_i)_1\neq0$, $(C_i)_1\neq0$, $(E_i^j)_1\neq0$ so we have to find correction to trial solution $(y_i^j)_2=(y_i^j)_1+\delta y_i^j$ - by Taylor expansion we can express $\delta S_i$, $\delta C_i$, $\delta E^i_j$ as function of the unknown small correction:
+\begin{align*}
+&(S_i)_1+\delta S_i=0, (C_i)_1+\delta C_i=0, (E_i^j)_1+\delta E_i^j=0\\
+&\left\{\begin{array}{l}\TDy{y_N^1}{S_i}\delta y_N^1+\TDy{y_N^2}{S_i}\delta y_N^2+\TDy{y_N^3}{S_i}\delta y_N^3+\TDy{y_N^4}{S_i}\delta y_N^4=-(S_i)_1\\
+\TDy{y_2^1}{C_i}\delta y_2^1+\ldots+\TDy{y_2^4}{C_i}\delta y_2^4+\TDy{y_1^2}{C_i}\delta y_1^2+\TDy{y_1^3}{C_i}\delta y_1^3=-(C_i)_1\\
+\TDy{y_j^1}{E_j^i}\delta y_j^1+\ldots+\TDy{y_j^4}{E_j^i}\delta y_j^4+\TDy{y_{j+1}^1}{E_j^i}\delta y_{j+1}^1\ldots+\TDy{y_{j+1}^4}{E_j^i}\delta y_{j+1}^4=-(E_j^i)_1\\
+\end{array}\right.
+\end{align*}
+con $i=1,\ldots,4$, $j=2,\ldots,N$: sistema algebrico di $4N-2$ equazioni in $4N-2$ $\delta y_j^i$ incognite ha matrice dei coefficienti (\keyword{Henyey matrix}) non-zero only near the diagonal e determinante non nullo - soluzione con metodi algebrici standard - fisso $\epsilon>0$ accuratezza con cui voglio risolvere le equazioni della struttura stellare e ripeto la procedura finch\'e $S_i<\epsilon$, $C_i<\epsilon$ - local errors doesn't propagate to other mesh
+\end{frame}
+
+\begin{frame}{Step temporale e problema modello iniziale}
+Step temporale $\Delta t$: uso metodo di Henyey per determinare le nuove abbondanze with I equations as I elements accounted for.
+\keyword{Problem of first model}: i) Turn on $\epsilon_g$ within few models ii) Initial model of evolutionary sequence is evaluated with \keyword{shooting method}
+starting from outer mesh with 4 boundary conditions for $T_e$, $L_s$, $P_s$, $R$ and using first order approx. $y_j^i=y_{j\pm1}^i+\TDy{m}{y_{j\pm1}}\,dm$: we determine $(y_f^i)_{surf}$ until some mesh f midway between center and surface and then integrate from centerup to $j=f$ using central trial conditions - we have $(y_f^i)_{center}\neq(y_f^i)_{surf}$ and have to correct trial central boundary conditions
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+\begin{align*}
+&\Delta(y_f^i)_{surf}=\TDy{y_N^1}{(y^i_f)_{surf}}\delta y_N^1+\TDy{y_N^4}{(y^i_f)_{surf}}\delta y_N^4\\
+&\Delta(y_f^i)_{center}=\TDy{y_1^2}{(y^i_f)_{center}}\delta y_1^2+\TDy{y_1^3}{(y^i_f)_{center}}\delta y_1^3
+\end{align*}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+correzione ai 4 valori al contorno $\delta y_N^1=\delta R$, $\delta y_N^4=\delta L_s$ e $\delta y_1^2=P_c$, $\delta y_1^3=T_c$ found solving \[-\Delta_f=\Delta(y_f^i)_{center}-\Delta(y_f^i)_{surf}\]
+	\end{column}
+\end{columns}
+Fails in advanced stages when structure has strong gradient - In massive stars late phases we can't ignore acceleration term
 \end{frame}

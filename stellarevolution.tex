@@ -1075,7 +1075,7 @@ nane bianche di He, C/O, O/Ne; supernovae di tipo II da deflagrazione del carbon
 $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milioni di anni; Interazione neutrini-nucleo denso: intrappolamento e tempi scala emissione; stima energia emessa: neutrini, fotoni, fronte di shock; SN1987A: flusso di neutrini e osservazione in bande EM
 \end{frame}
 
-\begin{frame}{Final core collapse and explosion: \keyword{core-collapse/type II SN}
+\begin{frame}{Final core collapse and explosion: \keyword{core-collapse/type II SN}}
 \begin{columns}[T]
 \begin{column}{0.55\textwidth}
 	\begin{itemize}
@@ -1114,23 +1114,55 @@ $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milio
 	\begin{column}{0.6\textwidth}
 		\begin{itemize}
 			\item SN-spectrum: no H (type I), Ia (presence of SiII absorption line around \SI{6150}{\angstrom} and late Fe emission), Ib/Ic (absence of Si lines and presence or not of strong HeI lines around \SI{5876}{\angstrom})
+			\item Most important \keyword{large-distance indicators}: good standard candles$[128]$ as max B-mag is constant - $[58]$ lightcurves are puwered by decays of $^{56}Ni\to^{56}Co$ ($t_{1/2}=\SI{6.1}{\day}$), and $^{56}Co\to^{56}Fe$ ($t_{1/2}=\SI{77}{\day}$) 
 		\end{itemize}
 	\end{column}
 	\begin{column}{0.4\textwidth}
 		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{latephase-CburningLsLnepsilonC}\label{fig:latephase-massive-taumburningmnext}
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{SNI-lightcurve}\label{fig:SNI-lightcurve}
 		\end{figure}
 \end{column}\end{columns}
 \end{frame}
 
-\begin{frame}{SNI-explosion mechanism}
-	contenu...
+\begin{frame}{SNI-explosion mechanism $[232,126]$}
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item CO-WD accreting mass (from binary companion) until nuclear runaway triggered
+			\item Open problems: i) double/single-degenerate: coalescence of 2 WD or mass exchange between WD and MS/RGB stars? ii) $M_{ch}$/sub-$M_{ch}$ to trigger explosion iii) explosive mechanism
+			\item explosion model account for: i)energy delivered \SI{e51}{\erg}, ii)nucleosynthesis of $04-1.0\msun$ of $^{56}Ni$, iii) production of significantamount of int-mass elements moving at \SI{e4}{\kilo\meter\per\second} at max SN brightness
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{SNI-WDexplosiveaccretion}\label{fig:SNI-WDexplosiveaccretion}
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{SNIa-bolo}\label{fig:SNIa-bolo}
+		\end{figure}
+\end{column}\end{columns}
 \end{frame}
 
 \subsection{Modello Solare standar}
 
-\begin{frame}{Caratteristiche e metodo di calcolo}
-eliosismologia e neutrini
+\begin{frame}{Struttura di equilibrio: Caratteristiche e metodo di calcolo}
+Determino la struttura solare integrando numericamente le equazioni fondamentali della struttura stellare
+\begin{subequations}\label{subeqn:stellarstructure}
+	\begin{align*}
+	&\TDy{r}{m}=4\pi r^2\rho\\
+	&\TDy{r}{P}=-\frac{Gm(r)\rho(r)}{r^2}\\
+	&\TDy{r}{T}=\nabla\frac{T}{p}\TDy{r}{p}\\
+	&\TDy{r}{L}=4\pi r^2[\rho(\epsilon-\epsilon_{\nu})-\rho\TDof{t}u+\frac{P}{\rho}\TDy{t}{\rho}]
+	\end{align*}
+	
+	\begin{equation*}
+	\PDy{t}{n_i}+\frac{1}{r^2}\PDof{r}(r^2n_iv_i)=\Dcvar{\PDy{t}{n_i}}{Nucl}\label{eq:difffusionchange}
+	\end{equation*}
+\end{subequations}
+con $v_i$ velocit\'a di diffusione della specie i. Ottengo il profilo radiale delle grandezze $\{P,m,T,L,X_i\}$, note la metallicit\'a iniziale Z, l'equazione di stato $P(\rho,T,X_i)$, l'opacit\'a $\kappa(P,T,X_i)$, il rate di produzione di energia nucleare per grammo $\epsilon(P,T,X_i)$.
+\end{frame}
+
+\begin{frame}{Modello solare standard: eliosismologia e neutrini}
+%neutrino flux: predicted vs observed
+%correction to density/$c_s$ solar profile fro helioseismic inversion
 \end{frame}
 
 \subsection{Stelle pulsanti}
