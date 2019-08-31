@@ -79,14 +79,6 @@ m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lamb
 
 \subsection{Popolazioni semplici}\linkdest{spcpx}
 
-\begin{frame}{Empirical IMF}
-\begin{align*}
-&dn=CM\expy{-x}\,dM\\
-&C=(2-x)\frac{M_t}{M_u\expy{2-x}-M_l\expy{2-x}}\\
-&C=\frac{M_t}{\ln(\frac{M_u}{M_l})}
-\end{align*}
-\end{frame}
-
 \begin{frame}{SSP: theoretical isochrones}
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
@@ -291,6 +283,99 @@ Empirical template: local field stars with known $[Fe/H]$ (spectroscopy) and dis
 	\end{column}
 \end{columns}
 \end{frame}
+
+\subsection{Young SSP}
+
+\begin{frame}{Young SSP - Age estimate}
+\begin{columns}[T]
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngisochrones}\label{fig:SSP-youngisochrones}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngagevert}\label{fig:SSP-youngagevert}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+		\item Population with $t_{age}<\SI{4}{\giga\year}$ (Galactic open cluster: Praesepe) - isochrone morphology show hook-like feature at TO due to overall contraction - CNO H-burning - and $L_{TO}$ higher - massive stars still evolving in MS - vertical TO region for very young ages
+		\item \keyword{TO as age indicator for young SSP} - also He-burning phase is $t_{age}(<2-3\si{\giga\year})$ dependent since He-core along RGB is less degenerate: He-core mass is no longer constant and L at beginning of He-core bunring phase depends on isochrone age.
+		\item If distance is known we can fit theoretical isochrones to TO-brightness.
+		\item Vertical method using luminosity of He-burning red clump stars
+		\item bottom end of WD cooling sequence: for $t_{age}=50-200\si{\mega\year}$ few WD - IMF- and uncertainties of first cooling phase - affected by details of AGB-WD transition/\Pnue-losses
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{young isochrone morphology and population of different evolutionary phases}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-youngisochOScal}\label{fig:SSP-youngisochOScal}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+\begin{itemize}
+	\item He-burning phase is red clump close to RGB - RGB is very fast - and $t_{age}<\SI{0.5}{\giga\year}$ He-burning move to blue - longer timescale at blue end of loops
+	\item SGB and RGB phases are depopulated (He-core mass reaches $M_{SC}$): can't use horizontal method
+	\item \keyword{Overshoot calibration from convective core}: shape of TO region is affected by extension of fully mixed central region - ages fro isochrones including overshoot are higher;
+\end{itemize}
+	\end{column}
+\end{columns}
+another possibility is number ratio of MS to He-burning stars $\frac{N_{MS}}{N_{He}}$: due to larger convective core models including core overshoot have larger He-core during He-burning so larger L and lower $\tau_{He}$ while MS lifetime is longer and $\frac{N_{MS}}{N_{He}}$ is larger
+\end{frame}
+
+\begin{frame}{Young SSP: Lithium Depletion Boundary}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngLidating}\label{fig:SSP-youngLidating}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngPMS}\label{fig:SSP-youngPMS}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item \keyword{LDB} dating method not based on MS/WD models - proton reactions destroy $Li$ where $T>\SI{2.5e6}{\kelvin}$ - $M_*<0.3-0.4\msun$ are fully convective so reaches ZAMS Li-depleted but for $t_{age}<\SI{200}{\mega\year}$ VLM stars are still in PMS and since higher mass star reach $T_{Li}$ earlier one expect to find Li-depleted star above a certain L called LDB - for $t_{age}>\SI{50}{\mega\year}$ VLM stars haven't started Li burning
+			\item Comparison of LDB/TO ages contrainsextension of overshoot from convective core of MS star
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Young SSP: distance indicators}
+\begin{itemize}
+	\item MS-/WD-fitting
+	\item Cepheid $\Pi-L$ relation ($[89]$ for application to LMC): $t_{age}=10-100\si{\mega\year}$ - measuring $\Pi-L$ relationship in two bands allow for determination of distance modulus and extintion
+	\begin{align*}
+&m_V=M_V+(m-M)_0+A_V\\
+&m_I=M_I+(m-M)_0+A_I
+	\end{align*}
+\end{itemize}
+\end{frame}
+
+\subsection{Luminosity function And IMF}
+
+\begin{frame}{SSP: luminosity function}
+\begin{columns}[T]
+	\begin{column}{0.35\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-LFMSSGBRGB}\label{fig:SSP-LFMSSGBRGB}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-MSSGBRGBsamet}\label{fig:SSP-MSSGBRGBsamet}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-observedLFM3}\label{fig:SSP-observedLFM3}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.65\textwidth}
+		\begin{itemize}
+			\item Assess level of agreement stellar evolutionary model/real stars ([43, 56, 159]): contain timescale of stellar evolution, free of uncertainties of surface superadiabatic convection
+			\item LF of post-MS fully determined by single mass evolving through that phases - IMF independent; in globular cluster post-MS phases are rel long and well populated
+			\item Theoretical LF for old metal-poor SSP as changing Z, age, Y, IMF - normalization at $M_V=2$ at RGB not affected by LF age: MS on r.s., toward brighter $M_V\approx4$ TO, then steep drop of SGB, RGB have more gentle slope - local maximum at RGB bump - whose brightness compared to observations test extension of surface convection $[43]$
+			\item Slopes of LFs are quite age-indep. - universality \Pelectron degenerate He-core mass related to L in RGB
+			\item MS is sensitive to IMF (populated by large mass range): decreasing Salpeter expo make flatter MS - globular cluster dynamical evolution: \keyword{PFMF}
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+
 
 \subsection{Popolazioni stellari composite (CSP)}
 
