@@ -108,8 +108,8 @@ m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lamb
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
 		\begin{figure}[!ht]
-		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-iso10GyrHB}\label{fig:SSP-iso10GyrHB}
-		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-CMDalpha}\label{fig:SSP-CMDalpha}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-iso10GyrHB}\label{fig:SSP-iso10GyrHB}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-CMDalpha}\label{fig:SSP-CMDalpha}
 		\end{figure}
 \end{column}
 \begin{column}{0.6\textwidth}
@@ -148,18 +148,92 @@ Turn-off/overall contraction: Isocrone di ammassi giovani/vecchi; metodo orizzon
 
 \begin{frame}{Indicatori di et\'a: metodo verticale}
 \begin{columns}[T]
+	\begin{column}{0.45\textwidth}
+	\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-agevert}\label{fig:SSP-agevert}
+	\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.28\textheight]{SSP-agevertdVZt}\label{fig:SSP-agevertdVZt}
+	\end{figure}
+	\end{column}
+	\begin{column}{0.55\textwidth}
+	\begin{itemize}
+	\item Comparison between observed and theretical $\Delta V=V_{TO}-V_{ZAHB}$ difference between TO point and ZAHB point at instability strip region around $\log(T_e)\approx3.85$ ($(B-V\approx0.3)$)
+	\item ZAHB is unaffected by age: changes of age at given $Fe/H$ changes $\Delta V$ through change in TO-brightness: \xaumenta{t_{age}}, \xaumenta{\Delta V}
+	\item At given $[Fe/H]$ a \SI{0.1}{\mag} variation of $\Delta V$ correspond to \SI{1}{\giga\year} in range of oldest star of MW; fixed $\Delta V$ an uncertainty of \SI{0.4}{\dex} in $[Fe/H]$ translate in uncertainty in age about \SI{1}{\giga\year}: at given age TO and ZAHB scale  same way with $[Fe/H]$ - TO region in CMD is vertical so uncertainty about \SI{0.1}{\mag}.
+	\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Indicatori di et\'a: metodo orizzontale}
+\begin{columns}[T]
+	\begin{column}{0.45\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-agehorizdBV}\label{fig:SSP-agehorizdBV}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.55\textwidth}
+		\begin{itemize}
+			\item $\Delta(B-V)=(B-V)_{RGB}-(B-V)_{TO}$: color difference between TO and base of RGB (color of RGB \SI{2.5}{\mag} above TO) - $(B-V)_{TO}$ varies with t but not $(B-V)_{RGB}$ - not strongly deps on Z since RGB/TO Z-deps cancel out
+			\item High accuracy in theretical predictions and observations required: $\frac{\Delta(B-V)}{\Delta t}\approx0.01-0.015\si{\mag\per\giga\year}$ - hardly used for absolute age determination since uncertainties due to color transformation and superadiabatic convection are \SI{0.01}{\mag} but $\Delta(B-V)$ is weakly affected by color trasformation, $Y$ and efficiency of convection around given age
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Indicatori di et\'a: WD isochrone}
+\begin{columns}[T]
+	\begin{column}{0.3\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.25\textheight]{SSP-ageWDcool}\label{fig:SSP-ageWDcool}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.25\textheight]{SSP-ageWDcoolLF}\label{fig:SSP-ageWDcoolLF}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.7\textwidth}
+		\begin{itemize}
+		\item we have to extend isochrone to WD stages: brighter part overlaps with cooling track of single WD mass corresponding to WDs produced by stars evolving at end of AGB phase - mass of WD produced by stars evolving along AGB in old population have roughly same mass (the bright part of isochrone), at bottom of isochrone we found object produced by all stars evolved through AGB: higher mass WD produced by higher mass progenitors evolve at smaller radii - left turn at bottom of isochrone
+		\item Brightness of bottom end of WD isochrone decreases with age: more advanced cooling stage: can be age indicator if distance is known
+		\end{itemize}
+	\end{column}
+\end{columns}
+LF: determined computing progenitor populating WD-isochrone using IMF - Peak of LF and subsequent cut-off corresponds to bottom of isochrone where WD of diff. mass pile-up due to their finite cooling time - increasing age of SSP move peak toward fainter magnitudes - uncertainties due to low luminosity observation and theretical uncertainties on mass loss, EOS of CO-core and envelope, opacity of H/He envelope, boundary conditions.
+\end{frame}
+
+\subsection{Indicatori per composizione chimica}
+
+\begin{frame}{Initial Helium abundance}
+\begin{columns}[T]
 	\begin{column}{0.5\textwidth}
 		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-agevert}\label{fig:SSP-agevert}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-ageY}\label{fig:SSP-ageY}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.5\textwidth}
 		\begin{itemize}
-		\item Comparison between observed and theretical $\Delta V=V_{TO}-V_{ZAHB}$ difference between TO point and ZAHB point at instability strip region around $\log(T_e)\approx3.85$ ($(B-V\approx0.3)$)
-		\item ZAHB is unaffected by age: changes of age at given $Fe/H$ changes $\Delta V$ through change in TO-brightness
+			\item For same age and metallicity mass evolving at TO and post-MS is lower for He-rich isocrones and isochrone shifted to blue from MS to tip RGB - also increases ZAHB brightness and lower TO luminosity at fixed age: \xaumenta{Y}, \xdiminuisce{L_{TO}}, \xaumenta{L{ZAHB}}: \xaumenta{\Delta V} - $\Delta Y\approx 0.02$ causes age decrease \SI{1}{\giga\year}
 		\end{itemize}
 	\end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}{Other Y indicators: parametro $R$ ([44,178]), $\Delta$, $A$}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-YRparam}\label{fig:SSP-YRparam}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Ratio of HB stars to RGB stars brighter than ZAHB: \keyword{R-parameter for Y determination in SSP} $R=\frac{N_{HB}}{N_{RGB}}$
+			\item post-MS phases are populated of stars with same initial mass and star count at a stage is proportional to stage evolutionary time - values of masses evolving along RGB and HB and their lifetime are weakly affected by relistic Y variation - \xaumenta{Y}, \xaumenta{L_{HB}}, \xdiminuisce{N_{RGB}}, \xaumenta{R}
+			\item Step increase in R when luminosity of RGB bump decreases below ZAHB level due to higher Z
+		\end{itemize}
+	\end{column}
+\end{columns}
+\begin{itemize}
+\item Parametro $\Delta$: magnitude difference between ZAHB and MS at given colour - at given colour MS becomes fainter and ZAHB brighter when Y increases
+\item Mass-Luminosity ratio $A=\log(\frac{L}{\lsun})-0.707\log(\frac{M}{\msun})$: pulsational properties of RR-Lyrae provide Y indicator for old stars - fixed pulsation mode \xaumenta{Y},\xaumenta{L_{HB}},\xaumenta{\exv{M}_{IS}} - $\log(\Pi)=11.627+0.823A-3.506\log(T_e)$
+\end{itemize}
 \end{frame}
 
 \subsection{Indicatori di distanza}\linkdest{distanceindicator}
@@ -173,6 +247,51 @@ RR lyrae
 cefeidi
 \end{frame}
 
+\begin{frame}{Parallasse e candele standard ideali. HB fitting}
+
+\begin{align*}
+&d=\frac{\SI{1}{\astronomicalunit}}{\tan(p)}\approx\frac{1}{p(\si{\rad})}\si{\astronomicalunit}\\
+&d=\frac{\SI{1}{\parsec}}{\tan(p)}\approx\frac{1}{p(\si{\arcsec})}\si{\parsec}
+\end{align*}
+\keyword{Standard candle}: class of object for which absolute magnitude doesn't change with changing age, Z, etc - determination of distances within our galaxy, Local Group Galaxies and out to Virgo Cluster.
+Empirical template: local field stars with known $[Fe/H]$ (spectroscopy) and distance (parallax) and known/negligible reddening ([143, 145]) - limited set of Z.
+\keyword{HB-fitting}: observed ZAHB or level of ZAHB at given colour (typically RR-Lyrae IS) is compared to theoretical counterpart - ZAHB brightness is determined by $M_{cHe}$ at He-flash
+\end{frame}
+
+\begin{frame}{MS and WD fitting}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-MSfitting}\label{fig:SSP-MSfitting}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-WDfitting}\label{fig:SSP-WDfitting}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Brightness of lower-MS ($M_V>5.0-5.5$) of old SSP is unaffected by age of stellar pop. - only initial chem comp determine their ZAMS: Y,Z known lower MS can be used as template and compared to observed MS in SSP with same initial chem. comp. - difference between absolute magnitude of template MS and apparent magnitude of observed one provide \keyword{population distance modulus} ($m-M=5\log(\frac{r(\si{\parsec})}{10})$) hence distance in parsec.
+			\item Bright part of WD-cooling sequence $M_V\approx10-12$, $T_e=\SIrange{e4}{2e4}{\kelvin}$: stars evolved out of AGB hence $M_*\approx0.55\msun$ - WD are virtually metal free son no color correction needed - but mass have to be known accurately and there is uncertainties on envelope composition
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Tip of RGB}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-TRGBLtZ}\label{fig:SSP-TRGBLtZ}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-TRGBLFglobar}\label{fig:SSP-TRGBLFglobular}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Fixed initial composition L of TRGB determined by $M_{cHe}$ at He-flash - lowM stars ignite He with similar core mass (slightly increasing for decreasing initial mass): $M_{bol}^{TRGB}$ is almost constant for $t>\SI{4}{\giga\year}$
+			\item At RGB-phase-transition $M_{bol}^{TRGB}$ increses sharply (L decreases) since lifting of \Pelectron-deg in He-core causes He ignition to occur at lower core mass; fixed age $M_{bol}^{TRGB}$ decreases for increasing Z in spite of decreases He-core mass at TRGB
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
 \subsection{Popolazioni stellari composite (CSP)}
 
 \begin{frame}{Complex Stellar Population}
@@ -180,7 +299,4 @@ cefeidi
 \end{frame}
 
 
-
-\begin{frame}{Indicatori di He (e Z??)}
-??
-\end{frame}
+\subsection{Unresolved stellar population}

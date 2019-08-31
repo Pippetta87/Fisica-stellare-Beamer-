@@ -1,12 +1,10 @@
 \ProvidesPackage{functions}
 
-
 %%% AAAA
 \newcommand{\agesun}{t_{\odot}}  %% eta sole
 \newcommand{\abc}[1]{\xrightarrow{#1}} %% Limits with rightarrow condition
 \newcommand{\abl}[2]{\xrightarrow{#1\rightarrow#2}} %% Limits with rightarrow and arrow
 \newcommand{\angstrom}{\textup{\AA}} % Angstrom mathmode
-
 
 %%% BBBBBb
 \renewcommand{\bf}{\textbf}
@@ -27,7 +25,6 @@
 \printbibliography[heading=subbibliography]
 \end{refsection}}
 \newcommand{\cel}[4]{\tensor*[^{#2}_{#3}]{\mathrm{#1}}{_{#4}}}    %Chemical element ^A_PA_N: [^{A}_{P}]{\mathrm{X}}{_{N}}
-
 
 %%% DDDD
 \newcommand{\dal}[1]{\nabla^2-\frac{1}{#1^2}\frac{\partial^2}{\partial t^2}}   %%% operatore di d'alambert: velocita da impostare. compatto
@@ -264,6 +261,9 @@
 \DeclareSIUnit\lightyear{ly}
 \DeclareSIUnit\year{yr}
 \DeclareSIUnit\mag{mag}
+\DeclareSIUnit\dex{dex}
+\DeclareSIUnit\rad{rad}
+\DeclareSIUnit\arcsec{arcsec}
 % Energy
 \DeclareSIUnit\erg{erg}
 \DeclareSIUnit\ev{ev}
