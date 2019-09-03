@@ -17,7 +17,7 @@
 
 \begin{align*}
 &\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
-&\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}}\\
+&\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}=\frac{1}{2}(G\exv{\rho})\expy{-1/2}}\\
 &\TDy{m}{T}=-\nabla\frac{T}{p}\frac{Gm}{4\pi r^4}\\
 &\TDy{m}{L}=\epsilon-\epsilon_{\nu} \underbrace{-c_P[\TDy{t}{T}-\nad\frac{T}{P}\TDy{t}{P}]}_{-c_P\PDy{t}{T}+\frac{\delta}{\rho}\PDy{t}{P}}\\
 &\TDy{t}{X_s}\frac{1}{A_s}=\sum_{production}\rho^{n_h+n_k-1}n_p\frac{X_h^{n_h}X_k^{n_k}}{A_h^{n_h}A_k^{n_k}}\frac{\exv{\sigma v}_{hk}}{m_H^{n_h+n_k-1}n_h!n_k!}\\
@@ -25,13 +25,68 @@
 \end{align*}
 \end{frame}
 
+\begin{frame}{Conservazione massa e HE}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+\begin{align*}
+&\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
+&\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}=\frac{1}{2}(G\exv{\rho})\expy{-1/2}}\\
+&\tau_{hyd}=\sqrt{\frac{R^3}{GM}}
+\end{align*}
+\end{column}\begin{column}{0.5\textwidth}
+\begin{align*}
+&\TDy{r}{m}=4\pi r^2\rho\\
+&\TDy{r}{P}=-\frac{Gm}{r^2}\rho\overbrace{[-\rho\PtwoDy{t}{r}]}^{\tau_{hyd}=\frac{1}{2}(G\exv{\rho})\expy{-1/2}}\\
+&\tau_{ff}=\sqrt{\frac{R}{g}}\\
+&\tau_{exp}=R\sqrt{\frac{\rho}{P}}
+\end{align*}
+\end{column}
+\end{columns}
+Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant star making a SNII, Cepheid); Sun: $\tau_H\approx\SI{38}{\minute}$; WD: $\tau_H\approx\SI{2}{\second}$
+\end{frame}
+
+\begin{frame}{Trasporto energia verso la superficie e gradiente termico}
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+		\begin{align*}
+		&\TDy{m}{T}=-\nabla\frac{T}{p}\frac{Gm}{4\pi r^4}\\
+		&\nabla=\nrad=\frac{3\kappa_R}{16\pi acG}\frac{LP}{mT^4}\tag*{$\nrad\leq\nad$}\\
+		&\nabla=\nad+\Delta\nabla\tag*{$\nrad>\nad-\frac{\chi_{\mu}}{\chi_T}\nmu$}
+		\end{align*}
+	\end{column}\begin{column}{0.4\textwidth}
+		\begin{align*}
+		&\TDy{r}{T}=\nabla\frac{T}{p}\TDy{r}{p}\\
+		&\nabla=\TDly{P}{T}
+		\end{align*}
+	\end{column}
+\end{columns}
+\begin{align*}
+&dP_{rad}=-dp=-\frac{dF_{Rad}}{c}=-\frac{F_{rad}}{c}\frac{dr}{l}=-\frac{F_{rad}}{c}\kappa_R\rho\,dr=\frac{4}{3}aT^3dT\\
+&dP_{rad}(\nu)=-\frac{F_{rad}(\nu)}{c}\kappa_{\nu}\rho\,dr=\frac{4\pi}{3c}\TDy{r}{B_{\nu}(T)}\,dr\\
+&B_{\nu}(T)=\frac{2h\nu^3}{c^2}\frac{1}{\exp{\frac{h\nu}{kT}}-1}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Equazioni struttura stellare: conservazione energia - Luminosit\'a}
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+\begin{align*}
+&\TDy{m}{L}=\epsilon-\epsilon_{\nu} \underbrace{-c_P[\TDy{t}{T}-\nad\frac{T}{P}\TDy{t}{P}]}_{-c_P\PDy{t}{T}+\frac{\delta}{\rho}\PDy{t}{P}0-T\PDy{t}{s}}\\
+&\epsilon_{gr}=-T\PDy{t}{s}=-\TDof{t}u+\frac{P}{\rho^2}\TDy{t}{\rho}\\
+&\epsilon_{gr}>0\tag*{contrazione}
+\end{align*}
+\end{column}\begin{column}{0.6\textwidth}
+\begin{align*}
+&\TDy{r}{L}=4\pi r^2[\rho(\epsilon-\epsilon_{\nu})-\rho\TDof{t}u+\frac{P}{\rho}\TDy{t}{\rho}]\\
+&
+\end{align*}
+\end{column}
+\end{columns}
+\end{frame}
+
 \begin{wordonframe}{Chemical evolution: nuclear burning, diffusion and convective mixing}\linkdest{diffusion}\
 
 \end{wordonframe}
-
-\begin{frame}{Energia gravitazionale}
-$(\TDy{r}{L}=4\pi r^2[\rho\epsilon-\rho\TDof{t}(\frac{u}{\rho}+\frac{P}{\rho}\TDy{t}{\rho})])$
-\end{frame}
 
 \begin{frame}{Trasporto radiativo e convettivo: \'e valida approx idrostatica}
 
@@ -40,7 +95,25 @@ $(\TDy{r}{L}=4\pi r^2[\rho\epsilon-\rho\TDof{t}(\frac{u}{\rho}+\frac{P}{\rho}\TD
 \subsection{Relazioni approssimate per grandezze stellari fondamentali}\linkdest{omrel}
 
 \begin{frame}{Teorema del viriale}
-
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{align*}
+&\Omega=-\int_0^M\frac{Gm(r)}{r}\,dm\\
+&\frac{1}{2}\TtwoDy{t}{I}=2E_i+\Omega\tag{T. viriale}\\
+&0=\int_M\frac{3P}{\rho}\,dm(r)+\Omega\tag{stationary}\\
+&E_i=\frac{1}{\gamma-1}\frac{P}{\rho}
+		\end{align*}
+	\end{column}\begin{column}{0.5\textwidth}
+		\begin{align*}
+&W=E_i+\Omega \tag{total E}\\
+&\TDy{t}{W}+L=0\tag{E conservation}\\
+&L=-\frac{1}{2}\dot{\Omega}=\dot{E}_i\\
+&E_T=E_i+\Omega=\frac{3\gamma-4}{3(\gamma-1)}\Omega\\
+&\gamma>4/3\tag{stability}
+		\end{align*}
+	\end{column}
+\end{columns}
+Nel caso in cui la contrazione gravitazionale sia l'unica fonte di energia per una massa gassosa in equilibrio idrostatico, il suo tempo di evoluzione caratteristico \'e il tempo di \kh{} $\tkh{}=\frac{\Omega}{L}\approx\frac{GM^2}{2RL}$
 \end{frame}
 
 \begin{frame}{Relazione massa, densit\'a, temperatura/ massa, peso molecolare, opacit\'a}
@@ -59,57 +132,106 @@ media di rosseland
 Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione H-
 \end{frame}
 
+\begin{frame}{Andamento opacit\'a}
+\begin{itemize}
+\item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2$ - $\sigma_T=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source
+\item Kramers opacity: $T<\SI{e7}{\kelvin}$ - FF, BF, BB - $\kappa_R\propto\rho T\expy{-7/2}$
+\end{itemize}
+\end{frame}
+
 \subsection{Conduzione}\linkdest{tracond}
 
 \begin{frame}{Diffusione per conduzione}
 stima opacit\'a per conduzione gas degenere NR
 \end{frame}
 
+\begin{frame}{Conduzione elettronica}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&F_e=-N_evl\TDy{r}{E}=-N_ekvl\TDy{r}{T}\\
+&E_T\approx\frac{3}{2}kT,\ v_T\approx\sqrt{\frac{2E_T}{m}}
+\end{align*}
+\end{column}
+\begin{column}{0.5\textwidth}
+\Pelectron degenerate are forced in higher momentum state - $P_F=2\pi\hbar(\frac{3}{4\pi g})\expy{1/3}n\expy{1/3}$
+\end{column}
+\end{columns}
+\end{frame}
+
 \subsection{Convezione}\linkdest{traconv}
-
-\begin{frame}{Convective regions and temperature gradient}
-\begin{block}{Criterio di \sch e Ledoux: regioni convettive}
-\begin{align*}
-&\nrad{}>\nad+\frac{\phi}{\delta}\nmu{}\\
-&\nrad{}>\nad
-\end{align*}
-\end{block}
-\begin{block}{T gradient: Mixing length}
-Gas with negligible radiation pressure
-\begin{align*}
-&F=\frac{L}{4\pi r^2}=F_{rad}+F_{con}=-\frac{4acT^3}{3\kappa\rho}\TDy{r}{T}|_{amb}+\frac{1}{2}\rho vc_p[\TDy{r}{T}|_{Ad}-\TDy{r}{T}|_{amb}]\Lambda\\
-&v^2=\frac{1}{8}g\frac{\Lambda}{H_P}Q(\nabla-\nad),\ Q=1-\TDly{T}{\mu}\\
-&F_{con}=\frac{1}{2}\rho vc_PT\frac{\lambda}{H_P}(\nabla-\nad{})
-\end{align*}
-$\nabla\to\nad{}$ in interni stellari convettivi
-\end{block}
-\end{frame}
-
-\begin{frame}{Mixing length per esterni stellari}
-%Calcolo altezza scala di pressione, flusso convettivo e gradiente ambientale in funzione della velocit\'a media degli elementi
-Le stelle con massa $M\leq1.1\msun{}$ hanno una regione radiativa interna mentre la parte esterna \'e convettiva
-\end{frame}
 
 \begin{wordonframe}{Forza di archimede}
 Una regione stellare \'e convettivamente stabile se una perturbazione di densit\'a infinitesima non cresce ad ampiezza finita.
 \begin{equation*}\label{eq:buoyancyEOM}
 \rho\PtwoDy{t}{(\Delta r)}=-g\Delta\rho=-g[\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]\Delta r
 \end{equation*}
-
 La forza di Archimede ha verso opposta alla perturbazione se
-\begin{equation*}\label{eq:Acriterion}
+\begin{equation*}
 [\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]>0
 \end{equation*}
+Riscrivo prima legge della termodinamica come $dq=c_P\,dT-\frac{\delta}{\rho}\,dP$
+\begin{equation*}
+N^2=g(\frac{1}{\Gamma_1P}\TDy{r}{P}-\frac{1}{\rho}\TDy{r}{\rho})=g(\frac{1}{\densityscale{}}-\frac{g}{c_s^2})\label{eq:bvfs}
+\end{equation*}
+$N^2$ rappresenta la massima frequenza sotto cui pu\'o oscillare una particella di fluido sottoposta a onde di gravit\'a mantenendo l'equilibrio di pressione con l'ambiente.
+\begin{equation*}
+\PtwoDy{t}{(\Delta r)}=-N^2\Delta r
+\end{equation*}
+che descrive un comportamento oscillatorio per $N^2>0$
 \end{wordonframe}
 
-\begin{wordonframe}{EOS e $\nad{}$}
+\begin{frame}{Convective regions and temperature gradient}
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+\begin{block}{Criterio di \sch e Ledoux: regioni convettive}
+	\begin{align*}
+	&\rho\PtwoDy{t}{(\Delta r)}=-g\Delta\rho=-g[\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]\Delta r\\
+	&\nrad{}>\nad+\frac{\phi}{\delta}\nmu{}=\nad-\frac{\chi_{\mu}}{\chi_T}\TDly{(P)}{(\mu)}\\
+	&\nrad{}>\nad\\
+	&\frac{d\rho}{\rho}=\alpha\frac{dP}{P}-\delta\frac{dT}{T}+\phi\frac{d\mu}{\mu}\\
+	&=-\frac{\chi_T}{\chi_{\rho}}\frac{\Delta T}{T}-\frac{\chi_{\mu}}{\chi_{\rho}}\frac{\Delta\mu(\Lambda)}{\mu}\\
+	&\Delta P=0=\chi_{\rho}\frac{\Delta\rho}{\rho}+\chi_T\frac{\Delta T}{T}+\chi_{\mu}\frac{\Delta\mu}{\mu}
+	\end{align*}
+\end{block}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{convectivestability}\label{fig:convectivestability}
+\end{figure}
+\end{column}\end{columns}
+\end{frame}
 
+\begin{frame}{Mixing length: gradiente ambientale e velocit\'a elementi convettivi}
+Le stelle con massa $M\leq1.1\msun{}$ hanno una regione radiativa interna mentre la parte esterna \'e convettiva. Convezione esterni $\nabla>\nad$, $v\approx1-10\si{\kilo\meter\per\second}\approx c_s$- $\nabla\to\nad{}$ in interni stellari convettivi: $\TDy{r}{T}=(1-\frac{1}{\Gamma_2})\frac{T}{P}\TDy{r}{P}$, $v\approx\SI{100}{\meter\per\second}\ll c_s$
+	\begin{align*}
+&F=\frac{L}{4\pi r^2}=F_{rad}+F_{con}=-\frac{4acT^3}{3\kappa\rho}\TDy{r}{T}|_{amb}+\frac{1}{2}\rho vc_p[\TDy{r}{T}|_{Ad}-\TDy{r}{T}|_{amb}]\Lambda\\
+&v^2=-\frac{1}{8}g\frac{\Delta\rho}{\rho}\Lambda=\frac{1}{8}g\frac{\Lambda}{H_P}Q(\nabla-\nad),\ Q=1-\TDly{T}{\mu},\ \Lambda=\alpha H_P\\
+&F_{con}^{up}=\frac{1}{2}\rho vc_PT\frac{\lambda}{H_P}(\nabla-\nad{})
+\end{align*}
+\begin{columns}[T]
+\begin{column}{0.2\textwidth}
+\begin{align*}
+&f_r&=-g\Delta\rho(r)=0\tag*{r}\\
+&&\propto\Delta r
+\end{align*}
+\end{column}
+\begin{column}{0.8\textwidth}
+Work done per unit volume moving bubble of $\Delta r$
+\begin{align*}
+&W(\Delta r)=-g\int_0^{\Delta r}\Delta\rho(\Delta r')d(\Delta r')=-\frac{1}{2}g\Delta\rho(\Delta r)\Delta r\\
+&\exv{W(\Delta r)}_{\Delta r}=\frac{1}{4}W(\Lambda)=\frac{1}{2}\rho v^2
+\end{align*}
+\end{column}\end{columns}
+%Calcolo altezza scala di pressione, flusso convettivo e gradiente ambientale in funzione della velocit\'a media degli elementi
+\end{frame}
+
+\begin{wordonframe}{EOS e $\nad{}$}
 Considero un'equazione di stato generica $\rho(P,T,\mu)$ e definita tramite:
 \begin{align*}
 &\frac{d\rho}{\rho}=\alpha\frac{dP}{P}-\delta\frac{dT}{T}+\phi\frac{d\mu}{\mu}\\
 &P=\frac{\rho\gasconstant{}T}{\mu}\quad\Rightarrow\quad\alpha=\delta=\phi=1
 \end{align*}
-
 Definisco le lunghezze caratteristiche per variazione di densit\'a e pressione:
 \begin{equation*}
 \densityscale{}=-\frac{dr}{d\ln{\rho}},\ H_P=-\frac{dr}{d\ln{P}}
@@ -125,11 +247,9 @@ Riscrivo l'equazione del moto utilizzando l'equazione di stato per scrivere la d
 \begin{equation*}
 \PtwoDy{t}{(\Delta r)}=-g\frac{\delta}{H_P}[\nabla_e-\nabla-\frac{\phi}{\delta}\nmu{}]\Delta r
 \end{equation*}
-
 \end{wordonframe}
 
 \begin{wordonframe}{Criterio di \sch/Ledoux}
-
 Infine per ricavare il criterio di stabilit\'a per convezione suppongo  il moto del blob adiabatico:
 \begin{equation*}
 dq=c_P\,dT-\frac{\delta}{\rho}\,dP
@@ -143,22 +263,6 @@ cio\'e una regione solare \'e stabile per convezione se
 \nrad{}<\nad+\frac{\phi}{\delta}\nmu{}\label{eq:ledoux}
 \end{equation*}
 dove ho usato $\nabla_{amb}=\nrad{}$, cio\'e il gradiente che si ha nel caso l'energia sia trasportata dai fotoni.
-\end{wordonframe}
-
-\begin{wordonframe}{Stabilit\'a convettiva e frequenza di \bv{}}
-Gradiente adiabatico: riscrivo prima legge della termodinamica come $dq=c_P\,dT-\frac{\delta}{\rho}\,dP$
-
-Introduco la frequenza di \bv{}:
-\begin{equation*}
-N^2=g(\frac{1}{\Gamma_1P}\TDy{r}{P}-\frac{1}{\rho}\TDy{r}{\rho})=g(\frac{1}{\densityscale{}}-\frac{g}{c_s^2})\label{eq:bvfs}
-\end{equation*}
-$N^2$ rappresenta la massima frequenza sotto cui pu\'o oscillare una particella di fluido sottoposta a onde di gravit\'a mantenendo l'equilibrio di pressione con l'ambiente.
-
-\begin{equation*}
-\PtwoDy{t}{(\Delta r)}=-N^2\Delta r
-\end{equation*}
-che descrive un comportamento oscillatorio per $N^2>0$.
-
 \end{wordonframe}
 
 \subsection{Teoria della mixing-length.}
@@ -239,11 +343,47 @@ cubic equation for $(\nabla-\nabla_e)$
 $0=dE-\frac{P}{\rho^2}d\rho$
 Caso pi\'u generale delle trasformazioni adiabatiche: \keyword{trasformazione politropa} trasformazione quasi-statica in maniera che $c=\TDy{Q}{T}$ (calore specifico) vari in maniera assegnata. (adiabatica: $c=0$, isoterma: $c=\infty$, isometrica: $c=c_V$, ...)
 \end{block}
-
+\begin{block}{Relazione politropa - EOS}
+\begin{columns}[T]
+	\begin{column}{0.4\textwidth}
+\begin{align*}
+&\TDy{r}{P}=-\TDy{r}{\phi}\rho\\
+&\frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\phi})=4\pi G\rho\\
+&\TDy{r}{\phi}=-\gamma K\rho\expy{\gamma-2}\TDy{r}{\rho}
+\end{align*}
+\end{column}
+\begin{column}{0.6\textwidth}
+\begin{align*}
+&P=K\rho\expy{\gamma}=K\rho\expy{1+1/n}\\
+&\gamma=5/3, n=3/2\tag{NR deg}\\
+&\gamma=4/3, n=3\tag{R deg}\\
+&\gamma=1, n=\infty\tag{isot.}\\
+&\nad\approx\frac{2}{5}\tag{conv}\\
+&P\propto\rho\expy{5/3}
+\end{align*}
+For convective exponent K varies from star to star
+\end{column}\end{columns}
+\end{block}
 \end{frame}
 
 \begin{frame}{Equazione Lane-Emden}
-
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+\begin{align*}
+&\rho=(\frac{-\phi}{(n+1)K})^n\tag{HE}\\
+&\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n\tag{Poiss}\\
+&\TtwoDy{z}{w}+\frac{2}{z}\TDy{z}{w}+w^n=0\\
+&\frac{1}{z^2}\TDof{z}(z^2\TDy{z}{w})+w^n=0\tag{Lane-Emden}
+\end{align*}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{align*}
+	&z=Ar\tag{new vars}\\
+	&A^2=\frac{4\pi G}{(n+1)^nK^n}(-\phi_c)\expy{n-1}\\
+	&=\frac{4\pi G}{(n+1)K}\rho_c\expy{\frac{n-1}{n}}\\
+	&w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})\expy{1/n}
+		\end{align*}
+\end{column}\end{columns}
 \end{frame}
 
 \begin{frame}{Strutture isoterme e modello solare}
@@ -292,6 +432,60 @@ Fusione $C12$, fotodisintegrzione $Ne20$, fusione $O16$, fotodisintegrzione $Si2
 
 \begin{frame}{Cattura neutronica: processi r e s}
 picchi r e s nella nella curva universale delle abbondanze
+\end{frame}
+
+\begin{frame}{Reaction rate di fusione}
+Sia $E$ l'energia cinetica nel centro di massa dei nuclei, la sezione d'urto $\sigma(E)$ di fusione \'e: $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$ - prodotto della sezione d'urto geometrica, della probabilit\'a di attraversamento della barriera coulombiana e del fattore astrofisico.
+
+La lunghezza d'onda di de Broglie relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p: $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$
+
+Il fattore astrofisico $S(E)$ descrive l'interazione tra i due reagenti a livello nucleare ed \'e debolmente dipendente dall'energia lontano da risonanze.
+
+La probabilit\'a di attraversamento della barriera coulombiana \'e:
+\begin{equation}
+P_0(E)=\exp{-2\pi\eta},\ \eta=\sqrt{\frac{m}{2}}\frac{Z_1Z_2e^2}{\hbar E\expy{\frac{1}{2}}}
+\end{equation}
+Sezione d'urto per i nuclei di carica $Z_1$, $Z_2$ e m massa ridotta:
+\begin{equation}
+\sigma(E)=\frac{S(E)}{E}\exp{-2\pi\eta}\label{eq:fusioncrosssection}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Gamow Peak}
+Per determinare $\exv{\sigma v}$ - media sulla distribuzione di Maxwell-Boltzmann $f(E)dE\propto\frac{E\expy{\frac{1}{2}}}{(kT)\expy{\frac{3}{2}}}\exp{-\frac{E}{kT}}\,dE$ - uso il fatto che l'integrando
+\begin{equation*}
+S(E)\exp{-\frac{E}{kT}-\frac{b}{\sqrt{E}}}\label{eq:reactionrateM}
+\end{equation*}
+ha forma approssimativamente gaussiana il cui massimo $E_G$, energia pi\'u probabile di reazione, e FWHM sono:
+\begin{equation*}
+E_G=\SI{5.665}{\kilo\ev} A\expy{\frac{1}{3}}T_7\expy{\frac{2}{3}},\ \Delta E=4.249\si{\kilo\ev}W\expy{\frac{1}{6}}T_7\expy{\frac{5}{6}}
+\end{equation*}
+posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$
+\begin{equation*}
+\exv{\sigma v}\propto b\expy{1/3}T\expy{-2/3}\exp{-\frac{b\expy{2/3}}{t\expy{1/3}}}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Energy production per unit mass}
+\begin{equation*}
+\epsilon_{ij}(\rho,T,X_i)=Q_{ij}\frac{n_in_j}{\rho(1+\delta_{ij})}\lambda_{ij}=\frac{1}{1+\delta_{ij}}Q_{ij}\frac{\rho N_A^2X_jX_k}{{A_iA_j}}\exv{\sigma v}_{ij}
+\end{equation*}
+dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $\exv{\sigma v}_{ij}$ \'e il rate di reazione per coppia di particelle; $X_i$ indica la frazione in  massa della specie i
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&PP\ \exv{\sigma v}\propto T\expy{3.9}\ E_C=\SI{0.55}{\mega\ev}\\
+&P^{14}N\ \exv{\sigma v}\propto T\expy{20}\ E_C=\SI{2.27}{\mega\ev}\\
+&\alpha+^{12}C\ \exv{\sigma v}\propto T\expy{42}\ E_C=\SI{3.43}{\mega\ev}\\
+&^{16}O+^{16}O\ \exv{\sigma v}\propto T\expy{182}\ E_C=\SI{14.07}{\mega\ev}
+\end{align*}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&E_C\approx Z_1Z_2\si{\mega\ev}
+\end{align*}
+\end{column}
+\end{columns}
 \end{frame}
 
 \section{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}\linkdest{nummod}

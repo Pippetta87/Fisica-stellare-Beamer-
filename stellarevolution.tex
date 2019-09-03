@@ -45,10 +45,10 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Major H burning reaction: PP chains}
+\begin{frame}[fragile]{Major H burning reaction: PP chains}
 \begin{columns}[T]\begin{column}{0.45\textwidth}
 \begin{align*}
-&T\leq\SI{5e6}{\kelvin}\\
+&T\geq\SI{5e6}{\kelvin}\\
 &^1H+^1H\to^2D+\APelectron+\Pnue\\
 &^2D+^1H\to^3He+\gamma\\
 &T\geq\SI{8e6}{\kelvin}:\\
@@ -62,6 +62,7 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 &^8Be\to2^4He
 \end{align*}
 \end{column}\begin{column}{0.55\textwidth}
+\begin{comment}
 \begin{align*}
 &r_{pp}=\num{11.5e10}\rho^2X_H^2T_6\expy{-2/3}\\
 &\exp{-33.81T_6\expy{-1/3}}(1+\num{0.0123}T_6\expy{1/3}+\num{0.0109}T_6\expy{2/3}\\
@@ -72,6 +73,14 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 &(\SI{6.936}{\mega\ev}-\SI{0.263}{\mega\ev})*\SI{1.602e-6}{\erg}*r_{pp}\\
 &\frac{PPI}{PPII+PPIII}=\frac{r_{33}}{r_{34}}=\frac{\lambda_{33}(^3He)^2/2}{\lambda_{34}^3He^4He}
 \end{align*}
+\end{comment}
+\begin{itemize}
+\item $Q=\SI{26.73}{\mega\ev}$ - energy release per gram $Q/m(^4He)=\SI{6.4e18}{\erg\per\gram}$
+\item Neutrino releases: PPI - \SI{0.5}{\mega\ev} per He
+\item Neutrino releases: PPII - \SI{0.81}{\mega\ev} per He
+\item Neutrino releases: PPI - \SI{6.71}{\mega\ev} per He
+\item $\epsilon_{PP}\propto X^2\rho T^4$
+\end{itemize}
 \end{column}\end{columns}
 \end{frame}
 
@@ -93,7 +102,8 @@ Ciclo CN-NO
 \end{align*}
 \end{column}\begin{column}{0.5\textwidth}
 \begin{align*}
-&\epsilon_{CN}(T_6)=\epsilon_{CN}(25)(\frac{T_6}{25})^{16.7}
+&\epsilon_{CN}(T_6)=\epsilon_{CN}(25)(\frac{T_6}{25})^{16.7}\\
+&\epsilon_{CNO}\propto XX_{14}\rho T^{18}
 \end{align*}
 \end{column}\end{columns}
 \end{frame}
@@ -416,16 +426,23 @@ combustion di He per stelle medio-grandi; clump He; loop He; Esaurimento He cent
 \end{frame}
 
 \begin{frame}{He-burning reactions}
+\begin{columns}[T]\begin{column}{0.54\textwidth}
 	\begin{align*}
-	&3\alpha (T\gtrsim\SI{1.2e8}{\kelvin}):\\ &^4He+^4He\to^8Be\tag*{$\tau_{1/2}\approx\SI{e-16}{\second}$}\\
-	&^8Be+^4He\to^{12}C+\gamma\tag*{$\SI{7.27}{\mega\ev}$, $\tau_H\approx100\tau_{He}$}\\
-	&\epsilon_{3\alpha}\approx\begin{array}{c}T^{40}: T\approx\SI{e8}{\kelvin}\\T^{20}: T\approx\SI{2e8}{\kelvin}\end{array}\\
-	&^{12}C+\alpha\to^{16}O+\gamma\\
-	&^{16}O+\alpha\to^{20}Ne+\gamma\\
-	&^{20}Ne+\alpha\to^{24}Mg+\gamma\\
-	&^{24}Mg+\alpha\to^{28}Si+\gamma
-	\end{align*}
-
+&3\alpha (T\gtrsim\SI{1.2e8}{\kelvin}):\\ &^4He+^4He\to^8Be\tag*{$\tau_{1/2}\approx\SI{e-16}{\second}$}\\
+&^8Be+^4He\to^{12}C+\gamma\tag*{$\SI{7.27}{\mega\ev}$, $\tau_H\approx100\tau_{He}$}\\
+&\epsilon_{3\alpha}\approx\begin{array}{c}Y^3\rho^2T^{40}: T\approx\SI{e8}{\kelvin}\\T^{20}: T\approx\SI{2e8}{\kelvin}\end{array}
+\end{align*}
+Energy release per gram $Q/m(^{12}C)=\SI{5.9e17}{\erg\per\gram}$ - $1/10$ di quella prodotta da H-burning
+	\end{column}
+	\begin{column}{0.46\textwidth}
+	\begin{align*}
+&^{12}C+\alpha\to^{16}O+\gamma\tag*{Q=\SI{7.162}{\mega\ev}}\\
+&^{16}O+\alpha\to^{20}Ne+\gamma\\
+&^{20}Ne+\alpha\to^{24}Mg+\gamma\\
+&^{24}Mg+\alpha\to^{28}Si+\gamma
+\end{align*}
+$\epsilon_{\alpha C}\propto YX_{12}\rho T^{20}$
+\end{column}\end{columns}
 \end{frame}
 
 \begin{frame}{ZAHB: equilibrium model}
