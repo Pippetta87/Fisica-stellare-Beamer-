@@ -63,18 +63,22 @@ Age of thin disk:G dwarf metallicity distribution (Rocha-pinto marciel 1996)
 \begin{column}{0.5\textwidth}
 \begin{align*}
 &M_A=m_A-5\log{d(\si{\parsec})}+5\\
-&M_{Bol}=M_{Bol,\odot}-2.5\log{\frac{L}{\lsun{}}}\\
-&(A_B)=m_A-m_B
+&M_{Bol}=M_{Bol,\odot}-2.5\log{\frac{4\pi R^2F_{Bol}}{\lsun{}}}\\
+&=F_{Bol}=\int\,d\lambda F_{\lambda}=\frac{ac}{4}T_e^4\\
+&\BC_A=M_{Bol}-M_A
 \end{align*}
 \end{column}
 \begin{column}{0.5\textwidth}
-ISM extintion $f_{\lambda}=f_ {\lambda,0}\exp{-\tau_{\lambda}}$, $\tau_{\lambda}$ ISM optical depth $\propto\invers{\lambda}$:
-\begin{equation*}
-m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lambda}}S_{\lambda}\,d\lambda}{\int_{\lambda_1}^{\lambda_2}f_{\lambda}^0S_{\lambda}\,d\lambda})}
-\end{equation*}
+ISM extintion $f_{\lambda}=f_ {\lambda,0}\exp{-\tau_{\lambda}}$, flux at Earth orbit with ISM extintion, $\tau_{\lambda}$ ISM optical depth $\propto\invers{\lambda}$:
+\begin{align*}
+m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lambda}}S_{\lambda}\,d\lambda}{\int_{\lambda_1}^{\lambda_2}f_{\lambda}^0S_{\lambda}\,d\lambda})}-m_0\\
+&(A-B)=m_A-m_B
+\end{align*}
 \end{column}
 \end{columns}
 \end{frame}
+
+
 
 
 \subsection{Popolazioni semplici}\linkdest{spcpx}
@@ -112,6 +116,16 @@ m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lamb
 \end{column}
 \end{columns}
 \end{frame}
+
+\begin{frame}{Old PPS: globular cluster}
+CMD and HRD
+\end{frame}
+
+\begin{frame}{Old PPS: open cluster}
+CMD and HRD
+\end{frame}
+
+\section{Old PSS}
 
 \begin{frame}{Old SSP: effect of ages and Zs}
 \begin{columns}[T]
