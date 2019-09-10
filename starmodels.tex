@@ -490,9 +490,9 @@ dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $
 
 \section{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}\linkdest{nummod}
 
+\subsection{4 Structure ODE with boundary conditions}\linkdest{fourODE}
 
 \begin{frame}{Equazioni struttura di equilibrio}
-
 \begin{align*}
 &\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
 &\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}}\\
@@ -538,9 +538,7 @@ integration from $\tau\approx0$ where $T\approx0$, $P\approx0$ down to $\tau=\fr
 
 \end{frame}
 
-\begin{frame}{Metodo del fitting}
-
-\end{frame}
+\subsection{Metodo di Henyey: modelli evolutivi}
 
 \begin{frame}{Metodo di Henyey $[96]$}
 N mass-shell with boundaries at $m_j$ $m_1=0,m_2=m',\ldots,m_N=M$
@@ -582,6 +580,8 @@ $4N-2$ equazioni in $4N-2$ incognite
 \end{align*}
 con $i=1,\ldots,4$, $j=2,\ldots,N$: sistema algebrico di $4N-2$ equazioni in $4N-2$ $\delta y_j^i$ incognite ha matrice dei coefficienti (\keyword{Henyey matrix}) non-zero only near the diagonal e determinante non nullo - soluzione con metodi algebrici standard - fisso $\epsilon>0$ accuratezza con cui voglio risolvere le equazioni della struttura stellare e ripeto la procedura finch\'e $S_i<\epsilon$, $C_i<\epsilon$ - local errors doesn't propagate to other mesh
 \end{frame}
+
+\subsection{Metodo di shooting: soluzione primo modello stellare con condizioni al bordo}\linkdest{shooting}
 
 \begin{frame}{Step temporale e problema modello iniziale}
 Step temporale $\Delta t$: uso metodo di Henyey per determinare le nuove abbondanze with I equations as I elements accounted for.
