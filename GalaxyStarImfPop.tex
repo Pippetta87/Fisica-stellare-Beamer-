@@ -375,22 +375,25 @@ another possibility is number ratio of MS to He-burning stars $\frac{N_{MS}}{N_{
 \end{columns}
 \end{frame}
 
-
-
 \subsection{Popolazioni stellari composite (CSP)}
 
 \begin{frame}{Complex Stellar Population}
 \begin{itemize}
-\item \keyword{CSP} are characterized by \keyword{star formation rate} (SFR) - evolution with time of amount of star formed and their initial chemical composition (Age-Metallicity relation)
+\item \keyword{CSP} are characterized by \keyword{SFH} $\SFH(\SFR,\AMR)$ -  \keyword{star formation rate} (SFR), evolution with time of amount of star formed and their initial chemical composition (Age-Metallicity relation) \keyword{AMR}
 \item Time evolution: $M(t)$ total mass, $F(t)/E(t)$ gas accretion/ejection, $e(t)$ stellar mass-loss, $s(t)$ mass in stars, $\Psi(t)$ SFR
 \begin{align*}
 &M(t)=g(t)+s(t)\\
 &\TDy{t}{M}=F(t)-E(t)\\
 &\TDy{t}{g}=F(t)-E(t)+e(t)-\Psi(t)\\
-&\TDy{t}{s(t)}=\Psi(t)-e(t)
+&\TDy{t}{s(t)}=\Psi(t)-e(t)\\
+&\TDy{t}{(g(t)X_i(t))}=e_{X_i}(t)-X_i(t)\Psi(t)+X_i^F(t)F(t)-X_i(t)E(t)
 \end{align*}
 \end{itemize}
+Above equations coupled stellar evolution models could reproduce chemical and spectrophotometric evolution of CSP.
+
+Determination of SFR and AMR from observed CMD: simulate observed CMD of CSP as linear combo of CMD of elementary population with homogeneous age and metallicity distribution within small age and Z range centered around discretized value of t/Z.
 \end{frame}
+
 
 \subsection{Unresolved stellar population}
 
