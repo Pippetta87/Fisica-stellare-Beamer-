@@ -71,7 +71,7 @@ Age of thin disk:G dwarf metallicity distribution (Rocha-pinto marciel 1996)
 \begin{column}{0.5\textwidth}
 ISM extintion $f_{\lambda}=f_ {\lambda,0}\exp{-\tau_{\lambda}}$, flux at Earth orbit with ISM extintion, $\tau_{\lambda}$ ISM optical depth $\propto\invers{\lambda}$:
 \begin{align*}
-m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lambda}}S_{\lambda}\,d\lambda}{\int_{\lambda_1}^{\lambda_2}f_{\lambda}^0S_{\lambda}\,d\lambda})}-m_0\\
+&m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lambda}}S_{\lambda}\,d\lambda}{\int_{\lambda_1}^{\lambda_2}f_{\lambda}^0S_{\lambda}\,d\lambda})}-m_0\\
 &(A-B)=m_A-m_B
 \end{align*}
 \end{column}
@@ -87,8 +87,8 @@ m_A=-2.5\log{(\frac{\int_{\lambda_1}^{\lambda_2}f_{\lambda}10\expy{-0.47A_{\lamb
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{isochr}\label{fig:isochr}
-\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-isoMSAGB}\label{fig:SSP-isoMSAGB}
+\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{isochr}
+\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-isoMSAGB}
 \end{figure}
 \end{column}
 \begin{column}{0.6\textwidth}
@@ -131,7 +131,7 @@ CMD and HRD
 \begin{columns}[T]
 	\begin{column}{0.4\textwidth}
 		\begin{figure}[!ht]
-		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-HDRCMDZpoorMSHB}\label{fig:SSP-HDRCMDZpoorMSHB}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-HDRCMDZpoorMSHB}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.6\textwidth}
@@ -304,8 +304,8 @@ Empirical template: local field stars with known $[Fe/H]$ (spectroscopy) and dis
 \begin{columns}[T]
 	\begin{column}{0.4\textwidth}
 		\begin{figure}[!ht]
-		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngisochrones}\label{fig:SSP-youngisochrones}
-		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngagevert}\label{fig:SSP-youngagevert}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngisochrones}
+		\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{SSP-youngagevert}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.6\textwidth}
@@ -324,7 +324,7 @@ Empirical template: local field stars with known $[Fe/H]$ (spectroscopy) and dis
 \begin{columns}[T]
 	\begin{column}{0.5\textwidth}
 		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-youngisochOScal}\label{fig:SSP-youngisochOScal}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{SSP-youngisochOScal}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.5\textwidth}
@@ -372,9 +372,9 @@ another possibility is number ratio of MS to He-burning stars $\frac{N_{MS}}{N_{
 \begin{columns}[T]
 	\begin{column}{0.35\textwidth}
 		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-LFMSSGBRGB}\label{fig:SSP-LFMSSGBRGB}
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-MSSGBRGBsamet}\label{fig:SSP-MSSGBRGBsamet}
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-observedLFM3}\label{fig:SSP-observedLFM3}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-LFMSSGBRGB}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-MSSGBRGBsamet}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-observedLFM3}
 		\end{figure}
 	\end{column}
 	\begin{column}{0.65\textwidth}
@@ -411,7 +411,7 @@ Determination of SFR and AMR from observed CMD: simulate observed CMD of CSP as 
 \begin{frame}{Determination of SFH}
 \begin{itemize}
 \item Si divide CMD in celle in maniera da avere abbastanza stelle per ogni cella e abbastanza celle per ogni fase evolutiva, $N_o(i)$ numero di stelle nella cella i
-\item Si generano CMD sintetici di popolazioni stellari elementari j con distribuzione di et\'a e metallicit\'a uniforme in $\Delta t$ e $\Delta z$ centrati attorno a n valori t,m (AMR and SFR constant within $\Delta t$ e $\Delta z$ bin): using MC technique to draw mass according to IMF and uniform distro in age and metallicity we determine CMD interpolating within grid of isochrones; another free parameter can be fraction of unresolved binary; account for foreground contamination - $N_s(i)=\sum_ja_jN_e^j(i)$ compared with observed with $\chi^2=\sum_i\frac{(N_o(i)-N_s(i))^2}{N_o(i)}$, the $1\sigma$ confidence interval on each parameter is defined by $\Delta\chi^2=\chi^2-\chi^_{min}$; in presence of Poisson errors $[65]$ as equivalent to $\chi^2$ can be $-2\ln{(PLR)}=2\sum_iN_s(i)-N_o(i)+N_o(i)\ln{\frac{N_o(i)}{N_s(i)}}$
+\item Si generano CMD sintetici di popolazioni stellari elementari j con distribuzione di et\'a e metallicit\'a uniforme in $\Delta t$ e $\Delta z$ centrati attorno a n valori t,m (AMR and SFR constant within $\Delta t$ e $\Delta z$ bin): using MC technique to draw mass according to IMF and uniform distro in age and metallicity we determine CMD interpolating within grid of isochrones; another free parameter can be fraction of unresolved binary; account for foreground contamination - $N_s(i)=\sum_ja_jN_e^j(i)$ compared with observed with $\chi^2=\sum_i\frac{(N_o(i)-N_s(i))^2}{N_o(i)}$, the $1\sigma$ confidence interval on each parameter is defined by $\Delta\chi^2=\chi^2-\chi^2_{min}$; in presence of Poisson errors $[65]$ as equivalent to $\chi^2$ can be $-2\ln{(PLR)}=2\sum_iN_s(i)-N_o(i)+N_o(i)\ln{\frac{N_o(i)}{N_s(i)}}$
 
 \end{itemize}
 \end{frame}
