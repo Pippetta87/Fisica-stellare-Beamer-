@@ -411,9 +411,15 @@ Determination of SFR and AMR from observed CMD: simulate observed CMD of CSP as 
 \begin{frame}{Determination of SFH}
 \begin{itemize}
 \item Si divide CMD in celle in maniera da avere abbastanza stelle per ogni cella e abbastanza celle per ogni fase evolutiva, $N_o(i)$ numero di stelle nella cella i
+<<<<<<< HEAD
 \item Si generano CMD sintetici di popolazioni stellari elementari j con distribuzione di et\'a e metallicit\'a uniforme in $\Delta t$ e $\Delta z$ centrati attorno a n valori t,m (AMR and SFR constant within $\Delta t$ e $\Delta z$ bin): using MC technique to draw mass according to IMF and uniform distro in age and metallicity we determine CMD interpolating within grid of isochrones; another free parameter can be fraction of unresolved binary; account for foreground contamination - $N_s(i)=\sum_ja_jN_e^j(i)$ compared with observed with $\chi^2=\sum_i\frac{(N_o(i)-N_s(i))^2}{N_o(i)}$, the $1\sigma$ confidence interval on each parameter is defined by $\Delta\chi^2=\chi^2-\chi^2_{min}$; in presence of Poisson errors $[65]$ as equivalent to $\chi^2$ can be $-2\ln{(PLR)}=2\sum_iN_s(i)-N_o(i)+N_o(i)\ln{\frac{N_o(i)}{N_s(i)}}$
-
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Distance indicators}
+Resolved CSP CMD can be used to estimate distances for cosmological distance calibration, study of local deviation from hubble flow, relative distance analysis for group of galaxies, comparison of intrinsic properties of some classis of stars in diff environments.
+\keyword{TRGB as degenerate distance indicator for CSP}: TRGB if bright part of RGB is detected: an SFH like LMC (or SMC) produces a CMD with an RGB similar to RGB of galactic globular cluster however LMC's RGB have mean age of \SI{4}{\giga\year} - in low mass star ratio between RGB and MS timescale increases for increasing stellar mass until $M_*\approx1.6\msun$: in case of constant SFR stat-weight of RGB sample related to younger population is therefore larger than that of older RGB stars; if $Z\gtrsim-0.7$ Z-dep of $M_I^{TRGB}$ is high and wrong Z causes wrong distance (ie \SI{4}{\giga\year} old RGB are bluer than that \SI{12}{\giga\year} old); if real age gets closer to \SI{2}{\giga\year} the TRGB luminosity declines as deg-nondeg He core transition approaches thus inducing error when globular cluster calibration is used
+
 \end{frame}
 
 \subsection{Unresolved stellar population}
