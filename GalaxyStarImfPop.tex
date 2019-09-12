@@ -1,4 +1,4 @@
-\section{Galaxies}\linkdest{gals}
+\section{Galaxies-Universe}\linkdest{U}
 
 \subsection{Primordial composition and nucleosynthesis}\linkdest{BBN}
 
@@ -14,24 +14,26 @@ The Gaia-ESO Survey: the Galactic Thick to Thin Disc transition
 
 \begin{frame}{Milky way: thin/thick disk, halo}
 \begin{columns}[T]
-\begin{column}{0.6\textwidth}
+\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{MWcartoon}\label{fig:MWcartoon}\end{figure}
 \end{column}
-\begin{column}{0.4\textwidth}
-Thin: $\exv{z}\approx\SI{300}{\parsec}$, Pop I (many metals absorption lines $Z\approx0.013$)
-Thick: $\exv{z}\approx\SI{1000}{\parsec}$, Pop II (absorption line almost. from H: $Z<0.004$)-Int pop I; kinemat. hot, old, $\alpha$-enh metal poor.
-Halo: Extreme pop II ($[\alpha/Fe]\approx0.3$)
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Thin: $\exv{z}\approx\SI{300}{\parsec}$, Pop I (many metals absorption lines $Z\approx0.013$)
+\item Thick: $\exv{z}\approx\SI{1000}{\parsec}$, Pop II (absorption line almost. from H: $Z<0.004$)-Int pop I; kinemat. hot, old, $\alpha$-enh metal poor.
+\item Halo: Extreme pop II ($[\alpha/Fe]\approx0.3$)
+\end{itemize}
 \end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}{Milky way: chemical evolution}
 \begin{columns}[T]
-\begin{column}{0.6\textwidth}
-\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.89\textheight]{PNSNISNII}\label{fig:PNSNISNII}
+\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.85\textheight]{PNSNISNII}\label{fig:PNSNISNII}
 \end{figure}
 \end{column}
-\begin{column}{0.4\textwidth}
+\begin{column}{0.5\textwidth}
 Massive star: oxigen/$\alpha$-elements (O, Ne, Mg, S, Si, Ca, Ti)
 \begin{align*}
 &[M/H]=[Fe/H]+\log{(0.694f_{\alpha}+0.306)}\\
@@ -78,9 +80,6 @@ ISM extintion $f_{\lambda}=f_ {\lambda,0}\exp{-\tau_{\lambda}}$, flux at Earth o
 \end{columns}
 \end{frame}
 
-
-
-
 \subsection{Popolazioni semplici}\linkdest{spcpx}
 
 \begin{frame}{SSP: theoretical isochrones}
@@ -125,7 +124,7 @@ CMD and HRD
 CMD and HRD
 \end{frame}
 
-\section{Old PSS}
+\section{Old PSS}\linkdest{oldPPS}
 
 \begin{frame}{Old SSP: effect of ages and Zs}
 \begin{columns}[T]
@@ -298,7 +297,30 @@ Empirical template: local field stars with known $[Fe/H]$ (spectroscopy) and dis
 \end{columns}
 \end{frame}
 
-\subsection{Young SSP}
+\subsection{Luminosity function And IMF}
+
+\begin{frame}{SSP: luminosity function}
+\begin{columns}[T]
+	\begin{column}{0.35\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-LFMSSGBRGB}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-MSSGBRGBsamet}
+			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-observedLFM3}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.65\textwidth}
+		\begin{itemize}
+			\item Assess level of agreement stellar evolutionary model/real stars ([43, 56, 159]): contain timescale of stellar evolution, free of uncertainties of surface superadiabatic convection
+			\item LF of post-MS fully determined by single mass evolving through that phases - IMF independent; in globular cluster post-MS phases are rel long and well populated
+			\item Theoretical LF for old metal-poor SSP as changing Z, age, Y, IMF - normalization at $M_V=2$ at RGB not affected by LF age: MS on r.s., toward brighter $M_V\approx4$ TO, then steep drop of SGB, RGB have more gentle slope - local maximum at RGB bump - whose brightness compared to observations test extension of surface convection $[43]$
+			\item Slopes of LFs are quite age-indep. - universality \Pelectron degenerate He-core mass related to L in RGB
+			\item MS is sensitive to IMF (populated by large mass range): decreasing Salpeter expo make flatter MS - globular cluster dynamical evolution: \keyword{PFMF}
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\section{Young SSP}\linkdest{youngPPS}
 
 \begin{frame}{Young SSP - Age estimate}
 \begin{columns}[T]
@@ -366,30 +388,7 @@ another possibility is number ratio of MS to He-burning stars $\frac{N_{MS}}{N_{
 \end{itemize}
 \end{frame}
 
-\subsection{Luminosity function And IMF}
-
-\begin{frame}{SSP: luminosity function}
-\begin{columns}[T]
-	\begin{column}{0.35\textwidth}
-		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-LFMSSGBRGB}
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-MSSGBRGBsamet}
-			\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.27\textheight]{SSP-observedLFM3}
-		\end{figure}
-	\end{column}
-	\begin{column}{0.65\textwidth}
-		\begin{itemize}
-			\item Assess level of agreement stellar evolutionary model/real stars ([43, 56, 159]): contain timescale of stellar evolution, free of uncertainties of surface superadiabatic convection
-			\item LF of post-MS fully determined by single mass evolving through that phases - IMF independent; in globular cluster post-MS phases are rel long and well populated
-			\item Theoretical LF for old metal-poor SSP as changing Z, age, Y, IMF - normalization at $M_V=2$ at RGB not affected by LF age: MS on r.s., toward brighter $M_V\approx4$ TO, then steep drop of SGB, RGB have more gentle slope - local maximum at RGB bump - whose brightness compared to observations test extension of surface convection $[43]$
-			\item Slopes of LFs are quite age-indep. - universality \Pelectron degenerate He-core mass related to L in RGB
-			\item MS is sensitive to IMF (populated by large mass range): decreasing Salpeter expo make flatter MS - globular cluster dynamical evolution: \keyword{PFMF}
-		\end{itemize}
-	\end{column}
-\end{columns}
-\end{frame}
-
-\subsection{Popolazioni stellari composite (CSP)}
+\section{Popolazioni stellari composite (CSP)}\linkdest{CSP}
 
 \begin{frame}{Complex Stellar Population}
 \begin{itemize}
@@ -408,21 +407,27 @@ Above equations coupled stellar evolution models could reproduce chemical and sp
 Determination of SFR and AMR from observed CMD: simulate observed CMD of CSP as linear combo of CMD of elementary population with homogeneous age and metallicity distribution within small age and Z range centered around discretized value of t/Z.
 \end{frame}
 
-\begin{frame}{Determination of SFH}
+\begin{frame}{Determination of SFH of CSP}
 \begin{itemize}
 \item Si divide CMD in celle in maniera da avere abbastanza stelle per ogni cella e abbastanza celle per ogni fase evolutiva, $N_o(i)$ numero di stelle nella cella i
-<<<<<<< HEAD
 \item Si generano CMD sintetici di popolazioni stellari elementari j con distribuzione di et\'a e metallicit\'a uniforme in $\Delta t$ e $\Delta z$ centrati attorno a n valori t,m (AMR and SFR constant within $\Delta t$ e $\Delta z$ bin): using MC technique to draw mass according to IMF and uniform distro in age and metallicity we determine CMD interpolating within grid of isochrones; another free parameter can be fraction of unresolved binary; account for foreground contamination - $N_s(i)=\sum_ja_jN_e^j(i)$ compared with observed with $\chi^2=\sum_i\frac{(N_o(i)-N_s(i))^2}{N_o(i)}$, the $1\sigma$ confidence interval on each parameter is defined by $\Delta\chi^2=\chi^2-\chi^2_{min}$; in presence of Poisson errors $[65]$ as equivalent to $\chi^2$ can be $-2\ln{(PLR)}=2\sum_iN_s(i)-N_o(i)+N_o(i)\ln{\frac{N_o(i)}{N_s(i)}}$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Distance indicators}
+\begin{frame}{Distance indicators: TRGB}
 Resolved CSP CMD can be used to estimate distances for cosmological distance calibration, study of local deviation from hubble flow, relative distance analysis for group of galaxies, comparison of intrinsic properties of some classis of stars in diff environments.
 \keyword{TRGB as degenerate distance indicator for CSP}: TRGB if bright part of RGB is detected: an SFH like LMC (or SMC) produces a CMD with an RGB similar to RGB of galactic globular cluster however LMC's RGB have mean age of \SI{4}{\giga\year} - in low mass star ratio between RGB and MS timescale increases for increasing stellar mass until $M_*\approx1.6\msun$: in case of constant SFR stat-weight of RGB sample related to younger population is therefore larger than that of older RGB stars; if $Z\gtrsim-0.7$ Z-dep of $M_I^{TRGB}$ is high and wrong Z causes wrong distance (ie \SI{4}{\giga\year} old RGB are bluer than that \SI{12}{\giga\year} old); if real age gets closer to \SI{2}{\giga\year} the TRGB luminosity declines as deg-nondeg He core transition approaches thus inducing error when globular cluster calibration is used
-
 \end{frame}
 
-\subsection{Unresolved stellar population}
+\begin{frame}{Distance indicators: RR-Lyra, Cepheids and HB}
+\begin{itemize}
+\item RR-Lyra can be used averaging their apparent magnitude to estimate CSP distance by applying the HB absolute magnitude calibration: HB level is strongly affected by metallicity
+\item CSP can be populated by HB object with mixture of Z and ages: also age can affect HB level for less then few \si{\giga\year} - the only way to extimate absolute magnitude of He-burning stars is to build synthetic CMD with population SFH: diff between mean V magnitude of He burning in solar neighborhood and in LMC as predicted by SFH estimate is $0.26$ mag, for globular cluster like age magnitude difference cinsidering only diff. of mean $Z$ of two HB pop is $\approx0.1$ mag in V
+\item Cepheid are the most used to determine distance from CSP harbouring young stars: also P-L relation can be Z dep: given narrow age covered by C one doesn't expect substantial chem evol.
+\end{itemize}
+\end{frame}
+
+\section{Unresolved stellar population}\linkdest{USP}
 
 \begin{frame}{Stellar population in distant galaxies}
 
