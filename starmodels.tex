@@ -453,26 +453,42 @@ $f^{(0)}(\vec{p}_i)$: numero di particelle della specie i per unit\'a di volume 
 \end{align*}
 \end{frame}
 
-\begin{wordonframe}{Interazione coulombiana}
-La principale correzione che tiene conto dell'interazioni tra particelle \'e dovuta alle interazioni coulombiane.
+\begin{wordonframe}{Elettrostatic screening of ions: weak screening}
+La principale correzione che tiene conto dell'interazioni tra particelle \'e dovuta alle interazioni coulombiane: influence EOS and nuclear rection rates.
 
-La presenza dello ione $Z_i$ altera la distribuzione di cariche: la formula di Boltzmann descrive la densit\'a delle particelle con carica Z: $n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}$.
-
-Regime di schermaggio debole, $e\phi\ll KT$: potenziale generato dalla nube di cariche attorno a Z $\phi_Z=-\frac{eZ}{r_D}$ con raggio di Debye:
+Screening of ion i with charge $Z_ie$ ar $\vec{r_i}$ in NR dilute plasma, motion of screened ions is slow compared to screening particles: continuum static equilibrium charge distribution (\Pelectron, light ions of mean charge $Z_p$)
+\begin{equation*}
+\nabla^2\phi=4\pi n_ee[\exp{(\frac{e\phi}{kT})}-\exp{-\frac{Z_pe\phi}{kT}}]-4\pi\sum_iZ_ie\delta(\vec{r}-\vec{r_i})
+\end{equation*}
+Regime di schermaggio debole, $e\phi\ll KT$: $\phi=\sum_i\phi_i$ potenziale attorno a ione pesante isolato:
 \begin{align*}
-&\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)\\
+%&\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)\\
+&\phi_i=\frac{Z_ie}{r_i}\exp{-\frac{r_i}{r_D}}
 &\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}
 \end{align*}
-
-Le correzioni dovute alle interazioni coulombiane sono
-\begin{align*}
-\rho u_c=\frac{1}{2}\int\phi(\vec{r})\rho_c(\vec{r})\,d^3r\to \frac{1}{2}\sum_ZeZ\overline{n}_Z\phi_Z=-e^3\sqrt{\frac{\pi\rho}{kT}}(N_A\zeta)\expy{\frac{3}{2}},\ P_c=\frac{1}{3}\rho u_c
-\end{align*}
-
 \end{wordonframe}
 
-\begin{frame}{Equazione di Saha}
+\begin{wordonframe}{Elettrostatic screening of ions: energy pressure correction}
+Energy required to assemble uniform shere with charge $Ze$: $U_{ee}=\int_0^{R_Z}\frac{q_r}{r}\,dq=\frac{3}{5}\frac{(Ze)^2}{R_Z}$.
+Energy required to assemble uniform cloud of charge $Ze$ around Z-nucleus: $U_{eZ}=-Ze\int_0^{R_Z}\frac{dq}{r}=-\frac{3}{2}\frac{(Ze)^2}{R_Z}$
+Le correzioni dovute alle interazioni coulombiane sono dovute a numero sfere ioniche per unit\'a di volume $n_Z=\frac{\rho X_Z}{A_Z}N_0$ with average potential energy per electron $\exv{-e\phi}_Z=-\frac{9}{10}\frac{(Ze)^2}{R_Z}$ that contain Z \Pelectron.
+\begin{align*}
+&\rho u_c=(\frac{U}{V})_e=\frac{1}{2}\phi(\vec{r})\rho_c(\vec{r})\to \frac{1}{2}\sum_ZeZ\overline{n}_Z\phi_Z=-e^3\sqrt{\frac{\pi\rho}{kT}}(N_A\zeta)\expy{\frac{3}{2}},\ P_c=\frac{1}{3}\rho u_c\\
+&E_0=\frac{(U/V)_e}{n_e}=\mu_e\sum_Z\exv{-e\phi}_Z\frac{ZX_Z}{A_Z}\approx-1.3(\mu_e^2\rho)\expy{1/3}[X+0.79Y+\sum_{Z>2}\frac{Z\expy{5/3}X_Z}{A_Z}]
+\end{align*}
+\end{wordonframe}
 
+\begin{frame}{Equazione di Saha e continuum depression. Ioniozzazione da pressione}
+L'equazione di Saha descrive la frazione relativa di ionizzazione
+\begin{align*}
+&\frac{n_{r+1}}{n_r}n_e=\frac{g_{r+1}}{g_r}f_r(T)\\
+&f_r(T)=2\frac{(2\pi m_ekT)\expy{3/2}}{h^3}\exp{-\chi_r/(kT)}
+\end{align*}
+Saha limitation:
+\begin{itemize}
+\item LTE: is the case when collision dominate over radiative processes
+\item Decreases ionization energy with increasing density: what is called pressure ionizzation is produced by coulomb interaction of bound electron with other electron in the plasma $\chi'_Z=\chi_Z-\frac{Ze^2}{R_D}$
+\end{itemize}
 \end{frame}
 
 \subsection{Reazioni nucleari}\linkdest{nuclearreactions}
