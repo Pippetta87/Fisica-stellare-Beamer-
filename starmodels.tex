@@ -393,7 +393,10 @@ For convective exponent K varies from star to star
 \subsection{Equazione di stato}\linkdest{eos}
 
 \begin{wordonframe}{Schema fisico/chimico: ingredienti EOS realistiche}
-L'equazione di stato e quindi le grandezze termodinamiche del plasma solare fra cui l'esponente adiabatico $\Gamma_1$, sono principalmente determinate usando lo schema chimico e lo schema fisico: il primo considera atomi e molecole, la cui popolazione per stati eccitati e diversi gradi di ionizzazione \'e ottenuto minimizzando l'energia libera da cui sono ricavate le altre grandezze termodinamiche; utilizzando questo approccio \'e stata ricavata l'equazione di stato MHD (\cite{hummer1988equation}). Il secondo considera nuclei ed elettroni come costituenti fondamentali interagenti tramite potenziale Coulombiano e trova le soluzione dell'equazione di Schr\"oedinger per un problema a molti corpi, questo approccio, usato per ricavare l'equazione di stato OPAL (\cite{rogers1986occupation}), \'e pi\'u adatto per trattare le regioni interne del Sole.
+\begin{itemize}
+\item schema chimico: il primo considera atomi e molecole, la cui popolazione per stati eccitati e diversi gradi di ionizzazione \'e ottenuto minimizzando l'energia libera da cui sono ricavate le altre grandezze termodinamiche; utilizzando questo approccio \'e stata ricavata l'equazione di stato MHD (\cite{hummer1988equation})
+\item schema fisico: nuclei ed elettroni come costituenti fondamentali interagenti tramite potenziale Coulombiano e trova le soluzione dell'equazione di Schr\"oedinger per un problema a molti corpi, questo approccio, usato per ricavare l'equazione di stato OPAL (\cite{rogers1986occupation})
+\end{itemize}
 
 
 Come illustrato in figura, per entrambe $\Gamma_1\approx\midfrac{5}{3}$ nell'interno solare e maggiori deviazioni si hanno nelle regioni di ionizzazione parziale degli elementi in particolare di idrogeno ed elio.
@@ -427,7 +430,7 @@ $f^{(0)}(\vec{p}_i)$: numero di particelle della specie i per unit\'a di volume 
 \begin{wordonframe}{Deviazioni dalla legge dei gas perfetti: radiazione e degenerazione elettronica}
 \begin{itemize}
 	\item Radiazione. Il contributo alla pressione ed energia interna per unit\'a di volume dei fotoni $P_R=\frac{a}{3}T^4$, $u_R=aT^4$, e $P-P_R=\beta P$.
-	\item Degenerazione elettronica - Principio di Pauli: non pi\'u di 2 elettroni in volume di spazio delle fasi $h^3$. $n_e$ la densit\'a numerica di \Pelectron, $\psi(P,T)$ il parametro di degenerazione, tale che per $\psi\to-\infty$ si abbia la distribuzione di Boltzmann e per $\psi\to+\infty$ completa degenerazione, e $u_k$ energia cinetica dell'elettrone, si ha:
+	\item Degenerazione elettronica - Principio di Pauli: non pi\'u di 2 elettroni in volume di spazio delle fasi $h^3$. $n_e$ la densit\'a numerica di \Pelectron, $\psi(P,T)$ il parametro di degenerazione, tale che per $\psi\to-\infty$ si abbia la distribuzione di Boltzmann e per $\psi\to+\infty$ completa degenerazione
 	\begin{align*}
 	&n_e=\rho N_A\frac{1+X}{2}=\intzi{}\frac{8\pi p^2\,dp}{h^3(\exp{\frac{u_k}{KT}-\psi}+1)}=\frac{8\pi}{h^3}(2m_ekT)\expy{3/2}a(\psi)\\
 	&P_e=\beta P-\rho\gasconstant{}(X+\frac{Y}{4}+\frac{Z}{\exv{A_Z}})=\frac{8\pi}{3h^3}\intzi{}p^3v(p)\frac{dp}{1+\exp{\epsilon/kT-\psi}}\\
@@ -436,76 +439,41 @@ $f^{(0)}(\vec{p}_i)$: numero di particelle della specie i per unit\'a di volume 
 \end{itemize}
 \end{wordonframe}
 
-\begin{frame}{degenerazione: casi limite}
-	contenu...
+\begin{frame}{degenerazione completa: casi limite NR e R}
+\begin{align*}
+&P_e=\int_{2\pi}\frac{d\Omega}{4\pi}\intzi{}dpf(p)v(p)p^2\cos{\theta}=\frac{8\pi}{3h^3}\int_0^{P_F}p^3v(p)\,dp\\
+&=\frac{8\pi c}{3h^3}\int_0^{P_F}\frac{p/(m_ec)}{\sqrt{1+p^2/(m_ec)^2}}=\frac{\pi m_e^4c^5}{3h^2}f(x)\\
+&U_e=\int_0^{P_F}f(p)E(p)\,dp=\frac{8\pi}{h^3}\int_0^{P_F}E(p)p^2\,dp=\frac{\pi m_e^4c^5}{3h^3}g(x)\
+\end{align*}
+\begin{align*}
+&n_e=\frac{\rho}{\mu_em_H}=\frac{8\pi m_ec^3}{3h^3}x^3\\
+&x=\frac{P_F}{m_ec}\ll1:\quad&x\gg1:\\
+&P_e=\frac{8\pi m_e^4c^5}{15h^3}x^5=\frac{2}{3}U_e&P_e=\frac{2\pi m_e^4c^5}{3h^3}x^4=\frac{1}{3}U_e\\
+&=\num{1.0036e13}(\frac{\rho}{\mu_e})\expy{5/3}&=\num{1.2435e15}(\frac{\rho}{\mu_e})\expy{4/3}
+\end{align*}
 \end{frame}
 
-\begin{wordonframe}{Interazione coulombiana. Equazione di saha}
+\begin{wordonframe}{Interazione coulombiana}
 La principale correzione che tiene conto dell'interazioni tra particelle \'e dovuta alle interazioni coulombiane.
 
-La presenza dello ione $Z_i$ altera la distribuzione di cariche quindi devo determinare il potenziale $\phi_i$ generato da $Z_i$ e dalla distribuzione di cariche attorno; usando la formula di Boltzmann la densit\'a delle particelle con carica Z risulta
-\begin{equation}\label{eq:Bdistroelectricpot}
-n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}
-\end{equation}
-con $\overline{n}_Z$ densit\'a numerica della particella di carica $Z$ in assenza di $Z_i$.
+La presenza dello ione $Z_i$ altera la distribuzione di cariche: la formula di Boltzmann descrive la densit\'a delle particelle con carica Z: $n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}$.
 
-L'equazione di Poisson per $\phi$ \'e
-\begin{equation}\label{eq:poissonscreened}
-\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)
-\end{equation}
-
-Nel regime di schermaggio debole, dove l'energia coulombiana \'e molto minore dell'energia termica $e\phi\ll KT$, espando $n_Z$ (\eqref{eq:Bdistroelectricpot}) al prim'ordine quindi in \eqref{eq:poissonscreened} rimane il termine lineare in $\phi$.
-
-Introduco il raggio di Debye:
-\begin{equation}
-\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
-\end{equation}
-quindi dall'equazione \eqref{eq:poissonscreened} ottengo il potenziale generato dallo ione $Z_i$ in $\vec{r}_i$ a distanza $|\vec{r}-\vec{r}_i|=r_i$ come soluzione di:
-\begin{equation}\label{eq:poissonspheric}
-\frac{r_D^2}{r_i}\TtwoDy{r_i}{(r_i\phi_i)}=\phi_i
-\end{equation}
-con
-\begin{equation}
-\phi=\sum_i\phi_i
-\end{equation}
-
-[Raggio di debye e degenerazione elettronica]
-	Il rapporto fra densit\'a elettronica e quella imperturbata \'e
-	\begin{equation}
-	\midfrac{f(\psi-\midfrac{U_e(r)}{KT})}{f(\psi)}
-	\end{equation}
-	dove $U_e(r)$ \'e l'energia di interazione di un elettrone
-
-
-La soluzione di \eqref{eq:poissonspheric} \'e
-\begin{equation}\label{eq:screenedpotential}
-\phi_i=\frac{Z_ie}{r_i}\exp{-\midfrac{r}{r_D}}
-\end{equation}
-
-[formula corretta potenziale elettrostatico generato da nuvola elettronica attorno a $Z_i$]
-	
-	\begin{align}
-	&\nabla^2V_i=-4\pi e\sum Zn_Z\approx\frac{1}{r_D^2}V_i\intertext{da cui ottengo il potenziale generato dalla nube di cariche attorno a Z}
-	&\phi_Z=-\frac{eZ}{r_D}
-	\end{align}
-	con $r_D$ raggio di Debye definito da:
-	\begin{equation}
-	\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
-	\end{equation}
-
-[correzioni $u_c/P_c$: notazione consistente.]
-	Le correzioni dovute alle interazioni coulombiane sono
-	\begin{align}
-	&u=\frac{3}{2}\frac{\gasconstant{}T}{\mu}+u_c,\ \rho u_c=\frac{1}{2}\sum_ZeZ\overline{n}_Z\phi_Z=-e^3\sqrt{\frac{\pi\rho}{kT}}(N_A\zeta)\expy{\frac{3}{2}}\\
-	&P=\frac{\rho}{\mu}kT+P_c,\  P_c=\frac{1}{3}u_c
-	\end{align}
+Regime di schermaggio debole, $e\phi\ll KT$: potenziale generato dalla nube di cariche attorno a Z $\phi_Z=-\frac{eZ}{r_D}$ con raggio di Debye:
+\begin{align*}
+&\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)\\
+&\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}
+\end{align*}
 
 Le correzioni dovute alle interazioni coulombiane sono
-\begin{align}
-&u=\frac{3}{2}\frac{\gasconstant{}T}{\mu}+u_c,\ \rho u_c=\frac{1}{2}\int\phi(\vec{r})\rho_c(\vec{r})\,d^3r\\
-&P=\frac{\rho}{\mu}kT+P_c,\  P_c=\frac{1}{3}\rho u_c
-\end{align}
+\begin{align*}
+\rho u_c=\frac{1}{2}\int\phi(\vec{r})\rho_c(\vec{r})\,d^3r\to \frac{1}{2}\sum_ZeZ\overline{n}_Z\phi_Z=-e^3\sqrt{\frac{\pi\rho}{kT}}(N_A\zeta)\expy{\frac{3}{2}},\ P_c=\frac{1}{3}\rho u_c
+\end{align*}
+
 \end{wordonframe}
+
+\begin{frame}{Equazione di Saha}
+
+\end{frame}
 
 \subsection{Reazioni nucleari}\linkdest{nuclearreactions}
 
