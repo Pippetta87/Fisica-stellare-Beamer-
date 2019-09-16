@@ -128,18 +128,7 @@ Nel caso in cui la contrazione gravitazionale sia l'unica fonte di energia per u
 media di rosseland
 \end{frame}
 
-\begin{frame}{Opacit\'a radiativa (analitico)}
-Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione H-
-\end{frame}
-
-\begin{frame}{Andamento opacit\'a}
-\begin{itemize}
-\item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2$ - $\sigma_T=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source
-\item Kramers opacity: $T<\SI{e7}{\kelvin}$ - FF, BF, BB - $\kappa_R\propto\rho T\expy{-7/2}$
-\end{itemize}
-\end{frame}
-
-\subsection{Conduzione}\linkdest{tracond}
+\subsection{Conduzione}
 
 \begin{frame}{Diffusione per conduzione}
 stima opacit\'a per conduzione gas degenere NR
@@ -148,15 +137,55 @@ stima opacit\'a per conduzione gas degenere NR
 \begin{frame}{Conduzione elettronica}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
-\begin{align*}
-&F_e=-N_evl\TDy{r}{E}=-N_ekvl\TDy{r}{T}\\
-&E_T\approx\frac{3}{2}kT,\ v_T\approx\sqrt{\frac{2E_T}{m}}
-\end{align*}
+	\begin{align*}
+	&F_e=-N_evl\TDy{r}{E}=-N_ekvl\TDy{r}{T}\\
+	&E_T\approx\frac{3}{2}kT,\ v_T\approx\sqrt{\frac{2E_T}{m}}
+	\end{align*}
 \end{column}
 \begin{column}{0.5\textwidth}
-\Pelectron degenerate are forced in higher momentum state - $P_F=2\pi\hbar(\frac{3}{4\pi g})\expy{1/3}n\expy{1/3}$
+	\Pelectron degenerate are forced in higher momentum state - $P_F=2\pi\hbar(\frac{3}{4\pi g})\expy{1/3}n\expy{1/3}$
 \end{column}
 \end{columns}
+\end{frame}
+
+\subsection{Opacit\'a}\linkdest{kapparad}
+
+\begin{frame}{Opacit\'a radiativa (analitico)}
+Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione H-
+\end{frame}
+
+\begin{frame}{Andamento opacit\'a: electron scattering e Kramer's opacity (FF)}
+\begin{itemize}
+\item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2=0.2(1+X)\si{\square\cm\per\gram}$ - $\sigma_T=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source - Compton scattering $h\nu|_M\gtrsim0.1 m_ec^2$, $h\nu|_M\approx4.96kT$: Compton scattering reduces opacity about $20\%$ for $T>\SI{e8}{\kelvin}$
+\item Kramers opacity: $T<\SI{e7}{\kelvin}$ -when FF, BF dominates: $\kappa_R\propto\rho T\expy{-7/2}$
+\end{itemize}
+\begin{block}{Free-free: radiation boost free-\Pelectron from lower to higher state}
+Fully ionized-$Z_i$ mixture: 
+\begin{align*}
+&\rho\kappa_{\nu}(ff)=\sum_in_{Z_i}ne\sqrt{\frac{2m_e}{3\pi kT}}[\frac{4\pi Z_i^2e^6}{3m_e^2ch\nu^3}]g_{ff}(\nu)(1-\exp{-h\nu/kT})\\
+&=\num{3.8e22}\overbrace{(X+1)}^{\propto n_e}\overbrace{[X+Y+B]}^{\propto\frac{X}{m_u}+\frac{4Y}{4m_u}+\sum_i\frac{X_iZ_i^2}{A_i}}\ [\si{cgs}]
+\end{align*}
+$\tau_{\Pelectron-int}\propto\frac{1}{v}\propto T\expy{-1/2}$: \Pelectron experience sharp acceleration $\approx\delta$ resulting in constant emission frequency, two body ion-\Pelectron encounter $\propto n_in_e$, \Pelectron have thermal distro $\propto\exp{-\epsilon/kT}$: $\rho j_{\nu}=n_en_iT\expy{-1/2}\exp{-\frac{h\nu}{kT}}$ - dalla legge di Kirchhoff, $j_{\nu}=4\pi\kappa_{\nu}^{abs}B_{\nu}(T)$, we have $\kappa_{\nu}^{abs}\propto\rho T\expy{-1/2}\nu\expy{-3}[1-\expy{-h\nu/kT}]$
+\end{block}
+\end{frame}
+
+\begin{frame}{Kramer's opacity (BF, BB) and $H^-$ ions opacity}
+\begin{block}{BF}
+Hydrogenic atom with charge Z and one \Pelectron in bound state n:
+\begin{align*}
+&\sigma_{\nu}(Z)=n\expy{-5}\frac{8\pi}{3\sqrt{3}}\frac{Z^4m_ee\expy{10}}{c\hbar^3(h\nu)^3}:\ h\nu>\chi=\frac{Ze^2}{2a_Z}\\
+&\rho\kappa_{\nu}(bf)=\sum_in_{Z_i}\sigma_{\nu}(Z_i)(1-\exp{-h\nu/kT})\\
+&\kappa_R(bf)=\num{3e25}\overbrace{1-X-Y}^{n_{\exv{Z}}}\overbrace{1+X+\frac{3}{4}Y}^{n_e}\rho T\expy{-7/2}
+\end{align*}
+\end{block}
+\begin{block}{BB: usually neglected in stellar interior}
+\end{block}
+\begin{block}{$H^-$ opacity $T<\SIrange{e4}{e5}{\kelvin}$}
+BB/BF transition for $H^-$ don't follow Kramer as ion abundance in solar photosphere is sensitive to other considerations: law of mass action for $H^-=H+\Pelectron$ is $\frac{n_{H^-}}{n_Hn_e}=K_1(T)$, and sources of free electrons are metals (Na, K) $M^++\Pelectron=M$ so $\frac{n_{M^+}n_e}{n_M}=K_2(T)$, supposing $n_e=n_{M^+}$:
+\begin{align*}
+&\rho\kappa_{H^-}^{ff}\propto n_{H^-}n_eT\expy{-7/2}=n_Hn_MT\expy{-7/2}K_1(T)K_2(T)
+\end{align*}
+\end{block}
 \end{frame}
 
 \subsection{Convezione}\linkdest{traconv}
