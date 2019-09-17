@@ -530,16 +530,73 @@ For $\rho>\SI{4e11}{\gram\per\cubic\cm}$ we have inverse $beta$-decay:nuclei cap
 \end{block}
 \end{frame}
 
-\subsection{Reazioni nucleari}\linkdest{nuclearreactions}
+\section{Energy production}\linkdest{luminositysourcessinks}
+
+\subsection{Work against gravity}
+
+\begin{frame}{Work done in expansion/contraction: }
+
+\end{frame}
+
+\subsection{Catena PP}
+
+
+\begin{frame}{Network reazioni nucleari}
+L'energia liberata dalle reazioni nucleari per grammo per secondo $\epsilon(\rho,T,X_i)$ \'e determinata dalla probabilit\'a che la reazione $X(a,b)Y$ abbia luogo.
+\end{frame}
+
+\begin{frame}{Tempi evoluzione chimica catena PP}
+
+\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.45\textwidth]{ppchainsequi}\label{fig:ppchainsequi}~
+		\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.45\textwidth]{pplifetime}\label{fig:pplifetime}
+\end{figure}
+\end{frame}
+
+
+\subsection{Fusione nucleare}
 
 \begin{frame}{Sezione d'urto nucleare}
-schermaggio elettronico nelle stelle
+ Sia $E$ l'energia cinetica nel centro di massa dei nuclei, la sezione d'urto $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$
+prodotto della sezione d'urto geometrica (nel riferimento del CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$
+per energie tipiche degli interni stellari approx onda S), della probabilit\'a di attraversamento della barriera coulombiana e del fattore astrofisico.
+
+La lunghezza d'onda di de Broglie relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$.
+
+L'energia potenziale dovuta all'interazione di due nuclei $Z_1$ e $Z_2$ a distanza r contiene un contributo delle altre cariche presenti nel plasma $U=\frac{Z_1Z_2e^2}{r}+U_s(r_{12})$
+l'energia potenziale non schermata e contributo della nuvola elettronica: $U_s$ aumenta la probabilit\'a di attraversamento della barriera coulombiana. Fattore moltiplicativo: $f=\exp{-\midfrac{U_0}{KT}}$ dove $U_0=U_s(0)$ poich\'e $r\ll r_D$ e considerando solo la correzione al fattore di penetrazione ($E_G\gg U_0$).
+
+Per determinare $U_0$ considero l'energia potenziale di $Z_1$ e $Z_2$ a distanza $r$
+\begin{equation*}
+U=Z_2e\int_{\infty}^r\PDy{r_1}{\phi_1}\,dr_1=\frac{Z_1Z_2e^2\exp{-\midfrac{r}{r_D}}}{r},\ U_s=U-\frac{Z_1Z_2e^2}{r}\approx\frac{Z_1Z_2e^2}{r_D}
+\end{equation*}
 \end{frame}
 
-\begin{frame}{Catena PP}
-dipendenza da T
-flusso neutrini
+\begin{frame}{Energia prodotta in reazioni di fusione}
+$S(E)$ descrive l'interazione a livello nucleare: debolmente dipendente dall'energia in assenza di risonanze.
+La probabilit\'a di attraversamento della barriera coulombiana: $P_0(E)=\exp{-2\pi\eta},\ \eta=\sqrt{\frac{m}{2}}\frac{Z_1Z_2e^2}{\hbar E\expy{\frac{1}{2}}}$
+Per i nuclei di carica $Z_1$, $Z_2$ e m massa ridotta: $\sigma(E)=\frac{S(E)}{E}\exp{-2\pi\eta}$
+Il rate per coppia di particelle
+\begin{equation*}
+\exv{\sigma v}=\num{1.3005e-15}[\frac{Z_1Z_2}{AT_6^2}]\expy{\frac{1}{3}}fS_{eff}\exp{-\tau}\si{\cubic\cm\per\second},\ \tau=\frac{3E_G}{kT}\approx\num{42.487}(Z_1^2Z_2^2AT_6\expy{-1})\expy{\frac{1}{3}}
+\end{equation*}
+$S_{eff}$ \'e il risultato dell'espansione dell'integrando per $\invers{\tau}\ll1$ ed estrapolato a $E_G$ a partire dal valore $S(0)$ determinato dalla fisica nucleare.
+La funzione $\epsilon(\rho,T,X_i)$ \'e determinata dalla somma di tutti i contributi
+\begin{equation*}
+\epsilon_{ij}=Q_{ij}\frac{n_in_j}{\rho(1+\delta_{ij})}\lambda_{ij}=\frac{1}{1+\delta_{ij}}Q_{ij}\frac{\rho N_A^2X_jX_k}{{A_iA_j}}\exv{\sigma v}_{ij}\label{eq:energyrate}
+\end{equation*}
+dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $\exv{\sigma v}_{ij}$ \'e il rate di reazione per coppia di particelle, mediata su MB- distro
+$f(E)dE\propto\frac{E\expy{\frac{1}{2}}}{(kT)\expy{\frac{3}{2}}}\exp{-\frac{E}{kT}}\,dE$:
+$S(E)\exp{-\frac{E}{kT}-\frac{b}{\sqrt{E}}}$
+ha forma approssimativamente gaussiana il cui massimo $E_G$, energia pi\'u probabile di reazione, e FWHM sono: $E_G=\SI{5.665}{\kilo\ev} A\expy{\frac{1}{3}}T_7\expy{\frac{2}{3}}$ $\Delta E=4.249\si{\kilo\ev}W\expy{\frac{1}{6}}T_7\expy{\frac{5}{6}}$
+posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$.
 \end{frame}
+
+
+
+\subsection{Reazioni nucleari risonanti (e non)}
+
+\subsection{Produzione energia da H-burning}
 
 \begin{frame}{Biciclo CNO}
 dipendenza da T
@@ -550,6 +607,7 @@ Modalit\'a combustione H in He: sequenza principale inferiore/superiore
 \begin{frame}{Combustion He}
 
 \end{frame}
+
 
 \begin{frame}{Produzione nuclei fino al Fe56}
 3$\alpha$: $He4+\alpha\to C12$, $C12+\alpha\to O16$

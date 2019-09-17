@@ -154,9 +154,8 @@
     \end{beamercolorbox}
     \endgroup
 }
-
-    \setbeamerfont{section title}{size=\Large,series=\bfseries}
-    \setbeamerfont{subsection title}{size=\large,series=\bfseries}
+\setbeamerfont{section title}{size=\Large,series=\bfseries}
+\setbeamerfont{subsection title}{size=\large,series=\bfseries}
     
 %\AtBeginDocument{%
 %\addtolength\abovedisplayskip{-0.5\baselineskip}%
@@ -167,7 +166,8 @@
 
 \makeatletter
 \AtBeginPart{%
-  \addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+\frame{\partpage}
 }
 %% number, shortname, page.
 \providecommand\beamer@partintoc[3]{%
@@ -183,7 +183,7 @@
 \makeatother%
 %%Display section subsection (title page) at beginning section subsection
 \AtBeginSection{\addtocounter{cherrysectionlist}{1}
-\frame{\partpage}}
+\frame{\sectionpage}}
 \AtBeginSubsection{\frame{\subsectionpage}}
 
 \setbeamertemplate{navigation symbols}{}
