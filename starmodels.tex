@@ -677,13 +677,50 @@ Modalit\'a combustione H in He: sequenza principale inferiore/superiore
 
 \begin{frame}{CNO1: energy production rate}
 
+\begin{align*}
+&\epsilon_{CNO1}=\sum_{i\to j}\epsilon_{i\to j}=\frac{1}{\rho}(Q_{i\to j}-\exv{E}_{\nu}^{i\to j})r_{i\to j}\\
+&\rho\epsilon^e_{CNO1}=\SI{3.458}{\mega\ev}\frac{(^{12}C)_e}{\tau_p(^{12}C)}+\SI{7.551}{\mega\ev}\frac{(^{13}C)_e}{\tau_p(^{13}C)}+\SI{9.055}{\mega\ev}\frac{(^{14}N)_e}{\tau_p(^{14}N)}\\
+&+\SI{4.966}{\mega\ev}\frac{(^{15}N)_e}{\tau_p(^{15}N)}\\
+&\epsilon^e_{CNO1}\approx\SI{25.030}{\mega\ev}N_A\exv{\sigma v}_{^{14}N(p,\gamma)}(\sum_{CNO1}\frac{X_i}{M_i})\frac{X_H}{M_H}\rho N_A\si{\mega\ev\per\second\per\gram}\\
+&\epsilon^e_{CNO1}=\epsilon^e_{CNO1}(T_0)(\frac{T}{T_0})\expy{16.7},\ T_0\approx\SI{25}{\mega\kelvin}\\
+%%Q
+&Q_{^{12}C(p,\gamma)^{13}N(\beta^+\nu)}-\exv{E}_{\nu}^{^{13}N(\beta^+\nu)}=(1.944+2.22-0.706)\si{\mega\ev}\\
+&Q_{^{13}C(p,\gamma)}=\SI{7.551}{\mega\ev}\\
+&Q_{^{14}N(p,\gamma)^{15}O(\beta^+\nu)}-\exv{E}_{\nu}^{^{15}O(\beta^+\nu)}=(7.297+2.754-0.996)\si{\mega\ev}\\
+&Q_{^{15}N(p,\alpha)}=\SI{4.966}{\mega\ev}
+\end{align*}
 
 \end{frame}
 
 \subsection{He-C-Ne-O-Si-Burning}\linkdest{epsilonheavy}
 
 \begin{frame}{Combustion He}
-
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Deps $M_*$ amd $Z$: hydrostatic He burning in massive star $\rho=\SIrange{e2}{e5}{\gram\per\cubic\cm}$, $T=\SIrange{0.1}{0.4}{\giga\kelvin}$
+			\item Reactiona during He-buring
+			\begin{align*}
+&^4He(\alpha\alpha,\gamma)^{12}C\ Q=\SI{7274.7}{\kilo\ev}\\
+&^{12}C(\alpha,\gamma)^{16}O\ Q=\SI{7161.9}{\kilo\ev}\\
+&^{16}O(\alpha,\gamma)^{20}Ne\ Q=\SI{4729.8}{\kilo\ev}\\
+&^{20}Ne(\alpha,\gamma)^{24}Mg\ Q=\SI{9316.6}{\kilo\ev}
+\item Energy production by $3\alpha$:
+\begin{align*}
+&\epsilon_{3\alpha}=\frac{Q_{3\alpha}}{\rho}r_{3\alpha}=\frac{Q_{3\alpha}}{\rho}\frac{N_{\alpha}\lambda_{3\alpha}}{3}\\
+&=\num{3.1771e14}\frac{\rho^2X_{\alpha}^3}{T_9^3}\exp{-\frac{4.4040}{T_9}}\si{\mega\ev\per\gram\per\second}\\
+&\epsilon_{3\alpha}(T)=\epsilon_{3\alpha}(T_0)(\frac{T}{T_0})^{41}
+\end{align*}
+			\end{align*}
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.28\textheight]{Heburningelems}
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.28\textheight]{3alphalevels}
+		\end{figure}
+	\end{column}
+\end{columns}
 \end{frame}
 
 
