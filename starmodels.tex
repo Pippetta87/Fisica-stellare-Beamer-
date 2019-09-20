@@ -125,7 +125,31 @@ Nel caso in cui la contrazione gravitazionale sia l'unica fonte di energia per u
 \subsection{Trasporto radiativo}\linkdest{trarad}
 
 \begin{frame}{Trasporto radiativo}
-media di rosseland
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+Diffusion approx: $F_{\nu}=-D_{\nu}\nabla U_{\nu}$.
+
+Radiative transport - $dp$ momentum trasfer from photons to matter
+\begin{align*}
+&dp=\frac{dF_r}{c}=\frac{F_r}{c}\frac{dr}{\rho\kappa_r}\\
+&dP_r=-\frac{F_r}{c}\frac{dr}{l}\\
+&\TDy{r}{P_r}=\frac{4}{3}aT^3\TDy{r}{T}\\
+&\TDy{r}{P_{r,\nu}}=-\frac{\kappa_{\nu}\rho}{c}F_{\nu}
+\end{align*}
+Conduzione elettronica
+\begin{align*}
+&F_e\approx-N_evl\TDy{r}{E}=-kN_evl\TDy{r}{T}
+\end{align*}
+\end{column}
+\begin{column}{0.5\textwidth}
+In LTE:
+\begin{align*}
+&P_{r,\nu}=\frac{4\pi}{3c}B_{\nu}(T)\\
+&\frac{1}{\kappa_R}=\frac{\intzi{}\frac{1}{\kappa_{\nu}}\TDy{T}{B_{\nu}(T)}\,d\nu}{\intzi{}\TDy{T}{B_{\nu}(T)}\,d\nu}\\
+&\plankfnu{}
+\end{align*}
+\end{column}
+\end{columns}
 \end{frame}
 
 \subsection{Conduzione}
@@ -175,7 +199,7 @@ Hydrogenic atom with charge Z and one \Pelectron in bound state n:
 \begin{align*}
 &\sigma_{\nu}(Z)=n\expy{-5}\frac{8\pi}{3\sqrt{3}}\frac{Z^4m_ee\expy{10}}{c\hbar^3(h\nu)^3}:\ h\nu>\chi=\frac{Ze^2}{2a_Z}\\
 &\rho\kappa_{\nu}(bf)=\sum_in_{Z_i}\sigma_{\nu}(Z_i)(1-\exp{-h\nu/kT})\\
-&\kappa_R(bf)=\num{3e25}\overbrace{1-X-Y}^{n_{\exv{Z}}}\overbrace{1+X+\frac{3}{4}Y}^{n_e}\rho T\expy{-7/2}
+&\kappa_R(bf)=\num{3e25}\overbrace{(1-X-Y)}^{n_{\exv{Z}}}\overbrace{(1+X+\frac{3}{4}Y)}^{n_e}\rho T\expy{-7/2}
 \end{align*}
 \end{block}
 \begin{block}{BB: usually neglected in stellar interior}

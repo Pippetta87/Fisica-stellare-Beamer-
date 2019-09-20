@@ -520,3 +520,142 @@ $I_{\angstrom}=\int_{\lambda_1}^{\lambda_2}(1-\frac{F_{I,\lambda}}{F_{C.\lambda}
 \end{frame}
 
 \section{Modello Solare standard}
+
+\begin{frame}{SSM: reproduce observed Sun as cem/phys inputs inside error's range}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{tabular}{l|c}
+	$\agesun{}$&$\SI[separate-uncertainty=true]{4.566\pm0.005e9}{\year}^{II}$\\
+	\hline
+	$\rsun{}$&$\SI{695658+-140}{\kilo\meter}^I$\\
+	\hline
+	$G\msun$&$\num{132712440018+-8}\SI{e9}{\cubic\meter\per\square\second}^{III}$\\
+	\hline
+	$\lsun{}$&$\SI{3.8275+-0.0014e33}{\erg\per\second}^I$\\
+	\hline
+	
+	\hline
+\end{tabular}
+\begin{align*}
+&\ln{L}=\ln{\lsun{}}+a(Y_0-Y_{0\odot})+b(\alpha-\alpha_{\odot})\\
+&\ln{r}=\ln{\rsun{}}+c(Y_0-Y_{0\odot})+d(\alpha-\alpha_{\odot})\\
+&a=\PDy{Y_0}{\ln{L}}=8.6,\ b=\PDy{\alpha}{\ln{L}}=0.02\\
+&c=\PDy{Y_0}{\ln{r}}=2.1,\ d=\PDy{\alpha}{\ln{r}}=-0.19\\
+&Y_0=0.256,\ \alpha_{ML}=
+\end{align*}
+Salaris: $Z_i=0.0198$, $Y_i=0.269$, $\alpha_{ML}\approx2.7$
+Stix: $Z_i=$, $Y_i=0.276$, $\alpha_{ML}\approx$
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+	\item A SSM reproduces withi uncertainties observed properties of Sun adopting chem/phys input chosen within uncertainties range
+	\item Evolve $1\msun$ starting from homogeneus composition (pre-MS phase) to present solar age - $Y_{in}$, $Z_{in}$, $\alpha_{ML}$
+	\item 
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Helioseismology: results}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+$c_s^2=\Gamma_1\frac{P}{\rho}$ - Principio variazionale
+\begin{align*}
+&-\omega^2\vec{\xi}=\frac{1}{\rho_0}\nabla p'-\vec{g}'-\frac{\rho'}{\rho_0}\vec{g}_0=L(\vec{\xi})\\
+&\frac{\Lvar{\omega}}{\omega}=-\frac{\int_V\rho_0\vec{\xi}\Lvar{L}\vec{\xi}\,d^3x}{2\omega^2\int_V\rho_0\scap{\xi}{\xi}d^3x}
+\end{align*}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Sound speed profile, depth of CZ ($\frac{R_{CZ}}{\rsun}=\num{0.713+-0.001}$), present surface He abundance $Y_s=\num{0.2485+-0.0034}$
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Problems with revised abundancies}
+\begin{columns}[T]
+\begin{column}{0.75\textwidth}
+\begin{table}[!ht]%{r}{0.7\textwidth}
+	\tiny
+	\pgfplotstabletypeset[
+	math/.style={%
+		preproc cell content/.append style={/pgfplots/table/@cell content/.add={$}{$}},
+	},
+	every head row/.style={
+		before row={\toprule
+			%&\multicolumn{4}{c|}{Primordiale}
+		},
+		every last row/.style={after row=\bottomrule},
+		after row={\midrule}
+	},
+	every last row/.style={after row=\bottomrule},
+	every first column/.style={column type/.add={|}{}},
+	every last column/.style={column type/.add={}{|}},
+	%columns/0/.style = {column type/.add={|}{}},
+	display columns/0/.style={column name={}},
+	display columns/1/.style={column name={$Z/X$}},
+	display columns/2/.style={column name={$R_{CZ}$}},
+	display columns/3/.style={column name={$Y_{CZ}$}},
+	display columns/4/.style={column name={$Y_0$}},
+	create on use/comp/.style={create col/set list={
+			inversione,GS98,AGS05,AGSS09,C+11}},
+	columns/comp/.style = {column type/.add={|}{}},
+	columns/comp/.style={string type},
+	columns/ZX/.style={string type},
+	columns/ZX/.append style={math},
+	columns/RCZ/.style={string type},
+	columns/RCZ/.append style={math},
+	columns/YCZ/.style={string type},
+	columns/YCZ/.append style={math},
+	columns/Y0/.style={string type},
+	columns/Y0/.append style={math},
+	columns={comp,ZX,RCZ,YCZ,Y0},
+	%/pgf/number format/precision=4
+	]{CZvsZ.txt}%%%
+\end{table}
+\end{column}
+\begin{column}{0.25\textwidth}
+GS98-AGSS09: Reduction O/Ne: $40\%$, reduction $C/N$ about $20\%$, reduction refractories $10\%$
+\end{column}
+\end{columns}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]%{r}{0.5\textwidth}
+	\includegraphics[width=0.9\textwidth,keepaspectratio]{deltacwu}
+\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+Differenza relativa nel profilo di $c_s$ risultanei dall'inversione delle differenze in frequenza tra Sole e modello: linea chiara composzione GS98, linea scura composizione AGSS09. Banda chiara errore inerente inversione eliosismologica, banda scura incertezza a $1\sigma$ sul profilo di $c_s$ predetto dal modello.
+Low original He abundance $Y_i\approx0.25-0.265$ respect estimated primordial abundance $Y_p\approx0.25$: low He enrichment during galaxy history? Disagreement with He2Z enrichment for galactic stars $\Delta Y/\Delta Z\approx1-5$
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Confronto helioseismic inversion e SSM con metallicit\'a rivista}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]%{r}{0.5\textwidth}
+			\includegraphics[width=0.9\textwidth,keepaspectratio]{SSM-GS98AGSS09-inver}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+Aumenta il disaccordo tra risultati inversione sismologica e risultati MSS con composizione aggiornata - Diminuisce Z a $T_e$ costante e raggio costante: diminuisce opacit\'a - zona convettiva meno profonda e 
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Solar neutrinos}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]%{r}{0.5\textwidth}
+			\includegraphics[width=0.9\textwidth,keepaspectratio]{nutheoflux}
+				\includegraphics[width=0.9\textwidth,keepaspectratio]{nufluxcomp}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+
+	\end{column}
+\end{columns}
+\end{frame}
