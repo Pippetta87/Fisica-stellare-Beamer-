@@ -1,0 +1,43 @@
+\section{Succo}\linkdest{succo}
+
+\begin{frame}{* formation}
+	contenu...
+\end{frame}
+
+\begin{frame}[fragile]{Struttura di equilibrio}\frameintoc
+\begin{itemize}
+\item Equilibrio idrostatico: pressione in un mesh \'e il peso della materia sopra per unit\'a di superficie. Stabilit\'a e tempi reazione a perturbazione
+\item Pressione radiativa. Una frazione $\kappa$ del flusso di momento $\frac{F}{c}$ \'e assorbita dalla materia (momentum transfer per $cm^3$ per sec): $dq=-(n_{\nu}\,dSc\,dt)*(\kappa\rho\,dr)*\frac{h\nu}{c}$, il primo termine \'e il numero di fotoni pasanti per superficie $dS$ in tempo $dt$, il secondo \'e la probabilit\'a d'assorbimento attraverso spessore $dr$, il terzo \'e la quantit\'a di moto di ogni fotone.
+\begin{align*}
+&dP_r=\TDy{S}{F}=\TDof{S}\TDy{t}{q}=-\int \,d\nu n_{\nu}c\kappa_{\nu}\rho\,dr\frac{h\nu}{c}\\
+&F_{\nu}=n_{\nu}ch\nu,\ \TDy{r}{P(Rad)}=-\int\,d\nu\frac{F(Rad)}{c}\kappa_{\nu}\rho
+\end{align*}
+\begin{comment}
+Un elemento di volume $dS\,dr$ subisce per effetto dell'assorbimento della radiazione una variazione d'impulso $dq$, nel caso un fotone venga assorbito la variazione del flusso uscente \'e $dF<0$
+The distribution of photons over over different quantum states with energies $\epsilon_k=\hbar\omega_k$ (large volume $\omega_k\to\omega$) 
+\begin{align*}
+\overline{n_k}=\frac{1}{\exp{\frac{\hbar\omega}{KT}}-1}
+\end{align*}
+Moltiplicando il numero di stati nel dato range di frequenze per la distribuzione di Plank (numero di occupazione) ottengo il numero di fotoni e l'energia radiativa nel range di frequenza
+\begin{align*}
+&dN_{\omega}=\frac{V}{\pi^2c^3}\frac{\omega^2\,d\omega}{\exp{\frac{\hbar\omega}{KT}}-1}\\
+&dE_{\omega}=\frac{V\hbar}{\pi^2c^3}\frac{\omega^3\,d\omega}{\exp{\frac{\hbar\omega}{KT}}-1}
+\end{align*}
+\end{comment}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rotazione, mass loss}
+\begin{itemize}
+\item Rotazione. \[\frac{\nabla P}{\rho}=-\nabla\phi+\vec{a}=-\nabla\phi+\Omega^2r_{\perp}=\vec{g}_{eff}\]
+If $\nabla\wedge(\Omega^2r_{\perp})=0$: $\phi\to\phi-V$, $V=\int_0^{r_{\perp}}\Omega^2r_{\perp}\,dr_{\perp}$ (OK if $P(\rho)$, politrope, regioni convettive)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stability}
+
+\end{frame}
+
+\begin{frame}{Hayashi Line (HL)}
+
+\end{frame}
