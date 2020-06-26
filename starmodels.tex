@@ -2,8 +2,8 @@
 
 \begin{wordonframe}{da fare: kippenhahn wiegert}
 \begin{itemize}
-\item strutture autogravitanti 1-62' (43). EQuilibrio idrostatico, vento stellare, stabilit\'a e pulsazioni
-\item metodi numerici 77'-84(44-48)
+\item strutture autogravitanti 1-62' (43). EQuilibrio idrostatico, vento stellare, stabilit\'a e pulsazioni: ho iniziato da succo
+\item metodi numerici 77'-84(44-48): sposto nella parte solve
 \item esistenza e unicit\'a 85'-99'(48-56)
 \item Properties of stellar matter: ideal gas with radiation, ionization, degenerate electron gas, equazione di stato, opacit\'a 102'-144'(57-78)
 \item produzione energia reazioni nucleari:  146'-172'(79-92)
@@ -386,64 +386,7 @@ cubic equation for $(\nabla-\nabla_e)$
 
 \end{wordonframe}
 
-\subsection{Approssimazione politropa}\linkdest{poly}
-
-\begin{frame}{Trasformazioni politropiche}
-\begin{block}{Gener. T. adiabatica}
-	Il rapporto $\gamma=\frac{c_P}{c_V}$ costante per gas perfetto di sole particelle totalmente ionizzato.
-	T. adiabatica:
-	\[TV\expy{\gamma-1}=\const,\ PV\expy{\gamma}=\const,\ P\expy{1-\gamma}T\expy{\gamma}=\const\]
-$0=dE-\frac{P}{\rho^2}d\rho$
-Caso pi\'u generale delle trasformazioni adiabatiche: \keyword{trasformazione politropa} trasformazione quasi-statica in maniera che $c=\TDy{Q}{T}$ (calore specifico) vari in maniera assegnata. (adiabatica: $c=0$, isoterma: $c=\infty$, isometrica: $c=c_V$, ...)
-\end{block}
-\begin{block}{Relazione politropa - EOS}
-\begin{columns}[T]
-	\begin{column}{0.4\textwidth}
-\begin{align*}
-&\TDy{r}{P}=-\TDy{r}{\phi}\rho\\
-&\frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\phi})=4\pi G\rho\\
-&\TDy{r}{\phi}=-\gamma K\rho\expy{\gamma-2}\TDy{r}{\rho}
-\end{align*}
-\end{column}
-\begin{column}{0.6\textwidth}
-\begin{align*}
-&P=K\rho\expy{\gamma}=K\rho\expy{1+1/n}\\
-&\gamma=5/3, n=3/2\tag{NR deg}\\
-&\gamma=4/3, n=3\tag{R deg}\\
-&\gamma=1, n=\infty\tag{isot.}\\
-&\nad\approx\frac{2}{5}\tag{conv}\\
-&P\propto\rho\expy{5/3}
-\end{align*}
-For convective exponent K varies from star to star
-\end{column}\end{columns}
-\end{block}
-\end{frame}
-
-\begin{frame}{Equazione Lane-Emden}
-\begin{columns}[T]
-	\begin{column}{0.5\textwidth}
-\begin{align*}
-&\rho=(\frac{-\phi}{(n+1)K})^n\tag{HE}\\
-&\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n\tag{Poiss}\\
-&\TtwoDy{z}{w}+\frac{2}{z}\TDy{z}{w}+w^n=0\\
-&\frac{1}{z^2}\TDof{z}(z^2\TDy{z}{w})+w^n=0\tag{Lane-Emden}
-\end{align*}
-	\end{column}
-	\begin{column}{0.5\textwidth}
-		\begin{align*}
-	&z=Ar\tag{new vars}\\
-	&A^2=\frac{4\pi G}{(n+1)^nK^n}(-\phi_c)\expy{n-1}\\
-	&=\frac{4\pi G}{(n+1)K}\rho_c\expy{\frac{n-1}{n}}\\
-	&w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})\expy{1/n}
-		\end{align*}
-\end{column}\end{columns}
-\end{frame}
-
-\begin{frame}{Strutture isoterme e modello solare}
-
-\end{frame}
-
-\subsection{Equazione di stato}\linkdest{eos}
+\section{From micro-physics to thermodynamics: Equazione di stato}\linkdest{eos}
 
 \begin{wordonframe}{Schema fisico/chimico: ingredienti EOS realistiche}
 \begin{itemize}
@@ -788,7 +731,7 @@ E_i=\int_0^Mu\,dm=\frac{3}{2}\int_M\frac{P}{\rho}\,dm\label{eq:traslintenergy}
 \end{equation*}
 \end{frame}
 
-\section{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}\linkdest{nummod}
+\section{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}\linkdest{stellarsolve}
 
 \subsection{4 Structure ODE with boundary conditions}\linkdest{fourODE}
 
@@ -803,7 +746,7 @@ E_i=\int_0^Mu\,dm=\frac{3}{2}\int_M\frac{P}{\rho}\,dm\label{eq:traslintenergy}
 \end{align*}
 \end{frame}
 
-\begin{frame}{Equazioni struttura di equilibrio: condizioni al bordo}
+\begin{frame}{Condizioni al bordo: espansione condizioni al centro ($m\to0$)}
 \begin{itemize}
 \item Le 4+I equazioni determinano $r$, $P$, $T$, $L$, $X_s$ specificata la massa e composizione iniziale (omogenea)
 \item $\tau_n\gg\tkh\gg\tau_{dyn}$: solve 4 structure equations at time t - do time step $\Delta t$ and determine new composition - solve structure at $t+\Delta t$ with new composition
@@ -825,6 +768,67 @@ At surface $m=M$, $L=L_s$, atmospheric model for $P$, $T$ - atmosphere defined b
 \end{columns}
 \end{frame}
 
+\begin{frame}[fragile]{Al centro: 1-order expansion of structure equations as $m\to0$}
+	\begin{align*}
+	&d(r^3)=\frac{3}{4\pi\rho}:\ r=(\frac{3}{4\pi\rho_c})^{1/3}m^{1/3}\\
+	&l=(\epsilon_n-\epsilon_{\nu}+\epsilon_g)_cm\\
+	&\TDy{m}{P}=-\frac{GM}{4\pi r^4}=-\frac{G}{4\pi}(\frac{4\pi\rho_c}{3})^{4/3}m^{-1/3}\\
+	&P-P_c=-\frac{3G}{8\pi}(\frac{4\pi\rho_c}{3})^{4/3}m^{2/3}\\
+	&\TDy{r}{P}\propto\frac{m}{r^2}\to0\\
+	&\TDy{m}{T}=-\frac{T}{P}\frac{Gm}{4\pi r^4}\nabla:\\
+	&T^4-T_c^4=-\frac{1}{2ac}(\frac{3}{4\pi})^{2/3}\kappa_c(\epsilon_n-\epsilon_{\nu}+\epsilon_g)_c\rho_c^{4/3}m^{2/3}\tag{Radiative}\\
+	&\log{T}-\log{T_c}=-(\frac{\pi}{6})^{1/3}G\frac{\nad{}_{,c}\rho_c^{4/3}}{P_c}m^{2/3}\tag{convective}
+	\end{align*}
+\end{frame}
+
+\begin{frame}{Condizione alla superficie: fitting mass}
+Fotosfera: regione di emissione della radiazione $\tau=\int_R^{\infty}\kappa\rho\,dr=\exv{\kappa}\int_R^{\infty}\rho\,dr=\frac{2}{3}$. HE: pressure is given by weight of matter above $P(R)=\frac{2}{3}\frac{GM}{R^2}\frac{1}{\exv{\kappa}}$. $L=4\pi R^2\sigma T_e^4$.
+Fitting mass: interior equations still valid, $l\approx L$, $m\approx M$, $M-m_F$ can have thermal readjustment.
+Model of stellar atmosphere for given M, $X_i(m)$: two parameter solution $(R,T_e)$ for $l=l_F^{ex}$, $P=P_F^{ex}$, $T=T_F^{ex}$, $r=r_F^{ex}$ integrated down to $m_F$ to be matched with interior solutions.
+4 equations for 4 DOF: $T_c$, $P_c$, $T_e$, $R$, and we can invert $r_F^{ex}(R,L)$
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{align*}
+&P_F^{ex}(R(r_F^{ex},L),L)=\pi(r_F^{ex},L)\\
+&T_F^{ex}(R(r_F^{ex},L),L)=\theta(r_F^{ex},L)
+\end{align*}
+\end{column}
+\begin{column}{0.5\textwidth}
+	Outer boundary conditions for interior solution such that there is alwaysan outer solution that matches interior
+\begin{align*}
+&P_F^{in}=\pi(r_F^{in},L)\\
+&T_F^{in}=\theta(r_F^{in},L)
+\end{align*}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Deps of interior solution on surface condition}
+m,l approx const: raidative envelope $\PDy{P}{T}=\frac{3}{64\pi\sigma G}\frac{\kappa l}{T^3m}$, $\kappa=\kappa_0P^aT^b$ con $a>0(=1)$, $b<0(=-4.5)$ si ha $\frac{T^{3-b}}{P^a}\PDy{P}{T}=\frac{3\kappa_0}{64\pi\sigma G}\frac{l}{m}$: solution $T^{4-b}=B(P^{1+a}+C)$ (''adiabat'')
+\begin{itemize}
+	\item $C=0\Rightarrow \nabla=\TDly{P}{T}\approx0.235<\nad=\frac{2}{5}$ ($P=0|_{T=0}$)
+	\item $C>0: \nabla<0.235$ (envelope sol. for $T_e>\SI{e4}{\kelvin}$): $P^2\ll C: T\approx\const{}$ (toward surface), $P\gg C$ (converge to $C=0$ solution)
+	
+\end{itemize}
+Condition at surface do not affect greatly interior solution.
+\begin{columns}[T]
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+	\item $0.4>\nabla>0.235$ (solutions below those with $C=0$): $\nad=\frac{2}{5}$ (lower in ionization regions),
+	$\nabla>\nad$ (interior solution have to be terminated at convection border).
+\end{itemize}
+Small variation of $T_e$ (numerical/physical uncert.or super-adiabat) lead to curves widely separated in interior.
+\end{column}
+\begin{column}{0.55\textwidth}
+\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{envelopelnTlnP}\label{fig:envelopelnTlnP}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
 \begin{frame}{Simplified atmosferic model: grey atmosphere}
 Atmosphere model: usually PP geometry and solve HE equation using non grey radiative transport and EOS and convection if needed
 \begin{align*}
@@ -836,6 +840,105 @@ integration from $\tau\approx0$ where $T\approx0$, $P\approx0$ down to $\tau=\fr
 
 \begin{frame}{Chemical mixing: diffusion and convection}
 
+\end{frame}
+
+\subsection{Approssimazione politropa}\linkdest{poly}
+
+\begin{frame}{Polytropic relation $P=K\rho^{\gamma}=K\rho^{1+\frac{1}{n}}$}
+	\begin{itemize}
+\item[*] Additional relation between T-P: ie $TV\expy{\gamma-1}=\const$, $PV\expy{\gamma}=\const$, $P\expy{1-\gamma}T\expy{\gamma}=\const$ ($0=dE-\frac{P}{\rho^2}d\rho$); \keyword{trasformazione politropa} trasformazione quasi-statica in maniera che $c=\TDy{Q}{T}$ (calore specifico) vari in maniera assegnata. (adiabatica: $c=0$, isoterma: $c=\infty$, isometrica: $c=c_V$, ...) - K as free parameter.
+\item [*] EOS of the form $P=K\rho^{\gamma}$, K fixed.
+	\end{itemize}
+	\begin{block}{Poisson eq.}
+		\begin{columns}[T]
+			\begin{column}{0.6\textwidth}
+				\begin{align*}
+				&\TDy{r}{P}=-\TDy{r}{\phi}\rho\\
+				&\frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\phi})=4\pi G\rho\\
+				&\TDy{r}{\phi}=-\gamma K\rho\expy{\gamma-2}\TDy{r}{\rho}:\ \rho=(\frac{-\phi}{(n+1)K})^n\\
+				&\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n
+				\end{align*}
+			\end{column}
+			\begin{column}{0.4\textwidth}
+				\begin{align*}
+				&\gamma=5/3, n=3/2\tag{NR deg}\\
+				&\gamma=4/3, n=3\tag{R deg}\\
+				&\gamma=1, n=\infty\tag{isot.}\\
+				&\nad\approx\frac{2}{5}\tag{conv}
+				\end{align*}
+		\end{column}\end{columns}
+	\end{block}
+$w(0)=1$, $w'(0)\propto\TDy{r}{\phi}=|g|\to0$, $w(z\approx0)\approx1-\frac{1}{6}z^2+\ldots$
+\end{frame}
+
+\begin{frame}{Equazione Lane-Emden}
+	\begin{columns}[T]
+		\begin{column}{0.5\textwidth}
+			\begin{align*}
+			&\rho=(\frac{-\phi}{(n+1)K})^n\tag{HE}\\
+			&\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n\tag{Poiss}\\
+			&\TtwoDy{z}{w}+\frac{2}{z}\TDy{z}{w}+w^n=0\\
+			&\frac{1}{z^2}\TDof{z}(z^2\TDy{z}{w})+w^n=0\tag{Lane-Emden}
+			\end{align*}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{align*}
+			&z=Ar\tag{new vars}\\
+			&A^2=\frac{4\pi G}{(n+1)^nK^n}(-\phi_c)\expy{n-1}\\
+			&=\frac{4\pi G}{(n+1)K}\rho_c\expy{\frac{n-1}{n}}\\
+			&w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})\expy{1/n}\\
+			&(\rho=\rho_cw^n)
+			\end{align*}
+	\end{column}\end{columns}
+Surface where $w(z_n)=0$ and $\rho=0$ ($\frac{r}{z}=\frac{1}{A}=\frac{R}{z_n}$)
+\end{frame}
+
+\begin{frame}{Polytropic star model: given $n<5, M, R$}
+\begin{block}{Possible if K not fixed by eos}
+\begin{align*}
+&m(r)=\int_0^r4\pi\rho r^2\,dr=4\pi\rho_c\int_0^rw^nr^2\,dr=4\pi\rho_c\frac{r^3}{z^3}\int_0^zw^nz^2\,dz\\
+&=4\pi\rho_cr^3(-\frac{1}{z}\TDy{z}{w}),\ M=4\pi\rho_cR^3(-\frac{1}{z}\TDy{z}{w})_{z=z_n}\\
+&\frac{\exv{\rho}}{\rho_c}=[-\frac{3}{z}\TDy{z}{w}]_{z_n}\tag{model}\\
+&\rho=\rho_cw^n(z),\ P=K(A,\rho_c)\rho^{\frac{n+1}{n}}
+\end{align*}
+\end{block}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{block}{ie radiative pressure}
+	\begin{align*}
+	&P=\frac{R\rho}{\mu}+\frac{a}{3}T^4=\frac{R}{\mu\beta}\rho T,\ \beta=\frac{P_{gas}}{P}\\
+	&1-\beta=\frac{P_r}{P}=\frac{aT^4}{3P}\Rightarrow P=(\frac{3R^4}{a\mu^4})^{\frac{1}{3}}(\frac{1-\beta}{\beta^4})^{\frac{1}{3}}\rho^{\frac{4}{3}}
+	\end{align*}
+\end{block}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{block}{isothermal sphere: $\gamma=1, n\to\infty$}
+$K=\frac{RT}{\mu}$ free param
+\begin{align*}
+&\TDy{r}{\phi}=-\gamma K\rho^{\gamma-2}\TDy{r}{\rho}:\  \frac{\phi}{-K}=\ln{\rho}-\ln{\rho_c}\\
+&\TtwoDy{z}{w}+\frac{2}{z}\TDy{z}{w}=\exp{-w}\\
+&w(0)=w'(0)=0
+\end{align*}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Fixed K. $M_{ch}$}
+\begin{block}{NR degenerate \Pelectron gas}
+$n=\frac{3}{2}$, $K=\frac{1}{20}(\frac{3}{\pi})^{\frac{3}{2}}\frac{h^2}{m_e}\frac{1}{(\mu_em_p)^{\frac{5}{3}}}$: given $\rho_c$ the poly model gives $\rho=\rho_cw^n$, $R=\frac{z_n}{A}\propto\rho_c^{\frac{1-n}{2n}}$, $M\propto\rho_cR^3=C_1\rho_c^{\frac{3-n}{2n}}$ quindi $R\propto M^{\frac{1-n}{3-n}}$. Given K, n the only param is $R$ or $M$ (or $\rho_c$)
+\end{block}
+\begin{block}{WD model}
+As M increases the inner R degenerate part increases ($\rho>\SI{e6}{\gram\per\cubic\cm}$): R degenerate core with $n=3$ fitted to outer NR degenerate envelope $n=\frac{3}{2}$. For $n=3$:
+\begin{align*}
+M=C_1=4\pi(\frac{w'}{z})_{z_3}z_3^3(\frac{K}{4\pi G})^{\frac{3}{2}}=M_{ch}=\frac{5.836}{\mu_e^2}\msun
+\end{align*}
+Model tend to finite mass as \xaumenta{\rho_c}
+\end{block}
+\end{frame}
+
+\begin{frame}{Strutture isoterme e modello solare}
+	
 \end{frame}
 
 \subsection{Metodo di Henyey: modelli evolutivi}

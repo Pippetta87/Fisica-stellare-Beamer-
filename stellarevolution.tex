@@ -1,5 +1,50 @@
 \section{Evoluzione stellare}\linkdest{stellarevolution}
 
+\subsection{Pre-MS}
+
+\begin{wordonframe}{da fare: kippenhahn wiegert}
+	\begin{itemize}
+		\item Hayashi line 224'-232' (119-123)
+		\item pre-main sequence contraction 266'-270' (140-142)
+	\end{itemize}
+\end{wordonframe}
+
+\begin{frame}{Traccia d'Hayashi: protostar can be described by SSE}
+	\begin{columns}[T]
+		\begin{column}{0.45\textwidth}
+			\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{hayatrack}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+		$\log{T_e}=A\log{L}+B\log{M}+\const{}$: $\TDly{T_e}{L}=\frac{1}{A}\gg1$ HL almost vertical, HL shift to left as \xaumenta{M}.
+		Extension of superadiabatic layer and ionization zones varies with $L$: $A>0$ for low L and changes sign at $L\approx\lsun$.
+		Fully convective star model as contracting polytrope with no nuclear source: close to HL $\exv{\nabla}=\invers{(1+n)}$, $\PDy{n}{\log{T_e}}>0$ star move to right as $n$ decreases ($\exv{\nabla}$ increases).
+		\end{column}
+	\end{columns}
+Since $\nrad\propto\frac{\kappa l P}{T^4m}\propto\frac{L}{M}C^{1+a}T^{b-4+2.5(1+a)}$, approx $\frac{l}{m}=\frac{L}{M}$, Kramers opacity $a=1$, $b=-4.5$, $T\approx T_c\approx\frac{M}{R}$, $R\propto L^{1/2}$, for any $M$ L reaches minimum if at center $0.4=\nrad\propto L^{1.25}M^{-5.5}$ so  down to $L_{min}\propto M^{4.4}$ star is full convective.
+\end{frame}
+
+\begin{frame}[fragile]{HL: stelle completamente convettive. Fitting interior to photosphere conditions}
+	\begin{columns}[T]
+		\begin{column}{0.55\textwidth}
+			Fully convective interior: $\nabla=\nad$, polytrope $P=CT^{n+1}$, ($n=\frac{1}{\nad}-1=\frac{3}{2}$), $P=\frac{R\rho T}{\mu}$, photosphere at $\tau=\frac{2}{3}$, $P_0$, $T_e$, $R$, $M$
+			\[\log{T}=0.4\log{P}+0.4(\frac{3}{2}\log{R}+\frac{1}{2}\log{M}-\log{C'})\]
+			Atmosphere (Radiative): $\exv{\kappa}\propto\kappa_0T^bP^a$, $\tau=\int_R^{\infty}$, HE: $P(r=R)=\int_R^{\infty}g\rho\,dr=g_0\int_R^{\infty}\rho\,dr=\frac{GM}{R^2}\frac{2}{3\exv{\kappa}}$:
+			\[(a+1)\log{P_0}=\log{M}-2\log{R}-b\log{T_e}+\const{}\]
+			%$P_0\propto(\frac{M}{R^2}T_e^{-b})^{\frac{1}{1+a}}$
+			Low $T_e$: atmospheric opacity from $H^-$: $A\approx0.05$, $B\approx0.2$
+			HL neighborhood: the larger $T_e$ the earlier radiative region before the center ($\exv{\nabla}<\nad$), on the right of HL $\exv{\nabla}>\nad$ (super-adiabatic convection in interior: star goes to the left with convective/dynamical timescale).
+			
+		\end{column}
+		\begin{column}{0.45\textwidth}
+			\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HL-intatm}\label{fig:HL-intatm}
+			\end{figure}
+			\begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HL-fulladiabatneigh}\label{fig:HL-fulladiabatneigh}
+		\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \subsection{Evoluzione di sequenza principale}\linkdest{MS}
 
 \begin{frame}{Approccio alla ZAMS per stelle di sequenza superiori/inferiori}
