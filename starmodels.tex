@@ -846,9 +846,8 @@ integration from $\tau\approx0$ where $T\approx0$, $P\approx0$ down to $\tau=\fr
 
 \begin{frame}{Polytropic relation $P=K\rho^{\gamma}=K\rho^{1+\frac{1}{n}}$}
 	\begin{itemize}
-\item[*] Additional relation between T-P: ie $1^{st}$ law $\TDy{T}{Q}=\TDy{T}{U}+P\TDy{T}{V}=C=c_V+P(\TDy{T}{V})_P$ - ideal gas $c_P-c_V=\frac{R}{\mu}$: $\frac{dT}{T}+\frac{1}{n}\frac{dV}{V}=0$, $n=\frac{c_V-C}{c_P-c_V}$
-
- $TV\expy{\gamma-1}=\const$, $PV\expy{\gamma}=\const$, $P\expy{1-\gamma}T\expy{\gamma}=\const$ ($0=dE-\frac{P}{\rho^2}d\rho$); \keyword{trasformazione politropa} trasformazione quasi-statica in maniera che $c=\TDy{Q}{T}$ (calore specifico) vari in maniera assegnata. (adiabatica: $c=0$, isoterma: $c=\infty$, isometrica: $c=c_V$, ...) - K as free parameter.
+\item[*] Additional relation between T-P: ie $1^{st}$ law $\TDy{T}{Q}=\TDy{T}{U}+P\TDy{T}{V}=C=c_V+P(\TDy{T}{V})_P$ - ideal gas $c_P-c_V=\frac{R}{\mu}$: $\frac{dT}{T}+\frac{1}{n}\frac{dV}{V}=0$, $n=\frac{c_V-C}{c_P-c_V}$. \keyword{trasformazione politropa}: t. quasi-statica in  con $c=\TDy{Q}{T}$ (calore specifico) assegnato - K is free parameter.
+%$TV\expy{\gamma-1}=\const$, $PV\expy{\gamma}=\const$, $P\expy{1-\gamma}T\expy{\gamma}=\const$ ($0=dE-\frac{P}{\rho^2}d\rho$). 
 \item [*] EOS of the form $P=K\rho^{\gamma}$, K fixed.
 	\end{itemize}
 	\begin{block}{Poisson eq.}
@@ -937,6 +936,37 @@ M=C_1=4\pi(\frac{w'}{z})_{z_3}z_3^3(\frac{K}{4\pi G})^{\frac{3}{2}}=M_{ch}=\frac
 \end{align*}
 Model tend to finite mass as \xaumenta{\rho_c}
 \end{block}
+\end{frame}
+
+\begin{frame}{Energy in poly}
+Energia gravitazionale:
+\begin{align*}
+&E_g=-G\int_0^M\frac{m}{r}\,dm\, (=-3\int_0^M\frac{P}{\rho}\, dm)\\
+&=-\frac{1}{2}\frac{GM^2}{R}-\frac{1}{2}\int_0^R\TDy{r}{\phi}m\,dr=-\frac{1}{2}\frac{GM^2}{R}+\frac{1}{2}\int_0^M\phi\,dm\\
+&\phi=-\frac{K\gamma}{\gamma-1}\rho^{\gamma-1}=-\frac{\gamma}{\gamma-1}\frac{P}{\rho}\tag{poly}\\
+&E_g=-\frac{1}{2}\frac{GM^2}{R}+\frac{1}{6}(n+1)E_g: E_g=-\frac{3}{5-n}\frac{GM^2}{R}
+\end{align*}
+Energia interna $E_i$ della stella - $u$ per unit mass:
+\begin{align*}
+&\frac{P}{\rho}=\frac{R}{\mu}T=(\gamma-1)c_VT\xrightarrow{\text{mono gas}}\frac{2}{3}u:\ \zeta=\frac{3P}{\rho u}\tag{virial for general EOS}\\
+&E_i=-\frac{1}{\zeta}E_g=\frac{3}{\zeta(5-n)}\frac{GM^2}{R},\ W=E_i+E_g=\frac{3}{5-n}(\frac{1}{\zeta}-1)\frac{GM^2}{R}\\
+&\zeta\,du=3\frac{dP}{\rho}-3\frac{P}{\rho^2}\,d\rho,\ du=\frac{P}{\rho^2}\,d\rho\Rightarrow\zeta=3\frac{\rho}{P}\TDy{\rho}{P}-3=3(\gamma_{ad}-1)
+\end{align*}
+\end{frame}
+
+\begin{frame}{Homologous contraction (poly index n)}
+$z\propto\frac{r}{R}$: LE gives $m(z)$ so mass elements at homologous points
+\begin{align*}
+&r'=r+\dot{r}\Delta t\Rightarrow\frac{r}{r'}=1+\frac{\dot{r}}{r}\Delta t\\
+&\frac{r'}{r}=\frac{R'}{R}=\const{}\Rightarrow\frac{\dot{r}}{r}=\frac{\dot{R}}{R}=\const{}\ (\PDof{m}\PDy{t}{\ln{r}})=0\\
+&\PDof{t}(\frac{1}{r}\PDy{m}{r})=0=\PDof{t}(\frac{1}{4\pi r^3\rho})\Rightarrow\frac{\dot{\rho}}{\rho}=-3\frac{\dot{r}}{r}\\
+&P=\int_m^M\frac{Gm}{4\pi r^4}\,dm:\ \dot{P}=\int_m^M\PDof{t}(\frac{1}{r^4})\frac{Gm}{4\pi}\tag{HE}\\
+&\rho\propto P^{\alpha}T^{-\delta}\Rightarrow\frac{\dot{\rho}}{\rho}=\alpha\frac{\dot{P}}{P}-\delta\frac{\dot{T}}{T}\tag{EOS}\\
+&\frac{\dot{T}}{T}=-\frac{4\alpha-3}{\delta}\frac{\dot{r}}{r}\\
+&\epsilon_g=c_PT(\nad\frac{\dot{P}}{P}-\frac{\dot{T}}{T})=c_PT[-4\nad+\frac{4\alpha-3}{\delta}]\frac{\dot{R}}{R}\\
+&\to-\frac{3}{5}c_PT\frac{\dot{R}}{R}\tag{ideal mono $\nad=\frac{2}{5}$, $\alpha=\delta=1$}
+\end{align*}
+
 \end{frame}
 
 \begin{frame}{Strutture isoterme e modello solare}
