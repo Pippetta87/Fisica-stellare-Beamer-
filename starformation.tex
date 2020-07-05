@@ -1,9 +1,10 @@
 \section{Star formation and pre MS}\linkdest{starformation}
 
-\begin{wordonframe}{da fare: kippenhahn wiegert}
+\begin{wordonframe}{da fare: }
 \begin{itemize}
-\item Onset of star formation 248'-255' (131-134)
-\item Formation of protostars 256'-265' (135-139)
+\item Onset of star formation: kippenhahn wiegert 248'-255' (131-134) -26.1: isothermal plane parallel and spherical object in HE
+\item Formation of protostars: kippenhahn wiegert 256'-265' (135-139)
+\item Star formation and early evolution: salaris cassisi 105' (119)
 \end{itemize}
 \end{wordonframe}
 
@@ -25,6 +26,84 @@
 	\end{column}\begin{column}{0.5\textwidth}
 
 \end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Onset of cloud formation ($\tau_{ff}\gg\tau{KH}$). Jeans Criterion}
+\begin{columns}[T]
+\begin{column}{0.65\textwidth}
+perturbazioni densit\'a uniforme costante (for small $\lambda$ as isothermal sphere in HE)
+\begin{align*}
+&\PDy{t}{\vec{v}}+(\vec{v}\cdot\nabla)\vec{v}=-\frac{1}{\rho}\nabla P-\nabla\phi\\
+&\PDy{t}{\rho}+\vec{v}\cdot\nabla\rho+\rho\nabla\cdot\vec{v}=0\\
+&\nabla^2\phi=4\pi G\rho,\ P=\frac{R}{\mu}\rho T=v_s^2\rho
+\end{align*}
+$T=T_0=\const$, $\rho=\rho_0=\const$, $\nabla^2\phi_0=4\pi G\rho_0$
+\end{column}
+\begin{column}{0.35\textwidth}
+Perturbazioni:
+\begin{align*}
+&\PDy{t}{\vec{v}_1}=-\nabla(\phi_1+v_s^2\frac{\rho_1}{\rho_0})\\
+&\PDy{t}{\rho_1}+\rho_0\nabla\cdot\vec{v}_1=0\\
+&\nabla\phi_1=4\pi G\rho_1
+\end{align*}
+\end{column}
+\end{columns}
+Homogeneous ODE system with constant coeffs: $\PDof{x}\to ik$, $\PDof{y}=\PDof{z}\to0$, $\PDof{x}\to i\omega$:
+\begin{columns}[T]
+	\begin{column}{0.3\textwidth}
+		\begin{align*}
+		&\omega v_1+\frac{kv_s^2\rho_1}{\rho_0}+k\phi_1=0\\
+		&k\rho_0v_1+\omega\rho_1=0\\
+		&4\pi G\rho_1+k^2\phi=0
+		\end{align*}
+	\end{column}
+	\begin{column}{0.3\textwidth}
+Non trivial solution
+		\begin{align*}
+		&\begin{vmatrix}
+		\omega&kv_s^2\rho_0&k\\
+		k\rho_0&\omega&0\\
+		0&4\pi G&k^2\\
+		\end{vmatrix}=0\\
+		&\omega^2=k^2v_s^2-4\pi G\rho_0
+		\end{align*}
+	\end{column}
+	\begin{column}{0.4\textwidth}
+$k$ large: $\omega$ real (oscillations). Stability $\lambda>\lambda_J=\sqrt{\frac{\pi}{G\rho_0}}v_s$, unstable $k<k_J=\frac{4\pi G\rho_0}{v_s^2}$
+\end{column}
+\end{columns}
+Collapsing plane-parallel slab: $i\omega\approx\sqrt{G\rho_0}$
+\end{frame}
+
+\begin{frame}{Fragmentation. Adiabatic collapse and cooling processes}
+	\begin{align*}
+&M_J=\frac{4\pi}{3}\exv{\rho}R_m^3:\ M_J\propto(\frac{T}{\mu})^{\frac{3}{2}}(\frac{1}{\exv{\rho}})^{\frac{1}{2}}\tag{sper. instab.}\\
+&M_J=\num{1.2e5}\msun{}(\frac{T}{\SI{100}{\kelvin}})^{\frac{3}{2}}(\frac{\rho}{\SI{e-24}{\gram\per\cubic\cm}})^{-\frac{1}{2}}\mu^{-\frac{3}{2}}\tag{pertub.}
+	\end{align*}
+	Cooling processes: $E_g\approx\frac{GM^2}{R}$ has to be radiated at rate $A\approx\frac{GM^2}{R}(G\exv{\rho})^{\frac{1}{2}}\propto\frac{G^{\frac{3}{2}}M^{\frac{5}{2}}}{R^{\frac{5}{2}}}$; radiation emission as fraction f of radiation emitted from black body $B=4\pi f\sigma T^4R^2$
+	\begin{columns}[T]
+		\begin{column}{0.5\textwidth}
+In isothermal collapse ($B\gg A$) $M_J\propto\rho^{-\frac{1}{2}}$ so as density increases the cloud undergoes ''sub collapses''.
+		\end{column}
+		\begin{column}{0.5\textwidth}
+At end of isothermal collapse, when matter becomes opaque $A\approx B$, begins adiabatic collapse phase (approx thermal equilibrium):
+ \begin{align*}
+&\nad=\TDly{P}{T}_a=\frac{2}{5}\\
+&T\propto P^{\frac{2}{5}}, P\propto\rho T:\ T\propto\rho^{\frac{2}{3}}\\
+&M_J\propto T^{\frac{3}{2}}\rho^{-\frac{1}{2}}\propto\rho^{\frac{1}{2}}
+ \end{align*}
+		\end{column}
+	\end{columns}
+At end of fragmentation $M_J\approx0.02\msun{}\frac{T^{\frac{1}{4}}}{f^{\frac{1}{2}}}$
+\end{frame}
+
+\begin{frame}{Free-fall collapse of (h-)sphere}
+$(\frac{g}{\nabla P})\propto\frac{M}{RT}\propto\frac{1}{R}$: collapse is more and more dominated by (g)ravitation (homologous contraction: $\frac{r}{r_0}$, $\frac{\dot{r}}{r_0}$ are same for all shell at given t)
+\begin{align*}
+&\ddot{r}=-\frac{Gm}{r^2}\Rightarrow\frac{1}{2}\dot{r}^2=\frac{4\pi r_0^3}{3r}G\rho_0+\const{}\\
+&\frac{\dot{r}}{r}=-\sqrt{\frac{8\pi}{3}G\rho_0(\frac{r_0}{r}-1)},\cos^2{\zeta}=\frac{r}{r_0}\Rightarrow \zeta+\frac{1}{2}\sin{2\zeta}=\sqrt{\frac{8\pi G\rho_0}{3}}t
+\end{align*}
+
 \end{frame}
 
 \subsection{Pre main sequence ed approccio a ZAMS per stelle di sequenza superiori/inferiori}\linkdest{preMS}
