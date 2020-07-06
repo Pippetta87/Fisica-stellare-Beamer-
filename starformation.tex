@@ -105,7 +105,58 @@ $(\frac{g}{\nabla P})\propto\frac{M}{RT}\propto\frac{1}{R}$: collapse is more an
 \end{align*}
 When opacity gets bigger in central regions collaps stalls. $\dot{M}=4\pi r^2v\rho$ constant in space and time over central mass $M$ in HE: $\frac{2}{r}+\frac{1}{\rho}\TDy{r}{\rho}+\frac{1}{v}\TDy{r}{v}$, $v=v_{ff}=\sqrt{\frac{GM}{2r}}$ so $\frac{1}{\rho}\TDy{r}{\rho}=-\frac{3}{2r}$ ie $\rho(r)=\frac{\const{}}{r^{\frac{3}{2}}}$.
 
-Radiation loss: $L_{accr}=\frac{1}{2}v_{ff}^2(R)\dot{M}=\frac{1}{4}\frac{GM}{R}\dot{M}$
+Radiation loss: $L_{accr}=\frac{1}{2}v_{ff}^2(R)\dot{M}=\frac{1}{4}\frac{GM}{R}\dot{M}$.
+
+Collapse calculation:
+\begin{align*}
+&\PDy{}{}+4\pi r^2v\rho=0,\ \TDof{t}=\PDof{t}+v\PDof{r}\\
+&\PDy{t}{v}+v\PDy{r}{v}+\frac{GM}{r^2}+\frac{1}{\rho}\PDy{r}{P}=0\tag{EOM}\\
+&\PDy{t}{u}+P\PDof{t}(\frac{1}{\rho})+v[\PDy{r}{u}+P\PDof{r}(\frac{1}{\rho})]+\frac{1}{4\pi\rho r^2}\PDy{r}{l}=0,\ l=-\frac{16\pi acr^2}{3\kappa\rho}T^3\PDy{r}{T}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Optically thin phase and core formation}
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+	\item Isothermal phase $T\approx\SI{10}{\kelvin}$ - when instability turns nonlinear contraction isn't homologous ($t_{ff}$ is smaller for inner shell: $\rho\propto r^{-2}$).
+	\item Central region becomes opaque at $\rho\approx\SI{e-13}{\gram\per\cubic\cm}$: density increases causes adiabatic pressure increases until collapse stops.
+	\item As M core increases and radius decreases v of infalling materials exeeds sound speed: shock region separating supersonic rain from hydrostatic core.
+	\item Hydrostatic core: protostar - $\rho_e$, $v_e$ infalling matter then $P_i=\rho_ev_e^2=\rho_e\frac{GM}{2R}$ (momentum conservation: $P+\rho v^2$ is the same on both sides) 
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{collapsingdensity}\label{fig:collapsingdensity}
+\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{collapsedensitystructure}\label{fig:collapsedensitystructure}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{core collapse}
+\begin{columns}[T]
+	\begin{column}{0.55\textwidth}
+	\begin{itemize}
+	\item For $H_2$ $\gamma_{ad}=\frac{f+2}{f}=\frac{7}{5}=1.4\approx\frac{4}{3}\approx1.33$, for $H$ $\gamma_{ad}=\frac{5}{3}\approx1.667$.  Slight decreases of $\gamma_{ad}<\frac{4}{3}$ by $H_2$ dissociation: collapse.
+	\item When all hydrogen is dissociated $\gamma_{ad}>\frac{4}{3}$
+	\item Central compression (of innermost core) is adiabatic as $\tau_{accr}<\tau_{KH}$, then $\dot{M}\to0$ and evolution is no more adiabatic.
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.45\textwidth}
+	\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{centralcollapseevolution}\label{fig:centralcollapseevolution}
+	\end{figure}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Evolution of protostar in HR}
+\begin{itemize}
+\item Far from HE: radiation emitted by core is absorbed by envelope's grain and re-emitted in IR. Infalling envelope. Start on far right in HR diagram.
+\item Thinning of envelope: photosphere moves downward until reaches core - $T_{ff}$ increases
+\item In accretion phase $L\approx L_{accr}\propto\dot{M}$, then $L\approx L_g$ of core. Strong accretion rate heats core and make it isothermal, then a T gradient builds up and convection developes downward from surface - we found object on HL if fully convective, normal condition at border and envelope is thin in V.
+\end{itemize}
 \end{frame}
 
 \subsection{Pre main sequence ed approccio a ZAMS per stelle di sequenza superiori/inferiori}\linkdest{preMS}
