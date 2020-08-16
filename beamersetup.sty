@@ -74,9 +74,10 @@
 
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
-%\AtBeginPart[]
+%\AtBeginPart
 %{
-%  \begin{frame}<beamer>{Outline}    %\tableofcontents[currentsection]
+%  \begin{frame}{Outline}
+%  \tableofcontents
 %  \end{frame}
 %}
 
@@ -169,6 +170,9 @@
 \AtBeginPart{%
 \addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
 \frame{\partpage}
+\begin{frame}[allowframebreaks]{Outline}
+\tableofcontents
+\end{frame}
 }
 %% number, shortname, page.
 \providecommand\beamer@partintoc[3]{%
@@ -202,7 +206,7 @@
           \hyperlink{stellarstructure}{SSE}:\hyperlink{stellarstructure}{EqS}-\hyperlink{omrel}{rude}-\hyperlink{transport}{trans}(\hyperlink{trarad}{rad}-\hyperlink{kapparad}{$\kappa$}-\hyperlink{tracond}{cond}-\hyperlink{traconv}{$\alpha$}-\hyperlink{diffusion}{diff})-\hyperlink{eos}{eos}-\hyperlink{luminositysourcessinks}{$\epsilon$}(\hyperlink{epsilong}{$\epsilon_g$}-\hyperlink{epsilonn}{$\epsilon_n$}\hyperlink{epsilonpp}{$PP$}-\hyperlink{epsiloncno}{CNO}-\hyperlink{epsilonheavy}{late}-\hyperlink{epsilon}{$\nu$})
         \end{beamercolorbox}%Equazioni struttura stellare, input, stabilit\'a
     
-\begin{beamercolorbox}[wd=.12\paperwidth,ht=4.5ex,dp=0ex,center]{author in head/foot}%refs nummod
+\begin{beamercolorbox}[wd=.1\paperwidth,ht=4.5ex,dp=0ex,center]{author in head/foot}%refs nummod
 \hyperlink{stellarsolve}{solve}:\hyperlink{fourODE}{4ODE}-\hyperlink{poly}{poly}\hyperlink{henyey}{Hey}-\hyperlink{shooting}{first$*$}
 \end{beamercolorbox}%Soluzione modelli stellari
 
@@ -210,11 +214,11 @@
 	\hyperlink{starformation}{$*$Formation}:\hyperlink{protostellar}{proto}-\hyperlink{preMS}{pMS}
 \end{beamercolorbox}%
 
-\begin{beamercolorbox}[wd=.3\paperwidth,ht=4.5ex,dp=0ex,center]{author in head/foot}%refs stellarevolution
+\begin{beamercolorbox}[wd=.3\paperwidth,ht=4.25ex,dp=0ex,center]{author in head/foot}%refs stellarevolution
             \hyperlink{stellarevolution}{Evol}:\hyperlink{preMS}{PMS}-\hyperlink{MS}{MS}-\hyperlink{LMS}{LMS}-\hyperlink{UMS}{UMS}-\hyperlink{MSdeps}{deps}-\hyperlink{malure}{M-L}-\hyperlink{postMS}{postMS}-\hyperlink{ZAHB}{ZAHB}-\hyperlink{HBlowM}{HBlowM}-\hyperlink{HBIM}{HB-I/M}-\hyperlink{HBpulsating}{HB-puls}-\hyperlink{AGB}{AGB}-\hyperlink{WD}{WD}-\hyperlink{lateintM}{lateintm}-\hyperlink{SN}{SN}
         \end{beamercolorbox}%Equazioni struttura stellare
 
-\begin{beamercolorbox}[wd=.15\paperwidth,ht=4.5ex,dp=1ex,center]{author in head/foot}%refs 
+\begin{beamercolorbox}[wd=.12\paperwidth,ht=4.5ex,dp=0ex,center]{author in head/foot}%refs 
 	\hyperlink{U}{U}:\hyperlink{BBN}{BBN}|\hyperlink{mw}{MW}|\hyperlink{starpop}{pop}:\hyperlink{oldPPS}{oPPS}-\hyperlink{youngPPS}{yPPS}-\hyperlink{ageindicator}{age}-\hyperlink{USP}{uSP}
 \end{beamercolorbox}%Popolazione stellare/ Galassia
 
