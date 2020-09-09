@@ -19,9 +19,9 @@
 &\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
 &\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}=\frac{1}{2}(G\exv{\rho})\expy{-1/2}}\\
 &\TDy{m}{T}=-\nabla\frac{T}{p}\frac{Gm}{4\pi r^4}\\
-&\TDy{m}{L}=\epsilon-\epsilon_{\nu} \underbrace{-c_P[\TDy{t}{T}-\nad\frac{T}{P}\TDy{t}{P}]}_{-c_P\PDy{t}{T}+\frac{\delta}{\rho}\PDy{t}{P}}\\
-&\TDy{t}{X_s}\frac{1}{A_s}=\sum_{production}\rho^{n_h+n_k-1}n_p\frac{X_h^{n_h}X_k^{n_k}}{A_h^{n_h}A_k^{n_k}}\frac{\exv{\sigma v}_{hk}}{m_H^{n_h+n_k-1}n_h!n_k!}\\
-&-\sum_{distruction}\rho^{n_d+n_j-1}n_d\frac{X_s^{n_d}X_j^{n_j}}{A_s^{n_d}A_j^{n_j}}\frac{\exv{\sigma v}_{sj}}{m_H^{n_d+n_j-1}n_d!n_j!}
+&\TDy{m}{L}=\epsilon-\epsilon_{\nu} \underbrace{-c_P[\TDy{t}{T}-\nad\frac{T}{P}\TDy{t}{P}]}_{-c_P\PDy{t}{T}+\frac{\delta}{\rho}\PDy{t}{P}}\quad(\TDy{t}{q}=\underbrace{\TDy{t}{u}+P\TDof{t}(\frac{1}{\rho})}_{c_P\TDy{t}{T}-\frac{\delta}{\rho}\TDy{t}{P}}=\underbrace{\epsilon-\frac{1}{\rho}\nabla\cdot\vec{F})}_{\epsilon-\PDy{m}{l}}\\
+&\TDy{t}{X_s}\frac{1}{A_s}=\sum_{production}\rho^{n_h+n_k-1}n_p\frac{X_h^{n_h}X_k^{n_k}}{A_h^{n_h}A_k^{n_k}}\frac{\exv{\sigma v}_{hk}}{m_H^{n_h+n_k-1}n_h!n_k!}\tag{$n_hh+n_kk\to n_ps$}\\
+&-\sum_{distruction}\rho^{n_d+n_j-1}n_d\frac{X_s^{n_d}X_j^{n_j}}{A_s^{n_d}A_j^{n_j}}\frac{\exv{\sigma v}_{sj}}{m_H^{n_d+n_j-1}n_d!n_j!}\tag{$n_jj+n_ds\to n_zz$}
 \end{align*}
 \end{frame}
 
@@ -92,7 +92,7 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 
 \end{frame}
 
-\subsection{Relazioni approssimate per grandezze stellari fondamentali}\linkdest{omrel}
+\subsection{Considerazioni energetiche}\linkdest{virialstability}
 
 \begin{frame}{Teorema del viriale}
 \begin{columns}[T]
@@ -116,10 +116,6 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 Nel caso in cui la contrazione gravitazionale sia l'unica fonte di energia per una massa gassosa in equilibrio idrostatico, il suo tempo di evoluzione caratteristico \'e il tempo di \kh{} $\tkh{}=\frac{\Omega}{L}\approx\frac{GM^2}{2RL}$
 \end{frame}
 
-\begin{frame}{Relazione massa, densit\'a, temperatura/ massa, peso molecolare, opacit\'a}
-
-\end{frame}
-
 \begin{frame}{Stability}\frameintoc
 	\begin{itemize}
 		\item 
@@ -127,9 +123,26 @@ Nel caso in cui la contrazione gravitazionale sia l'unica fonte di energia per u
 		\end{itemize}
 	\end{frame}
 
+    \subsection{Andamento qualitativo}
+    
+    \begin{frame}{Propriet\'a stellari al variare di M? Relazioni M-L?}
+
+    \end{frame}
+    
+%\begin{frame}{Relazione massa, densit\'a, temperatura/ massa, peso molecolare, opacit\'a}
+%\end{frame}
 \section{Trasporto}\linkdest{transport}
 
 \subsection{Trasporto radiativo}\linkdest{trarad}
+
+\begin{frame}{Caratteristiche del gas di fotoni}
+    \begin{itemize}
+        \item Intensity (Macroscopic): energy transported $dE=I(\vec{x},t;\vec{n},\nu)dS\cos{\alpha}d\Omega d\nu dt$, $\alpha$: angolo tra $\vec{n}$ e $d\vec{S}$
+        \item Photon number density (Microscopic) $\psi$: $\psi(\vec{x},t;\vec{n},\nu)d\Omega d\nu$ number photons traveling around solid angle centered at $\vec{n}$, number of photons crossing $dS$: $\psi(\vec{n}\cdot d\vec{S}d\Omega d\nu cdt$, $dE=ch\nu\psi dS\cos{\alpha}d\Omega d\nu dt$: $I=\psi ch\nu$
+        \item photon distro function $f_R$: $f_R(\vec{x},t;\vec{n},p)d^3p$: number of photons per unit volume with moment $[\vec{p},\vec{p}+dp]$, $d^3p=p^2dpd\Omega=(\frac{h}{c})^3\nu^2d\Omega d\nu$: $I=\frac{h^4\nu^3}{c^2}f_R$
+        \item Mean intensity (zeroth moment of radiation field over angles): $J_{\nu}=J(\vec{x},t;\nu)=\invers{(4\pi)}\oint I\,d\Omega$ (\si{\erg\per\squared\cm\per\second\per\hertz\per\ster})
+    \end{itemize}
+\end{frame}
 
 \begin{frame}{Trasporto radiativo}
 \begin{columns}[T]
@@ -327,7 +340,7 @@ dove ho usato $\nabla_{amb}=\nrad{}$, cio\'e il gradiente che si ha nel caso l'e
 
 \subsection{Teoria della mixing-length.}
 
-\begin{wordonframe}{Convezione in esterni stellari}
+\begin{wordonframe}{\todo{Convezione in esterni stellari}}
 
 In presenza di convezione il flusso di energia verso l'esterno ha una componente radiativa, determinata dal gradiente di temperatura, e una componente dominante convettiva 
 \begin{equation*}\label{eq:radconvflux}
@@ -705,7 +718,7 @@ Fusione $C12$, fotodisintegrzione $Ne20$, fusione $O16$, fotodisintegrzione $Si2
 \end{frame}
 
 \begin{frame}{Cattura neutronica: processi r e s}
-picchi r e s nella nella curva universale delle abbondanze
+\todo{picchi r e s nella nella curva universale delle abbondanze}
 \end{frame}
 
 \begin{frame}{Nuclear burning efficiency}
