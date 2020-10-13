@@ -1,3 +1,4 @@
+%! TEX root = main.tex
 \section{Equazioni struttura stellare}\linkdest{stellarmodel}
 
 \begin{wordonframe}{da fare: kippenhahn wiegert}
@@ -406,15 +407,13 @@ cubic equation for $(\nabla-\nabla_e)$
 
 \end{wordonframe}
 
-\section{From micro-physics to thermodynamics: Equazione di stato}\linkdest{eos}
+\section{From micro-physics to thermodynamics: Equazione di stato, opacit\'a}\linkdest{micro2macro}
 
-\begin{wordonframe}{Schema fisico/chimico: ingredienti EOS realistiche}
+\begin{wordonframe}{Schema fisico/chimico: relazione $\rho(P,T)$ realistiche}
 \begin{itemize}
-\item schema chimico: il primo considera atomi e molecole, la cui popolazione per stati eccitati e diversi gradi di ionizzazione \'e ottenuto minimizzando l'energia libera da cui sono ricavate le altre grandezze termodinamiche; utilizzando questo approccio \'e stata ricavata l'equazione di stato MHD (\cite{hummer1988equation})
+\item schema  chimico: il primo considera atomi e molecole, la cui popolazione per stati eccitati e diversi gradi di ionizzazione \'e ottenuto minimizzando l'energia libera da cui sono ricavate le altre grandezze termodinamiche; utilizzando questo approccio \'e stata ricavata l'equazione di stato MHD (\cite{hummer1988equation})
 \item schema fisico: nuclei ed elettroni come costituenti fondamentali interagenti tramite potenziale Coulombiano e trova le soluzione dell'equazione di Schr\"oedinger per un problema a molti corpi, questo approccio, usato per ricavare l'equazione di stato OPAL (\cite{rogers1986occupation})
 \end{itemize}
-
-
 Come illustrato in figura, per entrambe $\Gamma_1\approx\midfrac{5}{3}$ nell'interno solare e maggiori deviazioni si hanno nelle regioni di ionizzazione parziale degli elementi in particolare di idrogeno ed elio.
 \end{wordonframe}
 
@@ -517,6 +516,133 @@ For $\rho>\SI{4e11}{\gram\per\cubic\cm}$ we have inverse $beta$-decay:nuclei cap
 \end{block}
 \end{frame}
 
+\begin{frame}{Absorption, emission and scattering}
+    \begin{itemize}
+        \item \keyword{Total absorption coef $\chi(\vec{x},t;\hat{n},\nu)$}: material volume of cross section $dS$ and length $dl$ removes energy from beam in interval dt:
+            \[\delta=\chi(\ldots)I(\ldots)dld\Omega d\nu dt\]
+            Sum over all states that can absorb at $\nu$ of the product of occupation number of those states (\si{\per\cubic\cm}) times their atomic crosssection (\si{\squared\cm}) at that freq.: $\lambda_{\nu}=\invers{\chi_{\nu}}$ is mean free path of photons
+        \item \keyword{Doppler Shift}: Photons moving along $\hat{n}$ with freq. $\nu$ in Lab. frame, has in fluid frame of materials moving at $\vec{v}$ freq. $\nu_0=\nu[1-\frac{\vec{v}\cdot\hat{n}}{c}]$ - $\frac{\Delta\nu_D}{\nu_0}c=13(\frac{T}{\SI{e4}{\kelvin}})^{1/2}\si{\kilo\meter\per\second}$
+        \item \keyword{Emission coeff. (Emissivity)}: $\eta(\vec{x},t;\hat{n},\nu)$ such that an element $dSxdl$ add energy to beam
+            \[\delta E=\eta(\ldots)dldSd\Omega\,dVdt\ [\si{\erg\per\cubic\cm\per\second\per\hertz\per\ster}]\]
+        \item \keyword{Scattering}: Photon excites atoms then atoms decay into fundamentals - Photons collides with free electrons (Thopson scattering), atom or molecule in which they excite a resonance (Rayleigh/Raman scattering) 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{True absorption and scattering coeff.}
+    True absorption plus scattering $\chi=\kappa+\sigma$, thermal emission plus scattering emission $\eta=\eta^T+\eta^S$ - if $\sigma_l$ (line scattering cross section) is isotropic total energy removed from beam is
+    \begin{align*}
+        &\sigma(\ldots)\intzi\,d\nu_0'\phi(\vec{x},t;\nu_0')\oint\,d\Omega_0'I_0(\vec{x},t;\hat{n}_0',\nu_0')\\
+        &=4\pi\sigma_l(\vec{x},t)\intzi\phi(\vec{x},t;\nu_0')J_0(\vec{x},t;\nu_0')d\nu_0'
+    \end{align*}
+    Prob. absorption of photon with $(\hat{n}',\nu')$ absorbed and re-emitted on $(\hat{n},\nu)$ is $R(\hat{n}',\nu',\hat{n},\nu)$.
+    If photons are random in angle and along line profile (\keyword{complete redistribution}: good approx. in many cases, within Doppler core of a line, if excited atoms suffer many collisions before re-emission) the fluid frame/lab. frame emission(emissivity) by scattering is
+    \begin{align*}
+        &\eta_0^S(\vec{x},t;\nu_0)=\sigma(\ldots)\phi(\vec{x},t;\nu_0)\intzi\,d\nu_0'\phi(\vec{x},t;\nu_0')J_0(\vec{x},t;\hat{n}_0',\nu_0')\\
+        &\eta^S(\vec{x},t;\hat{n},\nu_0)=\sigma(\ldots)\phi(\vec{x},t;\nu_0)\intzi\,d\nu_0'\oint\,d\Omega\phi(\vec{x},t;\nu_0')I_0(\vec{x},t;\hat{n}_0',\nu_0')
+    \end{align*}
+    When scattering is isotropic and coherent the emissivity is $\eta_0^S=\sigma_0(\vec{x},t)J_0(\vec{x},t;\nu_0)$: Thompson scattering of continuum photons by free electrons
+\end{frame}
+
+\begin{frame}{Kirchoff-Plank relation}
+    In TE: $(\eta_{\nu}^t)^*=(\kappa_{\nu}I_{\nu})^*$, $*$ indica TE dove $I_{\nu}=B_{\nu}$ quindi $(\eta_{\nu}^t)^*=(\kappa_{\nu}B_{\nu})^*$ - when gradients of physical quantities are small over photon destruction lenght: LTE
+\end{frame}
+
+\begin{frame}{Einstein relations}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $g_i, g_j$, \keyword{absorption probability $B_{ij}$}, \keyword{spontaneus emission probability $A_{ji}$}: isotropic
+            \[\dot{E}_{\nu}=\frac{A_{ji}h\nu_{ji}}{4\pi}n_i\phi_{\nu}\]
+            \begin{align*}
+                &(\frac{n_i}{n_j})^*B_{ij}I_{\nu}^*=A_{ji}+B_{ji}I_{\nu}^*\label{CR and TE}\\
+                &(\frac{n_j}{n_i})^*=\frac{g_j}{g_i}\exp{-h\nu/KT}\\
+                &\Rightarrow B_{\nu}=\frac{A_{ji}}{B_{ji}}\invers{[\frac{g_iB_{ij}}{g_jB_{ji}}\exp{h\nu_{ij}kT}-1]}\\
+                &g_iB_{ij}=g_jB_{ji}\tag{Atomic prop $\to$ E. coeff}\\
+                &A_{ji}=\frac{2h\nu_{ij}^3}{c^2}B_{ji}\tag{also for non TE}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            Number of photons absorbed per unit volume per unit time:
+            \[r_{ij}=n_i\phi_{\nu}B_{ij}I_{\nu}(\frac{d\Omega}{4\pi})d\nu\]
+            \keyword{Induced emission probability $B_{ji}$}: rate of stimulated energy emission per unit volume (as $I_{\nu}$)
+            \[\dot{E}_{\nu}=\frac{B_{ji}h\nu_{ij}}{4\pi}n_i\phi_{\nu}I_{\nu}\]
+            \keyword{Line emission/absorption ceff} (co-moving frame):
+            \begin{align*}
+    &\eta_l(\nu)=n_j\frac{A_{ji}h\nu_{ij}}{4\pi}\phi_{\nu}\\
+    &\chi_l(\nu)=\frac{n_iB_{ij}h\nu_{ij}}{4\pi}[1-\frac{g_in_j}{g_jn_i}]\phi_{\nu}
+            \end{align*}
+        \end{column}
+    \end{columns}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+             Source function for a line: ratio emissivity to opacity:
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \[S_l=\frac{n_jA_{ji}}{n_iB_{ij}-n_jB_{ji}}=\frac{2h\nu_{ij}^3}{c^2}\invers{[\frac{g_jn_i}{g_in_j}-1]}\to B_{\nu}\]
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Einstein-Milne relations}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            Fluid frame; $n_e(v)$ maxwellian - prob. ionization by rad $(\nu,\nu+d\nu)$: Energy absorption coeff. $\alpha_{\nu}=h\nu p_{\nu}$,
+            photoionization rate: $n_0h\nu I_{\nu}\,d\nu$, $n_0$ atoms number density, $n_1$ density of ions - $F(v)$/$G(v)$ spontaneous/induced recombination prob for \Pelectron with $(v,v+dv)$, recombination rate: $n_1n_e(v)[F+GI]vdv$
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            Thermodynamic equilibrium: photoionizations equal recombinations
+            \begin{align*}
+                &n_0^*p_{\nu}B_{\nu}=n_1^*n_e(v)[F(v)+G(v)B_{\nu}]\\
+                &\Rightarrow B_{\nu}=\frac{F(v)}{G(v)}\invers{(\frac{n_0^*p_{\nu}m_e}{n_1^*n_e(v)hG(v)}-1)}\\
+                &\left\{\begin{array}{l}F(v)=\frac{2h\nu^3}{c^2}G(v)\\\frac{p_{\nu}}{G(v)}\frac{h}{m}[n_2(v)(\frac{n_1}{n_0})^*]\exp{h\nu/kT}\\
+                \end{array}\right.\tag{1}
+            \end{align*}
+        \end{column}
+    \end{columns}
+    \begin{align}
+        &n_e(v)\,dv=n_e[\frac{m_e}{2\pi kT}]^{3/2}\exp{-\frac{1}{2}\frac{mv^2}{kT}}4\pi v^2\,dv\tag{TE: $n_e$ maxwell.}\\
+        &(\frac{n_1}{n_0})^*=(\frac{g_0}{2g_1})[\frac{h^2}{2\pi m_ekT}]^{3/2}\exp{\epsilon_{ion}/kT}=n_e\phi_0\tag{Saha eq.}\\
+        &\Rightarrow p_{\nu}=\frac{8\pi m^2v^2g_1}{h^2g_0}G(v)=\frac{4\pi c^2m^2v^2g_1}{h^3g_0\nu^3}F(v)\tag{2}
+    \end{align}
+ (1)-(2) continuum analog of Einstein relations   
+\end{frame}
+
+\begin{frame}{Continuum emission/absorption coeff.}
+    \begin{align*}
+        &\kappa_{\nu}=h\nu[n_0p_{\nu}-\frac{h}{m}n_1n_e(v)G(v)]=[n_0-n_0^*\exp{-\frac{h\nu}{kT}}]\alpha_{\nu}\\
+        &\kappa_{\nu}^*=n_0^*\underbrace{[1-\exp{-\frac{h\nu}{kT}}]}_{\text{correction stimulated emission}}\alpha_{\nu}\tag{LTE}
+    \end{align*}
+    Recombination (spontaneous/induced) results from ion-electrons collision: if they have Maxwellian distribution, recombination at LTE rate whereas for lines rate depends on upper level population - Spontaneous continuum emission coeff.:
+\begin{align*}
+    &\eta_{\nu}^t=h\nu n_1n_e(v)F(v)\frac{h}{m}=\frac{hn_1n_e(v)F(v)}{m_ep_{\nu}}\alpha_{\nu}\\
+    &\to\frac{2h\nu^3}{c^2}n_0^*\alpha\exp{-\frac{h\nu}{kT}}=n_0^*(1-\exp{-\frac{h\nu}{kT}})\alpha_{\nu}B_{\nu}(T)=\kappa_{\nu}^*B_{\nu}(T)
+\end{align*}
+\end{frame}
+
+\begin{frame}{Opacity and emission coeff.}
+    \begin{align*}
+        &\chi_{\nu}=\kappa_{\nu}+\sigma_{\nu}=\underbrace{\sum_i\sum_{j>i}[n_i-\frac{g_i}{g_j}n_j]\alpha_{ij}(\nu)}_{\text{BB - line}}+\underbrace{\sum_i(n_i-n_i^*\exp{-\frac{h\nu}{kT}})\alpha_{ik}(\nu)}_{\text{BF}}\\
+        &+\underbrace{\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)(1-\exp{-\frac{h\nu}{kT}})}_{\text{FF}}+\underbrace{n_e\sigma_e}_{\text{Thompson scatt. by free e}}\\
+        &\eta_{\nu}^{th}=\frac{2h\nu^3}{c^2}[\sum_i\sum_{j>i}n_j \frac{g_i}{g_j}\alpha_{ij}(\nu)+\sum_in_i^*\alpha_{i\kappa}(\nu)\exp{-\frac{h\nu}{kT}}+\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)\exp{-\frac{h\nu}{kT}}]\\
+        &\xrightarrow{LTE}\frac{2h\nu^3}{c^2}\exp{-\frac{h\nu}{kT}}[\sum_in_i^* (\sum_{j>i}\alpha_{ij}(\nu)+\alpha_{i\kappa}(\nu))+\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)\exp{-\frac{h\nu}{kT}}]\\
+        &\Rightarrow\chi_{\nu}^*=\kappa_{\nu}^*+n_e\sigma_e,\ (\eta_{\nu}^{th})^*
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Derivation of transfer equation}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            
+\begin{figure}[!ht]
+	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{radthroughcyl}
+\end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
 \section{Energy production}\linkdest{luminositysourcessinks}
 
 \subsection{Work against gravity}\linkdest{epsilong}
@@ -566,7 +692,7 @@ posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$.
 
 \subsection{Catena PP}\linkdest{epsilonpp}
 
-\begin{frame}{PP1: twice $\Pproton(\Pproton,\Pnue\APelectron)d(p,\gamma)^3He$ and $^3He(^3He,21^H)^4He$}
+\begin{frame}{PP1: twice $\Pproton(\Pproton,\Pnue\APelectron)d(p,\gamma)^3He$ and $^3He(^3He,2^1H)^4He$}
 \begin{columns}[T]
 	\begin{column}{0.55\textwidth}
 \begin{itemize}
@@ -869,7 +995,7 @@ integration from $\tau\approx0$ where $T\approx0$, $P\approx0$ down to $\tau=\fr
 \item[*] Additional relation between T-P: ie $1^{st}$ law $\TDy{T}{Q}=\TDy{T}{U}+P\TDy{T}{V}=C=c_V+P(\TDy{T}{V})_P$ - ideal gas $c_P-c_V=\frac{R}{\mu}$: $\frac{dT}{T}+\frac{1}{n}\frac{dV}{V}=0$, $n=\frac{c_V-C}{c_P-c_V}$. \keyword{trasformazione politropa}: t. quasi-statica in  con $c=\TDy{Q}{T}$ (calore specifico) assegnato - K is free parameter.
 %$TV\expy{\gamma-1}=\const$, $PV\expy{\gamma}=\const$, $P\expy{1-\gamma}T\expy{\gamma}=\const$ ($0=dE-\frac{P}{\rho^2}d\rho$). 
 \item [*] EOS of the form $P=K\rho^{\gamma}$, K fixed.
-	\end{itemize}
+    \end{itemize}
 	\begin{block}{Poisson eq.}
 		\begin{columns}[T]
 			\begin{column}{0.6\textwidth}
