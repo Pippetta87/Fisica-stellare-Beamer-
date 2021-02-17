@@ -631,16 +631,22 @@ For $\rho>\SI{4e11}{\gram\per\cubic\cm}$ we have inverse $beta$-decay:nuclei cap
 \begin{frame}{Derivation of transfer equation}
     \begin{columns}[T]
         \begin{column}{0.4\textwidth}
-            
 \begin{figure}[!ht]
 	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{radthroughcyl}
 \end{figure}
         \end{column}
         \begin{column}{0.6\textwidth}
-            
+\begin{align*}
+    &\Delta t=\frac{ds}{c}:\ I(\vec{x}+\Delta\vec{x},t+\Delta t;\vec{n},\nu)\\
+    &=I(\vec{x},t;\vec{n},\nu)+[\frac{1}{c}\PDy{t}{I}]\,ds
+\end{align*}
         \end{column}
     \end{columns}
-
+  \begin{align*}
+   &I(\vec{x}+\Delta\vec{x},t+\Delta t;\vec{n},\nu)-I(\vec{x},t;\vec{n},\nu)=[\eta(\vec{x},t;\vec{n},\nu)-\chi(\vec{x},t;\vec{n},\nu)I(\vec{x},t;\vec{n},\nu)]ds\,dS\,d\Omega\,d\nu\,dt\\
+   &[\frac{1}{c}+\PDof{t}]I(\vec{x},t;\vec{n},\nu)=\eta(\vec{x},t;\vec{n},\nu)-\chi(\vec{x},t;\vec{n},\nu)I(\vec{x},t;\vec{n},\nu)\tag{Trans. eq.}
+  \end{align*}
+  Classical, macroscopic, phenomenological: not included polarization, dispersion, coherence, interference and quantum effects.
 \end{frame}
 
 \section{Energy production}\linkdest{luminositysourcessinks}
