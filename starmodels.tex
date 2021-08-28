@@ -618,13 +618,13 @@ For $\rho>\SI{4e11}{\gram\per\cubic\cm}$ we have inverse $beta$-decay:nuclei cap
 \end{align*}
 \end{frame}
 
-\begin{frame}{Opacity and emission coeff.}
+\begin{frame}{Total Opacity and Total Emission coeff. and LTE}
     \begin{align*}
         &\chi_{\nu}=\kappa_{\nu}+\sigma_{\nu}=\underbrace{\sum_i\sum_{j>i}[n_i-\frac{g_i}{g_j}n_j]\alpha_{ij}(\nu)}_{\text{BB - line}}+\underbrace{\sum_i(n_i-n_i^*\exp{-\frac{h\nu}{kT}})\alpha_{ik}(\nu)}_{\text{BF}}\\
-        &+\underbrace{\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)(1-\exp{-\frac{h\nu}{kT}})}_{\text{FF}}+\underbrace{n_e\sigma_e}_{\text{Thompson scatt. by free e}}\\
+        &+\underbrace{\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)(1-\exp{-\frac{h\nu}{kT}})}_{\text{FF}}+\underbrace{n_e\sigma_e}_{\text{Thompson scatt. by free e}}\tag{Tot.Opa.}\\
         &\eta_{\nu}^{th}=\frac{2h\nu^3}{c^2}[\sum_i\sum_{j>i}n_j \frac{g_i}{g_j}\alpha_{ij}(\nu)+\sum_in_i^*\alpha_{i\kappa}(\nu)\exp{-\frac{h\nu}{kT}}+\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)\exp{-\frac{h\nu}{kT}}]\\
         &\xrightarrow{LTE}\frac{2h\nu^3}{c^2}\exp{-\frac{h\nu}{kT}}[\sum_in_i^* (\sum_{j>i}\alpha_{ij}(\nu)+\alpha_{i\kappa}(\nu))+\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)\exp{-\frac{h\nu}{kT}}]\\
-        &\Rightarrow\chi_{\nu}^*=\kappa_{\nu}^*+n_e\sigma_e,\ (\eta_{\nu}^{th})^*
+        &\Rightarrow\chi_{\nu}^*=\kappa_{\nu}^*+n_e\sigma_e,\ (\eta_{\nu}^{th})^*=\kappa_{\nu}^*B_{\nu}
     \end{align*}
 \end{frame}
 
