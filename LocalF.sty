@@ -23,15 +23,15 @@
 
 %%% COUNTERS
 \newcounter{cherrykey}%conta le keyword totali per auto ref
-\newcounter{cherrysectionlist}% conta le key prima di keywordlist
+%\newcounter{cherrysectionlist}% conta le key prima di keywordlist
 \newcounter{todokey}%conta i todo totali per auto ref
-\newcounter{todosectionlist}% conta i todo prima di keywordlist
+\newcounter{sectionlist}% conta le section prima della attuale
 \newcounter{mustkey}%conta i must totali per auto ref
 \newcounter{mustsectionlist}% conta i must prima di keywordlist
 
 \newcommand\headinginfo[1]{%
-  \addcontentsline{key-\thecherrysectionlist}{heading}{{#1}}%
-  \addtocontents{key-\thecherrysectionlist}{\vspace{5pt}}}
+  \addcontentsline{key-\thesectionlist}{heading}{{#1}}%
+  \addtocontents{key-\thesectionlist}{\vspace{5pt}}}
 %% expert approach to keywords
  \makeatletter
 \newcommand\keyword[2][target-\thecherrykey]{%keyword
@@ -41,7 +41,7 @@
 }%
 \phantomsection% comment out if hyperref is not used
   \linkdest{#1}%
-\addcontentsline{key-\thecherrysectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
+\addcontentsline{key-\thesectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
 }
 \newcommand\todo[2][todo-\thetodokey]{%todo
 	\addtocounter{todokey}{1}
@@ -50,7 +50,7 @@
 	}%
 	\phantomsection% comment out if hyperref is not used
 	\linkdest{#1}%
-	\addcontentsline{todo-\thetodosectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}\hspace{1mm}}%
+	\addcontentsline{todo-\thesectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}\hspace{1mm}}%
 }
 \newcommand\must[2][must-\themustkey]{%must
 	\addtocounter{mustkey}{1}
@@ -59,22 +59,25 @@
 	}%
 	\phantomsection% comment out if hyperref is not used
 	\linkdest{#1}%
-	\addcontentsline{must-\themustsectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
+	\addcontentsline{must-\thesectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
 }
 \makeatother
   
 \makeatletter
+\newcommand{\listofsecframes}{%listofsecframes
+  \@starttocorig{secfr-\thesectionlist}
+}
 \newcommand{\listofkeywordsbasic}{%listofkeyword
-  \@starttocorig{key-\thecherrysectionlist}
+  \@starttocorig{key-\thesectionlist}
 }
 \newcommand{\listoftodosbasic}{%listoftodos
-	\@starttocorig{todo-\thetodosectionlist}
+	\@starttocorig{todo-\thesectionlist}
 }
 \newcommand{\listofmustsbasic}{%listofmusts
-	\@starttocorig{must-\themustsectionlist}
+	\@starttocorig{must-\thesectionlist}
 }
 %%frameintoc
-\newcommand\listofframes{\@starttoc{lbf}}
+\newcommand\listofframes{\@starttoc{cherryframes}}
 \newcommand\listofframesname{List of frames}
 \makeatother
 
@@ -90,7 +93,7 @@
 %%frameintoc
 \newcommand\frameintoc{%
 %\subsubsection{\insertframetitle}
-\addcontentsline{lbf}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%
+\addcontentsline{cherryframes}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%
 }
 
 %% helper macros for celestial-sphere
