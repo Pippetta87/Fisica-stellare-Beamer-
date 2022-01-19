@@ -21,17 +21,19 @@
 \newenvironment{wordonframe}[1]{\comment}{\endcomment}
 \fi
 
+%\renewcommand\addcontentsline[3]{\addtocontents{#1}{\protect\contentsline{#2}{#3}}}
+
 %%% COUNTERS
-\newcounter{cherrykey}%conta le keyword totali per auto ref
+\newcounter{cherrykey}%conta le keyword
 %\newcounter{cherrysectionlist}% conta le key prima di keywordlist
 \newcounter{todokey}%conta i todo totali per auto ref
-\newcounter{sectionlist}% conta le section prima della attuale
+\newcounter{sectionkey}% conta le section prima della attuale
 \newcounter{mustkey}%conta i must totali per auto ref
-\newcounter{mustsectionlist}% conta i must prima di keywordlist
+%\newcounter{partkey}% conta le part
 
 \newcommand\headinginfo[1]{%
-  \addcontentsline{key-\thesectionlist}{heading}{{#1}}%
-  \addtocontents{key-\thesectionlist}{\vspace{5pt}}}
+  \addcontentsline{key-\thesectionkey}{heading}{{#1}}%
+  \addtocontents{key-\thesectionkey}{\vspace{5pt}}}
 %% expert approach to keywords
  \makeatletter
 \newcommand\keyword[2][target-\thecherrykey]{%keyword
@@ -40,8 +42,8 @@
 \color{keyword}{#2}%
 }%
 \phantomsection% comment out if hyperref is not used
-  \linkdest{#1}%
-\addcontentsline{key-\thesectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
+\linkdest{#1}%
+\addcontentsline{key-\thesectionkey}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
 }
 \newcommand\todo[2][todo-\thetodokey]{%todo
 	\addtocounter{todokey}{1}
@@ -50,7 +52,8 @@
 	}%
 	\phantomsection% comment out if hyperref is not used
 	\linkdest{#1}%
-	\addcontentsline{todo-\thesectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}\hspace{1mm}}%
+   \addcontentsline{todo-\thepart}{subsubsection}{\textbullet\protect\hyperlink{{#1}}{{#2}}\hspace{1mm}}%
+   % \addcontentsline{todo-\thepart}{subsubsection}{ todo}
 }
 \newcommand\must[2][must-\themustkey]{%must
 	\addtocounter{mustkey}{1}
@@ -59,26 +62,22 @@
 	}%
 	\phantomsection% comment out if hyperref is not used
 	\linkdest{#1}%
-	\addcontentsline{must-\thesectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
+    \addcontentsline{must-\thepart}{subsubsection}{\protect\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
 }
-\makeatother
-  
-\makeatletter
+
 \newcommand{\listofsecframes}{%listofsecframes
-  \@starttocorig{secfr-\thesectionlist}
+  \@starttocorig{secfr-\thesectionkey}
 }
 \newcommand{\listofkeywordsbasic}{%listofkeyword
-  \@starttocorig{key-\thesectionlist}
+  \@starttocorig{key-\thepart}
 }
 \newcommand{\listoftodosbasic}{%listoftodos
-	\@starttocorig{todo-\thesectionlist}
+	\@starttocorig{todo-\thepart}
 }
 \newcommand{\listofmustsbasic}{%listofmusts
-	\@starttocorig{must-\thesectionlist}
+	\@starttocorig{must-\thepart}
 }
-%%frameintoc
-\newcommand\listofframes{\@starttoc{cherryframes}}
-\newcommand\listofframesname{List of frames}
+\newcommand\listofframesbasic{\@starttoc{cherryframes}}%%frameintoc cherrry
 \makeatother
 
 \newcommand\listmustsname{MUSTS}%listofmust
@@ -89,8 +88,14 @@
 \listkeywordsname\phantomsection: \listofkeywordsbasic}
 \newcommand\listtodosname{TODO}%listoftodo
 \newcommand\listoftodos{%
-\listtodosname\phantomsection: \listoftodosbasic}
+\listtodosname\phantomsection: 
+
+\listoftodosbasic}
+
 %%frameintoc
+\newcommand\listofframesname{Important frames}
+\newcommand\listofframes{%
+\listofframesname\phantomsection: \listofframesbasic}
 \newcommand\frameintoc{%
 %\subsubsection{\insertframetitle}
 \addcontentsline{cherryframes}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%

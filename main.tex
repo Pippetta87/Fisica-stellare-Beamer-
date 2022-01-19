@@ -29,27 +29,21 @@
 \definecolor{todo}{rgb}{0.75, 0.0, 0.2}
 \definecolor{must}{rgb}{1.0, 0.31, 0.0}
 
-%beamer setup
-\usepackage{beamersetup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% importa pacchetti
 \usepackage{usepkg}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni generali
 \usepackage{functions}
 %http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
-\newcommand{\setmuskip}[2]{#1=#2\relax} %%problem usinig mu with calc (req by mathtools) loaded
-
-\usepackage{sources}
-
-
-%\usepackage{length}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni per questo file main
-\usepackage{mathOp}
-
-\def\status{coazione}%ripeter
-\def\keeptrying{coazione}
+%%
+%beamer setup
+\makeatletter%%see https://tex.stackexchange.com/questions/411987/how-to-fix-hypertargets-directing-links-to-the-line-after-the-target-it-looks-l
+\newcommand{\linkdest}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
+\makeatother
 \usepackage{LocalF}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{beamersetup}
+\usepackage{sources}
+\usepackage{mathOp}
 
 \title{Fisica stellare}
 
@@ -57,10 +51,6 @@
 \begin{document}
 
 \input{tikzdir}%%contain tikz files as filecontents
-\part{provaaj}
-\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{2pt}\setlength\belowdisplayskip{2pt}\setlength\abovedisplayshortskip{2pt}\setlength\belowdisplayshortskip{2pt}}{}
-\addtobeamertemplate{block begin}{\vspace*{-3pt}}{}
-\addtobeamertemplate{block end}{}{\vspace*{-3pt}}
 
 \begin{frame}
   \titlepage
@@ -70,18 +60,16 @@
 % and table of contents.
 %\frame{\tableofcontents[onlyparts]}
 
-\begin{frame}[label={argomenti}]{Fisica stellare: argomenti del corso}
-\tableofcontents[onlyparts]
+\begin{frame}{Fisica stellare: argomenti del corso}%label={}
+\tableofcontents[soloparti]
 \end{frame}
 
 \begin{wordonframe}{Meta.}
-lbf, todo, keyword, must
+    list frames insection, lbf:frameintoc-dopo indice delle parti, todo-dopo indice delle parti, keyword-dopo toc della part, must dopo indice parti
 \end{wordonframe}
 
 \begin{wordonframe}{Perch\'e studio queste cose?? Sviluppi; futuro.}
-
 Concretezza, concentrazione, indipendenza
-
 \end{wordonframe}
 
 \part{Intro}\linkdest{intro}
@@ -91,7 +79,7 @@ Concretezza, concentrazione, indipendenza
 \input{intro}
 \input{succo}
 
-\part{Modelli stellari: struttura ed evoluzione}\linkdest{evolutivemodels}
+ \part{Modelli stellari: struttura ed evoluzione}\linkdest{evolutivemodels}
 
 \begin{frame}{this part toc}
 %\begin{columns}[T]
@@ -111,14 +99,14 @@ Concretezza, concentrazione, indipendenza
 \end{frame}
 \input{starmodels}
 
-\part{Formazione ed evoluzione stellare}
+ \part{Formazione ed evoluzione stellare}
 %\begin{frame}{TOC formation evolution}
 %\tableofcontents[sections]
 %\end{frame}
 \input{starformation}
 \input{stellarevolution}
-
-\part{Stellar population in the milky way}\linkdest{constraints}
+ 
+ \part{Stellar population in the milky way}\linkdest{constraints}
 \begin{frame}{this part toc}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
@@ -132,5 +120,5 @@ Concretezza, concentrazione, indipendenza
 \end{columns}
 \end{frame}
 \input{GalaxyStarImfPop}
-
+ 
 \end{document}
