@@ -24,10 +24,10 @@
 %\renewcommand\addcontentsline[3]{\addtocontents{#1}{\protect\contentsline{#2}{#3}}}
 
 %%% COUNTERS
-\newcounter{cherrykey}%conta le keyword
+%\newcounter{cherrykey}%conta le keyword
 %\newcounter{cherrysectionlist}% conta le key prima di keywordlist
 \newcounter{todokey}%conta i todo totali per auto ref
-\newcounter{sectionkey}% conta le section prima della attuale
+%\newcounter{sectionkey}% conta le section prima della attuale
 \newcounter{mustkey}%conta i must totali per auto ref
 %\newcounter{partkey}% conta le part
 
@@ -65,9 +65,9 @@
     \addcontentsline{must-\thepart}{subsubsection}{\protect\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
 }
 
-\newcommand{\listofsecframes}{%listofsecframes
-  \@starttocorig{secfr-\thesectionkey}
-}
+%\newcommand{\listofsecframes}{%listofsecframes
+%  \@starttocorig{secfr-\thesectionkey}
+%}
 \newcommand{\listofkeywordsbasic}{%listofkeyword
   \@starttocorig{key-\thepart}
 }
@@ -77,7 +77,8 @@
 \newcommand{\listofmustsbasic}{%listofmusts
 	\@starttocorig{must-\thepart}
 }
-\newcommand\listofframesbasic{\@starttoc{cherryframes}}%%frameintoc cherrry
+%\newcommand\listofframesbasic{\@starttoc{cherryframes}}%%frameintoc cherrry
+%\newcommand\listofframesbasic{\@starttoc{cherryframes}}%%frameintoc cherrry
 \makeatother
 
 \newcommand\listmustsname{MUSTS}%listofmust
@@ -92,14 +93,10 @@
 
 \listoftodosbasic}
 
-%%frameintoc
-\newcommand\listofframesname{Important frames}
-\newcommand\listofframes{%
-\listofframesname\phantomsection: \listofframesbasic}
-\newcommand\frameintoc{%
+%\newcommand\frameintoc{%using iftlbfBOOL
 %\subsubsection{\insertframetitle}
-\addcontentsline{cherryframes}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%
-}
+%\addcontentsline{cherryframes}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%
+%}
 
 %% helper macros for celestial-sphere
 

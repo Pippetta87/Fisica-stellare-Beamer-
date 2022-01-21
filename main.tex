@@ -29,18 +29,55 @@
 \definecolor{todo}{rgb}{0.75, 0.0, 0.2}
 \definecolor{must}{rgb}{1.0, 0.31, 0.0}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% importa pacchetti
 \usepackage{usepkg}
+\usepackage{makerobust}
+\MakeRobustCommand\usebeamertemplate
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni generali
 \usepackage{functions}
 %http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
 %%
 %beamer setup
-\makeatletter%%see https://tex.stackexchange.com/questions/411987/how-to-fix-hypertargets-directing-links-to-the-line-after-the-target-it-looks-l
+
+%%% COUNTERS
+\newcounter{cherrykey}%conta le keyword
+\newcounter{sectionkey}% conta le section prima della attuale
+
+ \makeatletter
+\newcommand{\listofsecframes}{%listofsecframes
+  \@starttocorig{secfr-\thesectionkey}
+}
 \newcommand{\linkdest}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
 \makeatother
 \usepackage{LocalF}
+\makeatletter
+\newif\ifframeinlbf
+\frameinlbftrue
+\newcommand\listofcherryframesbasic{\@starttocorig{cherryframes}}
+%%frameintoc
+\newcommand\listofcherryframesname{Important frames}
+\newcommand\listofcherryframes{%
+\listofcherryframesname\phantomsection: \listofcherryframesbasic}
+\addtobeamertemplate{frametitle}{%
+    \addtocontents{secfr-\thesectionkey}{%
+        \protect\beamer@subsectionintoc{\protect\the\c@section}{0}{%
+            \protect\insertframetitle%
+        }{\protect\the\c@page}{\protect\the\c@part}{\protect\the\beamer@tocsectionnumber}%
+    }%%
+\ifframeinlbf
+\mode<presentation>{%
+        \only<1>{%
+            \hypertarget{\protect\insertframetitle}{}%
+                    \addcontentsline{cherryframes}{section}{%
+                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
+                        \normalsize\insertframetitle%
+                    }%
+    }%
+ }%
+             \else\fi%
+}%
+{}%
+\makeatother
 \usepackage{beamersetup}
 \usepackage{sources}
 \usepackage{mathOp}
@@ -50,7 +87,7 @@
 % Let's get started
 \begin{document}
 
-\input{tikzdir}%%contain tikz files as filecontents
+%\input{tikzdir}%%contain tikz files as filecontents
 
 \begin{frame}
   \titlepage
@@ -60,17 +97,18 @@
 % and table of contents.
 %\frame{\tableofcontents[onlyparts]}
 
-\begin{frame}{Fisica stellare: argomenti del corso}%label={}
+\begin{frame}[allowframebreaks]{Fisica stellare: argomenti del corso}%label={}
 \tableofcontents[soloparti]
+\listofcherryframes
 \end{frame}
 
-\begin{wordonframe}{Meta.}
-    list frames insection, lbf:frameintoc-dopo indice delle parti, todo-dopo indice delle parti, keyword-dopo toc della part, must dopo indice parti
-\end{wordonframe}
+%\begin{wordonframe}{Meta.}
+%    list frames insection, \sout{lbf:frameintoc} frameinlbfBOOL-dopo indice delle parti, todo-dopo indice delle parti, keyword-dopo toc della part, must dopo indice parti
+%\end{wordonframe}
 
-\begin{wordonframe}{Perch\'e studio queste cose?? Sviluppi; futuro.}
-Concretezza, concentrazione, indipendenza
-\end{wordonframe}
+%\begin{wordonframe}{Perch\'e studio queste cose?? Sviluppi; futuro.}
+%Concretezza, concentrazione, indipendenza
+%\end{wordonframe}
 
 \part{Intro}\linkdest{intro}
 %\begin{frame}{TOC intro}
@@ -79,8 +117,7 @@ Concretezza, concentrazione, indipendenza
 \input{intro}
 \input{succo}
 
- \part{Modelli stellari: struttura ed evoluzione}\linkdest{evolutivemodels}
-
+\part{Modelli stellari: struttura ed evoluzione}\linkdest{evolutivemodels}
 \begin{frame}{this part toc}
 %\begin{columns}[T]
 %\begin{column}{0.5\textwidth}

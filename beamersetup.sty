@@ -1,24 +1,11 @@
 \ProvidesPackage{beamersetup}
-
-%\makeatletter
-%\newcommand\listframessec{\@starttoc{allframessec}}
-%\makeatother
-
-\makeatletter
-\addtobeamertemplate{frametitle}{}{%
-   {%
-    \addtocontents{secfr-\thesectionkey}{%
-        \protect\beamer@subsectionintoc{\protect\the\c@section}{0}{%
-            \protect\insertframetitle%
-        }{\protect\the\c@page}{\protect\the\c@part}{\protect\the\beamer@tocsectionnumber}%
-    }%
-}%
-}%
-
-\makeatother
-
-\usetheme{default}
-
+%
+%%\makeatletter
+%%\newcommand\listframessec{\@starttoc{allframessec}}
+%%\makeatother
+%%\usetheme{default}
+%
+%
 \subtitle{Cosa sono le stelle: formazione, fenomenologia evolutiva, popolazioni stellari.}
 
 \date{2022 Gennaio, \today}
@@ -52,8 +39,8 @@
 \setlength\belowdisplayskip{10pt plus 0pt minus 0pt}
 \setlength\abovedisplayshortskip{8pt plus 0pt minus 0pt}
 \setlength\belowdisplayshortskip{8pt plus 0pt minus 0pt}
-
-%\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{2pt}\setlength\belowdisplayskip{2pt}\setlength\abovedisplayshortskip{2pt}\setlength\belowdisplayshortskip{2pt}}{}
+}
+\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{2pt}\setlength\belowdisplayskip{2pt}\setlength\abovedisplayshortskip{2pt}\setlength\belowdisplayshortskip{2pt}}{}
 \addtobeamertemplate{block begin}{\vspace*{-3pt}}{}
 \addtobeamertemplate{block end}{}{\vspace*{-3pt}}
 
@@ -71,7 +58,7 @@
 
 \addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{-40pt}}
 %\setlength\leftmargini{-2pt}
-}
+%%}?
 %https://tex.stackexchange.com/questions/115907/how-do-i-remove-white-space-above-itemize-command-in-beamer-using-enumitem
 %It's not a good idea to use the enumitem package with beamer since beamer has its own ways of dealing with the standard list-like environments. Just by loading enumitem when using beamer you loose the special beamer formatting and the overlay-awareness of the list-like components.
 \renewcommand{\itemize}[1][]{%
@@ -186,37 +173,37 @@
 {
 \leavevmode%
 \hbox{%Refintro
-    \begin{beamercolorbox}[wd=.1\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%
+    \begin{beamercolorbox}[wd=.1\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%
         \hyperlink{reglez}{RegLez}:\hyperlink{febbraio}{feb}-\hyperlink{marzo}{mar}-\hyperlink{aprile}{apr}-\hyperlink{maggio}{mag}|\hyperlink{succo}{Succo}%
     \end{beamercolorbox}%
 }%
 \hbox{%
-    \begin{beamercolorbox}[wd=.2\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%refs Part 2
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%refs Part 2
         \hyperlink{stellarstructure}{SSE}:\hyperlink{stellarstructure}{EqS}-\hyperlink{omrel}{rude}-\hyperlink{transport}{trans}(\hyperlink{trarad}{rad}-\hyperlink{kapparad}{$\kappa$}-\hyperlink{tracond}{cond}-\hyperlink{traconv}{$\alpha$}-\hyperlink{diffusion}{diff})-\hyperlink{micro2macro}{eos}-\hyperlink{luminositysourcessinks}{$\epsilon$}(\hyperlink{epsilong}{$\epsilon_g$}-\hyperlink{epsilonn}{$\epsilon_n$}\hyperlink{epsilonpp}{$PP$}-\hyperlink{epsiloncno}{CNO}-\hyperlink{epsilonheavy}{late}-\hyperlink{epsilon}{$\nu$})%
     \end{beamercolorbox}%Equazioni struttura stellare, input, stabilit\'a
 }%
 \hbox{%
-    \begin{beamercolorbox}[wd=.1\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%refs nummod
+    \begin{beamercolorbox}[wd=.1\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%refs nummod
 \hyperlink{stellarsolve}{solve}:\hyperlink{fourODE}{4ODE}-\hyperlink{poly}{poly}\hyperlink{henyey}{Hey}-\hyperlink{shooting}{first$*$}%
 \end{beamercolorbox}%Soluzione modelli stellari
 }%
 \hbox{%
-    \begin{beamercolorbox}[wd=.1\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%refs star formation to pre-MS
+    \begin{beamercolorbox}[wd=.1\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%refs star formation to pre-MS
 	\hyperlink{starformation}{$*$Formation}:\hyperlink{protostellar}{proto}-\hyperlink{preMS}{pMS}%
 \end{beamercolorbox}%
 }%
 \hbox{%
-    \begin{beamercolorbox}[wd=.3\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%refs stellarevolution
+    \begin{beamercolorbox}[wd=.3\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%refs stellarevolution
             \hyperlink{stellarevolution}{Evol}:\hyperlink{preMS}{PMS}-\hyperlink{MS}{MS}-\hyperlink{LMS}{LMS}-\hyperlink{UMS}{UMS}-\hyperlink{MSdeps}{deps}-\hyperlink{malure}{M-L}-\hyperlink{postMS}{postMS}-\hyperlink{ZAHB}{ZAHB}-\hyperlink{HBlowM}{HBlowM}-\hyperlink{HBIM}{HB-I/M}-\hyperlink{HBpulsating}{HB-puls}-\hyperlink{AGB}{AGB}-\hyperlink{WD}{WD}-\hyperlink{lateintM}{lateintm}-\hyperlink{SN}{SN}%
         \end{beamercolorbox}%Equazioni struttura stellare
     }%
     \hbox{%
-        \begin{beamercolorbox}[wd=.12\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%refs 
+        \begin{beamercolorbox}[wd=.12\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%refs 
 	\hyperlink{U}{U}:\hyperlink{BBN}{BBN}|\hyperlink{mw}{MW}|\hyperlink{starpop}{pop}:\hyperlink{oldPPS}{oPPS}-\hyperlink{youngPPS}{yPPS}-\hyperlink{ageindicator}{age}-\hyperlink{USP}{uSP}%
 \end{beamercolorbox}%Popolazione stellare/ Galassia
 }%
 \hbox{%
-    \begin{beamercolorbox}[wd=.05\paperwidth,ht=4.2ex,dp=0ex,center]{author in head/foot}%
+    \begin{beamercolorbox}[wd=.035\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%
  %   \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
     \insertframenumber{}/\inserttotalframenumber{}%
         \end{beamercolorbox}%}%
