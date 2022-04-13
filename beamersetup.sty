@@ -12,6 +12,19 @@
 
 \subject{Modelli stellari ed input fisici. Evoluzione stellare. Star formation and star populations}
 
+% Beamer margin
+%\setbeamersize{text margin left=1pt,
+%    text margin right=1pt
+%}
+% In beamer, these changes can be made in the preamble
+\addtolength{\topmargin}{0pt}
+\addtolength{\headsep}{0pt}
+\addtolength{\oddsidemargin}{-25pt}
+\addtolength{\marginparwidth}{0pt}
+\addtolength{\marginparsep}{-0pt}
+\addtolength{\textwidth}{50pt}
+%\geometry{margin=1pt}
+%\setbeamersize{text margin left = -2cm, text margin right = -2cm}
 \newcommand{\setmuskip}[2]{#1=#2\relax} %%problem usinigmu with calc (req by mathtools) loaded
 %default with calc? https://tex.stackexchange.com/questions/188215/mathtools-with-mu-illegal-unit
 \setmuskip{\medmuskip}{0mu plus 0mu minus 0mu}
@@ -50,13 +63,13 @@
 \addtobeamertemplate{block begin}{}{\setlength{\parskip}{0pt plus 0pt minus 0pt}}
 %\setlength\parskip{3pt plus 0pt minus 0pt}
 
-\addtobeamertemplate{block begin}{}{\setlength{\jot}{-30pt}}
+\addtobeamertemplate{block begin}{}{\setlength{\jot}{-0pt}}
 %\setlength\jot{0pt plus 0pt minus 0pt}
 
 \addtobeamertemplate{block begin}{}{\setlength{\mathindent}{0pt plus 0pt minus 0pt}}
 %\setlength\mathindent{0pt plus 0pt minus 0pt}
 
-\addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{-40pt}}
+\addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{-1cm}}
 %\setlength\leftmargini{-2pt}
 %%}?
 %https://tex.stackexchange.com/questions/115907/how-do-i-remove-white-space-above-itemize-command-in-beamer-using-enumitem
@@ -88,14 +101,14 @@
 %\setlist[itemize,0]{%leftmargin=\dimexpr 26pt-.5in
 %align=left, leftmargin=-5pt,label=*,labelwidth=10pt
 %}
-\setlength{\itemindent}{10pt}
-\setbeamersize{text margin left=10mm,text margin right=10mm} 
+\setlength{\itemindent}{3pt}
+\setbeamersize{text margin left=1mm,text margin right=1mm} 
 \makeatother
 
 \hypersetup{pdfpagemode=FullScreen}
 
 \addtobeamertemplate{block begin}{%
-\setlength{\textwidth}{0.95\textwidth}%
+\setlength{\textwidth}{0.99\textwidth}%
 \setlength\abovedisplayskip{0pt}%
 }{}
 
@@ -140,7 +153,7 @@
 
 \makeatletter
 \AtBeginPart{%
-%\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
 \frame{\partpage}
 \begin{frame}[allowframebreaks]{Outline: \insertpart}%\insertpart
 \tableofcontents[]%sectionstyle=show/shaded
@@ -150,7 +163,7 @@
 \providecommand\beamer@partintoc[3]{%
 \ifnum\c@tocdepth=-1\relax
 % requesting onlyparts.
-\makebox[6em]{Part #1:} \parbox{0.5\textwidth}{#2}
+    \makebox[0.1\paperwidth]{Part #1:} \parbox{0.99\paperwidth}{#2}
 \par
 \fi
 }%
@@ -203,7 +216,7 @@
 \end{beamercolorbox}%Popolazione stellare/ Galassia
 }%
 \hbox{%
-    \begin{beamercolorbox}[wd=.035\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%
+    \begin{beamercolorbox}[wd=.05\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%
  %   \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
     \insertframenumber{}/\inserttotalframenumber{}%
         \end{beamercolorbox}%}%

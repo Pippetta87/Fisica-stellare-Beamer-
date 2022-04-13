@@ -36,7 +36,7 @@
   \addtocontents{key-\thesectionkey}{\vspace{5pt}}}
 %% expert approach to keywords
  \makeatletter
-\newcommand\keyword[2][target-\thecherrykey]{%keyword
+\newcommand\keyword[2][keyword-\thecherrykey]{%keyword
 \addtocounter{cherrykey}{1}
 \noindent{%
 \color{keyword}{#2}%
@@ -68,9 +68,10 @@
 %\newcommand{\listofsecframes}{%listofsecframes
 %  \@starttocorig{secfr-\thesectionkey}
 %}
-\newcommand{\listofkeywordsbasic}{%listofkeyword
-  \@starttocorig{key-\thepart}
-}
+%\newcommand{\listofkeywordsbasic}{%listofkeyword automatic for every section
+%  \@starttocorig{key-\thepart}
+%}
+
 \newcommand{\listoftodosbasic}{%listoftodos
 	\@starttocorig{todo-\thepart}
 }
