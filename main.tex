@@ -29,8 +29,10 @@
 \definecolor{todo}{rgb}{0.75, 0.0, 0.2}
 \definecolor{must}{rgb}{1.0, 0.31, 0.0}
 % redefine frame
+\setbeamertemplate{headline}{\vskip-3pt}
 \makeatletter
 \setbeamertemplate{frametitle}{
+\vspace*{-1mm}
     \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
     \@tempdima=\textwidth%
     \advance\@tempdima by\beamer@leftmargin%
@@ -49,7 +51,8 @@
         }%
         \vskip-1ex%
         \if@tempswa\else\vskip-.0cm\fi% set inside beamercolorbox... evil here...
-    \end{beamercolorbox}%
+\end{beamercolorbox}%
+\vspace*{-6mm}
 }
 \makeatother
 
@@ -151,6 +154,16 @@
 %\end{frame}
 \input{intro}
 \input{succo}
+
+\part{Modello Plasma stellare}\linkdest{stellarplasma}
+\begin{frame}{this part toc}
+    \begin{itemize}
+        \item Radiative transfer equation and solution in far interior
+        \item Solution of RE in stellar interior
+        \item Nuclear Fusion
+    \end{itemize}
+\end{frame}
+\input{stellarplasmamodel}
 
 \part{Modelli stellari: struttura ed evoluzione}\linkdest{evolutivemodels}
 \begin{frame}{this part toc}
