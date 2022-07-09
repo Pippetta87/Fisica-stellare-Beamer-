@@ -13,22 +13,22 @@
 \subject{Modelli stellari ed input fisici. Evoluzione stellare. Star formation and star populations}
 
 % Beamer margin
-%\setbeamersize{text margin left=1pt,
-%    text margin right=1pt
-%}
+\setbeamersize{text margin left=1pt, text margin right=20pt}
 % In beamer, these changes can be made in the preamble
 \addtolength{\topmargin}{0pt}
-\addtolength{\headsep}{0pt}
-\addtolength{\oddsidemargin}{-25pt}
+\addtolength{\headsep}{3pt minus 2pt}
+\addtolength{\oddsidemargin}{-1pt}
+\addtolength{\evensidemargin}{-1pt}
 \addtolength{\marginparwidth}{0pt}
-\addtolength{\marginparsep}{-0pt}
-\addtolength{\textwidth}{50pt}
+\addtolength{\marginparsep}{-1pt}
+\addtolength{\textwidth}{20pt}
 %\geometry{margin=1pt}
 %\setbeamersize{text margin left = -2cm, text margin right = -2cm}
 \newcommand{\setmuskip}[2]{#1=#2\relax} %%problem usinigmu with calc (req by mathtools) loaded
 %default with calc? https://tex.stackexchange.com/questions/188215/mathtools-with-mu-illegal-unit
 \setmuskip{\medmuskip}{0mu plus 0mu minus 0mu}
 \makeatletter
+%\setlength{\parskip}{fixed amount plus amount to stretch minus amount to shrink}GLUE
 %%\setbeamersize{cosa=size}
 %\arraycolsep=5pt                  % distance between 2 columns 
 %\thinmuskip=3mu                   % space between ordinary and operator atoms 
@@ -48,24 +48,45 @@
 %\setlength\thinmuskip{0pt}%=
 %\setlength\medmuskip{0pt plus 0pt minus 0pt}%=
 %\setlength\thickmuskip{0pt plus 0pt}%=
-\setlength\abovedisplayskip{0pt plus 0pt minus 0pt}
-\setlength\belowdisplayskip{0pt plus 0pt minus 0pt}
-\setlength\abovedisplayshortskip{0pt plus 0pt minus 0pt}
-\setlength\belowdisplayshortskip{0pt plus 0pt minus 0pt}
+\setlength\abovedisplayskip{1pt minus 1pt}
+\setlength\belowdisplayskip{1pt minus 1pt}
+\setlength\abovedisplayshortskip{1pt minus 1pt}
+\setlength\belowdisplayshortskip{1pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0pt minus 0pt}
+\setlength{\jot}{-0pt}
+\setlength{\mathindent}{-0pt plus 1pt minus 2pt}
+\setlength{\itemindent}{-0pt}
+%\setlength{\leftmargini}{-1mm}
+%\setbeamersize{text margin left=-2cm,text margin right=1mm} 
+\setlength{\parskip}{0pt plus 0pt minus 0pt}
 }
 %\addtobeamertemplate{frametitle}{\vspace*{-0.3cm}\relax}{\vspace*{-1.7cm}\relax}
 \addtobeamertemplate{frame begin}{
+\vspace*{-6mm}
+}{
+\setlength\abovedisplayskip{1pt minus 1pt}
+\setlength\belowdisplayskip{1pt minus 1pt}
+\setlength\abovedisplayshortskip{1pt minus 1pt}
+\setlength\belowdisplayshortskip{1pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0pt minus 0pt}
+\setlength{\jot}{-0pt}
+\setlength{\mathindent}{-50pt plus 1pt minus 2pt}
+\setlength{\itemindent}{-0pt}
+%\setlength{\leftmargini}{-1mm}
+%\setbeamersize{text margin left=-2cm,text margin right=1mm} 
+\setlength{\parindent}{0pt}\@afterindentfalse\@afterheading
+\setlength{\parskip}{0pt plus 0pt minus 0pt}
+\setlength{\jot}{-0pt}
+\setlength{\leftmargini}{0mm}
+\addtolength{\itemsep}{0.5\baselineskip}
+}
+\addtobeamertemplate{block begin}{
 \setlength\abovedisplayskip{1pt}
 \setlength\belowdisplayskip{1pt}
 \setlength\abovedisplayshortskip{1pt}
 \setlength\belowdisplayshortskip{1pt}}{}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt plus 0pt minus 0pt}}
-\setlength{\jot}{-0pt}}
-\setlength{\mathindent}{-3pt plus -7pt minus 0pt}}
-}{
-\addtolength{\itemsep}{0.5\baselineskip}}
-\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{1pt}\setlength\belowdisplayskip{1pt}\setlength\abovedisplayshortskip{1pt}\setlength\belowdisplayshortskip{1pt}}{}
 \addtobeamertemplate{block begin}{\vspace*{-3pt}}{}
 \addtobeamertemplate{block end}{}{\vspace*{-3pt}}
 
@@ -78,10 +99,10 @@
 \addtobeamertemplate{block begin}{}{\setlength{\jot}{-0pt}}
 %\setlength\jot{0pt plus 0pt minus 0pt}
 
-\addtobeamertemplate{block begin}{}{\setlength{\mathindent}{-50pt plus -50pt minus 0pt}}
+\addtobeamertemplate{block begin}{}{\setlength{\mathindent}{1pt plus 5pt minus 10pt}}
 %\setlength\mathindent{0pt plus 0pt minus 0pt}
 
-\addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{-1cm}}
+\addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{0mm}}
 %\setlength\leftmargini{-2pt}
 %%}?
 %https://tex.stackexchange.com/questions/115907/how-do-i-remove-white-space-above-itemize-command-in-beamer-using-enumitem
@@ -113,8 +134,6 @@
 %\setlist[itemize,0]{%leftmargin=\dimexpr 26pt-.5in
 %align=left, leftmargin=-5pt,label=*,labelwidth=10pt
 %}
-\setlength{\itemindent}{3pt}
-\setbeamersize{text margin left=1mm,text margin right=1mm} 
 \makeatother
 
 \hypersetup{pdfpagemode=FullScreen}
@@ -236,6 +255,7 @@
         \end{beamercolorbox}%}%
     %\vskip{0pt}%
     }%
-    }%
+    \vspace*{-3mm}    
+}%
     \makeatother
     \beamertemplatenavigationsymbolsempty
