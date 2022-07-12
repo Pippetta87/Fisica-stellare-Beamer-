@@ -13,8 +13,9 @@ Come illustrato in figura, per entrambe $\Gamma_1\approx\midfrac{5}{3}$ nell'int
 \end{wordonframe}
 
 \begin{wordonframe}{Relazione tra $P(\rho, T)$: approx zero gas perfetto di atomi completamente ionizzati}
-\begin{columns}[T]
-\begin{column}{0.55\textwidth}
+\begin{columns}[L]%
+    \hspace{-19pt}\relax
+\begin{column}{0.55\textwidth}%
 EOS gas perfetto di ioni ed elettroni 
 \begin{equation*}
 P_G=P_I+P_e=\frac{\rho}{\mu}\gasconstant{}T
@@ -25,6 +26,7 @@ Energia interna per unit\'a di massa: somma delle energie traslazionali delle pa
 &=\frac{3}{2}\frac{P}{\rho}=\frac{3}{2}\frac{\gasconstant T}{\mu}
 \end{align*}
 \end{column}
+    \hspace{-22pt}\relax
 \begin{column}{0.45\textwidth}
 Peso molecolare medio: massa media in amu per particella libera
 \begin{align*}
@@ -142,17 +144,16 @@ $F=U-TS$: processo isotermo rev., $\Delta Q$ system, $\Delta W=P\Delta V$ work t
     \end{itemize}
 \end{frame}
 
-
 \section{Radiative transfer equation}
 
 \begin{frame}{Derivation of transfer equation}
     \begin{columns}[T]
-        \begin{column}{0.4\textwidth}
+        \begin{column}{0.3\textwidth}
 \begin{figure}[!ht]
 	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{radthroughcyl}
 \end{figure}
         \end{column}
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.7\textwidth}
 \begin{align*}
     &\Delta t=\frac{ds}{c}:\ I(\vec{x}+\Delta\vec{x},t+\Delta t;\vec{n},\nu)\\
     &=I(\vec{x},t;\vec{n},\nu)+[\frac{1}{c}\PDy{t}{I}]\,ds
@@ -161,11 +162,25 @@ $F=U-TS$: processo isotermo rev., $\Delta Q$ system, $\Delta W=P\Delta V$ work t
     \end{columns}
   \begin{align*}
    &I(\vec{x}+\Delta\vec{x},t+\Delta t;\vec{n},\nu)-I(\vec{x},t;\vec{n},\nu)=[\eta(\vec{x},t;\vec{n},\nu)-\chi(\vec{x},t;\vec{n},\nu)I(\vec{x},t;\vec{n},\nu)]ds\,dS\,d\Omega\,d\nu\,dt\\
-   &[\frac{1}{c}+\PDof{t}]I(\vec{x},t;\vec{n},\nu)=\eta(\vec{x},t;\vec{n},\nu)-\chi(\vec{x},t;\vec{n},\nu)I(\vec{x},t;\vec{n},\nu)\tag{Trans. eq.}
+   &[\frac{1}{c}\PDof{t}+\nabla_{\vec{s}}]I(\vec{x},t;\vec{n},\nu)=\eta(\vec{x},t;\vec{n},\nu)-\chi(\vec{x},t;\vec{n},\nu)I(\vec{x},t;\vec{n},\nu)\tag{Trans. eq.}\\
+   &[\frac{1}{c}\PDof{t}+\mu\PDof{z}]I(z,t;\mu,\nu)=\eta(z,t;\mu,\nu)-\chi(\ldots)I(\ldots)\tag{1D planar}
   \end{align*}
+
+  \begin{columns}[T]
+      \begin{column}{0.15\textwidth}
+          \begin{figure}[!ht]\includegraphics[trim={2cm 0cm 1cm 5mm},clip, keepaspectratio,width=0.99\textwidth]{radtransfspheric}\label{fig:}\end{figure}
+      \end{column}
+      \begin{column}{0.85\textwidth}
+          \begin{align*}
+          &dr=\cos{\Theta}\,ds=\mu\,ds,\ r\,d\Theta=-\sin{\Theta}\,ds=-\sqrt{1-\mu^2}\,ds\tag{spherical sym}\\
+          &\PDof{s}=\PDy{s}{r}\PDof{r}+\PDy{s}{\Theta}=\mu\PDof{r}+\frac{(1-\mu^2)}{r}\PDof{\mu}\\
+          &[\frac{1}{c}\PDof{t}+\mu\PDof{r}+\frac{(1-\mu^2)}{r}\PDof{\mu}]I(r,t;\mu,\nu)=\eta(r,t;\mu,\nu)-\chi(r,t;\mu,\nu)I(r,t;\mu,\nu)
+          \end{align*}
+      \end{column}
+  \end{columns}
+  
   Classical, macroscopic, phenomenological: not included polarization, dispersion, coherence, interference and quantum effects.
 \end{frame}
-
 
 \begin{frame}{Einstein relations}
     \begin{columns}[T]
@@ -284,7 +299,7 @@ Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $
 \end{frame}
 
 \begin{frame}{Semiclassical picture of photon scattering}
-    <++>
+    
 \end{frame}
 
 \begin{frame}{True absorption and scattering coeff.}
