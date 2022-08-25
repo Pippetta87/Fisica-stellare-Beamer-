@@ -21,7 +21,12 @@
 \newenvironment{wordonframe}[1]{\comment}{\endcomment}
 \fi
 
+%\makeatletter
+%\def\maketag@@@#1{\hspace{-50pt}\relax\m@th\normalfont#1}
+%\makeatother
 %\renewcommand\addcontentsline[3]{\addtocontents{#1}{\protect\contentsline{#2}{#3}}}
+\newtagform{shiftleft}{\scriptsize(}{)\normalsize}
+\usetagform{shiftleft}
 
 %%% COUNTERS
 %\newcounter{cherrykey}%conta le keyword

@@ -8,12 +8,12 @@
 %
 \subtitle{Cosa sono le stelle: formazione, fenomenologia evolutiva, popolazioni stellari.}
 
-\date{2022 Luglio, \today}
+\date{2022 Settembre, \today}
 
 \subject{Modelli stellari ed input fisici. Evoluzione stellare. Star formation and star populations}
 
 % Beamer margin
-\setbeamersize{text margin left=2pt, text margin right=20pt}
+\setbeamersize{text margin left=2pt, text margin right=30pt}
 % In beamer, these changes can be made in the preamble
 \addtolength{\topmargin}{0pt}
 \addtolength{\headsep}{3pt minus 2pt}
@@ -44,6 +44,8 @@
 %\abovedisplayshortskip=0pt plus 3pt 
 %\belowdisplayshortskip=7pt plus 3pt minus 4pt
 \g@addto@macro\normalsize{%
+    \setlength{\tagmarginsep}{0pt}
+    %\everydisplay{\displayindent=\tagmarginsep \displaywidth=\dimexpr\linewidth-2\tagmarginsep}
 %\renewcommand\normalsize{
 %\setlength\thinmuskip{0pt}%=
 %\setlength\medmuskip{0pt plus 0pt minus 0pt}%=
@@ -57,7 +59,8 @@
 \setlength{\jot}{-0pt}
 \setlength{\mathindent}{-0pt plus 1pt minus 2pt}
 \setlength{\itemindent}{-0pt}
-%\setlength{\leftmargini}{-1mm}
+\setlength{\leftmargini}{\dimexpr\leftmargini-2pt\relax}
+\setlength\columnsep{1pt}
 %\setbeamersize{text margin left=-2cm,text margin right=1mm} 
 \setlength{\parskip}{0pt plus 0pt minus 0pt}
 }
@@ -65,6 +68,7 @@
 \addtobeamertemplate{frame begin}{
 \vspace*{-6mm}
 }{
+\setlength\columnsep{1pt}
 \setlength\abovedisplayskip{1pt minus 1pt}
 \setlength\belowdisplayskip{1pt minus 1pt}
 \setlength\abovedisplayshortskip{1pt minus 1pt}
@@ -86,7 +90,9 @@
 \setlength\abovedisplayskip{1pt}
 \setlength\belowdisplayskip{1pt}
 \setlength\abovedisplayshortskip{1pt}
-\setlength\belowdisplayshortskip{1pt}}{}
+\setlength\belowdisplayshortskip{1pt}
+%\setlength\itemindent{1pt}
+}{}
 \addtobeamertemplate{block begin}{\vspace*{-3pt}}{}
 \addtobeamertemplate{block end}{}{\vspace*{-3pt}}
 
@@ -102,7 +108,7 @@
 \addtobeamertemplate{block begin}{}{\setlength{\mathindent}{1pt plus 5pt minus 10pt}}
 %\setlength\mathindent{0pt plus 0pt minus 0pt}
 
-\addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{0mm}}
+%\addtobeamertemplate{block begin}{}{\setlength{\leftmargini}{0mm}}
 %\setlength\leftmargini{-2pt}
 %%}?
 %https://tex.stackexchange.com/questions/115907/how-do-i-remove-white-space-above-itemize-command-in-beamer-using-enumitem
