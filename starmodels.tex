@@ -241,21 +241,21 @@ BB/BF transition for $H^-$ don't follow Kramer as ion abundance in solar photosp
 
 \begin{wordonframe}{Forza di archimede}
 Una regione stellare \'e convettivamente stabile se una perturbazione di densit\'a infinitesima non cresce ad ampiezza finita.
-\begin{equation*}\label{eq:buoyancyEOM}
+\begin{equation*}\label{eq:buoyanc yEOM}
 \rho\PtwoDy{t}{(\Delta r)}=-g\Delta\rho=-g[\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]\Delta r
 \end{equation*}
 La forza di Archimede ha verso opposta alla perturbazione se
-\begin{equation*}
+\begin{equation*} 
 [\Dcvar{\TDy{r}{\rho}}{e}-\Dcvar{\TDy{r}{\rho}}{amb}]>0
 \end{equation*}
 Riscrivo prima legge della termodinamica come $dq=c_P\,dT-\frac{\delta}{\rho}\,dP$
-\begin{equation*}
+\begin{equation*} 
 N^2=g(\frac{1}{\Gamma_1P}\TDy{r}{P}-\frac{1}{\rho}\TDy{r}{\rho})=g(\frac{1}{\densityscale{}}-\frac{g}{c_s^2})\label{eq:bvfs}
 \end{equation*}
 $N^2$ rappresenta la massima frequenza sotto cui pu\'o oscillare una particella di fluido sottoposta a onde di gravit\'a mantenendo l'equilibrio di pressione con l'ambiente.
 \begin{equation*}
 \PtwoDy{t}{(\Delta r)}=-N^2\Delta r
-\end{equation*}
+\end{equation*} 
 che descrive un comportamento oscillatorio per $N^2>0$
 \end{wordonframe}
 
@@ -286,20 +286,20 @@ Le stelle con massa $M\leq1.1\msun{}$ hanno una regione radiativa interna mentre
 &F=\frac{L}{4\pi r^2}=F_{rad}+F_{con}=-\frac{4acT^3}{3\kappa\rho}\TDy{r}{T}|_{amb}+\frac{1}{2}\rho vc_p[\TDy{r}{T}|_{Ad}-\TDy{r}{T}|_{amb}]\Lambda\\
 &v^2=-\frac{1}{8}g\frac{\Delta\rho}{\rho}\Lambda=\frac{1}{8}g\frac{\Lambda}{H_P}Q(\nabla-\nad),\ Q=1-\TDly{T}{\mu},\ \Lambda=\alpha H_P\\
 &F_{con}^{up}=\frac{1}{2}\rho vc_PT\frac{\lambda}{H_P}(\nabla-\nad{})
-\end{align*}
+\end{align*} 
 \begin{columns}[T]
-\begin{column}{0.2\textwidth}
+\begin{column}{0.3\textwidth}
 \begin{align*}
-&f_r&=-g\Delta\rho(r)=0\tag*{r}\\
+&f_r&=-g\Delta\rho(r)=0\tag{r}\\
 &&\propto\Delta r
-\end{align*}
+\end{align*} 
 \end{column}
-\begin{column}{0.8\textwidth}
+\begin{column}{0.7\textwidth}
 Work done per unit volume moving bubble of $\Delta r$
 \begin{align*}
 &W(\Delta r)=-g\int_0^{\Delta r}\Delta\rho(\Delta r')d(\Delta r')=-\frac{1}{2}g\Delta\rho(\Delta r)\Delta r\\
 &\exv{W(\Delta r)}_{\Delta r}=\frac{1}{4}W(\Lambda)=\frac{1}{2}\rho v^2
-\end{align*}
+\end{align*} 
 \end{column}\end{columns}
 %Calcolo altezza scala di pressione, flusso convettivo e gradiente ambientale in funzione della velocit\'a media degli elementi
 \end{frame}
@@ -345,72 +345,54 @@ dove ho usato $\nabla_{amb}=\nrad{}$, cio\'e il gradiente che si ha nel caso l'e
 
 \subsection{Teoria della mixing-length.}
 
-\begin{wordonframe}{\todo{Convezione in esterni stellari}}
-
-In presenza di convezione il flusso di energia verso l'esterno ha una componente radiativa, determinata dal gradiente di temperatura, e una componente dominante convettiva 
-\begin{equation*}\label{eq:radconvflux}
-F=F_{con}+F_{rad}=\frac{\lsun{}}{4\pi r^2}
-\end{equation*}
-
-Una maggiore efficienza del trasporto convettivo di energia si riflette in una minore differenza tra il gradiente di temperature adiabatico ed effettivo.
-
-\begin{figure}[!h]
+\begin{wordonframe}{Convezione in esterni stellari}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &F=F_{con}+F_{rad}=\frac{\lsun{}}{4\pi r^2}\\
+                &F_{con}=\exv{\rho vc_P\Delta T}\label{eq:convectiveflux}\tag{Avg on r-sphere}\\
+                &\frac{\Delta T}{T}\approx\frac{1}{T}\PDy{r}{(\Delta T)}\underbrace{\frac{l_m}{2}}_{\Delta r\approx\frac{l_m}{2}}=(\nabla-\nabla_e)\frac{l_m}{2}\frac{1}{H_P}\\
+                &-g\frac{\Delta\rho}{\rho}\tag{Force/unit mass}\\
+                &v^2=g\delta(\nabla-\nabla_e)\frac{l_m^2}{8H_P}\\
+                &f=\frac{4acT^3}{3\kappa\rho}|\PDy{n}{T}|\tag{Rad. exchange}\\
+                &\PDy{t}{T_e}=-\frac{\lambda}{\rho Vc_P}\\
+                &\Dcvar{\TDy{r}{T}}{e}=\Dcvar{\TDy{r}{T}}{ad}-\frac{\lambda}{\rho Vc_Pv}\label{eq:Tchangelength}\tag{$\Delta T$ per unit length by blob}\\
+                &|\PDy{n}{T}|\approx\exv{\Delta T}\\
+                &\frac{\nabla_e-\nad{}}{\nabla-\nabla_e}=\frac{6acT^3}{\kappa\rho^2c_Pl_mv}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            Eccesso di calore trasportato dai blob $c_P\Delta T$ rispetto all'ambiente, il cui cammino libero medio \'e la mixing-length $l_m=\alpha H_P$, che da luogo al flusso di energia. Assumo la forza di galleggiamento media sia la met\'a di quella alla superficie r ($\exv{\Delta \rho}\approx\frac{\Delta\rho}{2}$) e lo spostamento medio $\frac{l_m}{2}$: assumo che met\'a del lavoro vada in energia cinetica del blob. Il modulo del flusso radiativo \'e proporzionale al gradiente termico in direzione normale alla superficie del blob quindi l'energia scambiata dall'intera superficie S del blob \'e $\lambda=Sf$ che determina, per la prima legge della termodinamica, dato V volume del blob, una variazione di temperatura per unit\'a di tempo. Le 5 equazioni determinano completamente le variabili $F_{rad}, F_{con}, v, \nabla_e, \nabla$ in funzione di $P,T,l(r),m(r),c_P,\nad{},\nrad{},g$.
+%Determino il valor medio della differenza di temperatura prendendo come valore caratteristico dello spostamento del blob $\Delta r\approx\frac{l_m}{2}$ (moti in entrambi i versi)
+        \end{column}
+    \end{columns}
+    %Una maggiore efficienza del trasporto convettivo di energia si riflette in una minore differenza tra il gradiente di temperature adiabatico ed effettivo. Il gradiente termico ambientale $\nabla$ e del blob $\nabla_e$ sono determinati inserendo le espressioni per il flusso radiativo e il flusso convettivo in.
+cubic equation for $(\nabla-\nabla_e)$
+%\begin{figure}[!h]
 %   \includegraphics[ width=0.99\textwidth,keepaspectratio]{proportionflux}
 %   \subcaption{Profilo radiale (profondit\'a in \si{\kilo\meter}) del flusso convettivo $F_c$ rispetto al flusso totale $F$, della super-adiabaticit\'a $\nabla-\nad{}$ e regioni di ionizzazione idrogeno e $\cel{He}{4}{}{}$. Da \cite{christensen1997effects}.}\label{fluxproportion}
-
 %\includegraphics[keepaspectratio,width=0.9\textwidth]{specificheatnablaa}
 %\subcaption{Profilo radiale di $c_P$ e $\nabla_a$: si ha cambiamento di comportamento nelle regioni di ionizzazione parziale di idrogeno ed elio. Da \cite{stix91sun}.}\label{specificheatnablaa}
-\end{figure}
-
-Per determinare il gradiente di temperatura effettivo $\nabla$ uso la teoria della mixing-length:
-si considera l'eccesso di calore trasportato dai blob di gas nel moto convettivo $c_P\Delta T$ rispetto all'ambiente, il cui cammino libero medio \'e la mixing-length $l_m=\alpha H_P$, che da luogo al flusso di energia
-\begin{equation*}
-F_{con}=\exv{\rho vc_P\Delta T}\label{eq:convectiveflux}
-\end{equation*}
-dove $\exv{}$ indica una media opportuna sulla sfera di raggio r. Determino il valor medio della differenza di temperatura prendendo come valore caratteristico dello spostamento del blob $\Delta r\approx\frac{l_m}{2}$:
-%, considerando moti in entrambi i versi,
-\begin{equation*}
-\frac{\Delta T}{T}\approx\frac{1}{T}\PDy{r}{(\Delta T)}\frac{l_m}{2}=(\nabla-\nabla_e)\frac{l_m}{2}\frac{1}{H_P}\label{eq:blobambdiff}
-\end{equation*}
-
-Assumo il lavoro medio fatto dalla forza di galleggiamento per unit\'a di massa $-g\frac{\Delta\rho}{\rho}$ uguale al valore medio della forza, cio\'e la met\'a di quello alla superficie sferica data, moltiplicato lo spostamento medio $\frac{l_m}{2}$ quindi, assumendo in oltre che in media met\'a del lavoro fatto dalla forza di galleggiamento sia trasformato in energia cinetica del blob si ottiene
-\begin{equation*}
-v^2=g\delta(\nabla-\nabla_e)\frac{l_m^2}{8H_P}\label{eq:blobvelocity}
-\end{equation*}
-
-Infine determino gli scambi radiative del blob: il modulo del flusso radiativo \'e proporzionale al gradiente termico in direzione normale alla superficie del blob
-\begin{equation*}
-f=\frac{4acT^3}{3\kappa\rho}|\PDy{n}{T}|
-\end{equation*}
-quindi l'energia scambiata dall'intera superficie S del blob \'e $\lambda=Sf$ che determina, per la prima legge della termodinamica, una variazione di temperatura per unit\'a di tempo:
-\begin{equation*}
-\PDy{t}{T_e}=-\frac{\lambda}{\rho Vc_P}
-\end{equation*}
-indicato con $V$ il volume del blob.
-
-La variazione della temperatura del blob per unit\'a distanza percorsa \'e quindi
-\begin{equation*}
-\Dcvar{\TDy{r}{T}}{e}=\Dcvar{\TDy{r}{T}}{ad}-\frac{\lambda}{\rho Vc_Pv}\label{eq:Tchangelength}
-\end{equation*}
-e approssimando il gradiente normale alla superficie con $\exv{\Delta T}$ ed usando le definizioni \eqref{eq:nablavitense} si ottiene:
-\begin{equation*}
-\frac{\nabla_e-\nad{}}{\nabla-\nabla_e}=\frac{6acT^3}{\kappa\rho^2c_Pl_mv}
-\end{equation*}
-Il gradiente termico ambientale $\nabla$ e del blob $\nabla_e$ sono determinati da \eqref{eq:radconvflux} e \eqref{eq:Tchangelength} inserendo le espressioni per il flusso radiativo \eqref{eq:radiativeflux} e il flusso convettivo \eqref{eq:convectiveflux}.
-
-In figura (\subref{fluxproportion}) si mostrano l'andamento di $\nabla-\nad{}$, il profilo termico e la frazione di flusso totale trasportato dalla convezione; in figure (\subref{specificheatnablaa}) si mostrano il profilo del calore specifico per unit\'a di massa e del gradiente adiabatico.
-
-Le 5 equazioni del flusso convettivo
-
-Le 5 equazioni determinano completamente le variabili $F_{rad}, F_{con}, v, \nabla_e, \nabla$ in funzione di $P,T,l(r),m(r),c_P,\nad{},\nrad{},g$.
-
-Come determino il gradiente effettivo ??
-
-Determino $\nabla-\nabla_e$
-cubic equation for $(\nabla-\nabla_e)$
-
+%\end{figure}
 \end{wordonframe}
 
+\begin{wordonframe}{Solution for ML variables}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &U=\frac{3acT^3}{c_P\rho^2\kappa l_m^2}\sqrt{\frac{8H_P}{g\delta}}\propto\alpha\expy{-2}H_P\expy{-\frac{3}{2}}\\
+                &W=\nrad{}-\nad{}\\
+                &\Rightarrow\nabla_e-\nad{}=\nabla-\nad{}-(\nabla-\nabla_e)=2U\sqrt{\nabla-\nabla_e}\\
+                &(\nabla-\nabla_e)\expy{\frac{3}{2}}=\frac{8}{9}U(\nrad{}-\nabla)\\
+                &(\xi-U)^3+\frac{8U}{9}(\xi^2-U^2-W)=0
+            \end{align*}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            Replacing expression for $v^2$ change temperature per unit length converted in grad form we get third eq. Using explicit formula for $F_{con}$ and $F_{con}=\frac{4acG}{3}\frac{T^4m}{\kappa Pr^2}(\nrad{}-\nabla)$ we get fourth eq. We have reduced yhe five equation to two for $\nabla, \nabla_e$, and defining  $\xi$ as positive root of $\xi^2=\nabla-\nad{}+U^2$ and looking at third eq we see that it's a quadratic eq for $\sqrt{\nabla-\nabla_e}$ with sol. $\sqrt{\nabla-\nabla_e}=-U+\xi$ and inserting this in the fourth eq we arrive at cubic for $\xi$ resol for any $U$ and $W$ params.
+        \end{column}
+    \end{columns}
+    
+\end{wordonframe}
 \section{From micro-physics to thermodynamics: Equazione di stato, opacit\'a}\linkdest{micro2macro}
 
 %\begin{multicols}{2}%https://newbedev.com/how-to-explicitly-split-long-toc-in-beamer
