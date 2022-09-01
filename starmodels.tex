@@ -940,7 +940,7 @@ Model of stellar atmosphere for given M, $X_i(m)$: two parameter solution $(R,T_
 &T_F^{ex}(R(r_F^{ex},L),L)=\theta(r_F^{ex},L)
 \end{align*}
 \end{column}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.445\textwidth}
 	Outer boundary conditions for interior solution such that there is alwaysan outer solution that matches interior
 \begin{align*}
 &P_F^{in}=\pi(r_F^{in},L)\\
@@ -967,7 +967,7 @@ Condition at surface do not affect greatly interior solution.
 \end{itemize}
 Small variation of $T_e$ (numerical/physical uncert.or super-adiabat) lead to curves widely separated in interior.
 \end{column}
-\begin{column}{0.55\textwidth}
+\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]
 	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{envelopelnTlnP}\label{fig:envelopelnTlnP}
 \end{figure}
@@ -991,8 +991,9 @@ integration from $\tau\approx0$ where $T\approx0$, $P\approx0$ down to $\tau=\fr
 
 \subsection{Approssimazione politropa}\linkdest{poly}
 
-\begin{frame}{Polytropic relation $P=K\rho^{\gamma}=K\rho^{1+\frac{1}{n}}$}
-	\begin{itemize}
+\begin{frame}{Polytropic relation}
+    \framesubtitle{$P=K\rho^{\gamma}=K\rho^{1+\frac{1}{n}}$}
+    \begin{itemize}
 \item[*] Additional relation between T-P: ie $1^{st}$ law $\TDy{T}{Q}=\TDy{T}{U}+P\TDy{T}{V}=C=c_V+P(\TDy{T}{V})_P$ - ideal gas $c_P-c_V=\frac{R}{\mu}$: $\frac{dT}{T}+\frac{1}{n}\frac{dV}{V}=0$, $n=\frac{c_V-C}{c_P-c_V}$. \keyword{trasformazione politropa}: t. quasi-statica in  con $c=\TDy{Q}{T}$ (calore specifico) assegnato - K is free parameter.
 %$TV\expy{\gamma-1}=\const$, $PV\expy{\gamma}=\const$, $P\expy{1-\gamma}T\expy{\gamma}=\const$ ($0=dE-\frac{P}{\rho^2}d\rho$). 
 \item [*] EOS of the form $P=K\rho^{\gamma}$, K fixed.
@@ -1176,7 +1177,7 @@ starting from outer mesh with 4 boundary conditions for $T_e$, $L_s$, $P_s$, $R$
 &\Delta(y_f^i)_{center}=\TDy{y_1^2}{(y^i_f)_{center}}\delta y_1^2+\TDy{y_1^3}{(y^i_f)_{center}}\delta y_1^3
 \end{align*}
 	\end{column}
-	\begin{column}{0.5\textwidth}
+	\begin{column}{0.45\textwidth}
 correzione ai 4 valori al contorno $\delta y_N^1=\delta R$, $\delta y_N^4=\delta L_s$ e $\delta y_1^2=P_c$, $\delta y_1^3=T_c$ found solving \[-\Delta_f=\Delta(y_f^i)_{center}-\Delta(y_f^i)_{surf}\]
 	\end{column}
 \end{columns}
