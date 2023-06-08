@@ -30,7 +30,7 @@
 
 %%% COUNTERS
 %\newcounter{cherrykey}%conta le keyword
-%\newcounter{cherrysectionlist}% conta le key prima di keywordlist
+\newcounter{cherrysectionlist}% conta le key prima di keywordlist
 \newcounter{todokey}%conta i todo totali per auto ref
 %\newcounter{sectionkey}% conta le section prima della attuale
 \newcounter{mustkey}%conta i must totali per auto ref
@@ -40,7 +40,6 @@
   \addcontentsline{key-\thesectionkey}{heading}{{#1}}%
   \addtocontents{key-\thesectionkey}{\vspace{5pt}}}
 %% expert approach to keywords
- \makeatletter
 \newcommand\keyword[2][keyword-\thecherrykey]{%keyword
 \addtocounter{cherrykey}{1}
 \noindent{%
@@ -59,7 +58,7 @@
 	\linkdest{#1}%
    \addcontentsline{todo-\thepart}{subsubsection}{\protect\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
    % \addcontentsline{todo-\thepart}{subsubsection}{ todo}
-}
+\makeatletter}
 \newcommand\must[2][must-\themustkey]{%must
 	\addtocounter{mustkey}{1}
 	\noindent{%
@@ -76,7 +75,7 @@
 %\newcommand{\listofkeywordsbasic}{%listofkeyword automatic for every section
 %  \@starttocorig{key-\thepart}
 %}
-
+\makeatletter
 \newcommand{\listoftodosbasic}{%listoftodos
 	\@starttocorig{todo-\thepart}
 }
