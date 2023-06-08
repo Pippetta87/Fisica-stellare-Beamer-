@@ -30,7 +30,7 @@
 
 %%% COUNTERS
 %\newcounter{cherrykey}%conta le keyword
-\newcounter{cherrysectionlist}% conta le key prima di keywordlist
+%vedi ifframeinlbf \newcounter{cherrysectionlist}% conta le key prima di keywordlist
 \newcounter{todokey}%conta i todo totali per auto ref
 %\newcounter{sectionkey}% conta le section prima della attuale
 \newcounter{mustkey}%conta i must totali per auto ref
@@ -40,33 +40,31 @@
   \addcontentsline{key-\thesectionkey}{heading}{{#1}}%
   \addtocontents{key-\thesectionkey}{\vspace{5pt}}}
 %% expert approach to keywords
-\newcommand\keyword[2][keyword-\thecherrykey]{%keyword
-\addtocounter{cherrykey}{1}
-\noindent{%
-\color{keyword}{#2}%
-}%
-\phantomsection% comment out if hyperref is not used
-\linkdest{#1}%
-\addcontentsline{key-\thesectionkey}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}}%
+\newcommand\keyword[2][keyword-\thekeywordsectionlist]{%keywordsection
+	%\addtocounter{todokey}{1}%at begin section does that
+	\noindent{%
+	\phantomsection% comment out if hyperref is not used
+	\linkdest[\protect\color{keyword}{#2}]{#1}%
+	}%
+    \addtocontents{keylist-\thekeywordsectionlist}{\protect\mycontentsline{subsubsection}{\parbox{0.48\textwidth}{\protect$\bullet$ #2}}{}{#1}}
 }
 \newcommand\todo[2][todo-\thetodokey]{%todo
 	\addtocounter{todokey}{1}
 	\noindent{%
-		\color{todo}{#2}%
-	}%
 	\phantomsection% comment out if hyperref is not used
-	\linkdest{#1}%
-   \addcontentsline{todo-\thepart}{subsubsection}{\protect\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
-   % \addcontentsline{todo-\thepart}{subsubsection}{ todo}
-\makeatletter}
+	\linkdest[\protect\color{todo}{#2}]{#1}%
+	}%
+    \addtocontents{todo-\thetodosectionlist}{\protect\mycontentsline{subsubsection}{\parbox{0.48\textwidth}{\protect$\bullet$ #2}}{}{#1}}
+%\addcontentsline{todo-\protect\thetodosectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
+}
 \newcommand\must[2][must-\themustkey]{%must
 	\addtocounter{mustkey}{1}
 	\noindent{%
-		\color{must}{#2}%
-	}%
 	\phantomsection% comment out if hyperref is not used
-	\linkdest{#1}%
-    \addcontentsline{must-\thepart}{subsubsection}{\protect\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
+	\linkdest[\protect\color{must}{#2}]{#1}%
+	}%
+    \addtocontents{must-\themustsectionlist}{\protect\mycontentsline{subsubsection}{\parbox{0.48\textwidth}{\protect$\bullet$ #2}}{}{#1}}
+%\addcontentsline{todo-\protect\thetodosectionlist}{subsubsection}{\textbullet\protect\hyperlink{#1}{#2}\protect\hspace{1mm}}%
 }
 
 %\newcommand{\listofsecframes}{%listofsecframes
@@ -76,32 +74,54 @@
 %  \@starttocorig{key-\thepart}
 %}
 \makeatletter
+\newcommand{\listofkeywordsbasic}{%
+  \@starttocorig{keylist-\thekeywordsectionlist}
+}
+%\newcommand{\listoftodosbasic}{%listoftodos
+%	\@starttocorig{todo-\thepart}
+%}
 \newcommand{\listoftodosbasic}{%listoftodos
-	\@starttocorig{todo-\thepart}
+	\@starttocorig{todo-\thetodosectionlist}
 }
+%\newcommand{\listofmustsbasic}{%listofmusts
+%	\@starttocorig{must-\thepart}
+%}
 \newcommand{\listofmustsbasic}{%listofmusts
-	\@starttocorig{must-\thepart}
+	\@starttocorig{must-\themustsectionlist}
 }
+%\newcommand{\lbfbasic}{%listofframes
+%	\@starttocorig{lbf-\thepart}
+%}%ifframeinlbf
 %\newcommand\listofframesbasic{\@starttoc{cherryframes}}%%frameintoc cherrry
 %\newcommand\listofframesbasic{\@starttoc{cherryframes}}%%frameintoc cherrry
 \makeatother
 
-\newcommand\listmustsname{MUSTS}%listofmust
-\newcommand\listofmusts{%
-	\listmustsname\phantomsection: \listofmustsbasic}
-\newcommand\listkeywordsname{KEYWORDS}%listofkeyword
-\newcommand\listofkeywords{%
-\listkeywordsname\phantomsection: \listofkeywordsbasic}
+%vedi ifframeinlbf
+%\newcommand\listofframesname{List of frames}
+%\newcommand\listofframes{%
+	%\listofframesname\phantomsection:%
+%\lbfbasic}
 \newcommand\listtodosname{TODO}%listoftodo
 \newcommand\listoftodos{%
-\listtodosname\phantomsection: 
+	\addtocounter{todosectionlist}{1}
+	\listtodosname\phantomsection: \listoftodosbasic}
+\newcommand\listmustsname{MUSTS}%listofmust
+\newcommand\listofmusts{%
+	\addtocounter{mustsectionlist}{1}
+	\listmustsname\phantomsection: \listofmustsbasic}
+\newcommand\listkeywordsname{KEYWORDS}%List of keywords
+\newcommand\listofkeywords{%
+\listkeywordsname\listofkeywordsbasic}
 
-\listoftodosbasic}
-
-%\newcommand\frameintoc{%using iftlbfBOOL
-%\subsubsection{\insertframetitle}
-%\addcontentsline{cherryframes}{section}{\protect\makebox[2em][l]{\insertframenumber\hfill}\insertframetitle\par}%
-%}
+%vedi ifframeinlbf
+%\newcommand\frameintoc{%frameintoc
+%	\noindent{%
+%	\phantomsection% comment out if hyperref is not used
+%	\linkdest{frametarget-\insertframenumber}%
+%	}%
+%    \addtocontents{lbf-\thepart}{\protect\mycontentsline{subsubsection}{\parbox{0.48\textwidth}{\protect$\bullet$\insertframetitle(\insertframenumber)}}{}{frametarget-\insertframenumber}%
+%        }        
+%    }
 
 %% helper macros for celestial-sphere
 
