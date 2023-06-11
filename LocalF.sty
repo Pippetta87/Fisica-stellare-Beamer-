@@ -35,10 +35,12 @@
 %\newcounter{sectionkey}% conta le section prima della attuale
 \newcounter{mustkey}%conta i must totali per auto ref
 %\newcounter{partkey}% conta le part
-
-\newcommand\headinginfo[1]{%
-  \addcontentsline{key-\thesectionkey}{heading}{{#1}}%
-  \addtocontents{key-\thesectionkey}{\vspace{5pt}}}
+\newcounter{mustsectionlist}
+\newcounter{todosectionlist}
+\newcounter{keywordsectionlist}
+%\newcommand\headinginfo[1]{%
+%  \addcontentsline{key-\thesectionkey}{heading}{{#1}}%
+%  \addtocontents{key-\thesectionkey}{\vspace{5pt}}}
 %% expert approach to keywords
 \newcommand\keyword[2][keyword-\thekeywordsectionlist]{%keywordsection
 	%\addtocounter{todokey}{1}%at begin section does that

@@ -29,8 +29,8 @@
 \definecolor{todo}{rgb}{0.75, 0.0, 0.2}
 \definecolor{must}{rgb}{1.0, 0.31, 0.0}
 % redefine frame
-\setbeamertemplate{headline}{\vskip-3pt}
-%%define \mycontentsline
+\addtobeamertemplate{headline}{\vskip-3pt}{}
+%define \mycontentsline
 \makeatletter
 \protected\def\Hy@toclinkstart{\hyper@linkstart{link}{\Hy@tocdestname}}
 \protected\def\Hy@toclinkend{\hyper@linkend}
@@ -75,133 +75,108 @@
   \fi
 }
 \makeatother
-%%%
-\makeatletter
-\setbeamertemplate{frametitle}{
-\vspace*{-1mm}
-    \ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
-    \@tempdima=\textwidth%
-    \advance\@tempdima by\beamer@leftmargin%
-    \advance\@tempdima by\beamer@rightmargin%
-    %\hspace*{1cm} %%%%%%%%%%%%% For example insert shift to right
-    \begin{beamercolorbox}[sep=0.3cm,center,wd=\the\@tempdima]{frametitle}
-        \usebeamerfont{frametitle}%
-        \vbox{}\vskip-1ex%
-        \if@tempswa\else\csname beamer@ftecenter\endcsname\fi%
-        \strut\insertframetitle\strut\par%
-        {%
-            \ifx\insertframesubtitle\@empty%
-            \else%
-            {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
-            \fi
-        }%
-        \vskip-1ex%
-        \if@tempswa\else\vskip-.0cm\fi% set inside beamercolorbox... evil here...
-\end{beamercolorbox}%
-\vspace*{-3mm}
-}
-\makeatother
+%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% importa pacchetti
 \usepackage{usepkg}
 \usepackage{makerobust}
 \MakeRobustCommand\usebeamertemplate
+\usepackage{beamersetup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni generali
-\usepackage{functions}
+%\usepackage{functions}
 %http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
 %%
 %beamer setup
 
-%%% COUNTERS
-\newcounter{cherrykey}%conta le keyword
-\newcounter{sectionkey}% conta le section prima della attuale
-
- \makeatletter
-\newcommand{\listofsecframes}{%listofsecframes
-  \@starttocorig{secfr-\thesectionkey}
-}
-\newcommand{\linkdest}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
-\makeatother
-\usepackage{LocalF}
-\makeatletter
-\newif\ifframeinlbf
-\frameinlbftrue
-\newcommand\listofcherryframesbasic{\@starttocorig{cherryframes}}
-%%frameintoc
-\newcommand\listofcherryframesname{Important frames}
-\newcommand\listofcherryframes{%
-\listofcherryframesname\phantomsection: \listofcherryframesbasic}
-\addtobeamertemplate{frametitle}{%
-    \addtocontents{secfr-\thesectionkey}{%
-        \protect\beamer@subsectionintoc{\protect\the\c@section}{0}{%
-            \protect\insertframetitle%
-        }{\protect\the\c@page}{\protect\the\c@part}{\protect\the\beamer@tocsectionnumber}%
-    }%%
-\ifframeinlbf
-\mode<presentation>{%
-        \only<1>{%
-            \hypertarget{\protect\insertframetitle}{}%
-                    \addcontentsline{cherryframes}{section}{%
-                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
-                        \normalsize\insertframetitle%
-                    }%
-    }%
- }%
-             \else\fi%
-}%
-{}%
-\makeatother
-\usepackage{beamersetup}
-\usepackage{sources}
-\usepackage{mathOp}
-
-\title{Fisica stellare}
+%%%% COUNTERS
+%\newcounter{cherrykey}%conta le keyword
+%%\newcounter{sectionkey}% conta le section prima della attuale: basta \thesection?
+%
+% \makeatletter
+%\newcommand{\listofsecframes}{%listofsecframes
+%  \@starttocorig{secfr-\thesection}
+%}
+%\newcommand{\linkdest}[2][\@empty]{%
+%    \hypertarget{\@empty}{#1}
+%\Hy@raisedlink{%1
+%\hypertarget{#2}{}
+%}%1
+%%\phantomsection\label{#2}
+%}
+%%\newcommand{\linkdest}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
+%\newcommand\listofcherryframesbasic{\@starttocorig{cherryframes}}
+%\newcommand\listofcherryframesname{Important frames}
+%\newcommand\listofcherryframes{%
+%\listofcherryframesname\phantomsection: \listofcherryframesbasic}
+%\makeatother
+%\usepackage{LocalF}
+%\makeatletter
+%\newif\ifframeinlbf
+%\frameinlbftrue
+%%%frameintoc
+%\ifframeinlbf
+%\mode<presentation>{%
+%        \only<1>{%
+%            %\hypertarget{\protect\insertframetitle}{}%
+%            %        \addcontentsline{cherryframes}{subsection}{%
+%                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
+%                       % \normalsize
+%           %            \protect\insertframetitle%
+%                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \protect\insertframetitle}}{}{cherryframes}}
+%        }%
+%    }%
+%             \else\fi%
+%%{}%from addbeamertemplate{frametitle}?
+%\makeatother
+%\usepackage{sources}
+%\usepackage{mathOp}
+%\title{Fisica stellare}
 
 % Let's get started
 \begin{document}
-\frameinlbffalse
+\part{aux part}
+\section{aux section}
 %\input{tikzdir}%%contain tikz files as filecontents
 \addtolength{\textheight}{-0pt}
 \addtolength{\headheight}{0pt}
 \addtolength{\footskip}{0pt}
 
-\begin{frame}
-  \titlepage
-\end{frame}
 
 % Section and subsections will appear in the presentation overview
 % and table of contents.
 %\frame{\tableofcontents[onlyparts]}
 
-\begin{frame}[allowframebreaks,fragile]{Fisica stellare: argomenti del corso}%label={}
-    \begin{columns}[T]
-     \begin{column}{0.45\textwidth}
-            \tableofcontents[soloparti]
-        \end{column}
-        \begin{column}{0.55\textwidth}
-            \listofcherryframes
-        \end{column}
-    \end{columns}
+\begin{frame}[fragile]{Fisica stellare: argomenti del corso}%label={}
+    %\begin{columns}[T]%list of frame a inizio sezione
+    % \begin{column}{0.45\textwidth}
+    \tableofcontents[onlyparts]
+    %    \end{column}
+      %  \begin{column}{0.55\textwidth}
+      %      \listofcherryframes
+      %  \end{column}
+   % \end{columns}
 \end{frame}
 
-\begin{wordonframe}{Meta.}
+\begin{frame}{Meta}
     argomenti del corso: toc parts a sinistra e important frames a destra
-    todo, must: before reglez
+    todo, must: before reglez; frame importanti
+    listofframe all'inizio di ogni sezione
+\inserttotalframenumber
+\end{frame}
 
-\end{wordonframe}
-
-%\begin{wordonframe}{Perch\'e studio queste cose?? Sviluppi; futuro.}
+%\begin{frame}{Perch\'e studio queste cose?? Sviluppi; futuro.}
 %Concretezza, concentrazione, indipendenza
-%\end{wordonframe}
-
-\part{Intro}\linkdest{intro}
-%\begin{frame}{TOC intro}
-%\tableofcontents
 %\end{frame}
-\input{intro}
-\input{succo}
 
-\part{Modello Plasma stellare}\linkdest{stellarplasma}
+\part{Intro}%\linkdest{intro}
+\begin{frame}{TOC intro}
+\tableofcontents
+\end{frame}
+%\input{intro}
+%\input{succo}
+\section{provas}
+
+\part{Modello Plasma stellare}%\linkdest{stellarplasma}
 \begin{frame}{this part toc}
     \begin{itemize}
         \item Recap recap stat phys gas of photons
@@ -210,9 +185,9 @@
         \item Nuclear Fusion
     \end{itemize}
 \end{frame}
-\input{stellarplasmamodel}
+%\input{stellarplasmamodel}
 
-\part{Modelli stellari: struttura ed evoluzione}\linkdest{evolutivemodels}
+\part{Modelli stellari: struttura ed evoluzione}%\linkdest{evolutivemodels}
 \begin{frame}{this part toc}
 %\begin{columns}[T]
 %\begin{column}{0.5\textwidth}
@@ -229,16 +204,16 @@
 %\end{column}
 %\end{columns}
 \end{frame}
-\input{starmodels}
-
- \part{Formazione ed evoluzione stellare}
+%\input{starmodels}
+ 
+  \part{Formazione ed evoluzione stellare}
 %\begin{frame}{TOC formation evolution}
 %\tableofcontents[sections]
 %\end{frame}
-\input{starformation}
-\input{stellarevolution}
+%\input{starformation}
+%\input{stellarevolution}
  
- \part{Stellar population in the milky way}\linkdest{constraints}
+ \part{Stellar population in the milky way}%\linkdest{constraints}
 \begin{frame}{this part toc}
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
@@ -251,6 +226,6 @@
 \end{column}
 \end{columns}
 \end{frame}
-\input{GalaxyStarImfPop}
- 
+%\input{GalaxyStarImfPop}
+  
 \end{document}

@@ -122,7 +122,7 @@ For $\rho>\SI{4e11}{\gram\per\cubic\cm}$ we have inverse $beta$-decay:nuclei cap
     \item Microstate probability: $\#\text{ of states}=\rho(p,q)\,dp\,dq$
     \item Isolated System is in equilibrium iff accessible microstates are equiprobable
 \item Ergodic system: trajectory in phase space are deterministic ($\dot{p}_i=-\PDy{q_i}{H}$, $\dot{q}_i=\TDy{p_i}{H}$) and starting from a point will get arb. closer to any other points.
-\item Evolution of systems starting inside a small cube in phase space is described with $\TDy{t}{\rho}=\PDy{t}{\rho}+\{\rho,H\}=0$ preserve volume ($\TDof{t}(x+\delta x)=\dot{x}+\delta x\PDof{x}\dot{x}$,$\TDof{t}(p+\delta p)=\dot{p}+\delta p\PDof{p}\dot{p}$ quindi $\dot{V}=\delta x\delta p[\PDof{p}\dot{p}+\PDof{x}\dot{x}]=0$). Per sistemi in equilibrio termodinamico le medie non dipendono esplicitamente dal tempo quindi neanche $\rgo(p,q)$: $\{\rho,H\}=0$.
+\item Evolution of systems starting inside a small cube in phase space is described with $\TDy{t}{\rho}=\PDy{t}{\rho}+\{\rho,H\}=0$ preserve volume ($\TDof{t}(x+\delta x)=\dot{x}+\delta x\PDof{x}\dot{x}$,$\TDof{t}(p+\delta p)=\dot{p}+\delta p\PDof{p}\dot{p}$ quindi $\dot{V}=\delta x\delta p[\PDof{p}\dot{p}+\PDof{x}\dot{x}]=0$). Per sistemi in equilibrio termodinamico le medie non dipendono esplicitamente dal tempo quindi neanche $\rho(p,q)$: $\{\rho,H\}=0$.
 \item Microcanonical ensemble: a particular solution is $\rho(p,q)=\const{}$ (all microstates accessible between $E$,$E+\delta E$, V and N are equiprobable)
 \item Canonical ensemble: system in thermal bath at T $\rho(p,q)=\exp{-\frac{H(p,q)}{kT}}$, fixed V, N and T.
 \item Gran-canonical ensemble: system in thermal/chemical equilibrium with reservoir, ie fixed T,$\mu$; $\rho(p,q)\propto\exp{-\frac{H(p,q)}{kT}}\exp{+\frac{\mu N}{kT}}$.
@@ -273,9 +273,9 @@ Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $
             \end{align*}
    \end{block}
    \begin{block}{E. of transfer in star interior}
-       \begin{align*}
+       \begin{align}
         &\TDy{s}{I_{\nu}}\frac{1}{\rho}=j_{\nu}-\kappa_{\nu}I_{\nu}\Leftrightarrow\TDy{s}{I_{\nu_{nm}}}=N_n(A_{nm}+B_{nm}I_{\nu_{nm}})h\nu_{nm}-N_mB_{mn}h\nu_{nm}I_{\nu_{nm}}\label{ERT}
-    \end{align*}
+    \end{align}
     \begin{columns}[T]
         \begin{column}{0.3\textwidth}
             $I_{\nu}$ in isotropic homogeneous medium adiabat. enclosed deps only on T:
@@ -293,7 +293,7 @@ Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $
     \item Broadened atomic level can be decomposed into sublevels and transition between these sublevels can be treated statistically: \keyword{redistribution function}: probability in atom's frame that incoming photon of freq $\nu'$ is scattered as outgoing $\nu$.
     \item Semiclassical picture
     \item Natural population of levels: probability emitting photon $(\hat{n},\nu)$ in transition to lower level averaged over ensemble of identical atoms is independent of previous history of ensemble (not naturally populated by radiative processes in which there is correlation with prop. prev. absorbed/emitted photon: stimulated emission)
-\item Distro of individual sublevel of naturally popul. n at $E_n$: $L(\chi,\gamma)=\frac{\gamma}{\pi(\xhi^2+\gamma^2)}$, $\chi=\frac{E-E_n}{h}$, $2\gamma_n=\sum_{m<n}A_{nm}+\sum_{m\neq n}B_{nm}\bar{J}_{nm}+R_{n\kappa}+\sum_{n\neq m}C_{nm}+C_{n\kappa}+Q_n$, A,B bb Einstein coeff., R photoion rate, C coll rate (bb,bf), $Q_n$ effective rate of elastic coll.in level n, $\bar{J}_{nm}=\int_0^{\infty}\oint \frac{d\Omega}{4\pi}\phi_{nm}(\nu,\hat{n})\,d\nu$ freq-averaged mean intensity for $n\to m$ (suppose spont em coeff much bigger than induced em coeff)
+\item Distro of individual sublevel of naturally popul. n at $E_n$: $L(\chi,\gamma)=\frac{\gamma}{\pi(\chi^2+\gamma^2)}$, $\chi=\frac{E-E_n}{h}$, $2\gamma_n=\sum_{m<n}A_{nm}+\sum_{m\neq n}B_{nm}\bar{J}_{nm}+R_{n\kappa}+\sum_{n\neq m}C_{nm}+C_{n\kappa}+Q_n$, A,B bb Einstein coeff., R photoion rate, C coll rate (bb,bf), $Q_n$ effective rate of elastic coll.in level n, $\bar{J}_{nm}=\int_0^{\infty}\oint \frac{d\Omega}{4\pi}\phi_{nm}(\nu,\hat{n})\,d\nu$ freq-averaged mean intensity for $n\to m$ (suppose spont em coeff much bigger than induced em coeff)
 \item Atom's frame absorption profile for transition between broadened level $i\to e$: $\phi_{ie}(\nu')=\intsinf{}L(\chi_i,\gamma_i)L(\chi_e',\gamma_e)\,d\chi_i$; $L(\chi_i,\gamma_i)$ natural occupation probability of sublevels in $(\chi_i,\chi_i+\,d\chi_i)$, $L(\chi_e'=\nu'-\nu_{ie}+\chi_i,\gamma_e)$ is occupation prob of level e when photon $\nu'$ is absorbed, total prob of transition is product summed over all i states, Cauchy's residue theorem $\phi_{ij}(\nu')=L(\nu'-\nu_{ij},\gamma_{ij})=\frac{\gamma_{ij}}{\pi[(\nu'-\nu_{ij})^2+\gamma_{ij}^2]}$, $\gamma_{ij}=\gamma_i+\gamma_j$
 \end{itemize}
 \end{frame}
