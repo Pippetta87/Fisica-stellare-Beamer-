@@ -83,59 +83,59 @@
 \MakeRobustCommand\usebeamertemplate
 \usepackage{beamersetup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni generali
-%\usepackage{functions}
+\usepackage{functions}
 %http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
 %%
 %beamer setup
 
 %%%% COUNTERS
-%\newcounter{cherrykey}%conta le keyword
+\newcounter{cherrykey}%conta le keyword
 %%\newcounter{sectionkey}% conta le section prima della attuale: basta \thesection?
 %
-% \makeatletter
-%\newcommand{\listofsecframes}{%listofsecframes
-%  \@starttocorig{secfr-\thesection}
-%}
-%\newcommand{\linkdest}[2][\@empty]{%
-%    \hypertarget{\@empty}{#1}
-%\Hy@raisedlink{%1
-%\hypertarget{#2}{}
-%}%1
+\makeatletter
+\newcommand{\listofsecframes}{%listofsecframes
+  \@starttocorig{secfr-\thesection}
+}
+\newcommand{\linkdest}[2][\@empty]{%
+    \hypertarget{\@empty}{#1}
+\Hy@raisedlink{%1
+\hypertarget{#2}{}
+}%1
 %%\phantomsection\label{#2}
-%}
+}
 %%\newcommand{\linkdest}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
-%\newcommand\listofcherryframesbasic{\@starttocorig{cherryframes}}
-%\newcommand\listofcherryframesname{Important frames}
-%\newcommand\listofcherryframes{%
-%\listofcherryframesname\phantomsection: \listofcherryframesbasic}
-%\makeatother
-%\usepackage{LocalF}
-%\makeatletter
-%\newif\ifframeinlbf
-%\frameinlbftrue
-%%%frameintoc
-%\ifframeinlbf
-%\mode<presentation>{%
-%        \only<1>{%
-%            %\hypertarget{\protect\insertframetitle}{}%
-%            %        \addcontentsline{cherryframes}{subsection}{%
-%                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
-%                       % \normalsize
-%           %            \protect\insertframetitle%
-%                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \protect\insertframetitle}}{}{cherryframes}}
-%        }%
-%    }%
-%             \else\fi%
-%%{}%from addbeamertemplate{frametitle}?
-%\makeatother
-%\usepackage{sources}
-%\usepackage{mathOp}
-%\title{Fisica stellare}
+\newcommand\listofcherryframesbasic{\@starttocorig{cherryframes}}
+\newcommand\listofcherryframesname{Important frames}
+\newcommand\listofcherryframes{%
+\listofcherryframesname\phantomsection: \listofcherryframesbasic}
+\makeatother
+\usepackage{LocalF}
+\makeatletter%frameinlbf
+\newif\ifframeinlbf
+\frameinlbffalse
+%%frameintoc
+\ifframeinlbf
+\mode<presentation>{%
+        \only<1>{%
+            %\hypertarget{\protect\insertframetitle}{}%
+            %        \addcontentsline{cherryframes}{subsection}{%
+                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
+                       % \normalsize
+           %            \protect\insertframetitle%
+                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \protect\insertframetitle}}{}{cherryframes}}
+        }%
+    }%
+             \else\fi%
+%{}%from addbeamertemplate{frametitle}?
+\makeatother
+\addtobeamertemplate{frame end}{\frameinlbffalse
+}{}
+\usepackage{sources}
+\usepackage{mathOp}
+\title{Fisica stellare}
 
 % Let's get started
 \begin{document}
-\part{aux part}
-\section{aux section}
 %\input{tikzdir}%%contain tikz files as filecontents
 \addtolength{\textheight}{-0pt}
 \addtolength{\headheight}{0pt}
@@ -147,7 +147,8 @@
 %\frame{\tableofcontents[onlyparts]}
 
 \begin{frame}[fragile]{Fisica stellare: argomenti del corso}%label={}
-    %\begin{columns}[T]%list of frame a inizio sezione
+    \framesubtitle{Main onlyparts TOC}
+   %\begin{columns}[T]%list of frame a inizio sezione
     % \begin{column}{0.45\textwidth}
     \tableofcontents[onlyparts]
     %    \end{column}
@@ -160,21 +161,22 @@
 \begin{frame}{Meta}
     argomenti del corso: toc parts a sinistra e important frames a destra
     todo, must: before reglez; frame importanti
-    listofframe all'inizio di ogni sezione
+    listofframe all'inizio di ogni sezione per frames con sottotitolo
 \inserttotalframenumber
 \end{frame}
 
-%\begin{frame}{Perch\'e studio queste cose?? Sviluppi; futuro.}
-%Concretezza, concentrazione, indipendenza
-%\end{frame}
+\begin{frame}{Perch\'e studio queste cose?? Sviluppi; futuro.}
+Concretezza, concentrazione, indipendenza
+\end{frame}
 
 \part{Intro}%\linkdest{intro}
-\begin{frame}{TOC intro}
-\tableofcontents
-\end{frame}
 %\input{intro}
 %\input{succo}
 \section{provas}
+
+\begin{frame}{my prova}
+    \framesubtitle{this is my good provas}
+\end{frame}
 
 \part{Modello Plasma stellare}%\linkdest{stellarplasma}
 \begin{frame}{this part toc}
