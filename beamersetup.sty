@@ -40,12 +40,31 @@
 \makeatother
 \makeatletter
 \addtobeamertemplate{frametitle}{
+    \ifframeinlbf
+\mode<presentation>{%
+        \only<1>{%
+            %\hypertarget{\protect\insertframetitle}{}%
+            %        \addcontentsline{cherryframes}{subsection}{%
+                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
+                       % \normalsize
+           %            \protect\insertframetitle%
+                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \insertframetitle}}{}{}}
+        }%
+    }%
+             \else\fi%
+
+    %\ifframeinlbf
+  %\addcontentsline{cherryframes}{section}{\protect\makebox[2em][l]{%
+  %  \protect\usebeamercolor[fg]{structure}\insertframenumber\hfill}%
+  %$\protect\hyperlink{page.\insertframenumber}\insertframetitle\par}%
+  %\else\fi
 %%        \protect\beamer@subsectionintoc{\protect\the\c@section}{0}{%
 %%            \protect\insertframetitle%
 %%        }{\protect\the\c@page}{\protect\the\c@part}{\protect\the\beamer@tocsectionnumber}%
 %    \addtocontents{secfr-\thesection}{\protect\mycontentsline{subsubsection}{\parbox{0.48\textwidth}{\protect$\bullet$ \protect\insertframetitle}}{}{}}%make newcommand as frame in lbf as \insertframetitle is expanded after
     \vspace*{-1mm}
 }{
+    \frameinlbffalse
     %\addtocontents{secfr-\thesection}{\protect\mycontentsline{subsection}{\protect\makebox[2em][l]{%
     %\protect\usebeamercolor[fg]{structure}\insertframenumber}%
 %\insertframetitle\par%
@@ -146,7 +165,7 @@
 \setlength{\jot}{-0pt}
 \setlength{\leftmargini}{0mm}
 \addtolength{\itemsep}{0.5\baselineskip}
-\frameinlbffalse
+%\frameinlbffalse
 }
 \addtobeamertemplate{block begin}{
 \setlength\abovedisplayskip{1pt}
@@ -267,7 +286,9 @@
 \addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
 %%\addtocontents{toc}{\mycontentsline{section}{contenuto}{mannaggia}{sdsd}}%
 %
+\frameinlbffalse
 \frame{\partpage}
+\frameinlbffalse
 \begin{frame}[allowframebreaks]{Outline: \insertpart}%\insertpart
     \tableofcontents%sectionstyle=show/shaded
 \end{frame}
@@ -276,13 +297,17 @@
 \makeatother%
 %%%Display section subsection (title page) at beginning section subsection
 \AtBeginSection{
+\frameinlbffalse
 \frame{\sectionpage}
+\frameinlbffalse
 \begin{frame}{Lista frame importanti di questa sezione}
    \listofsecframes
 \end{frame}
 %%\addtocounter{sectionkey}{1}%using \thesection
 }
-\AtBeginSubsection{\frame{\subsectionpage}}
+\AtBeginSubsection{
+\frameinlbffalse
+\frame{\subsectionpage}}
 
 \makeatletter
 \setbeamertemplate{navigation symbols}{}

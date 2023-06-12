@@ -112,20 +112,20 @@
 \usepackage{LocalF}
 \makeatletter%frameinlbf
 \newif\ifframeinlbf
-\frameinlbffalse
+%\frameinlbftrue
 %%frameintoc
-\ifframeinlbf
-\mode<presentation>{%
-        \only<1>{%
-            %\hypertarget{\protect\insertframetitle}{}%
-            %        \addcontentsline{cherryframes}{subsection}{%
-                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
-                       % \normalsize
-           %            \protect\insertframetitle%
-                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \protect\insertframetitle}}{}{cherryframes}}
-        }%
-    }%
-             \else\fi%
+%\ifframeinlbf
+%\mode<presentation>{%
+%        \only<1>{%
+%            %\hypertarget{\protect\insertframetitle}{}%
+%            %        \addcontentsline{cherryframes}{subsection}{%
+%                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
+%                       % \normalsize
+%           %            \protect\insertframetitle%
+%                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \insertframetitle}}{}{}}
+%        }%
+%    }%
+%             \else\fi%
 %{}%from addbeamertemplate{frametitle}?
 \makeatother
 \addtobeamertemplate{frame end}{\frameinlbffalse
@@ -158,11 +158,15 @@
    % \end{columns}
 \end{frame}
 
+\begin{frame}{Fisica stellare: i frames pi\'u importanti}%label={}
+     \listofcherryframes
+\end{frame}
+
 \begin{frame}{Meta}
     argomenti del corso: toc parts a sinistra e important frames a destra
     todo, must: before reglez; frame importanti
     listofframe all'inizio di ogni sezione per frames con sottotitolo
-\inserttotalframenumber
+frameinlbftrue: listofcherryframes
 \end{frame}
 
 \begin{frame}{Perch\'e studio queste cose?? Sviluppi; futuro.}
@@ -170,13 +174,8 @@ Concretezza, concentrazione, indipendenza
 \end{frame}
 
 \part{Intro}%\linkdest{intro}
-%\input{intro}
-%\input{succo}
-\section{provas}
-
-\begin{frame}{my prova}
-    \framesubtitle{this is my good provas}
-\end{frame}
+\input{intro}
+\input{succo}
 
 \part{Modello Plasma stellare}%\linkdest{stellarplasma}
 \begin{frame}{this part toc}
@@ -187,7 +186,7 @@ Concretezza, concentrazione, indipendenza
         \item Nuclear Fusion
     \end{itemize}
 \end{frame}
-%\input{stellarplasmamodel}
+\input{stellarplasmamodel}
 
 \part{Modelli stellari: struttura ed evoluzione}%\linkdest{evolutivemodels}
 \begin{frame}{this part toc}
@@ -206,14 +205,14 @@ Concretezza, concentrazione, indipendenza
 %\end{column}
 %\end{columns}
 \end{frame}
-%\input{starmodels}
+\input{starmodels}
  
-  \part{Formazione ed evoluzione stellare}
-%\begin{frame}{TOC formation evolution}
-%\tableofcontents[sections]
-%\end{frame}
-%\input{starformation}
-%\input{stellarevolution}
+  \part{Formazione ed evoluzione stellare} 
+\begin{frame}{TOC formation evolution}
+\tableofcontents
+\end{frame}
+\input{starformation}
+\input{stellarevolution}
  
  \part{Stellar population in the milky way}%\linkdest{constraints}
 \begin{frame}{this part toc}
@@ -228,6 +227,6 @@ Concretezza, concentrazione, indipendenza
 \end{column}
 \end{columns}
 \end{frame}
-%\input{GalaxyStarImfPop}
+\input{GalaxyStarImfPop}
   
 \end{document}
