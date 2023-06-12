@@ -48,7 +48,12 @@
                     %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
                        % \normalsize
            %            \protect\insertframetitle%
-                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \insertframetitle}}{}{}}
+                    %\addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \insertframetitle}}{}{}}
+\let\aux\insertframetitle
+\let\auxlink\insertframenumber
+    \linkdest{linkframecherry-\auxlink}
+%\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{$\bullet$ \aux}}{}{linkframecherry-\auxlink}}
         }%
     }%
              \else\fi%
@@ -78,7 +83,11 @@
                     %framesubstitle - prioritate 2
                    % \frame{b}
                     \let\aux\insertframesubtitle
-                        \addtocontents{secfr-\thesection}{\protect\mycontentsline{subsection}{\parbox{0.48\textwidth}{$\bullet$ \aux}}{}{}}
+                    \let\auxlink\insertframenumber
+    \phantomsection\linkdest{linkframesec-\auxlink}
+%\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+    \addtocontents{secfr-\thesection}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{$\bullet$ \aux}}{}{linkframesec-\auxlink}}
+                        %\addtocontents{secfr-\thesection}{\protect\mycontentsline{subsection}{\parbox{0.48\textwidth}{$\bullet$ \aux}}{}{}}
 
                 \fi
             \else
@@ -283,9 +292,9 @@
 }
 %
 \AtBeginPart{%
-    \linkdest{linkdest-\thepart}
+    \linkdest{linkpart-\thepart}
 %\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
-    \addtocontents{toc}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{ \protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}}{}{linkdest-\thepart}}
+    \addtocontents{toc}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{ \protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}}{}{linkpart-\thepart}}
 
 %%\addtocontents{toc}{\mycontentsline{section}{contenuto}{mannaggia}{sdsd}}%
 %
