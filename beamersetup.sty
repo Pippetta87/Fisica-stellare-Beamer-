@@ -283,7 +283,10 @@
 }
 %
 \AtBeginPart{%
-\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+    \linkdest{linkdest-\thepart}
+%\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+    \addtocontents{toc}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{ \protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}}{}{linkdest-\thepart}}
+
 %%\addtocontents{toc}{\mycontentsline{section}{contenuto}{mannaggia}{sdsd}}%
 %
 \frameinlbffalse
