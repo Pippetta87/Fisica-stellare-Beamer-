@@ -178,13 +178,21 @@ $F=U-TS$: processo isotermo rev., $\Delta Q$ system, $\Delta W=P\Delta V$ work t
           \end{align*}
       \end{column}
   \end{columns}
-  
   Classical, macroscopic, phenomenological: not included polarization, dispersion, coherence, interference and quantum effects.
 \end{frame}
 
 \begin{frame}{Einstein relations}
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
+            Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $g_i, g_j$, \keyword{absorption probability $B_{ij}$}, \keyword{spontaneus emission probability $A_{ji}$}: isotropic
+                        \[\dot{E}_{\nu}=\frac{A_{ji}h\nu_{ji}}{4\pi}n_i\phi_{\nu}\]
+                \begin{align*}
+                &(\frac{n_i}{n_j})^*B_{ij}I_{\nu}^*=A_{ji}+B_{ji}I_{\nu}^*\label{CR and TE}\\
+                                &(\frac{n_j}{n_i})^*=\frac{g_j}{g_i}\exp{-h\nu/KT}\\
+                            &\Rightarrow B_{\nu}=\frac{A_{ji}}{B_{ji}}\invers{[\frac{g_iB_{ij}}{g_jB_{ji}}\exp{h\nu_{ij}kT}-1]}\\
+                        &g_iB_{ij}=g_jB_{ji}\tag{Atomic prop $\to$ E. coeff}\\
+                    &A_{ji}=\frac{2h\nu_{ij}^3}{c^2}B_{ji}\tag{also for non TE}
+            \end{align*}
         \end{column}
         \begin{column}{0.5\textwidth}
             Number of photons absorbed per unit volume per unit time:
@@ -317,6 +325,15 @@ Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $
     When scattering is isotropic and coherent the emissivity is $\eta_0^S=\sigma_0(\vec{x},t)J_0(\vec{x},t;\nu_0)$: Thompson scattering of continuum photons by free electrons
 \end{frame}
 
+  \begin{frame}{Total Opacity and Total Emission coeff. and LTE}
+      \begin{align*}
+              &\chi_{\nu}=\kappa_{\nu}+\sigma_{\nu}=\underbrace{\sum_i\sum_{j>i}[n_i-\frac{g_i}{g_j}n_j]\alpha_{ij}(\nu)}_{\text{BB - line}}+\underbrace{\sum_i(n_i-n_i^*\exp{-\frac{h\nu}{kT}})\alpha_{ik}(\nu)}_{\text{BF}}\\
+                      &+\underbrace{\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)(1-\exp{-\frac{h\nu}{kT}})}_{\text{FF}}+\underbrace{n_e\sigma_e}_{\text{Thompson scatt. by free e}}\tag{Tot.Opa.}\\
+          &\eta_{\nu}^{th}=\frac{2h\nu^3}{c^2}[\sum_i\sum_{j>i}n_j \frac{g_i}{g_j}\alpha_{ij}(\nu)+\sum_in_i^*\alpha_{i\kappa}(\nu)\exp{-\frac{h\nu}{kT}}+\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)\exp{-\frac{h\nu}{kT}}]\\
+                  &\xrightarrow{LTE}\frac{2h\nu^3}{c^2}\exp{-\frac{h\nu}{kT}}[\sum_in_i^* (\sum_{j>i}\alpha_{ij}(\nu)+\alpha_{i\kappa}(\nu))+\sum_{\kappa}n_en_{\kappa}\alpha_{\kappa\kappa}(\nu,T)\exp{-\frac{h\nu}{kT}}]\\
+                          &\Rightarrow\chi_{\nu}^*=\kappa_{\nu}^*+n_e\sigma_e,\ (\eta_{\nu}^{th})^*=\kappa_{\nu}^*B_{\nu}
+          \end{align*}
+          \end{frame}
 
 \section{Solution of RE in far interior}
 
