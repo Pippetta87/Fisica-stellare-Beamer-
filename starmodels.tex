@@ -30,7 +30,11 @@
 \begin{columns}[T]
 	\begin{column}{0.5\textwidth}
 \begin{align*}
+&\frac{D\rho}{Dt}=\PDy{t}{\rho}+(\scap{v}{\nabla})\rho\tag{mat-dev}\\
+&\frac{D\rho}{Dt}=\rho\scap{\nabla}{v}\tag{Lagr. mass cont.}\\
+&\PDy{t}{\rho}+\nabla\cdot(\rho\vec{v})=0\tag{Euler mass cont.}\\
 &\TDy{m}{r}=\frac{1}{4\pi r^2\rho}\\
+&\frac{D\vec{v}}{Dt}=-\nabla\Omega-\frac{1}{\rho}\nabla P[+\frac{1}{\rho}\div{\tau}]\\
 &\TDy{m}{P}=-\frac{Gm}{4\pi r^4}\overbrace{[-\frac{1}{4\pi r^2}\PtwoDy{t}{r}]}^{\tau_{hyd}=\frac{1}{2}(G\exv{\rho})\expy{-1/2}}\\
 &\tau_{hyd}=\sqrt{\frac{R^3}{GM}}
 \end{align*}
@@ -47,6 +51,35 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 \end{frame}
 
 \begin{frame}{Trasporto energia verso la superficie e gradiente termico}
+    \begin{columns}[T]
+        \begin{column}{0.7\textwidth}
+    \begin{align*}
+        \TDy{s}{I_{\nu}}=j_{\nu}\rho-\kappa_{\nu}\rho I_{\nu}\xrightarrow{\times\cos{\theta}\times\int\,d\Omega}&\int_{\Omega}\PDy{r}{I}\cos^2{\theta}\,d\Omega-\int_{\Omega}\frac{1}{r}\PDy{r}{I}\cos{\theta}\sin{\theta}d\,\Omega\\
+        &=\int_{\Omega}\rho j\cos{\theta}\Omega-\int_{\Omega}\rho\kappa I\cos{\theta}d\Omega
+    \end{align*}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \begin{align*}
+                &\TDof{s}=\PDof{r}\TDy{s}{r}+\PDof{\theta}\TDy{s}{\theta}\\
+                &=\PDof{r}\cos{\theta}-\frac{\sin{\theta}}{r}\PDof{\theta}
+            \end{align*}<++>
+        \end{column}
+    \end{columns}
+    
+    \begin{columns}[T]
+        \begin{column}{0.7\textwidth}
+\begin{align*}
+&dP_{rad}=-dp=-\frac{dF_{Rad}}{c}=-\frac{F_{rad}}{c}\frac{dr}{l}=-\frac{F_{rad}}{c}\kappa_R\rho\,dr=\frac{4}{3}aT^3dT\\
+&dP_{rad}(\nu)=-\frac{F_{rad}(\nu)}{c}\kappa_{\nu}\rho\,dr=\frac{4\pi}{3c}\TDy{r}{B_{\nu}(T)}\,dr
+\end{align*}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+\begin{align*}
+&B_{\nu}(T)=\frac{2h\nu^3}{c^2}\frac{1}{\exp{\frac{h\nu}{kT}}-1}
+\end{align*}
+        \end{column}
+    \end{columns}
+
 \begin{columns}[T]
 	\begin{column}{0.6\textwidth}
 		\begin{align*}
@@ -61,11 +94,20 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 		\end{align*}
 	\end{column}
 \end{columns}
-\begin{align*}
-&dP_{rad}=-dp=-\frac{dF_{Rad}}{c}=-\frac{F_{rad}}{c}\frac{dr}{l}=-\frac{F_{rad}}{c}\kappa_R\rho\,dr=\frac{4}{3}aT^3dT\\
-&dP_{rad}(\nu)=-\frac{F_{rad}(\nu)}{c}\kappa_{\nu}\rho\,dr=\frac{4\pi}{3c}\TDy{r}{B_{\nu}(T)}\,dr\\
-&B_{\nu}(T)=\frac{2h\nu^3}{c^2}\frac{1}{\exp{\frac{h\nu}{kT}}-1}
-\end{align*}
+\begin{columns}[T]
+	\begin{column}{0.6\textwidth}
+		\begin{align*}
+		&\TDy{m}{T}=-\nabla\frac{T}{p}\frac{Gm}{4\pi r^4}\\
+		&\nabla=\nrad=\frac{3\kappa_R}{16\pi acG}\frac{LP}{mT^4}\tag*{$\nrad\leq\nad$}\\
+		&\nabla=\nad+\Delta\nabla\tag*{$\nrad>\nad-\frac{\chi_{\mu}}{\chi_T}\nmu$}
+		\end{align*}
+	\end{column}\begin{column}{0.4\textwidth}
+		\begin{align*}
+		&\TDy{r}{T}=\nabla\frac{T}{p}\TDy{r}{p}\\
+		&\nabla=\TDly{P}{T}
+		\end{align*}
+	\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Equazioni struttura stellare: conservazione energia - Luminosit\'a}

@@ -147,11 +147,25 @@
 % and table of contents.
 %\frame{\tableofcontents[onlyparts]}
 
+%\begin{frame}[fragile]{Fisica stellare: argomenti del corso}%label={}
+%    %\framesubtitle{Main onlyparts TOC}
+%   %\begin{columns}[T]%list of frame a inizio sezione
+%    % \begin{column}{0.45\textwidth}
+%    \tableofcontents[onlyparts]
+%    %    \end{column}
+%      %  \begin{column}{0.55\textwidth}
+%      %      \listofcherryframes
+%      %  \end{column}
+%   % \end{columns}
+%\end{frame}
+
 \begin{frame}[fragile]{Fisica stellare: argomenti del corso}%label={}
     %\framesubtitle{Main onlyparts TOC}
    %\begin{columns}[T]%list of frame a inizio sezione
     % \begin{column}{0.45\textwidth}
+    \begin{multicols}{2}
     \tableofcontents[onlyparts]
+    \end{multicols}
     %    \end{column}
       %  \begin{column}{0.55\textwidth}
       %      \listofcherryframes
@@ -180,7 +194,7 @@ Concretezza, concentrazione, indipendenza
 \input{intro}
 \input{succo}
 
-\part{Modello Plasma stellare}%\linkdest{stellarplasma}
+\part{Modello Plasma stellare}\linkdest{stellarplasmamodel}
 \begin{frame}{this part toc}
     \begin{itemize}
         \item Recap recap stat phys gas of photons
