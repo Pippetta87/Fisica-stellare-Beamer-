@@ -25,7 +25,6 @@
 \usepackage{subfig}
 \usepackage{refcount}
 \usepackage[normalem]{ulem} % either use this (simple) or
-\usepackage{hepnames}
 %http://www.terminally-incoherent.com/blog/2007/09/19/latex-squeezing-the-vertical-white-space/
 
 \usepackage{verbatim}
@@ -62,4 +61,14 @@ decorations.markings,fadings,decorations.pathreplacing
     list-final-separator = {\text{, e }}
 }
 \usepackage{booktabs}
+\usepackage{hepnames}
+%\usepackage{hepnicenames}
+\usepackage{textcomp}
 %\usepackage{standalone}
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd\@HepConStyle
+ {\edef\@upcode{\updefault}}
+ {\ifdefined\shapedefault\edef\@upcode{\shapedefault}\else\edef\@upcode{\updefault}\fi}
+ {}{}
+\makeatother
