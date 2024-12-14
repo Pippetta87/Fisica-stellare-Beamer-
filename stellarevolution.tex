@@ -63,7 +63,7 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 
 \begin{frame}[fragile]{Major H burning reaction: PP chains}
 \begin{columns}[T]\begin{column}{0.45\textwidth}
-\begin{align*}
+\begin{align*} 
 &T\geq\SI{5e6}{\kelvin}\\
 &^1H+^1H\to^2D+\APelectron+\Pnue\\
 &^2D+^1H\to^3He+\gamma\\
@@ -74,11 +74,11 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 &^7Be+\Pelectron\to^7Li+\Pnue\\
 &^7Li+^1H\to^4He+^4He\tag*{PPII}\\
 &^7Be+^1H\to^8B+\gamma\\
-&^8B\to^8Be+\APelectron+\gamma\\
-&^8Be\to2^4He
+&^8B\to^8Be+\APelectron+\Pnue\\
+&^8Be\to2^4He\tag*{PPIII}
 \end{align*}
 \end{column}\begin{column}{0.55\textwidth}
-\begin{comment}
+\begin{comment} 
 \begin{align*}
 &r_{pp}=\num{11.5e10}\rho^2X_H^2T_6\expy{-2/3}\\
 &\exp{-33.81T_6\expy{-1/3}}(1+\num{0.0123}T_6\expy{1/3}+\num{0.0109}T_6\expy{2/3}\\
@@ -88,7 +88,7 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 &\rho\epsilon(^3He(^3He,2p)^4He)=\\
 &(\SI{6.936}{\mega\ev}-\SI{0.263}{\mega\ev})*\SI{1.602e-6}{\erg}*r_{pp}\\
 &\frac{PPI}{PPII+PPIII}=\frac{r_{33}}{r_{34}}=\frac{\lambda_{33}(^3He)^2/2}{\lambda_{34}^3He^4He}
-\end{align*}
+\end{align*} 
 \end{comment}
 \begin{itemize}
 \item $Q=\SI{26.73}{\mega\ev}$ - energy release per gram $Q/m(^4He)=\SI{6.4e18}{\erg\per\gram}$
@@ -109,20 +109,21 @@ Ciclo CN-NO
 &^{13}C+^1H\to^{14}N+\gamma\\
 &^{14}N+^1H\to^{15}O+\gamma\\
 &^{15}O\to^{15}N+\APelectron+\Pnue\\
-&^{15}+^1H\to^{12}+^4He\tag*{CN}\\
-&T\geq\SI{20e6}{\kelvin}\tag*{\num{e-4} volte}\\
+&^{15}N+^1H\to^{12}+^4He\tag*{CN}\\
+&T\geq\SI{20e6}{\kelvin}\tag*{Branching Ratio: \num{e-4}}\\
 &^{15}N+^1H\to^{16}O+\gamma\\
 &^{16}O+^1H\to^{17}F+\gamma\\
 &^{17}F\to^{17}O+\APelectron+\Pnue\\
 &^{17}O+^1H\to^{14}N+^4He
-\end{align*}
+\end{align*} 
 \end{column}\begin{column}{0.5\textwidth}
 \begin{align*}
 &\epsilon_{CN}(T_6)=\epsilon_{CN}(25)(\frac{T_6}{25})^{16.7}\\
 &\epsilon_{CNO}\propto XX_{14}\rho T^{18}
 \end{align*}
+Matter processed by CN: \xdiminuisce{C}, \xaumenta{N}; by CNO: \diminuisce{C}, \xaumenta{N}, \ximinuisce{O}.
 \end{column}\end{columns}
-\end{frame}
+\end{frame} 
 
 \subsection{Lower main sequence ($M^*\leq1.3\msun{}$)}\linkdest{LMS}
 
@@ -130,7 +131,8 @@ Ciclo CN-NO
 ZAMS: first MS model fully supported by H-burning in which secondary elements are in equilibrium:
 \begin{itemize}
 \item $^3He$ production in central zones: si forma piccolo core convettivo
-\[\TDy{t}{N_3}=N_1N_2\exv{\sigma v}_{12}-2\frac{(N_3)^2}{2}\exv{\sigma v}_{33}-N_3N_4\exv{\sigma v}_{34}\]
+    \[\TDy{t}{N_{^3He}}=N_{^1H}N_D\exv{\sigma v}_{^1HD}-2\frac{(N_{^3He})^2}{2}\exv{\sigma v}_{^3He^3He}-N_{^3He}N_{^4He}\exv{\sigma v}_{^3He^4He}\]
+    Assuming $N_{^3He}\gg N_{^3He}^{eq}$ we can estimate time scale for $^3He$ equilibrium.
 \end{itemize}
 \begin{columns}[T]\begin{column}{0.4\textwidth}
 \begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HRD-LMS}\label{fig:HRD-LMS}
@@ -148,10 +150,10 @@ TO is hottest point in evolutionary track: H exhausted
 \subsection{Upper main sequence ($M^*\geq1.2-1.3\msun{}$)}\linkdest{UMS}
 
 \begin{frame}{Da ZAMS a Overall contraction}
-\begin{columns}[T]\begin{column}{0.45\textwidth}
+\begin{columns}[T]\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HRD-UMS}\label{fig:HRD-UMS}
-\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.42\textheight]{UMS-Hprofile}\label{fig:UMS-Hprofile}\end{figure}
-\end{column}\begin{column}{0.55\textwidth}
+\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.40\textheight]{UMS-Hprofile}\label{fig:UMS-Hprofile}\end{figure}
+\end{column}\begin{column}{0.5\textwidth}
 \begin{block}{CNO H-Burning: convective core}
 Higher T: CNO dominant: $\epsilon_{CNO}$ steeper:convective core: \xaumenta{M^*}, \xaumenta{M_{con}}, \xaumenta{P_{rad}}, \xdiminuisce{\nad{}}.
 \end{block}
@@ -164,8 +166,11 @@ Higher T: CNO dominant: $\epsilon_{CNO}$ steeper:convective core: \xaumenta{M^*}
 \end{itemize}
 \end{block}
 \begin{block}{Overall contraction}
-When $X<0.05$ at B start gravitational contraction of core until C; after C inner regions contract outer expand
+    When $X<0.05$ at B start gravitational contraction of core until C; after C inner regions contract outer expand; C mark ends of central H-burning phase: after C core contracts and outer envelope expands and thus radius increases and outer opacity increases while T outer layers decreases.
 \end{block}
+\begin{block}{Core retraction leaves He gradient}
+    Convective core retracts as X is strongly decreased leaving He gradient decreasing moving outwards.
+\end{block}<++>
 \end{column}\end{columns}
 \end{frame}
 
@@ -262,7 +267,12 @@ In radiative region the retracting convective core leave chem composition gradie
 \subsection{Mass-Luminosity relations}\linkdest{malure}
 
 \begin{frame}{M-L relation}
-Near ZAMS $L\propto M^3$. Assumption: radiative transport $L\propto\frac{R^4}{M}T^4$, HE $P\propto M^2/R^4$, perfect gas $P\propto\rho T$.
+Near ZAMS $L\propto M^3$:
+\begin{align*}
+    &\TDy{m_r}{T}=-\frac{3\kappa_R}{64\pi^2ac}\frac{L_r}{r^4}\Rightarrow L\propto \frac{R^4}{M}T_c^4\\
+    &\TDy{m_r}{P}=-\frac{Gm_r}{4\pi r^4}\Rightarrow P\propto \frac{M^2}{R^4}\\
+    &P\propto\rho T\propto \frac{M}{R^3}T\Rightarrow T_c\propto \frac{M}{R}
+\end{align*}
 \begin{columns}[T]\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{ML-01-10}\label{fig:ML-01-10}
@@ -281,27 +291,84 @@ M\expy{2.6},\ \numrange{0.2}{0.5}\msun{}\\
 \end{column}\end{columns}
 \end{frame}
 
-\subsection{Post-MS: RGB??}\linkdest{postMS}
+\subsection{Post-MS: SGB, RGB??}\linkdest{postMS}
 %SC [160]
 
-\begin{frame}{Condizione Core per fusione}
-\begin{figure}[!ht]
-\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.4\textheight]{HHeCcore}\label{fig:HHeCcore}
-\end{figure}
-\begin{itemize}
-    \item Electron degeneracy
-    \item gravitational contraction: virial theorem
-\end{itemize}
+\begin{frame}{Int-massive stars}
+    \begin{itemize}
+        \item $M_{He,core}$ maggiore del limite SC
+        \item SGB: Structure move from blue to red side at almost constant surface L. $\tkh{}\approx\SI{12}{\mega\yr}$ for $3\msun{}$, $\tkh{}\approx\SI{1}{\mega\yr}$ for $6\msun{}$.
+        \item RGB: Point D - constant effective T while L increases; point E where He burning is efficient marks the end of RG phase.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{SC-mass limit}
+\begin{frame}{Low-mass stars}
+    \begin{itemize}
+        \item $M_{He,core}$ below SC limit and even when H-burning in shell produce bigger He-core the electron degeneracy provide support against contraction.
+        \item $M_{cHe}-L$ relation.
+        \item Lower mass RGB stars at given L have larger radii and lower $T_{eff}$: mass loss shift star toward lower values.
+        \item First dredge-up: Surface abundance of He monotonically increses as convection goes deeper; also $^3He$ and CNO elements are mixed.
+        \item RGB bump: along RGB convection receeds as H-burning shell moves outward and when H-burning shell encounter discontinuity have peculiar behaviour in that region of HRD - stars stay $20\%$ of RGB lifetime in region of HRD.
+        \item Max T moves outside center in He core
+        \item He ignited when $M_{cHe}\approx0.5\msun{}$.
+        \item Thermal runaway at Tip of RGB: He-flash.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Condizione Core per fusione: Virial theorem}
+    \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+\begin{itemize}
+    \item gravitational contraction: virial theorem
+        \begin{align*}
+            &\int_0^M\TDy{m}{P}4\pi r^3\,dm=-\int_0^M \frac{Gm}{r}\,dm\tag{HE$*4\pi r^3$}\\
+            &\Rightarrow \underbrace{[4\pi r^3P]_0^M}_{P_{surf}\approx0,r=0}-\int_0^M12\pi r^2\TDy{m}{r}P\,dm=-\int_0^M \frac{Gm}{r}\,dm\\
+            &E=\frac{3}{2}\frac{P}{\rho}\Rightarrow E=-\frac{\Omega}{2}\tag{Internal energy per unit mass: perfect monoatomic gas}\\
+            &E_T=E+\Omega\Rightarrow E_T=-E, E_T=\frac{\Omega}{2}\\
+            &L=-\TDy{t}{E_T}\Rightarrow L=-\frac{1}{2}\TDy{t}{\Omega}, \Delta E=-\Delta E_T=\frac{\Delta\Omega}{2}\tag{only grav}\\
+            &E=\frac{1}{\gamma-1}\frac{P}{\rho}, \gamma=\frac{c_P}{c_v}(=\frac{5}{3}\text{perfect})\tag{generic perf. gas}\\
+            &\Rightarrow E=-\frac{\Omega}{3(\gamma-1)},E_T=\frac{3\gamma-4}{3(\gamma-1)}\Omega\tag{Stability: HE $\gamma>\frac{4}{3}$}\\
+            &3(\gamma-1)E+\Omega=4\pi R^3P_0\tag{Surf. press.}\\
+        \end{align*}
+\end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+\begin{figure}[!ht] 
+    \includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.3\textheight]{HHeCcore}\label{fig:HHeCcore}
+\end{figure}
+\begin{align*}
+    &\Omega=-\alpha \frac{GM^2}{R}\\
+    &\rho=\const:\alpha=\frac{3}{5}\\
+    &E\approx \frac{3}{2}K\bar{T}\frac{M}{\mu m_H}\\
+    &\Rightarrow\bar{T}\propto M^{\frac{2}{3}}\bar{\rho}^{-\frac{1}{3}}
+\end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Condizione Core per fusione: virial theorem and degenerate electrons}
+    \begin{itemize}
+        \item Electron degeneracy: $3(\gamma-1)$ is 2 (NR) or 1 (R) for degenerate \Pelectron; for mixture \Pelectron-ions $\gamma>\frac{4}{3}$. Case NR \Pelectron deg. $3(\gamma-1)=2$  (NR: $\gamma=\frac{5}{3}$): $\Omega=-2E=2E_{Tot}$, if $L=-\frac{1}{2}\TDy{t}{\Omega}$, $\Omega\propto \frac{1}{R}\propto\rho^{\frac{1}{3}}$ implica $\frac{1}{\Omega}\TDy{t}{\Omega}=\frac{1}{3}\frac{1}{\rho}\TDy{t}{\rho}$     
+            \begin{align*}
+                &n_e=\frac{\rho}{\mu_em_H}=\frac{8\pi p_F^3}{3h^3}\Rightarrow\rho\proptoE_F^{\frac{3}{2}}\\
+                &E=\frac{1}{\rho}\int_0^{E_F}\frac{8\sqrt{2}\pi m_e^{\frac{3}{2}}}{h^3}E_{kin}^{\frac{3}{2}}\,dE_{kin}\propto \frac{1}{\rho}E_F^{\frac{5}{2}}\propto \frac{\rho^{\frac{5}{3}}}{\rho}\propto\rho^{\frac{2}{3}}\\
+                &\Rightarrow \frac{1}{E_e}\TDy{t}{E_e}=\frac{2}{3}\frac{1}{\rho}\TDy{t}{\rho}\Rightarrow\TDy{t}{E_e}\approx2 \frac{E_e}{\Omega}\TDy{t}{\Omega}
+        &\Omega=-2E, E=E_I+E_E\Rightarrow \Omega\approx-2E_e\tag{High degeneracy}\\
+        &\TDy{t}{E_e}\approx2 \frac{E_e}{\Omega}\TDy{t}{\Omega}\Rightarrow\TDy{t}{E_e}\approx-\TDy{t}{\Omega}\\
+        &L=-\TDy{t}{E_{tot}}=-\TDy{t}{E_e}-\TDy{t}{E_i}-\TDy{t}{\Omega}\approx-\TDy{t}{E_i}
+            \end{align*}
+    \end{itemize}
+    Half gravitational energy not radiated away increases electron internal energy (Fermi energy), whereas ions thermal energy decreases. Evolution of degenerate object (WD) can be considered at constant radius $\Delta\Omega=\frac{\Delta R}{R^2}\approx L$
+\end{frame}
+
+\begin{frame}{SC-mass limit} 
 $L=0$ implica formazione core di He isotermo: se la massa del core di elio \'e maggiore del $10\%$ della massa totale della stella il core si contrae - le stelle della LMS hanno core pi\'u piccolo, stelle di massa $M\geq2.5-3\msun{}$  hanno core pi\'u grande.
-\begin{equation*}
+\begin{equation*} 
 \frac{M_c}{M}>(\frac{M_c}{M})_{SC}=0.37(\frac{\mu_{env}}{\mu_c})^2\xrightarrow{\parbox{2.5cm}{$\mu_e=\mu_{\odot}=0.6$\\$\mu_c=\mu(He)=1.3$}}0.08
 \end{equation*}
 il core si contrae su $\tkh{}$.
 Virial theorem for non-vanishing pressure surface pressure $P_0$ and $M_c$, $R_c$ and $T_c$:
-\begin{align*}
+\begin{align*} 
 &(2U_i+\Omega+S_p=0,\ S_p=-\int\exv{v^2}\Vec{r}\cdot\hat{n}\,dS=P_0V)\\
 &P_0=K_1\frac{M_cT_c}{R_c^3}-K_2\frac{M_c^2}{R_c^4}\\
 &P_{0,m}=K_3T_c^4/M_c^2

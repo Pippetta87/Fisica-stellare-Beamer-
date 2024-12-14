@@ -7,8 +7,91 @@
 
 \section{Grandezze Fondamentali}\linkdest{succo}
 
- \begin{frame}{Stime Euristiche: Tempo scala}
+\begin{frame}{Stime Euristiche: Tempo scala, Pressione e Temperatura centrali}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\PDy{m}{P}=-\frac{Gm}{4\pi r^4}\Rightarrow \frac{P_0-P_c}{M}\approx \frac{2G(M/2)^2}{4\pi(R/2)^4}\\
+                &\Rightarrow P_c\approx \frac{2GM^2}{\pi R^4}\\
+                &\rho\xrightarrow{\text{ideal g.}}\frac{\mu}{R}\frac{P}{T}\Rightarrow T_c\approx \frac{P_c}{\rho_c}\frac{\mu}{R}\\
+                &=P_c\frac{\mu}{R}\underbrace{\frac{\bar{\rho}}{\rho_c}}_{\approx0.01-0.03}\Rightarrow T_c<\frac{8}{3}\frac{G\mu}{R}\frac{M}{R}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &f_P=-\PDy{m}{P}\,dm\\
+                &f_g=-\frac{g\,dm}{4\pi r^2}=-\frac{Gm}{r^2}\frac{dm}{4\pi r^2}\\
+                &\frac{dm}{4\pi r^2}\PtwoDy{t}{r}=f_P+f_g\Rightarrow \frac{1}{4\pi r^2}\PtwoDy{t}{r}=-\PDy{m}{P}-\frac{Gm}{4\pi r^4}\\
+                &|\PtwoDy{t}{r}|\to \frac{R}{\tau_{ff}}\Rightarrow \frac{R}{\tau_{ff}}\approx g\Rightarrow\tau_{ff}\approx\sqrt{\frac{R}{g}}\\
+                &\to \frac{R}{\tau_{expl}^2}\Rightarrow \frac{R}{\tau_{expl}^2}=\frac{P}{\rho R}=4\pi r^2\PDy{m}{P}=\PDy{m}{P}/\rho\\
+                &\Rightarrow\tau_{expl}\approx R\sqrt{\frac{\rho}{P}}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\section{Equazioni struttura: Energy transport}
+
+\begin{frame}{Radiative transport}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &I(\theta)\,d\Omega=cu(\theta)\,d\Omega\\
+                &u=\int^{4\pi}u(\theta)\,d\Omega=\frac{1}{c}\int I(\theta)\,d\Omega\tag{Energy density}\\
+                &J(\vec{r},\nu,t)=\invers{(4\pi)}\int I(\vec{r},\hat{n},\nu,t)\,d\Omega\tag{Mean Intensity}\\
+                &P_r=\frac{1}{3}\int_0^{\infty}\frac{h\nu}{c}cn(\nu)\,d\nu=\frac{1}{3}u\tag{rad Press}\\
+                &P_r=\frac{1}{c}\int I(\theta)\cos^2{\theta}\,d\Omega\tag{Rad Press}\\
+                &=\int^{4\pi}\frac{I(\theta)\cos{\theta}}{c}\cos{\theta}\,d\Omega\\
+                &=\frac{2\pi}{c}\int_0^{2\pi}I(\theta)\cos{\theta}\sin{\theta}\,d\theta\\
+                &H=\int I(\theta)\cos{\theta}\,d\Omega\\
+                &=2\pi\int_0^{\pi}I(\theta)\cos{\theta}\sin{\theta}\,d\theta\tag{Net En. Flux polar dir}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            Pressione di radiazione: radiazione contenuta in parallelepipedo di superficie unitaria lunghezza c in direzione $\theta$ (l'asse polare forma con la radiazione un angolo $\theta$) quindi la sezione d'urto geometrica in direzione polare contiene fattore $\cos{\theta}$, la proiezione del momento rispetto alla direzione polare ha un altro $\cos{\theta}$.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Flusso di energia proporzionale al gradiente termico}
+\begin{block}{Diffusion Approx: Stellar Interior Near TE}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+    \begin{align*}
+                &U=aT^4\\
+                &''\vec{j}=-D\nabla n''\tag{diffusion}\\
+                &D=\frac{1}{3}vl_p\\
+                &\vec{F}_{\nu}=-D_{\nu}\nabla U_{\nu}\\
+                &D_{\nu}=\frac{1}{3}cl_{\nu}=\frac{c}{3\kappa_{\nu}}\rho
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &I(\theta)=I_0+I_1\cos{\theta}+\ldots\\
+                &u=\frac{4\pi}{c}I_0\\
+                &H=\frac{4\pi}{3}I_1\\
+                &P_r=\frac{4\pi}{3c}I_0
+            \end{align*}
+        \end{column}
+    \end{columns}
     
+\end{block}
+
+\begin{block}{Momentum transfer Rad-Mat}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+    \begin{align*}
+        &dp=\frac{dF_{Rad}}{c}=\frac{F_{Rad}}{c}\frac{dr}{l}\\
+        &\TDy{r}{P_{Rad}}=-\frac{\kappa\rho}{c}F_{Rad}\\
+        &-\frac{F_{rad}(\nu)}{c}\kappa_{\nu}\rho\,dr=\frac{4\pi}{3c}\TDy{r}{B_{\nu}(T)}\,dr\tag{L-grad T}
+    \end{align*}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            Flux of photons through volume matter at r, flux of energy $F_{rad}$. $dp$ momentum transfered from photons to volume element, $l$ photon mean free path: $\invers{l}=\kappa\rho$, $dp$ opposite of change of $dP_{Rad}$ of pressure exerted by photons over dr    
+        \end{column}
+    \end{columns}
+    
+\end{block}
 \end{frame}
 
 \section{evolution}

@@ -3,9 +3,10 @@
 
 \begin{wordonframe}{da fare: }
 \begin{itemize}
-\item Onset of star formation: kippenhahn wiegert 248'-255' (131-134) -26.1: isothermal plane parallel and spherical object in HE
-\item Formation of protostars: kippenhahn wiegert 256'-265' (135-139)
-\item Star formation and early evolution: salaris cassisi 105' (119)
+    \item Rev Larson 2003:
+    \item Onset of star formation: kippenhahn wiegert 248'-255' (131-134) -26.1: isothermal plane parallel and spherical object in HE
+    \item Formation of protostars: kippenhahn wiegert 256'-265' (135-139)
+    \item Star formation and early evolution: salaris cassisi 105' (119)
 \end{itemize}
 \end{wordonframe}
 
@@ -19,14 +20,39 @@
 
 \subsection{From clouds to proto-stars}\linkdest{protostellar}
 
-\begin{frame}{Clouds collapse phases}
-\begin{columns}[T]\begin{column}{0.5\textwidth}
+\begin{frame}{Molecular Clouds: density and clumps formation}
 \begin{itemize}
 \item clouds equilibrium shape: Observed cloud mass greater than Jeans mass; Rotation and magnetic field support increases Jeans mass
+\item $H_2$ molecules formation: dust grains enhance $H_2$ formation which increases with density and column density of at least $20\msun{}\si{\per\square\pc}$ (Column density: Mangus shirly 2015) is required to shield from UV, where typical column density is $100\msun\si{\per\square\pc}$ (Elmegreen 85, 93); column density of cold $H_2$ is hard to measure directly infact is measured indirectly by collisional excitation of other molecules and by relative decrese of 21-cm emission/absorption line strenght from deplition of atomic H.
+\item Collisional excitation cooling by molecular/atomic lines emission increases with density while external heating decreases: MC are very cold (\SIrange{10}{20}{\kelvin}); far IR emission of CO; in densest regions gas is thermally coupled to dust mantaining $T\approx10K$.
+\item Inefficient conversion of MC into stars: turbulence, magnetic fields.
+\item Almost all MC are star forming: short lifetime, young age - $\tau_{MC}$ approx crossing time of internal turbulent motion $<\SI{1}{\mega\year}$
+\item Fragmentation. Youngest stars are in denser part of MC: denser clumps may originate from Small fluctuation amplified by gravitational instabilities or Supersonic turbulent motion may compress gas into observed clumpy structure.
+\item How collapse is initiated - Prestellar cloud core: Gravitational instability, for example Bonnor-Ebert sphere that slightly exceeds stability threshold, or if prestellar core are magnetically supported condensing gradually by ambipolar diffusion (neutral species collapse) whereby gas contract slowly along across field lines (SIS: singular isothermal sphere with no magnetic support $\rho(r)=\frac{c_s^2}{2\pi Gr^2}$, $M(r)=\frac{2c_s^2}{G}r$).
 \end{itemize}
-	\end{column}\begin{column}{0.5\textwidth}
+\end{frame}
 
-\end{column}\end{columns}
+\begin{frame}{Spherical collapse}
+    \begin{itemize}
+        \item At low $\rho$: \xaumenta{\rho} \xdiminuisce{T} (increases atomic/molecular lines cooling); At higher $\rho$: gas becomes thermally coupled to gas which controls T with its thermal emission - T is \SIrange{6}{12}{\kelvin} while $\rho$ spans many OM as long as core remains optically thin to dust thermal radiation ($n_{H_2}<\SI{e10}{\per\cubic\cm}$).
+        \item Most collapse calculation assume early stages isothermal at \SI{10}{\kelvin} (whitworth 98) and a universal result of isothermal collapse is runaway growth of central density peak (Penston 66, Bodenheimer Sweigart 68, Larson 69)
+        \item In absence of pressure gradient the collapse of uniform sphere happens in $t_{ff}\approx\sqrt{\frac{3\pi}{32G\rho}}$: denser inner regions collapse faster (Larson 73, Tohline 82). Numerics show that $\rho\propto r\expy{-2}$ for collapsing isothermal sphere asymptotically for smaller radii as long as isothermal approx holds (Larson 69, Ogino 99); peak width at any stage of order of Jeans length $\propto\rho\expy{-1/2}$.
+        \item Calculations: small fraction of collapsing cloud core attains density to form a star; in SIS model envelope is at rest instead of falling at approx twice $c_s$ as in dynamical collapse.
+        \item Rotation. Forming cloud core rotate as expected due to turbulence in MC (Burket Bodenheimer 00) - ''Angular Momentum Problem'': much more angular momentum in MC than rotating stars - magnetic field can't dispose excess angular momentum: formation of multiple system. Narita 84: competition between pressure and gravity near center - centrifugal force never become strong enough there to halt condensation (rather the material with higher angular momentum produce a disk). Also for SIS model rotation could produce disk then spiral density fluctuation could cause inward mass transfer or disk fragmentation.
+        \item Collapse with Magnetic Field. Timescale Ambipolar Diffusion \SI{e7}{\year} which is one OM greater then ff timescale; as in the central part gravity force become dominant the core becomes more flattened along field lines, when central part becomes unstable runaway collapse begins (flattened, collapse speed approx sound speed). Ambipolar Diffusion may solve ''Magnetic flux problem'' for star formation
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Optically Thick Phase}
+    \begin{itemize}
+        \item Always central density peak is realize in spite of thermal pressure never being negligible near central regions; spherical symmetry at later stage when optical depth of central regions becomes large and radiative cooling unimportant and T rises (3D calculation partially support spherical Approx: Bate 98): rotational flattening may eventually becomes important and transient spiral appears (gravitational torque transfer enough angular momntum outward to allow growth of central mass.
+            \item Calculation show formation of central object or protostar: Larson 69, 72, Appenzeller Tscharnuter 75, Winkler Newman 80, Masunaga Inutsuka 00 (later stages), Wuchterl Tscharnuter 03.
+            \item Central regions becomes opaque for thermal radiation of dust for $\rho_c>\SI{e-13}{\gram\per\cubic\cm}$ ($\num{2e10} H_2$ \si{\per\cubic\cm}), transition to adiabatic evolution: completely adiabatic for $\rho>\SI{e-12}{\gram\per\cubic\cm}$ with ratio of specific heat $\gamma=\frac{7}{5}$ consistent for $H_2$ gas. As density continues to rise pressure increses faster than gravity and collapse halts at $\rho_c\approx\SI{2e-10}{\gram\per\cubic\cm}$: first hydrostatic core is formed with accreting shock at surface (mass $0.01 \msun{}$, radius several AU); its properties are almost indep. of initial conditions/boundary conditions due to convergence toward selfsimilar behaviour during isothermal collapse.
+            \item Formation of second hydrostatic core, mass $0.001\msun{}$, radius $\rsun{}$: when $T_c>\SI{2000}{\kelvin}$ $H_2$ dissociates reducing $\gamma<\frac{4}{3}$ required for stability, hence we have a second collapse phase producing runaway central concentration; rapid collapse is halted when H is completely ionized at center and $\gamma=\frac{5}{3}$. Second hydrostatic core bounded by accretion shock.
+            \item Predicted stars begins its life as small embryo $<\num{e-2}\msun{}$, the accreting surface is surrounded by optically thick materials hence the shock is adiabatic: outer layers of protostars are strongly heated and expands rapidly, until the reach $4\rsun{}$ when acreted all materials of first hydrostatic core (Masunaga Inutsuka 00).
+            \item When rotation is present materials from first hydrostatic core has significant angular momentum and sets into disk (Yorke Bodenheimer 99), outward angular momentum transfer is needed to have predicted accretion rate (Mercer Smith 84).
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Onset of cloud formation ($\tau_{ff}\gg\tau{KH}$). Jeans Criterion}
