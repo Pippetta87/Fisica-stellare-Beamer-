@@ -350,23 +350,146 @@ Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $
 \end{frame}
 
 
-\section{Fusione nucleare}\linkdest{epsilonn}
+\section{Fusione nucleare}\linkdest{reactionrates}
+
+\begin{frame}{Rate of nuclear reaction}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\sigma=\frac{\#\text{ interaction per T}}{\# \text{ incident per A per T}*\#\text{ target within beam}}\\
+                &=\frac{N_R/T}{N_{beam}/(AT)N_T}\Rightarrow \frac{N_R}{T}=\frac{N_{beam}}{TA}N_T\sigma\\
+                &j_{beam}=\frac{N_{beam}}{TA},\ \SI{1}{\barn}=\SI{e-24}{\square\cm},\ \SI{1}{\square\femto\meter}=\SI{e-2}{\barn}\\
+                &r_{01}=\frac{N_0N_1\exv{\sigma v}}{1+\delta_{01}},\ m_{01}=\frac{m_0m_1}{m_0+m_1}\\
+                &P(v)\,dv=(\frac{m_{01}}{2\pi KT})^{\frac{3}{2}}\exp{-\frac{m_{01}v^2}{2KT}}4\pi v^2\,dv\\
+                &=P(E)\,dE=\frac{2}{\sqrt{\pi}}\frac{\sqrt{E}}{(KT)^{\frac{3}{2}}}\exp{-\frac{E}{KT}}\,dE
+            \end{align*}
+            If velocity of 0,1 are sep. Maxwell. also $v_{01}$ is Maxwell.;$K\approx\SI{8.6e-5}{\ev\per\kelvin}$
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\frac{N_R}{VT}=(\sigma N_T)(\frac{N_b}{VAT})\\
+                &=\sigma \frac{N_T}{V}\frac{N_b}{AT}=\sigma \frac{N_T}{V}v \frac{N_b}{V}\\
+                &r_{01}=N_0N_1\sigma v\xrightarrow{P(v)}N_0N_1\exv{\sigma v}_{01}\\
+                &N_0N_1\tag{Pairs number density: non id.}\\
+                &\frac{N_0(N_0-1)}{2}\to \frac{N_0^2}{2}\tag{Number density pairs: id}\\
+                &v_T=\sqrt{\frac{2KT}{m_{01}}}\tag{Peak $P(v)$}\\
+                &E_T=\frac{KT}{2}\tag{Peak $P(E)$}
+            \end{align*}
+            $N_0$, $N_1$ number density
+        \end{column}
+    \end{columns}
+    \begin{block}{Reaction rate at high temperature: we have to consider excited states}
+        \begin{align*}
+        &P_{i\mu}=\frac{N_{i\mu}}{N_i}=\frac{g_{i\mu}\exp{-\frac{E_{i\mu}}{KT}}}{\sum_{\mu}g_{i\mu}\exp{-\frac{E_{i\mu}}{KT}}}=\frac{g_{i\mu}\exp{-\frac{E_{i\mu}}{KT}}}{G_i}\tag{$E_{i\mu}$ excitation energy}\\
+        &N_A\exv{\sigma v}^*_{01\to23}=\sum_{\mu}P_{0\mu}\sum_{\nu}N_A\exv{\sigma v}^{\mu\to\nu}_{01\to23}\tag{$\mu$ states target 0, $\nu$ in 3}\\
+        &=R_{tt}N_A\exv{\sigma v}_{01\to23}\tag{$R_{tt}$ stellar enhancement factor}
+    \end{align*}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Photodisintegration ($\gamma+3\to0+1$)}
+    Most astrophys. photodisin $\gamma+3\to0+1$ are derived from corresp. particle induced reaction rate applying reciproc. theorem but some are measured directly:
+    \begin{align*}
+        &j_b=\frac{N_b}{AT}=\frac{cN_b}{V}\Rightarrow r_{\gamma3}=\frac{N_R}{VT}=N_3N_{\gamma}c\sigma(E_{\gamma}),\ N_3=\frac{N_T}{V},\ N_{\gamma}=\frac{N_b}{V}\tag{$\gamma3\to01$}\\
+        &r_{\gamma3}=N_3\int_0^{\infty}cN_{\gamma}(E_{\gamma})\sigma(E_{\gamma})\,dE_{\gamma}\tag{If $Q_{\gamma3\to01}<0$ integration lower limit is $E_t=Q_{01\to\gamma3}$}\\
+        &N_{\gamma}(E_{\gamma})\,dE_{\gamma}=\frac{u(E_{\gamma})}{E_{\gamma}}\,dE_{\gamma}=\frac{8\pi}{(hc)^3}\frac{E_{\gamma}^2}{\exp{\frac{E_{\gamma}}{KT}}-1}\,dE_{\gamma},\ u(E_{\gamma})\,dE_{\gamma}=\frac{8\pi}{(hc)^3}\frac{E_{\gamma}}{\exp{\frac{E_{\gamma}}{KT}-1}},\ u(\nu)\,d\nu=\frac{8\pi}{(hc)^3}\frac{1}{\exp{\frac{E_{\gamma}}{KT}}-1}\,d\nu\\
+        &\lambda_{\gamma}(3)=\frac{r_{\gamma3}}{N_3}=\int_0^{\infty}cN_{\gamma}(E_{\gamma})\sigma(E_{\gamma})\,dE_{\gamma}\Rightarrow\lambda_{\gamma}(3)=\frac{8\pi}{h^3c^2}\int_0^{\infty}\frac{E_{\gamma}^2\sigma(E_{\gamma})}{\exp{\frac{E_{\gamma}}{KT}}-1}\tag{decay const}\\
+        &\frac{\sigma_{\gamma3\to01}}{\sigma_{01\to\gamma3}}=\frac{(2j_0+1)(2j_1+1)}{2(2j_2+1)}\frac{2m_{01}c^2E_{01}}{E_{\gamma}^2}\frac{1}{(1+\delta_{01})}\tag{forward/reverse}\\
+        &\Rightarrow \frac{8\pi m_{01}}{h^3}\frac{(2j_0+1)(2j_1+1)}{(2j_3+1)}\int_0^{\infty}\overbrace{\frac{E_{\gamma}-Q_{01\to\gamma3}}{\exp{\frac{E_{\gamma}}{KT}-1}}}^{E_{01} \text{Kinetic energy in COM}}\sigma_{01\to\gamma3}\,dE_{\gamma}\\
+    &\lambda_{\gamma}(3)\approx\int_0^{\infty}(E_{\gamma}-Q_{01\to\gamma3})\exp{-\frac{E_{\gamma}}{KT}}\frac{\exp{-2\pi\eta}}{E_{01}}S(E_{01})\,dE_{\gamma}\tag{charged particle em., $E_{\gamma}\gg KT$, $S\approx\const{}$}\\
+    &\approx S(E_0)\exp{-\frac{Q_{01\to\gamma3}}{KT}}\int_0^{\infty}\exp{-2\pi\eta}\exp{-\frac{E_{01}}{KT}}\,dE_{01},\ E_{\gamma}^{eff}=E_0+Q_{01\to\gamma3}\tag{$E_0$ Gamow peak forward reaction}\\
+    &\lambda_{\gamma}(3)\propto\int_0^{\infty}(E_{\gamma}-Q_{01\to\gamma3})\exp{-\frac{E_{\gamma}}{KT}}E_{01}^{l-1/2}\,dE_{\gamma}\tag{$(\gamma,n)$: small $E_n$: $\sigma_{n\gamma}\propto\sigma_l\propto E^{l-1/2}$, $E_{\gamma}^{eff}\approx E_{thr}$}\\
+    &\approx\int_0^{\infty}\exp{-\frac{E_{\gamma}}{KT}}(E_{\gamma}-Q_{01\to\gamma3})^{l+1/2}\,dE_{\gamma},\ E^{eff}_{\gamma}=(l+\frac{1}{2})KT+Q_{n\gamma}\tag{n-capt.: $E_n^{eff}=(l+\frac{1}{2})KT$ so $E_{\gamma}^{eff}=(l+\frac{1}{2})KT+Q_{n\gamma}$}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Resonance reaction rate}
+    Narrow Res.: One level Breit-Wigner formula
+            \begin{itemize}
+                \item Isolated: Level density in compound nucleus is small so resonance do not overlap
+                \item Narrow: Partial width cont. over total res. width ($\Gamma<\text{few kev}$)
+            \end{itemize}
+            \begin{align*}
+                &\sigma_{BW}(E)=\frac{\lambda^2}{4\pi}\frac{(2J+1)(1+\delta_{01})}{(2j_0+1)(2j_1+1)}\frac{\Gamma_a\Gamma_b}{(E_r-E)^2+\Gamma^2/4}
+            \end{align*}
+            $j_i$ Spin of target/projectile, $J,E_R$ spin and energy of resonance, $\Gamma_i,\Gamma$ Partial width of entrance/exit channel, total res width.
+            \begin{align*}
+                &N_A\exv{\sigma v}=\sqrt{\frac{8}{\pi m_{01}}}\frac{N_A}{(KT)^{\frac{3}{2}}}\int_0^{\infty}E\sigma_{BW}(E)\exp{-\frac{E}{KT}}\,dE=N_A \frac{\sqrt{2\pi}\hbar^2}{(m_{01}KT)^{\frac{3}{2}}}\omega\int_0^{\infty}\frac{\Gamma_a\Gamma_b\exp{-\frac{E}{KT}}}{(E-E_R)^2+\Gamma^2/4}\,dE\\
+                &\omega=\frac{(2J+1)(1+\delta_{01})}{(2j_0+1)(2j_0+1)}
+            \end{align*}
+            Narrow res.: MB factor $\exp{-\frac{E}{KT}}$ and $\Gamma_i$ approx const.:
+            \begin{equation*}
+            N_A\exv{\sigma v}=N_A(\frac{2\pi}{m_{01}KT})^{\frac{3}{2}}\hbar^2\exp{-\frac{E_r}{KT}}\omega\gamma 
+            \end{equation*}
+            $\omega\gamma=\omega \frac{\Gamma_a\Gamma_b}{\Gamma}$, proportional to area under resonance cross-section (ie product of max. cross-section $\sigma_{BW}(E_r)=\frac{\lambda_r^2}{\pi}\omega \frac{\Gamma_a\Gamma_b}{\Gamma}$ and total res. width): $\Gamma*\sigma_{BW}(E_r)=\frac{\lambda_r^2}{\pi}\omega\gamma$. Several narrow res. add incoherently.
+            Temperature deps.: $N_A\exv{\sigma v}_T=N_A\exv{\sigma v}_{T_0}(\frac{T}{T_0})^{\num{11.605}\frac{E_r}{T_9}-\frac{3}{2}}$, $E_r$ in \si{\mega\ev}: T sensitive increases as \xdiminuisce{T} and \xaumenta{E_r}.
+            Broad Res.: Explicit energy dependence of cross-section
+            \begin{align*}
+                &N_A\exv{\sigma v}=\sqrt{2\pi}\frac{N_A\omega\hbar^2}{(m_{01}KT)^{\frac{3}{2}}}\int_0^{\infty}\exp{-\frac{E}{KT}}\frac{\Gamma_a(E)\Gamma_b(E+Q-E_f)}{(E_r-E)^2+\Gamma(E)^2/4}
+            \end{align*}
+            $\Gamma_b$ has to be calculated at energy $E_{23}=E_{01}+Q_{01\to23}-E_f$.
+\end{frame}
+
+\begin{frame}{Reaction Rate Equilibrium}
+    \begin{align*}
+        &r=r_{01\to23}-r_{23\to01}=\frac{N_0N_1\exv{\sigma v}_{01to23}}{(1+\delta_{01})}-\frac{N_2N_2\exv{\sigma v}_{23\to01}}{(1+\delta_{23})}\tag{Equilibrium $r=0$}\\
+        &\frac{N_2N_3}{N_0N_1}=\frac{(1+\delta_{23})\exv{\sigma v}_{01\to23}}{(1+\delta_{01})\exv{\sigma v}_{23\to01}}=\frac{(2j_2+1)(2j_3+1)}{(2j_0+1)(2j_1+1)}\frac{G_2^{norm}G_3^{norm}}{G_0^{norm}G_1^{norm}}(\frac{m_{23}}{m_{01}})^{\frac{3}{2}}\exp{\frac{Q_{01\to23}}{KT}}\\
+        &G_i^{norm}=\frac{G_i}{g_i}=\frac{\sum_{\mu}g_{i\mu}\exp{-\frac{E_{i\mu}}{KT}}}{g_i}\tag{Normalized partition function, $g_i$ stat. weight ground state of nucleus i}\\
+        &r=0=r_{01\to\gamma3}-r_{\gamma3\to01}=\frac{N_0N_1\exv{\sigma v}_{01\to\gamma3}}{(1+\delta_{01})}-\lambda_{\gamma}(3)N_3\tag{$01\to\gamma3$}\\
+        &\frac{N_3}{N_0N_1}=\frac{1}{(1+\delta_{01})}\frac{\exv{\sigma v}_{01\to\gamma3}}{\lambda_{\gamma}(3)}=\frac{1}{1+\delta_{01}}\frac{1}{N_1}\frac{\lambda_1(0)}{\lambda_{\gamma}(3)}\\
+        &=(\frac{h^2}{2\pi})^{\frac{3}{2}}\frac{1}{(m_{01}KT)^{\frac{3}{2}}}\frac{(2j_3+1)}{(2j_0+1)(2j_1+1)}\frac{G_3^{norm}}{G_0^{norm}G_1^{norm}}\exp{\frac{Q_{01\to\gamma3}}{KT}}\tag{Saha statistical equation}\\
+            &01\to23\tag{$0$,$3$: Heavy, $1$, $2$: $\alpha$, \Pproton, \Pneutron}\\
+            &\left.\TDy{t}{N_0}\right|_{01\to23}=-r_{01\to23},\ \left.\TDy{t}{N_3}\right|_{23\to01}=-r_{23\to01}\\
+                    &f_{03}=|\TDy{t}{N_0}|_{01\to23}-\TDy{t}{N_3}|_{23\to01}|=|r_{01\to23}-r_{23\to01}|=|N_0N_1\exv{\sigma v}_{01\to23}-N_2N_3\exv{\sigma v}_{23\to01}|\tag{Net abundance flow between 0,3}\\
+                    &(\TDy{t}{N_0})_{01\to23}\approx(\TDy{t}{N_3})_{23\to01}\gg f_{03}\approx0\ \phi_{03}=\frac{|r_{01\to23}-r_{23\to01}|}{\max{r_{01\to23},r_{23\to01}}}\approx0\tag{equilibrium condition}
+                            \end{align*}
+        A differenza di stato stazionario, la condizione di equilibrio non implica $N_0,N_3$ costanti: refers to near equality of forward/reverse abundance flow between pair nuclei; when a group of severals pairs comes into equilibrium the resulting solution of reaction network is of quasi-equilibrium (Arnett96).
+\end{frame}
 
 \begin{frame}{Sezione d'urto fusion nucleare}
-$E$ l'energia cinetica nel centro di massa dei nuclei: $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$
-prodotto della sezione d'urto geometrica (nel riferimento del CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$
-per energie tipiche degli interni stellari approx onda S), della probabilit\'a di attraversamento della barriera coulombiana e del fattore astrofisico. La lunghezza d'onda di de Broglie relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$.
+    \begin{itemize}
+        \item Sezione d'urto: $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$, $E$ l'energia cinetica nel centro di massa dei nuclei. Prodotto sezione d'urto geometrica (nel riferimento del CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$ - per energie tipiche interni stellari approx onda S), della probabilit\'a di attraversamento della barriera coulombiana $P_0$ e del fattore astrofisico $S(E)$. \todo{$R\ll\lambdabar$??}
+            La lunghezza d'onda di de Broglie relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$: $\pi\lambdabar^2\propto \frac{1}{p^2}\propto \frac{1}{E}$; geometrical cross-section for \si{\kilo\ev} nucleons $\pi\lambdabar^2=657\invers{E}\si{\barn}$ where E is in \si{\kilo\ev} and reduced mass in amu.
+\item Probability crossing coulomb barrier: $\widehat{T}=\widehat{T}_1\ldots\widehat{T}_n\approx\exp{[-\frac{2}{\hbar}\sqrt{2m(V_i-E)}(R_{i+1}-R_i)]}\xrightarrow{n large}\exp{[-\frac{2}{\hbar}\int_{R_0}^{R_c}\sqrt{2m[V(r)-E]}\,dr]}$. The leading term of expansion of $\widehat{T}$ for $\frac{E}{V_C}\ll1$: $\widehat{T}\approx\exp{(-\frac{2\pi}{\hbar}\sqrt{\frac{m}{2E}Z_0Z_1e^2})}=\Exp{-2\pi\eta}=P_0(E)$. Sommerfeld parameter $\eta$, numerically $2\pi\eta=\num{0.989534}Z_0Z_1\sqrt{\frac{1}{E}\frac{M_0M_1}{M_0+M_1}}$, $M_i$ in units of u.
+\item Astrophysical factor $S(E)$: $S(E)=\sigma(E)E\exp{\frac{2\pi Z_1Z_0e^2}{\hbar v}}$.
+    Slow variation with E (non resonant case): expansion around $E=0$ $S(E)=S(0)+S'(0)E+\frac{2}{2}S''(0)E^2$ is suff.
+    \begin{equation*}
+        N_A\exv{\sigma v}=(\frac{4}{3})^{\frac{3}{2}}\frac{\hbar}{\pi}\frac{N_A}{m_{01}Z_0Z_1e^2}S_{eff}\tau^2\exp{-\tau}
+    \end{equation*}
+    $\tau=\frac{3E_0}{KT}$, $S_{eff}$ accounts for energy dependence of astrophysical factor and asymmetry of Gamow Peak
+\item Gamow peak - Gauss Approx. $\PDof{E}[\frac{2\pi}{\hbar}\sqrt{\frac{m_{01}}{2E}Z_0Z_1e^2-\frac{E}{KT}}]_{E_0}=0=\PDof{E}(\frac{E}{KT}+bE^{-\frac{1}{2}})_{E_0}=\frac{1}{KT}-\frac{1}{2}bE_0^{-\frac{3}{2}}$:
+    \begin{align*}
+        &\exp{(-\frac{E}{KT}-bE^{-\frac{1}{2}})}\approx C\exp{-(\frac{E-E_0}{\Delta/2})^2},\ \Delta=\frac{4}{\sqrt{3}}\sqrt{E_0KT}=\num{0.75}(Z_0^2Z_1^2AT_6^5)^{\frac{1}{6}}\si{\kilo\ev}\tag{match 2nd der}\\
+        &E_0=(\frac{bKT}{2})^{\frac{2}{3}}=[(\frac{\pi}{\hbar})^2(Z_0Z_1e^2)^2(\frac{m_{01}}{2})(KT)^2]^{\frac{1}{3}}=\num{0.1220}(Z_0^2Z_1^2\frac{M_0M_1}{M_0+M_1}T_9^2)
+    \end{align*}
+\end{itemize}
 
-L'energia potenziale dovuta all'interazione di due nuclei $Z_1$ e $Z_2$ a distanza r contiene un contributo delle altre cariche presenti nel plasma $U=\frac{Z_1Z_2e^2}{r}+U_s(r_{12})$
-l'energia potenziale non schermata e contributo della nuvola elettronica: $U_s$ aumenta la probabilit\'a di attraversamento della barriera coulombiana. Fattore moltiplicativo: $f=\exp{-\midfrac{U_0}{KT}}$ dove $U_0=U_s(0)$ poich\'e $r\ll r_D$ e considerando solo la correzione al fattore di penetrazione ($E_G\gg U_0$).
+\end{frame}
+
+\begin{frame}{Coulomb screening and continuum depression}
+    In ionized plasma electron are attracted to nuclei while nuclei repel each others:each nucleus is surrounded by charged cloud, so Coulomb barrier in nuclear reaction becomes thinner increasing tunneling probability and reaction rate.
+    L'energia potenziale dovuta all'interazione di due nuclei $Z_1$ e $Z_2$ a distanza r contiene un contributo delle altre cariche presenti nel plasma
+    \begin{equation*}
+    U=\frac{Z_1Z_2e^2}{r}+U_s(r_{12})
+    \end{equation*}
+    l'energia potenziale non schermata e contributo della nuvola elettronica: $U_s$ aumenta la probabilit\'a di attraversamento della barriera coulombiana.
+    Fattore moltiplicativo: $f=\exp{-\midfrac{U_0}{KT}}$ dove $U_0=U_s(0)$ poich\'e $r\ll r_D$ e considerando solo la correzione al fattore di penetrazione ($E_G\gg U_0$).
 
 Per determinare $U_0$ considero l'energia potenziale di $Z_1$ e $Z_2$ a distanza $r$
 \begin{equation*}
 U=Z_2e\int_{\infty}^r\PDy{r_1}{\phi_1}\,dr_1=\frac{Z_1Z_2e^2\exp{-\midfrac{r}{r_D}}}{r},\ U_s=U-\frac{Z_1Z_2e^2}{r}\approx\frac{Z_1Z_2e^2}{r_D}
 \end{equation*}
+Weak Screening regime: Condition of weak Coulomb energy compared to thermal.
+\begin{align*}
+    &R_D=\sqrt{\frac{KT}{4\pi e^2\rho N_A\zeta^2}}=\num{2.812e-7}\rho^{-\frac{1}{2}}T_9^{\frac{1}{2}}\invers{\zeta}\si{\cm}\\
+    &\zeta=\sqrt{\sum_i \frac{(Z_i^2+Z_i\theta_e)X_i}{A_i}}\\
+    &T\gg \num{e5}\rho^{\frac{1}{3}}\zeta^2\tag{weak screening}
+\end{align*}
+Continuum depression: $\chi_Z=\chi_Z-\frac{Ze^2}{R_D}$ (pressure ionization)
 \end{frame}
 
-\begin{frame}{Energia prodotta in reazioni di fusione???}
+\begin{frame}{Approfondimento fattore astrofisico}
+    \todo{chiarire $S_{eff}: $S(0)$ vs $S(E_0)$}
 $S(E)$ descrive l'interazione a livello nucleare: debolmente dipendente dall'energia in assenza di risonanze.
 La probabilit\'a di attraversamento della barriera coulombiana: $P_0(E)=\exp{-2\pi\eta},\ \eta=\sqrt{\frac{m}{2}}\frac{Z_1Z_2e^2}{\hbar E\expy{\frac{1}{2}}}$
 Per i nuclei di carica $Z_1$, $Z_2$ e m massa ridotta: $\sigma(E)=\frac{S(E)}{E}\exp{-2\pi\eta}$
@@ -375,6 +498,29 @@ Il rate per coppia di particelle
 \exv{\sigma v}=\num{1.3005e-15}[\frac{Z_1Z_2}{AT_6^2}]\expy{\frac{1}{3}}fS_{eff}\exp{-\tau}\si{\cubic\cm\per\second},\ \tau=\frac{3E_G}{kT}\approx\num{42.487}(Z_1^2Z_2^2AT_6\expy{-1})\expy{\frac{1}{3}}
 \end{equation*}
 $S_{eff}$ \'e il risultato dell'espansione dell'integrando per $\invers{\tau}\ll1$ ed estrapolato a $E_G$ a partire dal valore $S(0)$ determinato dalla fisica nucleare.
+%\begin{equation*}
+%\exv{\sigma v}\propto b\expy{1/3}T\expy{-2/3}\exp{-\frac{b\expy{2/3}}{t\expy{1/3}}}
+%\end{equation*}
+\end{frame}
+
+\begin{frame}{Non-resonant reaction rate: Neutron induced reaction}
+    \begin{itemize}
+        \item Most likely at max MB: $E_T=KT$, $v_T=\sqrt{\frac{2KT}{m_{01}}}$.
+        \item $\frac{1}{v}$-dependence of low energy $\sigma$: we have two approaches - $\sigma_r=\pi(R+\lambdabar)^2$ based on model of total absorption then include reflection of incident neutron wave at nuclear surface (transmission probability) resulting in $\sigma=\pi(R+\lambdabar)^2 \frac{4kK}{(k+K)^2}$ where $K=\sqrt{2m(E+V_0)/\hbar^2}$ for barrier depth $-V_0$ and $k=\sqrt{\frac{2mE}{\hbar^2}}$, for low energy neutrons $E\ll V_0$, $k\ll K$ and $\lambdabar=\invers{k}\gg R$ quindi $\sigma=\frac{4\pi}{kK}\propto \frac{1}{v}$ since $k=\frac{p}{\hbar}=\frac{mv}{\hbar}$, the other approach use one level resonance formula: decay by $\gamma$ emission and take $\Gamma$ indipendent on neutron energy, the neutron width $\Gamma_n$ (entrance channel) is dependent on density of states $\TDy{E}{n}\propto v$ available to captured neutron and far from resonance $E\ll E_R$: $\sigma=\frac{\pi}{k^2}\frac{\Gamma_n\Gamma}{E_R^2+\Gamma^2/4}\propto \frac{1}{v}$ (not only $(n,\gamma)$ but also $(n,p)$, $(n,\alpha)$).
+        \item For $\sigma\propto \frac{1}{v}$:
+            \begin{equation*}
+                N_A\exv{\sigma v}=N_A\int_0^{\infty}vP(v)\sigma(v)\,dv=N_AS=\const{}
+            \end{equation*}
+        \item But Non-resonant neutron cross-section deviate from $\frac{1}{v}$:
+            \begin{enumerate}
+                \item S-wave neutron may have not small energy
+                \item New reaction channel may becomes energetically accessible
+                \item Higher partial waves may contribute to neutron cross-section.
+            \end{enumerate}<++>
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Produzione energia reazioni nucleari}
 La funzione $\epsilon(\rho,T,X_i)$ \'e determinata dalla somma di tutti i contributi
 \begin{equation*}
 \epsilon_{ij}=Q_{ij}\frac{n_in_j}{\rho(1+\delta_{ij})}\lambda_{ij}=\frac{1}{1+\delta_{ij}}Q_{ij}\frac{\rho N_A^2X_jX_k}{{A_iA_j}}\exv{\sigma v}_{ij}\label{eq:energyrate}
@@ -384,7 +530,333 @@ $f(E)dE\propto\frac{E\expy{\frac{1}{2}}}{(kT)\expy{\frac{3}{2}}}\exp{-\frac{E}{k
 $S(E)\exp{-\frac{E}{kT}-\frac{b}{\sqrt{E}}}$
 ha forma approssimativamente gaussiana il cui massimo $E_G$, energia pi\'u probabile di reazione, e FWHM sono: $E_G=\SI{5.665}{\kilo\ev} A\expy{\frac{1}{3}}T_7\expy{\frac{2}{3}}$ $\Delta E=4.249\si{\kilo\ev}W\expy{\frac{1}{6}}T_7\expy{\frac{5}{6}}$
 posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$.
-%\begin{equation*}
-%\exv{\sigma v}\propto b\expy{1/3}T\expy{-2/3}\exp{-\frac{b\expy{2/3}}{t\expy{1/3}}}
-%\end{equation*}
+Most of reactions occur at Gamow peak, in MB tail (except for $T>\SI{10}{\giga\kelvin}$, $E_0\ll V_c$); reaction with larger Coulomb barrier do not contribute significantly to energy production: \xaumenta{E_0}, \xaumenta{Z_i}, \xdiminuisce{\text{area picco}}
+\begin{equation*}
+E_0=[(\frac{\pi}{\hbar})^2(Z_0Z_1e^2)^2(\frac{m_{01}}{2})(KT)^2]^{\frac{1}{3}}=\num{0.1220}[Z_0^2Z_1^2 \frac{M_0M_1}{M_0+M_1}T_9^2]^{\frac{1}{3}}=\SI{5.665}{\kilo\ev}(Z_0^2Z_1^2 \frac{A_0A_1}{A_0+A_1})^{\frac{1}{3}}T_7^{\frac{2}{3}}
+\end{equation*}
+For increasing charges of projectile/target peak shifts toward higher energies and becomes wider
+\begin{equation*}
+\Delta E=\SI{4.249}{\kilo\ev}(Z_0^2Z_1^2 \frac{A_0A_1}{A_0+A_1})^{\frac{1}{6}}T_7^{\frac{5}{6}}
+\end{equation*}
+Q do not contains energy carried by non interacting neutrinos.
+
+\end{frame}
+
+\begin{frame}{Periodic table}
+    
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{PeriodicTableAtomicMassColor}\label{fig:PeriodicTableAtomicMassColor}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Energy prodcution PP chains ($\SI{1}{\mega\ev}=\SI{1.602e-6}{\erg}$)}
+    \begin{columns}[T]
+        \begin{column}{0.45\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{pp-Q-table}\label{fig:pp-Q-table}
+\end{figure}
+    \begin{itemize}
+        \item PPII, PPIII - $He^3(He^4,\gamma)Be^7$ then electron capture $Be^7+\Pelectron\to Li^7+\nu$ (or proton captur: $Be^7+H^1\to B^8+\gamma$): rate of prodiuction of $\alpha$ may be up to twice that of PPI ($\frac{r_{pp}}{2}$) as only one PP reaction. Approx:
+            \begin{itemize}
+                \item Deuterium equilibrium(seconds-hours): $\TDy{t}{D}\approx0$ quindi $\lambda_{pp}\frac{H^2}{2}\approx\lambda_{pd}HD$
+        \item $Li^7$, $Be^7$ equilibrium: $\TDy{t}{Li^7+Be^7}=\lambda_{34}He^3He^4-\lambda_{17}HBe^7-\lambda_{17}'HLi^7\approx0$, when equilibrium reached (years) Li/Be will follow buildup of $He^3$ - simplified equation for rate of production of $He^4$ and H: 
+            \begin{align*}
+                &\TDy{t}{He^4}=\lambda_{33}\frac{(He^3)^2}{2}+\lambda_{34}He^3He^4\\
+                &\TDy{t}{H}=-3\lambda_{pp}\frac{H^2}{2}+2\lambda_{33}\frac{(He^3)^2}{2}-\lambda_{34}He^3He^4
+            \end{align*}
+            Competition for $He^3$ determines which PP dominates
+            \end{itemize}
+    \end{itemize}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+        PPI - Split in two parts: pp is followed rapidly by $D(p,\gamma)He^3$ (net effect $3H\to He^3+\nu$) at rate $r_{pp}$, energy liberated $Q=\SI{6.936}{\mega\ev}-\SI{0.263}{\mega\ev}$ so $\rho\epsilon(3H\to He^3)=\num{1.069e-5}r_{pp}\si{\erg\per\cubic\cm\per\second}$ - then for $He^3(He^3,2p)He^4$ has $Q=\SI{12.858}{\mega\ev}$ and summing $\rho\epsilon_{PPI}=\num{1.069e-5}r_{pp}+\num{2.060e-5}r_{33}\si{\erg\per\cubic\cm\per\second}$. Equilibrium $\TDy{t}{He^3}\approx0$: $2r_{33}=r_{pp}$, $\TDy{t}{He^4}=r_{33}=\frac{r_{pp}}{2}$ and energy production $\rho\epsilon_{PPI}=\num{2.099e-5}r_{pp}\si{\erg\per\cubic\cm\per\second}$.
+        \begin{itemize}
+            \item Third approx when $He^3$ reaches equilibrium:
+                \begin{align*}
+                    &\TDy{t}{He^3}\approx0\Rightarrow\lambda_{pp}-\lambda_{33}(He^3_e)^2-\lambda_{34}He_e^3He^4\approx0\\
+                    &\TDy{t}{He^4}=\frac{1}{4}\lambda_{pp}H^2+\frac{1}{2}\lambda_{34}He_e^3He^4\\
+                    &\TDy{t}{H}=-\lambda_{pp}^2-2\lambda_{34}He_e^3He^4\\
+                    &\TDy{t}{He^4}=-\frac{1}{4}\TDy{t}{H}\tag{All reactions in equil.}\\
+                    &\left(\frac{PP1}{PPII+PPIII}\right)_e=\frac{1}{2}\frac{\lambda_{33}}{\lambda_{34}}\frac{He_e^3}{He^4}\\
+                    &PPI: \frac{2*0.263}{26.73}\approx2.0\%\ PPII: \frac{0.263+0.80}{26.73}\approx4.0\%\\
+                    &PPIII: \frac{0.263+7.2}{26.73}\approx27.9\%\tag{$\nu$ losses}
+                \end{align*}
+        \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Approfondimenti PP}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            \begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.9\textheight]{PP-lifetime}\label{fig:PP-lifetime}
+\end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{align*}
+                &Q=(4(ME)_{H}-(ME)_{He^4})c^2=\SI{26.731}{\mega\ev}\\
+                &\rho\epsilon=\TDy{t}{He^4}(4M_H-M_{He^4})[0.980F_{PPI}+0.960F_{PPII}+0.721F_{PPIII}]\\
+                &\rho\epsilon_{PPI}=\SI{6.671}{\mega\ev}r_{pp}+\SI{12.861}{\mega\ev}r_{He^3He^3}\\
+                &\epsilon_{pp}^e=\num{6.551}N_A\exv{\sigma v}_{pp}(\frac{X_H}{M_H}^2\rho N_A\si{\mega\ev\per\gram\per\second}\\
+                    &\epsilon_{PPI}^e=\epsilon_{PPI}^e(T_0)(\frac{T}{T_0})^{3.9}
+            \end{align*}
+            \begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.75\textwidth]{PP-energy-fraction}\label{fig:PP-energy-fraction}
+\end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Ciclo CN-NO}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{cnno-scheme}\label{fig:cnno-scheme}
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{CNOs}\label{fig:cnos}
+\end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            Energetic. allowed: proton induced $(p,\alpha)$ reactions on $^{15}N$, $^{17}O$, $^{18}O$, $(p,\gamma)$ and $(p,\alpha)$ on $^{19}F$, and only $(p,\gamma)$ on $^{12}C$, $^{13}C$, $^{14}N$, $^{16}O$.
+            \begin{align*}
+                &C^{12}(p,\gamma)N^{13}(\beta^+\nu)C^{13}(p\gamma)N^{14}\tag{CN-CNO1}\\
+                &N^{14}(p,\gamma)O^{15}(\beta^+\nu)N^{15}\\
+                &N^{15}(p,\alpha)C^{12}\\
+                &N^{15}(p,\gamma)O^{16}(p,\gamma)F^{17}(\beta^+\nu)O^{17}\tag{NO-CNO2}\\
+                &O^{17}(p,\alpha)N^{14}\\
+                &O^{17}(p,\gamma)F^{18}(\beta^+\nu)O^{18}(p,\alpha)N^{15}\tag{CNO3}\\
+                &O^{18}(p,\gamma)F^{19}(p,\alpha)O^{16}\tag{CNO4}
+            \end{align*}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.65\textwidth]{CNObranching}\label{fig:CNObranching}
+\end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Steady state CNO: Abundances}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            For $T<\SI{0.1}{\giga\ev}$ $\beta$-decay lifetime of $^{13}N$ $\tau_{^{13}N}\ll\tau_{^{12}C}$ for $(p,\gamma)$ destruction, and after few minutes $^{13}N$, $^{15}O$ are at equilibrium
+            \begin{align*}
+                &\TDy{t}{^{12}C}=H ^{15}N\exv{\sigma v}_{^{15}N(p,\alpha)}-H ^{12}C\exv{\sigma v}_{^{12}C(p,\gamma)}\\
+                &\TDy{t}{^{13}C}=H ^{12}C\exv{\sigma v}_{^{12}C(p,\gamma)}-H ^{13}C\exv{\sigma v}_{^{13}C(p,\gamma)}\\
+                &\TDy{t}{^{14}N}=H ^{13}C\exv{\sigma v}_{^{13}C(p,\gamma)}-H ^{14}N\exv{\sigma v}_{^{14}N(p,\gamma)}\\
+                &\TDy{t}{^{15}N}=H ^{14}N\exv{\sigma v}_{^{14}N(p,\alpha)}-H ^{15}N\exv{\sigma v}_{^{15}N(p,\alpha)}\\
+                &\left(\frac{^{14}N}{^{12}C}\right)_e=\frac{\exv{\sigma v}_{^{12}C(p,\gamma)}}{\exv{\sigma v}_{^{14}N(p,\gamma)}}=\frac{\tau_p(^{14}N)}{\tau_p(^{12}C)}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\Rightarrow\TDy{t}{^{12}C}+\TDy{t}{^{13}C}+\TDy{t}{^{14}N}+\TDy{t}{^{15}N}=0\\
+                &\Rightarrow\sum CNO1=\const{}
+            \end{align*}
+            Ratio of any nuclidic abb. is inverse ratio of reaction rate (or lifetime): ie $(\frac{^{14}N}{^{12}C})=\frac{\exv{\sigma v}_{^{12}C(p,\gamma)}}{\exv{\sigma v}_{^{14}N(p,\gamma)}}$. CNO abundance evolution: conversion of $^{12}C$, $^{16}O$ to $^{14}N$.
+        \end{column}
+    \end{columns}
+    \begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.65\textwidth]{CNO1-equil-abund}\label{fig:CNO1-equil-abund}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Steady state CNO: energy production}
+            \begin{align*}
+                &\epsilon_{CNO}=\frac{1}{\rho}\sum_{i\to j}(Q_{i\to j}-\bar{E}^{i\to j}_{\nu})r_{i\to j}\\
+                &Q_{^{12}C(p,\gamma)^{13}N(\beta^+\nu)}-\bar{E}^{^{13}N(\beta^+\nu)}=(\num{1.944}+\num{2.22}-\num{0.706})\si{\mega\ev}=\SI{3.458}{\mega\ev}\\
+                &Q_{^{13}C(p,\gamma)}=\SI{7.551}{\mega\ev}\\
+                &Q_{^{14}N(p,\gamma)^{15}O(\beta^+\nu)}-\bar{E}_{\nu}^{^{15}(\beta^+\nu)}=(\num{7.297}+\num{2.754}-\num{0.996})\si{\mega\ev}=\SI{9.055}{\mega\ev}\\
+                &Q_{^{15}N(p,\alpha)}=\SI{4.966}{\mega\ev}\\
+                &\rho\epsilon^e_{CNO1}=\SI{3.458}{\mega\ev}H(^{12}C)_e\exv{\sigma v}_{^{12}C(p,\gamma)}+\SI{7.551}{\mega\ev}H(^{13}C)_e\exv{\sigma v}_{^{13}C(p,\gamma)}+\SI{9.055}{\mega\ev}H(^{14}N)_e\exv{\sigma v}_{^{14}N(p,\gamma)}\\
+                &+\SI{4.966}{\mega\ev}H(^{15}N)_e\exv{\sigma v}_{^{15}N(p,\alpha)}\\
+                &=\SI{3.458}{\mega\ev}\frac{(^{12}C)_e}{\tau_p(^{12}C)}+\SI{7.551}{\mega\ev}\frac{(^{13}C)_e}{\tau_p(^{13}C)}+\SI{9.055}{\mega\ev}\frac{(^{14}N)_e}{\tau_p(^{14}N)}+\SI{4.966}{\mega\ev}\frac{(^{15}N)_e}{\tau_p(^{15}N)}\\
+                &\epsilon^e_{CNO1}=\frac{\SI{25.030}{\mega\ev}}{\rho}\frac{\sum CNO1}{\tau_p(^{12}C)+\tau_p(^{13}C)+\tau_p(^{14}N)+\tau_p(^{15}N)}\approx\frac{\SI{25.030}{\mega\ev}}{\rho}\frac{\sum CNO1}{\tau_p(^{14}N)}\\
+                &=\frac{\SI{25.030}{\mega\ev}}{\rho}(\sum CNO1)H\exv{\sigma v}_{^{14}N(p,\gamma)}=\num{25.030}N_A\exv{\sigma v}_{^{14}N(p,\gamma)}(\sum_i \frac{X_i}{M_i})\frac{X_H}{M_H}\rho N_A\si{\mega\ev\per\gram\per\second}\\
+                &\epsilon^e_{CNO1}(T)=\epsilon^e_{CNO1}(T_0)(\frac{T}{T_0})^{16.7}\tag{$T=\SI{25}{\mega\kelvin}$}\\
+                &\epsilon_{pp}\propto\rho X_H^2,\ \epsilon_{CN}\propto\rho X_HX_{CN}
+            \end{align*}
+\end{frame}
+
+\begin{frame}{He burning: energy production}
+    He-burn in massive* contribute $^{16}O$, $^{18}O$ to universe while massive* and AGB of $^{12}C$.
+    \begin{columns}[T]
+        \begin{column}{0.7\textwidth}
+            \begin{align*}
+                &^4He(\alpha\alpha,\gamma)^{12}C\tag{$Q=\SI{7274.7}{\kilo\ev}$}\\
+                &\alpha+\alpha\to^8Be\tag{$Q=\SI{-91.84\pm0.04}{\kilo\ev}$}\\
+                &E_r=\SI{287.6\pm0.2}{\kilo\ev}\tag{Res in $^8Be(\alpha,\gamma)^{12}C$}\\
+                &^{12}(\alpha,\gamma)^{16}O\tag{$Q=\SI{7161.9}{\kilo\ev}$}\\
+                &^{16}O(\alpha,\gamma)^{20}Ne\tag{$Q=\SI{4729.8}{\kilo\ev}$}\\
+                &^{20}Ne(\alpha,\gamma)^{24}Mg\tag{$Q=\SI{9316.6}{\kilo\ev}$}\\
+                &\lambda_{3\alpha\to^{12}C}=\lambda_{3\alpha}=3N_{\alpha}(\frac{h^2}{2\pi})^{\frac{3}{2}}\frac{1}{(m_{\alpha\alpha}KT)^{\frac{3}{2}}}\exp{\frac{Q_{\alpha\alpha\to^8Be}}{KT}}\lambda_{^8Be(\alpha,\gamma)}\\
+                &\lambda_{^8Be(\alpha,\gamma)}=\lambda_{\alpha}(^8Be)=N_{\alpha}\exv{\sigma v}_{^8Be(\alpha,\gamma)}\\
+                &\sigma_{^8Be(\alpha,\gamma)}=(\frac{2\pi}{m_{\alpha^8Be}KT})^{\frac{3}{2}}\hbar^2\exp{\frac{E_r}{KT}}\omega\gamma_{^8Be(\alpha,\gamma)}\tag{Narrow res.}\\
+                &\omega\gamma_{^8Be(\alpha,\gamma)}=\frac{2J+1}{(2j_0+1)(2j_1+1)}\frac{\Gamma_{\alpha}\Gamma_{rad}}{\Gamma}\approx\Gamma_{rad}\approx\SI{3.7\pm0.5}{\milli\ev}\\
+                &\Gamma_{\alpha}=\SI{8.3\pm0.1}{\ev},\ \Gamma_{rad}=\Gamma_{\gamma}+\Gamma_{pair}=\SI{3.7\pm0.5}{\milli\ev},\\
+                &J(^{12}C)=j_0(\alpha)=j_1(^8Be)=0\\
+                &\lambda_{3\alpha}=\num{8.7590e-10}\frac{(\rho X_{\alpha})^2}{T_9^3}\exp{\frac{-\num{4.4040}}{T_9}}\si{\per\second}\tag{$E'=\SI{287.6}{\kilo\ev}-\SI{-91.84}{\kilo\ev}=\SI{379.4}{\kilo\ev}$}\\
+                &\epsilon_{3\alpha}=\frac{Q_{3\alpha}}{\rho}r_{3\alpha}=\frac{\SI{7.275}{\mega\ev}}{\rho}\frac{1}{3}\num{8.7590e-10}(\rho N_A \frac{X_{\alpha}}{M_{\alpha}})\frac{(\rho X_{\alpha})}{T_9^3}\exp{-\frac{\num{4.4040}}{T_9}}\\
+                &=\num{3.1771e14}\frac{\rho^2X_{\alpha}^3}{T_9^3}\exp{-\frac{4.4040}{T_9}}\si{\mega\ev\per\gram\per\second}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            $\rho=\SIrange{e2}{e5}{\gram\per\cubic\cm}$, $T=\SIrange{0.1}{0.4}{\giga\kelvin}$
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.40\textheight]{Heburning-network}\label{fig:Heburning-network}
+\end{figure}
+    \begin{align*}
+        &\epsilon_{3\alpha}(T)=\epsilon_{3\alpha}(T_0)(\frac{T}{T_0})^{41.0}\\
+        &\frac{N(^{12}C)}{N(^{16}O)}\tag{universe}
+    \end{align*}
+    \todo{Iliadis: He burning beyonf C}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Advanced Burning Stages ($T>\SI{6e8}{\kelvin}$): C-Burning}
+    \begin{columns}[T]
+        \begin{column}{0.45\textwidth}
+            Coulomb barrier $CC$: \SI{8}{\mega\ev}
+            \begin{align*}
+                &C^{12}+C^{12}&\to Mg^{24}+\gamma\tag{$Q=\SI{13.930}{\mega\ev}$}\\
+                &&\to Na^{23}+p\tag{$Q=\SI{2.238}{\mega\ev}$}\\
+                &&\to Ne^{20}+\alpha\tag{$Q=\SI{4.616}{\mega\ev}$}\\
+                &&\to Mg^{23}+n\tag{\xaumenta{T}:shell $Q=\SI{-2.6}{\mega\ev}$}\\
+                &&\to O^{16}+2\alpha\tag{$Q=\SI{-0.11}{\mega\ev}$}\\
+                &O^{16}+O^{16}&\to S^{32}+\gamma\tag{$Q=\SI{16.539}{\mega\ev}$}\\
+                &&\to P^{31}+p\tag{$Q=\SI{7.676}{\mega\ev}$}\\
+                &&\to S^{31}+n\tag{$Q=\SI{1.459}{\mega\ev}$}\\
+                &&\to Si^{28}+\alpha\tag{$Q=\SI{9.593}{\mega\ev}$}\\
+                &&\to Mg^{24}+2\alpha\tag{$Q=\SI{-0.4}{\mega\ev}$}
+            \end{align*}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.32\textheight]{CBurning-abund}\label{fig:CBurning-abund}
+\end{figure}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            Difference mass between compound nucleus $^{12}C+^{12}C$ and $^{24}Mg$: excess energy carried away from light massive particles (Branching ratio $B_p\approx B_{\alpha}\approx \frac{1-B_n}{2}$, $B_n\approx2-10\%$ at $E_{cm}=\SIrange{3.5}{5.0}{\mega\ev}$): $^{12C(^{12}C,\alpha)}$ and $^{12}(^{12}C,p)$ rates approx equal while $^{12}C(^{12}C,n)$ is far smaller. Important electron screening correction: approx factor 3. Secondary reactions contribute sign. to nuclear energy release by primary C-burning: each $^{12}C+^{12}C$ releases $\bar{Q}_C\approx\SI{10}{\mega\ev}$
+            \begin{align*}
+                &\epsilon_C=\frac{\bar{Q}_C}{\rho}r_{^{12}C^{12}C}=\frac{\bar{Q}_C}{\rho}\frac{(N_{^{12}C})^2\exv{\sigma v}_{^{12}^{12}C}}{2}\\
+                &=\frac{N_A\bar{Q}_C}{288}X_{^{12}C}^2\rho N_A\exv{\sigma v}_{^{12}C^{12}C}=\num{2.09e22}X_{^{12}C}^2\rho N_A\exv{\sigma v}_{^{12}C^{12}C}\\
+            \end{align*}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.32\textheight]{CBurning-S}\label{fig:CBurning-S}
+\end{figure}
+        \end{column}
+    \end{columns}
+    \begin{equation*}
+    \epsilon_C=\epsilon_C(T_0)(\frac{T}{T_0})^{28} \int\epsilon_C(t)\,dt=\frac{N_A\bar{Q}_C}{2M_{^{12}C}}\Delta X_{^{12}C}=\num{2.51e23}\Delta X_{^{12}C}\si{\mega\ev\per\gram}
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{C-burning: weak interactions and neutron excess param.}
+    \begin{itemize}
+        \item  $\eta=\sum_i(N_i-Z_i)Y_i=\sum_i \frac{N_i-Z_i}{M_i}X_i$ $Y_i$ is the mole fraction, number of excess neutron per nucleon in the plasma: can change due to weak interactions.
+    \item Most important source of neutrons is $^{22}Ne(\alpha,n)^{25}Mg$ (and $^{21}Ne(\alpha,n)^{24}Mg$). Neutron induced processes on $^{12}C$, $^{20}Ne$, $^{23}Na$, $^{24}Mg$, $^{25}Mg$, neutron excess parameter increases slightly as $^{20}Ne(n,\gamma)^{21}Ne(p,\gamma)^{22}Na(n,p)^{22}Ne(\alpha,n)^{25}Mg(p,\gamma)^{26}Al(\beta^+\nu)^{26}Mg$.
+    \item As light nuclei are small number radioactive nuclei undergoes $\beta$-decay; for $T-\rho$ condition inside $25\msun{}$ photodisintegration of $^{13}N$ prevent $^{13}C$ production ($^{12}C(p,\gamma)^{13}N(\beta^+\nu)^{13}C$, $Q_{^{12}Cp}=\SI{1944}{\kilo\ev}$), equilibrium between $^{12}C$ and $^{13}N$ is quickly estab.: equil. abundance ratio and decay const. $\lambda_{^{12}C\to^{13}N\to^{13}C}$ are proportional to mass fraction of proton so flow through $^{12}C(p,\gamma)^{13}N(\beta^+\nu)^{13}C$ is neglig., for lower T typical of lower mass stare $^{13}N$ photodis. is less important and $^{12}C(p,\gamma)^{13}N(\beta^+\nu)^{13}C(\alpha,n)$ may becomes dominant neutron source and increases $\eta$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Ne-burning ($T\approx\SI{1.5}{\giga\kelvin}$, $\rho\approx\SI{5e6}{\gram\per\cubic\cm}$, $\tau_{Ne}\approx\SI{280}{\day}$)}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{align*}
+                &^{20}Ne(\gamma,\alpha)^{16}O\tag{$Q=\SI{-4.7}{\mega\ev}$}\\
+                &^{20}Ne(\alpha,\gamma)^{24}Mg(\alpha,\gamma)^{28}Si&\tag{$Q=\SI{9.3}{\mega\ev}$}\\
+                &&\tag{$Q=\SI{10}{\mega\ev}$}\\
+                &^{23}Na(\alpha,p)^{26}Mg(\alpha,n)^{29}Si&\tag{$Q=\SI{1.8}{\mega\ev}$}\\
+                &&\tag{$Q=\SI{34}{\kilo\ev}$}
+            \end{align*}
+            Most important energy generating reactions: $^{20}Ne(\gamma,\alpha)^{16}Ne$, $^{20}Ne(\alpha,\gamma)^{24}Mg$ ($^{20}Ne+^{20}Ne\to^{16}O+^{24}Mg+\SI{4.6}{\mega\ev}$), each $Ne+Ne$ liberates $\bar{Q}_{Ne}\approx\SI{6.2}{\mega\ev}$ near $T\approx\SI{1.5}{\giga\kelvin}$.
+            \begin{align*}
+                &\epsilon_{Ne}\approx\num{6.24e33}\frac{(X_{^{20}Ne})^2}{X_{^{16}O}}T_9^{\frac{3}{2}}\exp{-\frac{54.89}{T_9}}N_A\exv{\sigma v}_{^{20}Ne(\alpha,\gamma)}\si{\mega\ev\per\gram\per\second}\\
+                &\epsilon_{Ne}(T)=\epsilon_{Ne}(T_0)(\frac{T}{T_0})^{49}\tag{$T_0\approx\SI{1.5}{\giga\kelvin}$}\\
+            \end{align*}
+            Approx factor 3 less energy produced for same amount of consumed fuel comp. to C-Burning
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            At end of C-burning core is made of $^{16}O$, $^{20}Ne$, $^{23}Na$, $^{24}Mg$: p,n,$\alpha$ separation energy is \SIrange{7}{17}{\mega\ev}, while for $^{20}Ne$ is \SI{4.7}{\mega\ev} - $\lambda_{\gamma}(^{20}Ne)\approx\SI{1.5e-6}{\per\second}$: $^{20}Ne$ will photodisintegrate and liberated $\alpha$ will induce secondary reactions.
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.32\textheight]{NeBurning-RR}\label{fig:NeBurning-RR}
+\end{figure}
+        \end{column}
+    \end{columns}
+    
+            \begin{align*}
+                &\int\epsilon_{Ne}(t)\,dt=\frac{N_A\bar{Q}_{Ne}}{2M_{^{20}Ne}}\Delta X_{^{20}Ne}=\num{9.32e22}\Delta X_{^{20}Ne}\si{\mega\ev\per\gram}
+            \end{align*}
+            Approx factor 3 less energy produced for same amount of consumed fuel comp. to C-Burning
+\end{frame}
+
+\begin{frame}{Oxigen Burning ($25\msun{}$, $T\approx\SI{2.2}{\giga\kelvin}$, $\rho\approx\SI{3e6}{\gram\per\cubic\cm}$, $\tau_O\approx\SI{162}{\day}$)}
+    \begin{columns}[T]
+        \begin{column}{0.45\textwidth}
+            Neon exhausted: in stellar core we have $^{16}O$, $^{24}Mg$, $^{28}Si$ - $^{16}O+^{16}O\to ^{32}S$ has lowest coulomb barrier: the compound nucleus is highly excited with mass difference approx \SI{16.5}{\mega\ev}. Primary reactions:
+            \begin{align*}
+                &^{16}O(^{16}O,p)^{31}P\tag{$Q=\SI{7.7}{\mega\ev}$}\\
+                &^{16}O(^{16}O,2p)^{30}Si\tag{$Q=\SI{0.4}{\mega\ev}$}\\
+                &^{16}O(^{16}O,\alpha)^{28}Si\tag{$Q=\SI{9.6}{\mega\ev}$}\\
+                &^{16}O(^{16}O,2\alpha)^{24}Mg\tag{$Q=\SI{-0.4}{\mega\ev}$}\\
+                &^{16}O(^{16}O,d)^{30}P\tag{$Q=\SI{-2.4}{\mega\ev}$}\\
+                &^{16}O(^{16}O,n)^{31}S\tag{$Q=\SI{1.5}{\mega\ev}$}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.5\textwidth]{OBurning-S}\label{fig:OBurning-S}~
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.5\textwidth]{OBurning-Odepl}\label{fig:OBurning-Odepl}
+    
+\end{figure}
+        \end{column}
+    \end{columns}
+    Energy sep. for n,p, $\alpha$ are approx. \SI{9}{\mega\ev} except for $^{16}O(\gamma,\alpha)^{12}C$ which is \SI{7.2}{\mega\ev}: $^{16}O$ fusion is major O depletion agent for $T<\SI{4}{\giga\kelvin}$. Proton exit channel dominates at all T: at $T=\SI{2.2}{\giga\kelvin}$ reaction rate contrib. are for p ($62\%$), $\alpha(21\%)$, n($17\%$); secondary reactions contrib. sign. to energy release, $\bar{Q}_O\approx\SI{17.2}{\mega\ev}$ for each $^{16}O+^{16}O$. Electron screening factor $\approx1.3$.
+    \begin{align*}
+        &\epsilon_O=\frac{\bar{Q}_O}{\rho}r_{^{16}O^{16}O}=\frac{N_A\bar{Q}_O}{512}X_{^{16}O}^2\rho N_A\exv{\sigma v}_{^{16}O^{16}O}=\num{2.03e22}X^2_{^{16}O}\rho N_A\exv{\sigma v}_{^{16}O^{16}O}\si{\mega\ev\per\gram\per\second}\\
+        &\epsilon_O(T)=\epsilon_O(T_0)(\frac{T}{T_0})^{34},\ \int\epsilon_O(t)\,dt=\frac{N_A\bar{Q}_O}{2M_{^{16}O}}\Delta X_{^{16}O}=\num{3.24e23}\Delta X_{^{16}O}\si{\mega\ev\per\gram}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Nucleosynthesis during O-Burning}
+    \begin{columns}[T]
+        \begin{column}{0.35\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.95\textwidth]{OBurning-nucl}\label{fig:OBurning-nucl}
+\end{figure}
+Quasi-equilibrium clusters: several pairs at equil. between forw./reverse photodiss. rate: $A=24-46$, iron peak.
+        \end{column}
+        \begin{column}{0.65\textwidth}
+            At end of Ne burning most abb. species are $^{16}O(X_i=0.77)$, $^{24}Mg(X_i=0.11)$, $^{28}Si(X_i=0.083)$. As O-burn $^{28}Si$, $^{32}S$ increases, also $^{34}S$, $^{35}Cl$, $^{36}Ar$, $^{38}Ar$, $^{39}K$, $^{40}Ca$, $^{42}Ca$ also increase.
+            \begin{itemize}
+                \item Production of $^{28}Si$, $^{32}S$
+                    \begin{align*}
+                        &^{16}O(^{16}O,p)^{31}P(p,\gamma)^{32}S\\
+                        &^{16}O(^{16}O,p)^{31}P(p,\alpha)^{28}Si\\
+                        &^{16}O(^{16}O,\alpha)^{28}Si\\
+                        &^{16}O(^{16}O,n)^{31}S(\gamma,p)^{30}P(\gamma,p)^{29}Si(\alpha,n)^{32}S
+                    \end{align*}
+                \item $^{31}S$, $^{30}P$ have rel. low sep energy ($S_p\approx\SI{6.1}{\mega\ev},\SI{5.6}{\mega\ev}$): photodisintegration domin. over $^{31}S(\beta^+\nu)^{31}P$ still relevant.
+                \item Sulfur-32: $^{28}S(\alpha,\gamma)^{32}S$ and converted back via $^{32}S(n,\gamma)^{33}S(n,\alpha)^{30}Si(p,\gamma)^{31}P$ or converted to heavier $^{32}S(\alpha,p)^{35}Cl(p,\gamma)^{36}Ar$ and so on.
+                \item Depletion of $^{24}Mg$ via liberated $\alpha$: $^{24}Mg(\alpha,\gamma)^{28}Si$ and $^{24}Mg(\alpha,p)^{27}Al$.
+                \item Neutron excess increases by factor 5: $^{31}S(\APelectron\nu)^{31}P$, $^{30}P(\APelectron\nu)^{30}Si$, and \Pelectron-capture $^{33}S(\Pelectron,\nu)^{33}P$, $^{35}Cl(\Pelectron,\nu)^{35}S$, $^{37}Ar(\Pelectron,\nu)^{37}Cl$.
+                \item Explosive O-burning is bel. major source of $^{28}Si$, $^{32,33,34}S$, $^{35}Cl$, $^{36,38}Ar$, $^{39,41}K$, $^{40,42}Ca$
+                \item Reduced lifetime against $\beta$-decay
+                \item At end of O-burning T is suff. high to produce light particles via photodiss.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Si-Burning ($25\msun{}$, $T\approx\SI{3.6}{\giga\kelvin}$, $\rho\approx\SI{3e7}{\gram\per\cubic\cm}$, $\tau_{Si}\approx\SI{4000}{\second}$)}
+    \begin{columns}[T]
+        \begin{column}{0.35\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.95\textwidth]{SiBurning-chains}\label{fig:SiBurning-chains}
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.95\textwidth]{SiBurning-lambda}\label{fig:SiBurning-lambda}
+\end{figure}
+            
+        \end{column}
+        \begin{column}{0.65\textwidth}
+            
+        \end{column}
+    \end{columns}
+    
 \end{frame}

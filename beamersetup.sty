@@ -100,7 +100,7 @@
 }
 \makeatother
 %% Beamer margin
-\setbeamersize{text margin left=2pt, text margin right=30pt}
+\setbeamersize{text margin left=2pt, text margin right=1pt}
 %% In beamer, these changes can be made in the preamble
 \addtolength{\topmargin}{0pt}
 \addtolength{\headsep}{3pt minus 2pt}
@@ -108,7 +108,7 @@
 \addtolength{\evensidemargin}{-1pt}
 \addtolength{\marginparwidth}{0pt}
 \addtolength{\marginparsep}{-1pt}
-\addtolength{\textwidth}{24pt}
+%\addtolength{\textwidth}{24pt}
 %%\geometry{margin=1pt}
 %%\setbeamersize{text margin left = -2cm, text margin right = -2cm}
 \newcommand{\setmuskip}[2]{#1=#2\relax} %%problem usinigmu with calc (req by mathtools) loaded
@@ -335,7 +335,7 @@
     \begin{beamercolorbox}[wd=.2\paperwidth,ht=5.5ex,dp=0ex,center]{author in head/foot}%refs Part 2
         %\ifthenelse{\value{page}<\getpagerefnumber{stellarsolve}\and\value{page}>\getpagerefnumber{stellarstructure}}{ \hyperlink{stellarstructure}{\emph{SSE}}}{\hyperlink{stellarstructure}{\textbf{SSE}}}
 %%\value{page},\numexpr\getpagerefnumber{stellarstructure}\relax
-        \hyperlink{stellarstructure}{SSE}:\hyperlink{stellarstructure}{EqS}--\hyperlink{transport}{trans}(\hyperlink{trarad}{rad}-\hyperlink{kapparad}{$\kappa$}-\hyperlink{tracond}{cond}-\hyperlink{traconv}{$\alpha$}-\hyperlink{diffusion}{diff})-\hyperlink{stellarplasmamodel}{m\&M}-\hyperlink{luminositysourcessinks}{$\epsilon$}(\hyperlink{epsilong}{$\epsilon_g$}-\hyperlink{epsilonn}{$\epsilon_n$}\hyperlink{epsilonpp}{$PP$}-\hyperlink{epsiloncno}{CNO}-\hyperlink{epsilonheavy}{late}-\hyperlink{epsilonnu}{$\nu$})%
+        \hyperlink{stellarstructure}{SSE}:\hyperlink{stellarstructure}{EqS}--\hyperlink{transport}{trans}(\hyperlink{trarad}{rad}-\hyperlink{kapparad}{$\kappa$}-\hyperlink{tracond}{cond}-\hyperlink{traconv}{$\alpha$}-\hyperlink{diffusion}{diff})-\hyperlink{stellarplasmamodel}{m\&M}(\hyperlink{reactionrates}{r})-\hyperlink{luminositysourcessinks}{$\epsilon$}(\hyperlink{epsilong}{$\epsilon_g$}-\hyperlink{epsilonn}{$\epsilon_n$}\hyperlink{epsilonpp}{$PP$}-\hyperlink{epsiloncno}{CNO}-\hyperlink{epsilonheavy}{late}-\hyperlink{epsilonnu}{$\nu$})%
     \end{beamercolorbox}%Equazioni struttura stellare, input, stabilit\'a
 }%
 \hbox{%
