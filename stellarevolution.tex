@@ -1205,9 +1205,6 @@ Hot WD: faster cooling then M-law ($L_S+L_{\nu}$) -when $\log(\frac{L}{\lsun})\l
 \end{itemize}
 \end{frame}
 
-\begin{frame}{NSE and Freeze-out}
-    
-\end{frame}
 \subsection{Destino finale di stelle massicce}\linkdest{SN}
 
 \begin{frame}{Destino finale di stelle di varia massa}
@@ -1226,54 +1223,49 @@ $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milio
 	\begin{itemize}
 	\item In core of massive stars after NSE photodisintegration processes and relativistic effects decreases $\gamma<4/3$: core becomes dynamically unstable and starts to collapse - at beginnings on KH-$\tau$
 	\item collapse accelerate as: i)\xaumenta{\rho_c} neutronizzazione aumenta e vengono rimossi gli elettroni liberi che sono il contributo principale alla pressione ii) increasing efficiency of photodisintegration increases $\alpha$ - gravitational binding energy is lowered: star can't get enough energy from contraction and collapse accelerates
-	\item At density of \SI{e14}{\gram\per\cubic\cm} materials become incompressible and collapse stop in central regions
+\item After few \si{\milli\second} of collapse, at density of approx \SI{e14}{\gram\per\cubic\cm}, materials become incompressible and collapse stop in central regions: core rebound supersonic. and produce shock wave impacting contracting external layers.
 	\end{itemize}
 	\end{column}
 	\begin{column}{0.45\textwidth}
 	\begin{itemize}
 	\item Prompt explosion scenario: layers collapsing above core rebounds with enough kinetic energy to escape - impossible: i) shock wave heats up infalling layers and induce photodisintegration losing energy; ii) emission of neutrino behind shock wave cool front 
-	\item $[59]$: additional energy source is neutrino energy deposition - in the core \Pnue diffusion velocity becomes less the collapse velocity - \keyword{neutrino trapping surface} below which neutrinos deposite energy in materials
+\item $[59]$: additional energy source is neutrino energy deposition - in the core \Pnue diffusion velocity becomes less then collapse velocity - \keyword{neutrino trapping surface} below which neutrinos deposite energy in materials: this could provides outgoing shock with energy necessary to produce explosive event.
 	\item $M_*<25\msun$ produce NS, more massive produce BH
+    \item SN progenitors with $M_{He}^c>40\msun{}$ can give rise to pair-instability SN explosion: production of \Pelectron-\APelectron pairs reduce $\gamma<\frac{4}{3}$ giving rise to runaway collapse. Major component of primeval Pop III with $M>100\msun$.
 	\end{itemize}
 \end{column}\end{columns}
 \end{frame}
 
-\begin{frame}{Nuclesynthesis during SNII explosion}
+\begin{frame}{Nuclesynthesis during SNII explosion} 
 \begin{itemize}
 \item Conditions for explosive nucleosynthesis are determined by max T at shock passage and how long materials remain at - same product of O,Si,Ne,C burning but diff isotopic ratio due to diff timescale
 \item \keyword{\Pnue-trasmutation} produce $^7Li$, $^{11}B$, $^{19}F$, $^{26}Al$
-\item \keyword{r-processes}
-\item Present computation use mass-cut as free-parameter (point outside which envelope is ejected) - core-collapse SN are main contributors of $\alpha$-elements production
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Scenario for $M_*>100\msun$ (primeval POPIII stars)}
-\begin{itemize}
-\item $M_{cHe}>40\msun$: after He-burning \Pelectron-\APelectron pair production can reduce $\gamma<4/3$ - runaway collapse
-\item prompt explosion $[232]$ and BH 
+\item \keyword{r-processes}: rapin neutron captures, most massive CC-SN are possible site for production of r-elements(requiring large neutron flux).
+\item Present computation use mass-cut as free-parameter (point outside which envelope is ejected) - core-collapse SN are main contributors of $\alpha$-elements(He, O, Ne, Mg, Si, S, Ca, Ti) production (Limongi 03).
 \end{itemize}
 \end{frame}
 
 \begin{frame}{SN type-I: observations} 
 \begin{columns}[T]
-	\begin{column}{0.4\textwidth}
+	\begin{column}{0.5\textwidth}
 		\begin{itemize}
 			\item SN-spectrum: no H ( type I), Ia (presence of SiII absorption line around $\SI{6150}{\angstrom}$ and late Fe emission), Ib/Ic (absence of Si lines and presence or not of strong HeI lines around $\SI{5876}{\angstrom}$)
 			\item Most important \keyword{large-distance indicators}: good standard candles$[128]$ as max B-mag is constant - $[58]$ lightcurves are powered by decays of $^{56}Ni\to ^{56}Co$ ($t_{1/2}=\SI{6.1}{\day}$), and $^{56}Co\to^{56}Fe$ ($t_{1/2}=\SI{77}{\day}$) 
             \item SN Ia most important distance indicator at large distances.
-            \item SN Ia has fews invariants besides maximum bolometric magnitude B:
+            \item SN Ia invariants: linear correlations between abs. mag. at max. and decline rate $\Delta m _{15}$
                 \begin{align*}
                     &M_B=-21.726 +2.698\Delta m_{15}(B)\\
                     &M_V=-20.883+1.949\Delta m_{15}(B)\\
                     &M_I=-19.591+1.076\Delta m_{15}(B)
                 \end{align*}
-                decline rate $\Delta m_{15}$ between tim of maximum and 15 days later.
+                decline rate $\Delta m_{15}$ between time of maximum and \SI{15}{\day} later. Rise to max B mag. in \SI{18}{\day}, max bol mag. coincides with max brightness in near-IR. The most important param. is $L_{max}$
+            \item Light curves of SNIa powered by decay of $^{56}Ni$ and $^{56}Co$: $^{56}Ni$ is produced during explosive burning decaying via \Pelectron capture to $^{56}Co$ with $t_{1/2}\approx\SI{6.1}{\day}$, $^{56}60\to^{56}Fe$ via \Pelectron-capture/$\beta^+$-decay with $t_{1/2}\approx\SI{77}{\day}$
         \end{itemize}
 	\end{column}
 	\begin{column}{0.5\textwidth}
 		\begin{figure}[!ht]
-		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.42\textheight]{SNIa-bolo}\label{fig:SNIa-bolo}
-			\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{SNI-lightcurve}\label{fig:SNI-lightcurve}
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.45\textheight]{SNIa-bolo}\label{fig:SNIa-bolo}
+			\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.45\textheight]{SNI-lightcurve}\label{fig:SNI-lightcurve}
 		\end{figure}
 \end{column}\end{columns}
 \end{frame}
@@ -1285,35 +1277,258 @@ $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milio
 			\item Type Ia: CO-WD accreting mass (from binary companion) until nuclear runaway triggered
             \item Type Ib, Ic: Explosion of massive star that have lost H-rich envelope		
     \item Open problems: i) double/single-degenerate: coalescence of 2 WD or mass exchange between WD and MS/RGB stars? ii) $M_{ch}$/sub-$M_{ch}$ to trigger explosion iii) explosive mechanism
-			\item explosion model account for: i)energy delivered \SI{e51}{\erg}, ii)nucleosynthesis of $04-1.0\msun$ of $^{56}Ni$, iii) production of significantamount of int-mass elements moving at \SI{e4}{\kilo\meter\per\second} at max SN brightness
+            \item explosion model account for: i)energy delivered \SI{e51}{\erg}, ii)nucleosynthesis of $04-1.0\msun$ of $^{56}Ni$, iii) production of significantamount of int-mass elements moving at \SI{e4}{\kilo\meter\per\second} at max SN brightness.
+        \item Chandra WD prog. - C-burning ignited explosively in central region ($\rho\approx\SI{e9}{\gram\per\cubic\cm}$, \Pelectron-deg) produce Fe-peak elements; outward flames propagation is influenced by kinds of instabilities, behind flame front materials undergoes explosive burning of Si, O, Ne, C.
 		\end{itemize}
 	\end{column}
 	\begin{column}{0.5\textwidth}
 		\begin{figure}[!ht] 
-		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.42\textheight]{SNI-WDexplosiveaccretion}\label{fig:SNI-WDexplosiveaccretion}
 		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.42\textheight]{SNIa-bolo}\label{fig:SNIa-bolo}
 		\end{figure}
 \end{column}\end{columns}
 \end{frame}
 
 \begin{frame}{SN Ia progenitors}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+		\begin{figure}[!ht] 
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.42\textheight]{SNI-WDexplosiveaccretion}\label{fig:SNI-WDexplosiveaccretion}
+		\end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Classical/symbiontic Novae: $M<M^{up}$, Accretion of H-rich materials onto CO-WD
+                \item Double Degenerate scenario - Two int. mass stars undergoing episodes of common envelope, losing materials, and ending up as very close CO-WD, with combined $M>M_{Ch}$, and losing angular momentum via GWs they coalesces and becomes unstable. Doubts: lack of observed DD systems.
+                \item Single Degenerate scenario - Accretion of H/He-rich materials at appropriate rate onto WD reaching $M>M_{Ch}$ brings to quite/explosive burning.
+                    If $\TDy{t}{M}\leq\num{e-9}\msun{}\si{\per\year}$: strong He-pulses, great mass loss, time to achieve $M>M_{Ch}$ approach Hubble time (Low accretion rate, Low H Production, Slow He Accretion, High \Pelectron Deg.). 
+                    $M>1.1\msun{}$ implausible: progenitor would be able to ignite C-burning before CO core WD config. attained (way out: core rotation).
+                \item Sub-Chandrasekhar scenario - Thermonuclear  explosion driven by accretion of H-rich materials onto low mass CO-WD: $M\geq0.65-0.8\msun{}$, $\dot{M}\approx\num{3e-8}\msun{}\si{\per\year}$, acreted materials approx $0.15\msun{}$. He-ignition causes compression waves that ignites C-cores (Different thermal properties of He layers if it comes from H-burning of accreted materials or He-rich materials).
+                \item If any H/He is detected DD could be rouled out ($X_H\leq\num{e-4}\msun{}$).
+            \end{itemize}
+        \end{column}
+    \end{columns}
     
 \end{frame}
-\subsection{Modello Solare standar}
 
-\begin{frame}{Struttura di equilibrio: Caratteristiche e metodo di calcolo}
-    $c_b=0.221-0.225$\si{\mega\meter\per\second}, $tsun{}\approx\SI{4.5669}{\year}$, $c^2=\frac{\Gamma_1P}{\rho}$, $\Gamma_1=\TDlny{\rho}{P}$,  $R_b\approx0.710-0716\rsun{}$, $Y_{ph}\approx0.233-0.268$.
+\subsection{Sun and Helioseismology}
+
+\begin{frame}{Modello solare standard}
+		\begin{figure}[!ht] 
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.4\textheight]{SSM}\label{fig:SSM}
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.3\textwidth]{Sunobs}\label{fig:Sunobs}
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.3\textwidth]{Suncomp}\label{fig:Suncomp}
+		\end{figure}
+    Per determinare il modello solare attuale evolvo il modello del Sole in sequenza principale partendo da una composizione chimica fissata fino ad ottenere un modello con le caratteristiche del Sole attuale:
+\begin{itemize}
+\item Il valore di Y \'e determinato in maniera da riprodurre la luminosit\'a solare attuale: l'aumento del peso molecolare medio $\mu$, dovuto principalmente alle reazioni di fusione, deve essere compensato da un'aumento di temperatura con conseguente incremento dell'energia generata e della luminosit\'a.
+\item L'efficienza della convezione, che determina il gradiente della regione esterna convettiva, \'e scelta in maniera da avere la temperatura efficace attuale.
+\item L'abbondanza iniziale di elementi pi\'u pesanti di idrogeno ed elio \'e determinata in maniera da riprodurre quella attuale determinata spettroscopicamente tenendo conto della diffusione.
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Modello solare standard: eliosismologia e neutrini}
-%neutrino flux: predicted vs observed
-%correction to density/$c_s$ solar profile fro helioseismic inversion
+\begin{frame}{Diffusione (braginskii1965transport, bahcall1990element)}
+
+    Diffusione: disomogeneit\'a delle condizioni. La velocit\'a di diffusione relativa di due elementi si pu\'o scrivere:
+\begin{align*}
+&V_{12}=\frac{1}{n_1}\int\,d^3v_1f_1\vec{v}_1-\frac{1}{n_{2}}\int\,d^3v_{2}f_{2}\vec{v}_{2}=-D_{12}\left[\frac{1}{c_1c_{2}}\PDy{r}{c_1}+\frac{m_{2}-m_1}{c_1m_1+c_{2}m_{2}}\frac{1}{P}\PDy{r}{P}-\frac{m_1m_{2}(\vec{F}_1-\vec{F}_{2})}{KT(c_1m_1+c_{2}m_{2})}+\frac{K_T}{n_1n_{2}}\frac{1}{T}\PDy{r}{T}\right]
+\end{align*}
+concentrazione relativa $c_i=\frac{n_i}{n}$, coefficiente di diffusione $D_{12}=\frac{1}{3}lv_{th}$, $l\approx(n\sigma)\expy{-1}$ cammino libero medio, $\sigma$ sezione d'urto media, coefficiente di diffusione termica $K_T$.
+
+Approssimando la soluzione dell'equazione del trasporto di Boltzmann con la distribuzione di equilibrio traslata della velocit\'a di diffusione $f_i(\vec{r},\vec{v},t)$ della specie i \'e soluzione di $\TDy{t}{f_i}=\PDy{t}{f_i}+\vec{v}_i\cdot\PDy{\vec{r}}{f_i}+\vec{F}_i\cdot\PDy{\vec{v}}{f_i}=-\Div_{\vec{p}}(\vec{s})=C(f_j)$ dove$\vec{s}$ \'e il flusso nello spazio dei momenti dovuto alle collisioni. 
+
+Sezione d'urto collisionale di Rutherford $d\sigma=\frac{4\pi(Z_iZ_j)^2}{\mu^2(\vec{v}-\vec{v}')^4}\frac{d\chi}{\chi^3}$
+per piccoli angoli $\chi$ di deviazione della velocit\'a relativa nel sistema CM e $m_{ij}$ massa ridotta.
+
+Considero un parametro d'impatto massimo $\lambda=\max{(r_D,a_0)}$, distanza alla quale il potenziale coulombiano \'e schermato dalle altre cariche $\sigma_{ij}\propto \frac{e^4Z_i^2Z_j^2}{(KT)^2}\ln{\Lambda_{st}}$ con $\ln{\Lambda_{ij}}\propto\ln{[1+0.18769(\frac{4KT\lambda}{Z_iZ_je^2})]}$.
+
+Scrivo il termine collisionale $C(f)$, considerando solo il contributo degli urti con la specie j con distribuzione $f_j$ , nella forma $C(f_i,f_j)=\int\,d^3p_j\,d\sigma|\vec{v}_i-\vec{v}_j|(f_i'f_j'-f_if_j)$ dove le quantit\'a primate si riferiscono ai valori dopo l'urto. La forza netta dovuta agli urti \'e $\vec{R}_{ij}=\int m_{ij}\vec{v}_{ij}C(f_i,f_j)\,d^3v_i$
+
+Considero il problema in cui le due specie hanno velocit\'a relativa media diversa da zero ma piccola rispetto alla velocit\'a termica. Nel sistema in cui la prima specie ha velocit\'a media nulla la seconda ha velocit\'a $V_{ij}$ quindi la distribuzione di velocit\'a della prima \'e la distribuzione di equilibrio a temperatura T quella della seconda \'e  la distribuzione di equilibrio a temperatura T traslata di $V_{ij}$, velocit\'a di diffusione: $f_j=f_j^{(0)}+\frac{m_j}{KT}(\vec{V}_{ij}\cdot\vec{v}_j)f_j^{(0)}$ da cui si ottiene $\vec{R}_{ij}=n_in_j\mu_{ij}\alpha_{ij}\vec{V}_{ij}$ con $\alpha_{ij}=\frac{\mu_{ij}}{KT}\int v_r^3\sigma^Tf^{(0)}(\vec{v_r})\,d^3v_r$ con $\sigma^T=\int(1-\cos{\chi})\,d\sigma$ rispettivamente coefficiente di resistenza e sezione d'urto per trasporto di momento.
+
 \end{frame}
 
-\subsection{Stelle pulsanti}
+\begin{frame}{Diffusion: H,He plasma}
+    La forza per unit\'a di volume agente sulle particelle di specie i (trascurando il gradiente termico) \'e $\vec{F}_i=-\nabla P_i+n_i(q_i\vec{E}+m_i\vec{g})$ e in condizioni stazionarie il momento trasferito tramite urti con le altre specie \'e uguale alla forza per unit\'a di volume: $\vec{F}_i=\sum_{i\neq j}\vec{R}_{ij}$; la formula precedente determina la componente della velocit\'a di diffusione relativa H-He dovuta al gradiente di pressione.
 
-\begin{frame}{Striscia di instabilit\'a e tipi di stelle pulsanti}
-RR LyrAE: diagramma di Bailey, curve di luce; relazioni periodo-luminosit\'a, massa-temperatura effettiva.
-Parametro A come indicatore di He.
-Stelle cefeidi; dicotomia di Oosterhoff
+Considero la velocit\'a di diffusione di idrogeno ed elio. In un plasma costituito da idrogeno, elio ed elettroni per mantenere la neutralit\'a la velocit\'a di diffusione degli elettroni \'e dello stesso ordine di grandezza di quella degli ioni, quindi l'impulso trasferito \'e trascurabile, da cui:
+\begin{align*}
+&F_H\approx F_{HHe}=-\PDy{r}{P_H}+n_H(eE+m_Hg)\\
+&F_{He}\approx -F_{HHe}=-\PDy{r}{P_{He}}+n_{He}(2eE+4m_Hg)\\
+&E=-\frac{1}{en_e}\PDy{r}{P_e}
+\end{align*}
+Per le velocit\'a di diffusione si ha $v_{HHe}=-\frac{m_{He}T}{m_{HHe}Y\rho \alpha_{HHe}}[\PDy{r}{\ln{(P_eP_H)}}-m_Hg]$, $n_Hv_H=\frac{(m_{He}n_Hn_{He})}{\rho}v_{HHe}$.
+La velocit\'a di diffusione degli elementi pesanti \'e determinata prevalentemente dagli urti con H e He. Indico con $\eta(A,r)$ la forza per unit\'a di volume sull'elemento di numero atomico Z e di massa A, $\eta(A,r)=-\PDy{r}{P_A}+n_A(Z_Ae\vec{E}+Am_H\vec{g})=-n_Ak_BT(\PDy{r}{\ln{P_A}}+Z_A\PDy{r}{\ln{P_e}}+\frac{AGm_HM}{r^2k_BT})$.
+
+In condizioni stazionarie si ha $\vec{F}_A\approx\vec{R}_{A,H}+\vec{R}_{A,He}=\eta(A,r)$ e, poich\'e $\frac{\eta(A,r)}{n_Av_H(m_{A,H}n_H\alpha_{A,H})}\propto\frac{1}{XZ_A}$, posso trascurare $\eta(A,r)$ ed esplicitando i contributi $R_{A,H}$ e $R_{A,He}$ ottengo $v_A(1+2\frac{Y}{X})\approx-v_H$.
+In presenza di un gradiente termico si ha un trasferimento netto di momento negli urti in direzione del gradiente, in \eqref{eq:friction}, dovuto al maggior numero di particelle energetiche provenienti dalle regioni pi\'u calde, ci\'o \'e dovuto alla dipendenza della sezione d'urto coulombiana dalla velocit\'a relativa $\propto v\expy{-4}$ (probabilit\'a di collisione $\propto v\expy{-3}$); la diffusione termica concentra le particelle pi\'u pesanti (e pi\'u cariche) nelle zone pi\'u calde.
+
+\end{frame}
+
+
+
+\begin{frame}{Oscillazioni 5-minuti}
+In lei62velocity si osserva che la superficie solare ha scale spazio-temporali privilegiate: in particolare \'e presente un comportamento periodico nell'atmosfera a tutte le altezze rilevato tramite effetto doppler. Il periodo \'e di circa 300 secondi e la lunghezza caratteristica di qualche \si{\mega\meter}.
+
+Il modello proposto da ulrich70five e stein71five considera le propriet\'a dei modi normali non radiali di oscillazione del Sole, in particolare usando la relazione di dispersione per onde acustiche, si ha la definizione di cavit\'a risonanti all'interno del Sole: la variazione delle propriet\'a del gas delimita le regioni di propagazione a diverse profondit\'a a seconda delle caratteristiche trasversali del moto.
+\begin{minipage}[t]{0.62\paperwidth}
+\begin{figure}[!ht]
+\includegraphics[keepaspectratio,width=0.95\textwidth]{midlmodes}
+\caption{I picchi della densit\'a spettrale si dispongono su creste in cui \'e concentrata la potenza in accordo al modello. Determinata usando i primi 144 giorni di osservazione di MDI con $l\leq300$.}
+\end{figure}
+\end{minipage}~
+\begin{minipage}[t]{0.32\paperwidth}
+\begin{figure}[!ht]
+\includegraphics[keepaspectratio,width=0.95\textwidth]{nrmodesLAWE}
+\caption{Modi adiabatici calcolati sulla base di un modello solare.}
+\end{figure}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Oscillazioni lineari adiabatiche}
+    
+Equazione del moto per un elemento di fluido sottoposto a uno spostamento infinitesimo dalla posizione di equilibrio al termine lineare nelle perturbazioni nel sistema di riferimento dell'elemento.
+
+$\vec{v}=\vec{v}_0+\vec{v}'$ con $\vec{v}'$ perturbazione euleriana della velocit\'a. La variazione di una grandezza euleriana nel riferimento solidale con l'elemento di fluido si esprime tramite $\TDof{t}=\PDof{t}+(\vec{v}\cdot\nabla)$, in prima approssimazione prendo $\vec{v}_0=0$ per poi considerare come perturbazioni gli effetti dovuti a campi di velocit\'a in specie rotazione.
+
+Lo spostamento infinitesimo $\vec{\xi}$ dalla posizione di equilibrio determina perturbazioni nella densit\'a e nella pressione: indico con $P'(\vec{r},t)$ e $\delta P$ la perturbazione euleriana e lagrangiana della pressione e con $\rho'$, $\Phi'$ e $\vec{g}'$ la perturbazione euleriana della densit\'a, e le perturbazioni euleriane del potenziale gravitazionale e dell'accelerazione di gravit\'a conseguenti, con $\vec{g}'=-\nabla\Phi'$, $\nabla^2\Phi'=4\pi G\rho'$. Scrivo la pressione come somma della pressione di equilibrio e della perturbazione euleriana: $P(\vec{r},t)=P_0(\vec{r})+P'(\vec{r},t)$, quindi per la perturbazione lagrangiana risulta $\Lvar{P(\vec{r})}=P(\vec{r}+\Lvar{\vec{r}})-P_0(\vec{r})=P'(\vec{r})+\Lvar{\vec{r}}\cdot\nabla P_0$, mentre integrando l'equazione di continuit\'a rispetto al tempo ottengo la relazione $\rho'+\div{(\rho_0\Lvar{\vec{r}})}=0$
+
+Ricavo l'equazione del moto perturbato considerando solo i termini lineari nella perturbazione $\rho_0\TDof{t}\vec{v}=\rho_0\PtwoDy{t}{\Lvar{\vec{r}}}=-\nabla P'+\rho_0\vec{g}'+\rho'\vec{g}_0$ dove ho utilizzato la condizione di equilibrio idrostatico.
+
+Bilancio di calore: $\TDy{t}{T}-\frac{\Gamma_2-1}{\Gamma_2}\frac{T}{P}\TDy{t}{P}=\frac{1}{c_P}(\epsilon-\frac{1}{\rho}\scap{\nabla}{F})\approx0$. Il moto di una elemento di fluido \'e descritto dalla relazione adiabatica $\TDy{t}{P}=\frac{\Gamma_1P}{\rho}\TDy{t}{\rho}$
+
+La condizione di perturbazione adiabatica linearizzata \'e $\PDy{t}{\Lvar{P}}-\frac{\Gamma_{1,0}P_0}{\rho_0}\PDy{t}{\Lvar{\rho}}=0$ che integrata rispetto a t ed in funzione della variazione euleriana diventa $P'+\vec{\xi}\cdot\nabla P_0=\frac{\Gamma_{1,0}P_0}{\rho_0}(\rho'+\vec{\xi}\cdot\nabla\rho_0)$.
+
+
+\end{frame}
+
+\begin{frame}{Oscillazioni adiabatiche: sistema ha soluzione per $\omega_{nlm}$ discreti}
+    Cerco una soluzione della forma di un'onda stazionaria: $Y_{lm}(\theta,\phi)=(-)^mc_{lm}P_l^m(\cos{\theta})\exp{im\phi}$
+\begin{align*}
+&L^2Y_l^m=-\frac{1}{\sin{\theta}}\PDof{\theta}(\sin{\theta}\PDy{\theta}{Y_l^m})+\frac{1}{\sin^2{\theta}}\PtwoDy{\phi}{Y_l^m}=-r^2\nabla_h^2Y_l^m=l(l+1)Y_l^m
+\end{align*}
+Variazione euleriana di densit\'a, pressione e potenziale gravitazionale nella forma $(\rho',P',\Phi')=\exp{i\omega t}[\rho'(r),P'(r),\Phi'(r)]Y_l^m$: $\hat{r}\cdot(\rot{\vec{\xi}})=0\ \Rightarrow\ \PDof{\theta}(\sin{\theta}\xi_{\phi})-\PDy{\phi}{\xi_{\theta}}=0$.
+Ricavo la componente tangenziale della perturbazione da una funzione scalare $\vec{\xi}=\exp{i\omega t}(\xi_r(r),\frac{\xi_h(r)}{L}\PDof{\theta},\frac{\xi_h(r)}{L\sin{\theta}}\PDof{\phi})Y_l^m(\theta,\phi)$
+\begin{columns}[T]
+    \begin{column}{0.6\textwidth}
+\begin{subequations}
+\begin{align*}
+&\frac{1}{r^2}\TDof{r}(r^2\xi_r)-\frac{\xi_rg_0}{c_s^2}+\frac{1}{\rho_0}(\frac{1}{c_s^2}-\frac{l(l+1)}{r^2\omega^2})P'-\frac{l(l+1)}{r^2\omega^2}\Phi'=0\\
+&\frac{1}{\rho_0}(\TDof{r}+\frac{g_0}{c_s^2})P'-(\omega^2-N^2)\xi_r+\TDy{r}{\Phi'}=0\\
+&\frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\Phi'})-\frac{l(l+1)}{r^2}\Phi'-\frac{4\pi G\rho_0}{g_0}N^2\xi_r-\frac{4\pi G}{c_s^2}P'=0
+\end{align*}
+\end{subequations}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        Ricavo la componente $\xi_h(r)$ applicando la parte tangenziale della divergenza all'equazione del moto: $\xi_h(r)=\frac{L}{r\omega^2}(\frac{P'(r)}{\rho_0}+\Phi'(r))$. $L=\sqrt{l(l+1)}$
+    \end{column}
+\end{columns}
+Soluzioni per un insieme discreto di valori delle frequenze, $\omega_{nlm}$. m non compare nelle equazioni: $\omega_{nlm}$ sono $2l+1$ degeneri (rimossa nel caso si tenga conto della rotazione ($\frac{\Omega}{\omega}\approx\num{e-4}$)). Condizioni al contorno: sono necessarie 4 condizioni: 1) Due condizioni per $r=0$ selezionano le soluzioni regolari: $P'=0,\ \Phi'=0$, vicino a zero risulta un andamento asintotico $(l\neq0):\ \xi_r\propto r\expy{l-1};\ (l=0):\ \xi_r\propto r;P',\ \Phi'\propto r^l$, 2) Alla superficie continuit\'a di $\Phi$ e $\nabla\Phi'$ e che non si abbia propagazione verso l'esterno - All'esterno della stella ho $\rho'=0$ quindi scelgo la soluzione nulla a infinito dell'equazione di Poisson $\Phi'=Ar\expy{-l-1}$: $\TDy{r}{\Phi'}+\frac{l+1}{r}\Phi'=0,\ r=\rsun{}$, la non propagazione oltre la fotosfera dipende dalla descrizione dell'atmosfera solare. Nella versione pi\'u semplice impongo che la variazione di pressione sia zero alla superficie perturbata della stella $\Lvar{P}=P'+\xi_r\TDy{r}{P}=0$. Le oscillazioni sono dovute ad onde acustiche, in cui la forza di richiamo \'e prodotta dal gradiente di pressione, modi p, e onde in cui la forza di richiamo \'e la forza di gravit\'a, i modi g: i modi osservabili pi\'u facilmente hanno periodo attorno a \SI{5}{\minute}: aumento del rumore solare a basse frequenze, processi di eccitazione dei modi che trasferiscono la massima energia ai modi di tale periodo.
+\end{frame}
+
+\begin{frame}{Cowling approx}
+    I modi gravo-acustici si riducono ai modi p ed f per alte frequenze e ai modi g per basse frequenze. Approssimando il comportamento della perturbazione localmente con un'onda piana e trascurando la perturbazione al potenziale gravitazionale $\Phi'$ si ottendono soluzioni asintotiche per i modi normali e relazioni di dispersione approssimate. L'approssimazione di Cowling: trascuro la perturbazione al potenziale gravitazionale $\Phi'(r)=-\frac{4\pi G}{2l+1}\left[\frac{1}{r^{l+1}}\int_0^r\rho'(r)r'^{l+2}\,dr'+r^l\int_r^R\frac{\rho'(r')}{r'^{l-1}}\,dr'\right]$: $|\Phi'|$ \'e trascurabile rispetto a $\rho'$:
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+\begin{align*}
+&\frac{1}{r^2}\TDof{r}(r^2\xi_r)-\frac{\xi_rg_0}{c_s^2}+\frac{1}{\rho_0}(\frac{1}{c_s^2}-\frac{l(l+1)}{r^2\omega^2})P'=0\\
+&\frac{1}{\rho_0}(\TDof{r}+\frac{g_0}{c_s^2})P'-(\omega^2-N^2)\xi_r=0
+\end{align*}
+I modi f separano i modi g e p: non hanno nodi in direzione radiale.
+    \end{column}
+    \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item $\omega\to\infty$: spettro \'e discreto, onde acustiche in cui la forza dominante \'e fornita dalla pressione, modi p, ordinati in base al numero di zeri di $\xi_r$ fra il centro e la superficie.
+\item $\omega\to0$, spettro \'e discreto, forza di richiamo \'e la gravit\'a: modi g.
+\end{itemize}
+    \end{column}
+\end{columns}
+
+Approx. onda piana: $\vec{\xi}\propto\exp{i\scap{k}{x}}$ con $\vec{k}=k_r\hat{r}+\vec{k}_h$. e per grandi n, trascuro la variabile perturbata rispetto alla sua derivata radiale: $\TtwoDy{r}{\xi_r}=\frac{\omega^2}{c_s^2}(1-\frac{N^2}{\omega^2})(\frac{S_l^2}{\omega^2}-1)\xi_r=-K(r)\xi_r$ per $K(r)>0$ quest'equazione descrive un comportamento oscillante; Relazione di dispersione: $k_r^2=\frac{\omega^2}{c_s^2}(1-\frac{N^2}{\omega^2})(1-\frac{S_l^2}{\omega^2})$. Le approssimazioni fatte non sono pi\'u valide vicino alla superficie dove il termine in $\invers{H_P}$ non \'e trascurabile per $H_P$ piccolo e vicino al centro solare dove il termine in $\frac{2}{r}$ non \'e trascurabile. Per lunghezza d'onda delle perturbazioni molto minore della scala caratteristica di variazione di $N, c_s$: $\omega_c=\frac{c_s}{2\densityscale{}}\sqrt{1-2\TDy{r}{\densityscale{}}}\propto T\expy{-\frac{1}{2}}$, freq. acustica critica, e per frequenze acustiche si ha punto di inversione per $\omega=\omega_c$: $k_r^2=\frac{\omega^2-\omega_c^2}{c^2}+S_l\frac{N^2-\omega^2}{c^2\omega^2}=\frac{\omega^2}{c^2}(1-\frac{\omega_{l,+}^2}{\omega^2})(1-\frac{\omega_{l,-}^2}{\omega^2})$ dove ho definito le frequenze critiche per i modi gravo-acustici $\omega_{\pm}=\frac{1}{2}(S_l^2+\omega_c^2)\pm\sqrt{\frac{1}{2}(S_l^2+\omega_c^2)^2-N^2S_l^2}$. Nell'interno solare, soprattutto per grandi l, vale $\omega_{l,+}\approx S_l\ \omega_{l,-}\approx N$, e vicino alla superficie $\omega_{l,+}\approx \omega_c\ \omega_{l,-}\approx 0$.
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Approx Cowling: cavit\'a risonanti}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+I modi p e g sono confinati in regioni dell'interno solare determinate dalla variazione delle caratteristiche del plasma solare. Le onde acustiche sono confinate in una regione che \'e limitata superiormente dall'aumento della frequenza critica acustica $\omega_c=\frac{c_s}{2\densityscale{}}\sqrt{1-2\TDy{r}{\densityscale{}}}\propto T\expy{-\frac{1}{2}}$, causato dalla diminuzione della temperatura che provoca la riflessione delle onde con periodo attorno ai 5-min, mentre l'aumento della velocit\'a del suono con la profondit\'a e la conseguente rifrazione dell'onda porta a propagazione del moto puramente tangenziale $k_r=0$ nel guscio sferico per cui $c_s=\frac{\omega}{k_h}\approx\omega \frac{r}{L}$ ovvero per $\omega=S_l$ frequenza di Lamb definita da $S_l^2=\frac{l(l+1)c_s^2}{r^2}$, definisco il raggio di inversione del moto tramite $\frac{c(r_t)}{r_t}=\frac{\omega}{L}$. Le regione di propagazione dei modi g sono definite da $\omega<N$: i modi g sono confinati nelle regioni pi\'u interne del Sole. Le onde di gravit\'a sono presenti nelle regioni in cui il gas \'e neutro o completamente ionizzato ($N^2$ grande) mentre sono riflesse dalle regioni dove $N$ \'e piccolo o immaginario: ionizzazione parziale, instabilit\'a convettiva, centro del Sole; i modi g sono confinati tra la la parte centrale dove $g\to0$ e il fondo della zona convettiva dove $N^2<0$.
+        \end{column}
+        \begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+\includegraphics[keepaspectratio,width=0.90\textwidth]{freqchar}
+\includegraphics[keepaspectratio,angle=0,width=0.75\textwidth]{plowertp}
+\includegraphics[keepaspectratio,width=0.90\textwidth]{raypath-gp}
+\caption{(a): Percorso di due onda acustiche $p_8(l=2), p_8(l=100)$; (b): Percorso di un'onda di gravit\'a: $g_{10}(l=5)$.}
+\end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Cowling Approx: radial resonance}
+    
+Le frequenze dei modi sono determinate dalla condizione, per l fissato, che l'onda interferisca costruttivamente con se stessa: onda stazionaria in direzione radiale implica che l'integrale di $k_r$ nella regione di propagazione fra due zeri consecutivi sia un intero multiplo di $\pi$: $\omega\int_{r_1}^{r_2}\sqrt{1-\frac{\omega_c^2}{\omega^2}-\frac{S_l^2}{\omega^2}(1-\frac{N^2}{\omega^2})}\,\frac{dr}{c}\approx\pi(n-\frac{1}{2})$, tiene conto del numero dei nodi radiali e dello sfasamento $\alpha$ prodotto nelle regioni di riflessione.
+
+\begin{columns}[T]
+    \begin{column}{0.25\textwidth}
+        
+\begin{figure}[!ht]
+\centering
+\includegraphics[keepaspectratio,width=0.99\textwidth]{dispersionDuvall}
+\caption{I modi p sono allineati su un'unica curva, dove n \'e l'ordine radiale e $\alpha$ una fase dovuta alla riflessione.}
+\end{figure}
+    \end{column}
+    \begin{column}{0.75\textwidth}
+        Un grafico di $\frac{\pi(n+\alpha(\omega))}{\omega}$ rispetto a $\frac{\omega}{k_h}$ rappresenta i modi p con un'unica curva, per $\alpha$ opportuno con: $(n+\alpha(\omega))\frac{\pi}{\omega}=F(\frac{\omega}{k_h})=F(\frac{\omega}{L})$, usando la relazione di dispersione per onde acustiche, $k_r^2=\frac{\omega^2}{c_s^2}(\frac{S_l^2}{\omega^2}-1)$:
+\begin{align*}
+&F(w)=\int_{r_t}^R\sqrt{1-\frac{c_s^2}{r^2w^2}}\,\frac{dr}{c_s},\ (n+\alpha)\pi\approx\int_{r_t}^Rk_r\,dr\approx\int_{r_t}^R\frac{\omega}{c_s}\sqrt{1-\frac{S_l^2}{\omega^2}}\,dr
+\end{align*}    
+    Limite per basse frequenze per i modi g trovo la relazione di dispersione approssimata per $l\neq0$: $k_r^2=\frac{S_l^2}{c^2}(\frac{N^2}{\omega^2}-1)$, ottengo espressione per i modi g: $\frac{(n+\alpha_g)\pi}{L}\approx\int_{r_1}^{r_2}(\frac{N^2}{\omega^2}-1)\expy{\frac{1}{2}}\,d\ln{r}$, con $r_2\approx R_{cz}$, $\alpha_g$ fase dovuta alla riflessione (dipende dall'andamento di $N^2$ nella regione di inversione del moto, alla base della zona convettiva). Per modi di alto grado angolare, confinati nella regione convettiva, con $\Gamma_1$ e $g$ lentamenta variabili e una stratificazione adiabatica, ottengo l'espressione delle frequenze dei modi approssimata: $\omega^2=\frac{2}{\mu_p}\frac{g}{\rsun{}}(n+\alpha)L$
+\end{column}
+\end{columns}
+dove $\mu_p=\frac{1}{\Gamma_1-1}$ \'e l'inidce politropico efficace della regione considerate. Per basso l, $r_t\approx0$, e, espandendo Duvall al primo'ordine in $\invers{w}$: $F(w)\approx\int_0^R\frac{dr}{c}-w\expy{-1}\frac{\pi}{2}$ e $\int_0^R\frac{dr}{c}-\frac{L}{\omega}\frac{\pi}{2}=\frac{(n+\alpha)\pi}{\omega}$ quindi frequenze equispaziate in n e $\nu_{nl}\approx\nu_{n-1,l+2}$: $\nu_{nl}=\frac{\omega_{nl}}{2\pi}\approx(n+\frac{l}{2}+\frac{1}{4}+\alpha)\Delta\nu$ con $\Delta\nu=[2\int_0^R\frac{dr}{c}]\expy{-1}\approx\SI{136}{\micro\hertz}$; osservato da Claviere79 per misure su intero disco. Per modi g di alto n e basso l: $\omega=\frac{L\int_{r_1}^{r_2}N\frac{dr}{r}}{\pi(n+\frac{l}{2}+\alpha_g)}$, $\lim_{n\to\infty}{\alpha_g}\approx-\midfrac{1}{6}$.
+\end{frame}
+
+\begin{frame}{Risultati Inversione}
+    \begin{figure}[!ht]%{r}{0.5\textwidth}
+        \includegraphics[width=0.4\textwidth,keepaspectratio]{deltacwu}
+        \caption{Differenza relativa nel profilo di $c_s$ risultanei dall'inversione delle differenze in frequenza tra Sole e modello: la linea chiara si riferisce alle frequenze di un modello con composzione GS98, la linea scura a composizione AGSS09. La banda chiara mostra l'errore inerente l'inversione eliosismologica, la banda scura l'incertezza a $1\sigma$ sul profilo di $c_s$ predetto dal modello.}
+\end{figure}
+
+\begin{table}[!ht]%{r}{0.7\textwidth}
+
+\pgfplotstabletypeset[
+math/.style={%
+        preproc cell content/.append style={/pgfplots/table/@cell content/.add={$}{$}},
+    },
+every head row/.style={
+ before row={\toprule
+ %&\multicolumn{4}{c|}{Primordiale}
+ },
+ every last row/.style={after row=\bottomrule},
+ after row={\midrule}
+},
+every last row/.style={after row=\bottomrule},
+every first column/.style={column type/.add={|}{}},
+every last column/.style={column type/.add={}{|}},
+%columns/0/.style = {column type/.add={|}{}},
+display columns/0/.style={column name={}},
+display columns/1/.style={column name={$Z/X$}},
+display columns/2/.style={column name={$R_{CZ}$}},
+display columns/3/.style={column name={$Y_{CZ}$}},
+display columns/4/.style={column name={$Y_0$}},
+create on use/comp/.style={create col/set list={
+inversione,GS98,AGS05,AGSS09,C+11}},
+columns/comp/.style = {column type/.add={|}{}},
+columns/comp/.style={string type},
+columns/ZX/.style={string type},
+columns/ZX/.append style={math},
+columns/RCZ/.style={string type},
+columns/RCZ/.append style={math},
+columns/YCZ/.style={string type},
+columns/YCZ/.append style={math},
+columns/Y0/.style={string type},
+columns/Y0/.append style={math},
+columns={comp,ZX,RCZ,YCZ,Y0},
+%/pgf/number format/precision=4
+     ]{CZvsZ.txt} %%%
+\end{table}
+
 \end{frame}

@@ -855,7 +855,54 @@ Quasi-equilibrium clusters: several pairs at equil. between forw./reverse photod
             
         \end{column}
         \begin{column}{0.65\textwidth}
+            Photodis. rearrangement similar to Ne-burning but on larger scale: $^{28}Si+^{28}Si$ and $^{28}Si+^{32}S$ have high Coulomb barrier, so reactions go via photodis. of less bound nuclei and captures of light part.
+            \begin{align*}
+                &S_p(^{32}S)\approx\SI{8.9}{\mega\ev}, S_n(^{32}S)\approx\SI{15}{\mega\ev}, S_{\alpha}(^{32}S)\approx\SI{10}{\mega\ev}\\
+                &S_p(^{28}Si)\approx\SI{11.6}{\mega\ev}, S_n(^{28}Si)\approx\SI{17.2}{\mega\ev}, S_{\alpha}(^{28}Si)\approx\SI{10}{\mega\ev}
+            \end{align*}
+            Above $T=\SI{2}{\giga\kelvin}$ $^{32}S$ will be consumed via: $^{32}S(\gamma,\alpha)^{28}P$, $^{32}S(\gamma,p)^{31}P(\gamma,p)^{30}Si(\gamma,n)^{29}Si(\gamma,n)^{28}Si$; T increases further to becomes disintegration of $^{28}Si$ ($^{28}Si(\gamma,p)^{27}Al$, $^{28}Si(\gamma,\alpha)^{24}Mg$: energy sep. for latter is much smaller, Coulomb barrier for ejected particles, reduced particle width of res).
+            \begin{align*}
+                &\epsilon_{Si}=\frac{Q_{2^{28}Si\to^{56}Ni}}{\rho}r_{2^{28}Si\to^{56}Ni}\approx \frac{Q_{2^{28}Si\to^{56}Ni}}{\rho}r_{^{24}Mg(\gamma,\alpha)^{20}Ne}\\
+                &=\frac{Q_{2^{28}\to^{56}Ni}}{\rho}N_{^{24}Mg}\lambda_{\gamma\alpha}(^{24}Mg)\\
+                &\epsilon_{Si}\approx\num{1.2985e34}X_{^{28}Si}(\frac{2X_{^{28}Si}}{1-X_{^{28}Si}})^{\frac{1}{7}}\exp{-\frac{142.12}{T_9}}T_9^{\frac{3}{2}}N_A\exv{\sigma v}_{^{20}Ne}\si{\mega\ev\per\gram\per\second}\\
+                &\epsilon_{Si}(T)=\epsilon_{Si}(T_0)(\frac{T}{T_0})^{47}\tag{$T_0=\SI{3.6}{\giga\ev}$}\\
+                &\bar{Q}_{Si}\approx Q_{2^{28}Si\to ^{56}Fe}=\SI{17.62}{\mega\ev}\\
+                &\int\epsilon_{Si}(t)\,dt=\frac{N_A\bar{Q}_{Si}}{2M{^{28}Si}}\Delta X_{^{28}}=\num{1.9e23}\Delta X_{^{28}Si}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Si-Burning: Abundance flows}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.95\textwidth]{SiBurning-abbflows }\label{fig:SiBurning-abbflows }
+\end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Thermally excited levels have big effect on decay const. for weak interactions and rates of many for./rever. reactions.
+                \item Quasiequilibrium clusters: $A=25-40$, $A=46-64$
+                \item At end of Si-burning stellar matter is $^{56}Fe$ ($X_f=0.56$), $^{52}Cr(X_f=0.19)$, $^{54}Fe(X_f=0.11)$, $^{55}Fe(X_f=0.05)$, $^{53}Mn(X_f=0.034)$
+                \item Neutron excess remains almost constant until iron peak is reached then increases sign.: $^{53}Mn(\Pelectron,\nu)^{53}Cr$, $^{54}Fe(\Pelectron,\nu)^{54}Mn$, $^{55}Fe(\Pelectron,\nu)^{55}Mn$, $^{55}Co(\Pelectron,\nu)^{55}Fe$. At end $\eta_f\approx0.067$<++>
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Nuclear Statistical equilibrium and $\alpha$ freeze-out}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
             
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Every nuclide in the network is in equilibrium: NSE.
+                \item While shock wave after massive stars explode move outward stellar matter in NSE cools and expands: denote $T_{\alpha}$ temperature at which $\alpha$ particles are not at equilibrium.
+                \item If $T_{\alpha}$ high such that few $\alpha$ presents:  When T falls below $T_{\alpha}$ photodisintegration fails to produce enough $\alpha$ particles. Particles-poor freeze-out.
+                \item If $T_{\alpha}$ low such that abb. of $\alpha$ is large: as T falls toward $T_{\alpha}$ free $\alpha$ tends to merge into iron peak $3\alpha\to^{12}C(\alpha,\gamma)^{16}O\ldots^{52}Fe(\alpha,\gamma)^{56}Ni$; when $T<T_{\alpha}$ suff. rapidly $\alpha$ can't be converted rapidly enough: excess of $\alpha$ particles. $\alpha$-rich freeze-out.
+            \end{itemize}
         \end{column}
     \end{columns}
     
