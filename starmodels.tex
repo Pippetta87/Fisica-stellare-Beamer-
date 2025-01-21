@@ -418,6 +418,9 @@ Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione
 \begin{frame}{Andamento opacit\'a: electron scattering e Kramer's opacity (FF)}
 \begin{itemize}
 \item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2=0.2(1+X)\si{\square\cm\per\gram}$ - $\sigma_T=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source - Compton scattering $h\nu|_M\gtrsim0.1 m_ec^2$, $h\nu|_M\approx4.96kT$: Compton scattering reduces opacity about $20\%$ for $T>\SI{e8}{\kelvin}$
+    \begin{align*}
+        &\sigma_T=\frac{8\pi}{3}r_e^2\approx\SI{6.7e-25}{\square\cm},\ \kappa_{\nu}=\sigma_T \frac{n_e}{\rho},\ \mu_e=\frac{2}{1+X},\ \mu_em_u=\frac{\rho}{n_e}:\ \kappa_{\nu}=\frac{\sigma_T}{\mu_em_u}
+    \end{align*}
 \item Kramers opacity: $T<\SI{e7}{\kelvin}$ -when FF, BF dominates: $\kappa_R\propto\rho T\expy{-7/2}$
 \end{itemize}
 \begin{block}{Free-free: radiation boost free-\Pelectron from lower to higher state}
@@ -624,7 +627,7 @@ cubic equation for $(\nabla-\nabla_e)$
 
 \subsection{Fusione nucleare}\linkdest{epsilonn}
 
-\begin{frame}{Sezione d'urto fusion nucleare}
+\begin{frame}{Sezione d'urto fusione nucleare}
 $E$ l'energia cinetica nel centro di massa dei nuclei: $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$
 prodotto della sezione d'urto geometrica (nel riferimento del CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$
 per energie tipiche degli interni stellari approx onda S), della probabilit\'a di attraversamento della barriera coulombiana e del fattore astrofisico. La lunghezza d'onda di de Broglie relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$.
@@ -845,13 +848,25 @@ dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $
 \end{frame}
 
 
-\section{Ordini di grandezza}
+\section{Ordini di grandezza e comportamento qualitativo}
 
-\begin{frame}{Energia interna}
-\begin{equation*}
-E_i=\int_0^Mu\,dm=\frac{3}{2}\int_M\frac{P}{\rho}\,dm\label{eq:traslintenergy}
-\end{equation*}
+\begin{frame}{Core Contraction - Envelope Expansion}
+    During evolution in HRD a star goes through different phases some of which involves core contraction-envelope expansion: since that happens in a variety of situation we need genaral principles:
+    \begin{align*}
+        &E=\exv{\Omega}+\exv{U}-\int_0^tL\,dt+\int_0^t\epsilon\,dt\tag{Tot. Energy, Av. over $t_{dyn}$}\\
+        &\approx\exv{\Omega}+\exv{U}\approx\const{}\tag{$t<\tkh{}$}\\
+        &\exv{\Omega}*2\exv{U}=0\tag{Virial}\\
+        &\Rightarrow\Omega_c+\Omega_e\approx\const{}\\
+        &\Omega\approx \frac{GM_c^2}{R_c}+\frac{GM_cM_e}{R_*}\tag{$M_e\ll M_c$ for UMS}\\
+        &\Rightarrow \frac{R_*}{R_c}\approx-\frac{M_c}{M_e}(\frac{R_*}{R_c})^2\ll-1\tag{Assumption: $M_c\approx\const{},\ M_e\approx\const{}$}
+        &\Rightarrow \frac{R_*}{R_c}\approx-\frac{M_c}{M_e}(\frac{R_*}{R_c})^2\approx-1\tag{LMS: $M_e>M_c$}
+    \end{align*}
 \end{frame}
+
+\section{Politropic Models}
+
+\section{Stellar Atmosphere}
+
 
 \section{Metodi per integrazione equazioni di struttura e raccordo con modelli dell'atmosfera stellare}\linkdest{stellarsolve}
 
