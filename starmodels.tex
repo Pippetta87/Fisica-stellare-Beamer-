@@ -147,6 +147,12 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 &\TDy{r}{L}=4\pi r^2[\rho(\epsilon-\epsilon_{\nu})-\rho\TDof{t}u+\frac{P}{\rho}\TDy{t}{\rho}]\\
 &
 \end{align*}
+\begin{figure}[!ht]
+            \centering
+            \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.9\textwidth]{nucreation}
+            %\caption{}
+            \label{fig:nucreation}
+        \end{figure}
 \end{column}
 \end{columns}
 \end{frame}
@@ -228,7 +234,7 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 		\begin{align*}
 &\Omega=-\int_0^M\frac{Gm(r)}{r}\,dm\\
 &\frac{1}{2}\TtwoDy{t}{I}=2E_i+\Omega\tag{T. viriale}\\
-&0=\int_M\frac{3P}{\rho}\,dm(r)+\Omega\tag{stationary}\\
+&0=2\int_M\frac{3}{2}\frac{P}{\rho}\,dm(r)+\Omega\tag{stationary}\\
 &E_i=\frac{1}{\gamma-1}\frac{P}{\rho}
 		\end{align*}
 	\end{column}\begin{column}{0.55\textwidth}
@@ -236,6 +242,7 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 &W=E_i+\Omega \tag{total E}\\
 &\TDy{t}{W}+L=0\tag{E conservation}\\
 &L=-\frac{1}{2}\dot{\Omega}=\dot{E}_i\\
+&\frac{1}{2}\TtwoDy{t}{I}=3(\gamma-1)W-(3\gamma-4)\Omega\\
 &E_T=E_i+\Omega=\frac{3\gamma-4}{3(\gamma-1)}\Omega\\
 &\gamma>4/3\tag{stability}
 		\end{align*}
@@ -244,12 +251,15 @@ Red giant: $\tau_H\approx\SI{5}{\day}$ (time for the shock to cross a supergiant
 Nel caso in cui la contrazione gravitazionale sia l'unica fonte di energia per una massa gassosa in equilibrio idrostatico, il suo tempo di evoluzione caratteristico \'e il tempo di \kh{} $\tkh{}=\frac{\Omega}{L}\approx\frac{GM^2}{2RL}$
 \end{frame}
 
+\begin{frame}{Core contraction-shell expansion (astrocollins)}
+
+\end{frame}
+
 \frameinlbftrue
-\begin{frame}{Stability}
+\begin{frame}{Stability: What happens for $\gamma<\frac{4}{3}$}
 
 	\begin{itemize}
-		\item 
-			Dynamical stability: $P=\int_m^M\frac{mG}{4\pi r^4}\,dm$ - assuming homologous adiabatic compression we have from HE $\frac{P'}{P}=(\frac{R'}{R})^{-4}$ and $\frac{P'}{P}=(\frac{\rho'}{\rho})^{\gamma_{ad}}=(\frac{R'}{R})^{-3\gamma_{ad}}$ - so for $\gamma_{ad}>\frac{4}{3}$: pressure increases more than weight, for $\gamma_{ad}<\frac{4}{3}$ star would collapse
+		\item Dynamical stability: $P=\int_m^M\frac{mG}{4\pi r^4}\,dm$ - assuming homologous adiabatic compression we have from HE $\frac{P'}{P}=(\frac{R'}{R})^{-4}$ and $\frac{P'}{P}=(\frac{\rho'}{\rho})^{\gamma_{ad}}=(\frac{R'}{R})^{-3\gamma_{ad}}$ - so for $\gamma_{ad}>\frac{4}{3}$: pressure increases more than weight, for $\gamma_{ad}<\frac{4}{3}$ star would collapse
 		\end{itemize}
 	
 \end{frame}
