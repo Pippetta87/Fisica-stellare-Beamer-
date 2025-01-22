@@ -45,6 +45,30 @@ Since $\nrad\propto\frac{\kappa l P}{T^4m}\propto\frac{L}{M}C^{1+a}T^{b-4+2.5(1+
 	\end{columns}
 \end{frame}
 
+\begin{frame}{Burning of light elements in pre-MS (Hartmann97, Tognelli 2017)}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+    Contrazione su $\tau\approx\tkh{}$ fino a innesco reazioni nucleari, in cui $L\propto t^{-\frac{2}{3}}$; nel caso si raggiungano le temperature di soglia per elementi leggeri si arresta contrazione ($\tau\approx\tau_n$).
+            \begin{align*}
+                &p(^2H,\APelectron\nu)^3He\tag{$T\approx\SI{e6}{\kelvin}$}\\
+                &p(^6Li,^3He)^4He\tag{$T\approx\SI{2e6}{\kelvin}$}\\
+                &p(^7Li,^4He)^4He\tag{$T\approx\SI{2.5e6}{\kelvin}$}\\
+                &p(^9Be,^4He)^6Li\tag{$T\approx\SI{3.5e6}{\kelvin}$}\\
+                &p(^{10}B,^4He)^7Be\tag{$T\approx\SI{4.5e6}{\kelvin}$}\\
+                &p(^{11}B,2 ^4He)^4He\tag{$T\approx\SI{5e6}{\kelvin}$}
+            \end{align*}
+            $T_{Th}(X_i)>T_{bcz}$: Elemento $X_i$ non viene bruciato.
+        \end{column}
+        \begin{column}{0.4\textwidth}
+			\begin{figure}[!ht]
+                \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.90\textwidth]{preMS-Tbcz}\label{fig:preMS-Tbcz}
+                \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.90\textwidth]{preMS-L}\label{fig:preMS-L}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
 \subsection{Evoluzione di sequenza principale}\linkdest{MS}
 
 \begin{frame}{Approccio alla ZAMS per stelle di sequenza superiori/inferiori}
@@ -121,7 +145,7 @@ Ciclo CN-NO
 &\epsilon_{CN}(T_6)=\epsilon_{CN}(25)(\frac{T_6}{25})^{16.7}\\
 &\epsilon_{CNO}\propto XX_{14}\rho T^{18}
 \end{align*}
-Matter processed by CN: \xdiminuisce{C}, \xaumenta{N}; by CNO: \diminuisce{C}, \xaumenta{N}, \ximinuisce{O}.
+Matter processed by CN: \xdiminuisce{C}, \xaumenta{N}; by CNO: \xdiminuisce{C}, \xaumenta{N}, \xdiminuisce{O}.
 \end{column}\end{columns}
 \end{frame} 
 
@@ -172,6 +196,22 @@ Higher T: CNO dominant: $\epsilon_{CNO}$ steeper:convective core: \xaumenta{M^*}
     Convective core retracts as X is strongly decreased leaving He gradient decreasing moving outwards.
 \end{block}
 \end{column}\end{columns}
+\end{frame}
+
+\begin{frame}{Details of $5\msun{}$}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.8\textheight,origin=c,angle=-90]{5msun_detail}\label{fig:5msun_detail}
+\end{figure}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.95\textwidth,origin=c,angle=0]{5msun_tab}\label{fig:5msun_tab}
+\end{figure}
+        \end{column}
+    \end{columns}
+    
 \end{frame}
 
 \subsection{Deps of MS on Physical input}\linkdest{MSdeps}
@@ -297,7 +337,7 @@ M\expy{2.6},\ \numrange{0.2}{0.5}\msun{}\\
 \begin{frame}{Int-massive stars}
     \begin{itemize}
         \item $M_{He,core}$ maggiore del limite SC
-        \item SGB: Structure move from blue to red side at almost constant surface L. $\tkh{}\approx\SI{12}{\mega\yr}$ for $3\msun{}$, $\tkh{}\approx\SI{1}{\mega\yr}$ for $6\msun{}$.
+        \item SGB: Structure move from blue to red side at almost constant surface L. $\tkh{}\approx\SI{12}{\mega\year}$ for $3\msun{}$, $\tkh{}\approx\SI{1}{\mega\year}$ for $6\msun{}$.
         \item RGB: Point D - constant effective T while L increases; point E where He burning is efficient marks the end of RG phase.
     \end{itemize}
 \end{frame}
@@ -350,7 +390,7 @@ M\expy{2.6},\ \numrange{0.2}{0.5}\msun{}\\
     \begin{itemize}
         \item Electron degeneracy: $3(\gamma-1)$ is 2 (NR) or 1 (R) for degenerate \Pelectron; for mixture \Pelectron-ions $\gamma>\frac{4}{3}$. Case NR \Pelectron deg. $3(\gamma-1)=2$  (NR: $\gamma=\frac{5}{3}$): $\Omega=-2E=2E_{Tot}$, if $L=-\frac{1}{2}\TDy{t}{\Omega}$, $\Omega\propto \frac{1}{R}\propto\rho^{\frac{1}{3}}$ implica $\frac{1}{\Omega}\TDy{t}{\Omega}=\frac{1}{3}\frac{1}{\rho}\TDy{t}{\rho}$     
             \begin{align*}
-                &n_e=\frac{\rho}{\mu_em_H}=\frac{8\pi p_F^3}{3h^3}\Rightarrow\rho\proptoE_F^{\frac{3}{2}}\\
+                &n_e=\frac{\rho}{\mu_em_H}=\frac{8\pi p_F^3}{3h^3}\Rightarrow\rho\propto E_F^{\frac{3}{2}}\\
                 &E=\frac{1}{\rho}\int_0^{E_F}\frac{8\sqrt{2}\pi m_e^{\frac{3}{2}}}{h^3}E_{kin}^{\frac{3}{2}}\,dE_{kin}\propto \frac{1}{\rho}E_F^{\frac{5}{2}}\propto \frac{\rho^{\frac{5}{3}}}{\rho}\propto\rho^{\frac{2}{3}}\\
                 &\Rightarrow \frac{1}{E_e}\TDy{t}{E_e}=\frac{2}{3}\frac{1}{\rho}\TDy{t}{\rho}\Rightarrow\TDy{t}{E_e}\approx2 \frac{E_e}{\Omega}\TDy{t}{\Omega}
         &\Omega=-2E, E=E_I+E_E\Rightarrow \Omega\approx-2E_e\tag{High degeneracy}\\
@@ -508,6 +548,21 @@ As convection zone goes deeper the H-burning shell takes less time to cross chem
 combustion di He per stelle medio-grandi; clump He; loop He; Esaurimento He centrale: , semiconvezione e pulsi convettivi
 \end{frame}
 
+\begin{frame}{Low Mass star HB: Flash-pulses to ZAHB and evolution from ZAHB}
+    \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.75\textwidth]{evolfromZAHB}\label{fig:evolfromZAHB}
+\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.75\textheight,origin=c,angle=-90]{Heflash2ZAHB}\label{fig:Heflash2ZAHB}
+\end{figure}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
 \begin{frame}{He-burning reactions}
 \begin{columns}[T]\begin{column}{0.45\textwidth}
 	\begin{align*}
@@ -581,6 +636,7 @@ $\epsilon_{\alpha C}\propto YX_{12}\rho T^{20}$
 \end{frame}
 
 \subsection{Core He-burning in low-mass stars}\linkdest{HBlowM}
+
 
 %\TDy{}{}=\alpha\frac{dP}{P}-\delta\frac{dT}{T}+\phi\frac{d\mu}{\mu}
 %dq=c_PdT-\frac{\delta}{\rho}\,dP
@@ -1310,7 +1366,7 @@ $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milio
     
 \end{frame}
 
-\subsection{Sun and Helioseismology}
+\subsection{Sun and Helioseismology}\linkdest{sun}
 
 \begin{frame}{Modello solare standard}
 		\begin{figure}[!ht] 
@@ -1327,24 +1383,17 @@ $Fe60$ come indicatore esplosioni nelle vicinanze della terra negli ultimi milio
 \end{frame}
 
 \begin{frame}{Diffusione (braginskii1965transport, bahcall1990element)}
-
-    Diffusione: disomogeneit\'a delle condizioni. La velocit\'a di diffusione relativa di due elementi si pu\'o scrivere:
+Diffusione: disomogeneit\'a delle condizioni. La velocit\'a di diffusione relativa di due elementi si pu\'o scrivere:
 \begin{align*}
 &V_{12}=\frac{1}{n_1}\int\,d^3v_1f_1\vec{v}_1-\frac{1}{n_{2}}\int\,d^3v_{2}f_{2}\vec{v}_{2}=-D_{12}\left[\frac{1}{c_1c_{2}}\PDy{r}{c_1}+\frac{m_{2}-m_1}{c_1m_1+c_{2}m_{2}}\frac{1}{P}\PDy{r}{P}-\frac{m_1m_{2}(\vec{F}_1-\vec{F}_{2})}{KT(c_1m_1+c_{2}m_{2})}+\frac{K_T}{n_1n_{2}}\frac{1}{T}\PDy{r}{T}\right]
 \end{align*}
 concentrazione relativa $c_i=\frac{n_i}{n}$, coefficiente di diffusione $D_{12}=\frac{1}{3}lv_{th}$, $l\approx(n\sigma)\expy{-1}$ cammino libero medio, $\sigma$ sezione d'urto media, coefficiente di diffusione termica $K_T$.
-
 Approssimando la soluzione dell'equazione del trasporto di Boltzmann con la distribuzione di equilibrio traslata della velocit\'a di diffusione $f_i(\vec{r},\vec{v},t)$ della specie i \'e soluzione di $\TDy{t}{f_i}=\PDy{t}{f_i}+\vec{v}_i\cdot\PDy{\vec{r}}{f_i}+\vec{F}_i\cdot\PDy{\vec{v}}{f_i}=-\Div_{\vec{p}}(\vec{s})=C(f_j)$ dove$\vec{s}$ \'e il flusso nello spazio dei momenti dovuto alle collisioni. 
-
 Sezione d'urto collisionale di Rutherford $d\sigma=\frac{4\pi(Z_iZ_j)^2}{\mu^2(\vec{v}-\vec{v}')^4}\frac{d\chi}{\chi^3}$
 per piccoli angoli $\chi$ di deviazione della velocit\'a relativa nel sistema CM e $m_{ij}$ massa ridotta.
-
 Considero un parametro d'impatto massimo $\lambda=\max{(r_D,a_0)}$, distanza alla quale il potenziale coulombiano \'e schermato dalle altre cariche $\sigma_{ij}\propto \frac{e^4Z_i^2Z_j^2}{(KT)^2}\ln{\Lambda_{st}}$ con $\ln{\Lambda_{ij}}\propto\ln{[1+0.18769(\frac{4KT\lambda}{Z_iZ_je^2})]}$.
-
-Scrivo il termine collisionale $C(f)$, considerando solo il contributo degli urti con la specie j con distribuzione $f_j$ , nella forma $C(f_i,f_j)=\int\,d^3p_j\,d\sigma|\vec{v}_i-\vec{v}_j|(f_i'f_j'-f_if_j)$ dove le quantit\'a primate si riferiscono ai valori dopo l'urto. La forza netta dovuta agli urti \'e $\vec{R}_{ij}=\int m_{ij}\vec{v}_{ij}C(f_i,f_j)\,d^3v_i$
-
+Scrivo il termine collisionale $C(f)$, considerando solo il contributo degli urti con la specie j con distribuzione $f_j$ , nella forma $C(f_i,f_j)=\int\,d^3p_j\,d\sigma|\vec{v}_i-\vec{v}_j|(f_i'f_j'-f_if_j)$ dove le quantit\'a primate si riferiscono ai valori dopo l'urto. La forza netta dovuta agli urti \'e $\vec{R}_{ij}=\int m_{ij}\vec{v}_{ij}C(f_i,f_j)\,d^3v_i$.
 Considero il problema in cui le due specie hanno velocit\'a relativa media diversa da zero ma piccola rispetto alla velocit\'a termica. Nel sistema in cui la prima specie ha velocit\'a media nulla la seconda ha velocit\'a $V_{ij}$ quindi la distribuzione di velocit\'a della prima \'e la distribuzione di equilibrio a temperatura T quella della seconda \'e  la distribuzione di equilibrio a temperatura T traslata di $V_{ij}$, velocit\'a di diffusione: $f_j=f_j^{(0)}+\frac{m_j}{KT}(\vec{V}_{ij}\cdot\vec{v}_j)f_j^{(0)}$ da cui si ottiene $\vec{R}_{ij}=n_in_j\mu_{ij}\alpha_{ij}\vec{V}_{ij}$ con $\alpha_{ij}=\frac{\mu_{ij}}{KT}\int v_r^3\sigma^Tf^{(0)}(\vec{v_r})\,d^3v_r$ con $\sigma^T=\int(1-\cos{\chi})\,d\sigma$ rispettivamente coefficiente di resistenza e sezione d'urto per trasporto di momento.
-
 \end{frame}
 
 \begin{frame}{Diffusion: H,He plasma}
@@ -1363,8 +1412,6 @@ In condizioni stazionarie si ha $\vec{F}_A\approx\vec{R}_{A,H}+\vec{R}_{A,He}=\e
 In presenza di un gradiente termico si ha un trasferimento netto di momento negli urti in direzione del gradiente, in \eqref{eq:friction}, dovuto al maggior numero di particelle energetiche provenienti dalle regioni pi\'u calde, ci\'o \'e dovuto alla dipendenza della sezione d'urto coulombiana dalla velocit\'a relativa $\propto v\expy{-4}$ (probabilit\'a di collisione $\propto v\expy{-3}$); la diffusione termica concentra le particelle pi\'u pesanti (e pi\'u cariche) nelle zone pi\'u calde.
 
 \end{frame}
-
-
 
 \begin{frame}{Oscillazioni 5-minuti}
 In lei62velocity si osserva che la superficie solare ha scale spazio-temporali privilegiate: in particolare \'e presente un comportamento periodico nell'atmosfera a tutte le altezze rilevato tramite effetto doppler. Il periodo \'e di circa 300 secondi e la lunghezza caratteristica di qualche \si{\mega\meter}.
@@ -1442,11 +1489,10 @@ I modi f separano i modi g e p: non hanno nodi in direzione radiale.
 \end{itemize}
     \end{column}
 \end{columns}
-
 Approx. onda piana: $\vec{\xi}\propto\exp{i\scap{k}{x}}$ con $\vec{k}=k_r\hat{r}+\vec{k}_h$. e per grandi n, trascuro la variabile perturbata rispetto alla sua derivata radiale: $\TtwoDy{r}{\xi_r}=\frac{\omega^2}{c_s^2}(1-\frac{N^2}{\omega^2})(\frac{S_l^2}{\omega^2}-1)\xi_r=-K(r)\xi_r$ per $K(r)>0$ quest'equazione descrive un comportamento oscillante; Relazione di dispersione: $k_r^2=\frac{\omega^2}{c_s^2}(1-\frac{N^2}{\omega^2})(1-\frac{S_l^2}{\omega^2})$. Le approssimazioni fatte non sono pi\'u valide vicino alla superficie dove il termine in $\invers{H_P}$ non \'e trascurabile per $H_P$ piccolo e vicino al centro solare dove il termine in $\frac{2}{r}$ non \'e trascurabile. Per lunghezza d'onda delle perturbazioni molto minore della scala caratteristica di variazione di $N, c_s$: $\omega_c=\frac{c_s}{2\densityscale{}}\sqrt{1-2\TDy{r}{\densityscale{}}}\propto T\expy{-\frac{1}{2}}$, freq. acustica critica, e per frequenze acustiche si ha punto di inversione per $\omega=\omega_c$: $k_r^2=\frac{\omega^2-\omega_c^2}{c^2}+S_l\frac{N^2-\omega^2}{c^2\omega^2}=\frac{\omega^2}{c^2}(1-\frac{\omega_{l,+}^2}{\omega^2})(1-\frac{\omega_{l,-}^2}{\omega^2})$ dove ho definito le frequenze critiche per i modi gravo-acustici $\omega_{\pm}=\frac{1}{2}(S_l^2+\omega_c^2)\pm\sqrt{\frac{1}{2}(S_l^2+\omega_c^2)^2-N^2S_l^2}$. Nell'interno solare, soprattutto per grandi l, vale $\omega_{l,+}\approx S_l\ \omega_{l,-}\approx N$, e vicino alla superficie $\omega_{l,+}\approx \omega_c\ \omega_{l,-}\approx 0$.
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Approx Cowling: cavit\'a risonanti}
+\begin{frame}{Approx Cowling: cavit\'a risonanti}
     \begin{columns}[T]
         \begin{column}{0.6\textwidth}
 I modi p e g sono confinati in regioni dell'interno solare determinate dalla variazione delle caratteristiche del plasma solare. Le onde acustiche sono confinate in una regione che \'e limitata superiormente dall'aumento della frequenza critica acustica $\omega_c=\frac{c_s}{2\densityscale{}}\sqrt{1-2\TDy{r}{\densityscale{}}}\propto T\expy{-\frac{1}{2}}$, causato dalla diminuzione della temperatura che provoca la riflessione delle onde con periodo attorno ai 5-min, mentre l'aumento della velocit\'a del suono con la profondit\'a e la conseguente rifrazione dell'onda porta a propagazione del moto puramente tangenziale $k_r=0$ nel guscio sferico per cui $c_s=\frac{\omega}{k_h}\approx\omega \frac{r}{L}$ ovvero per $\omega=S_l$ frequenza di Lamb definita da $S_l^2=\frac{l(l+1)c_s^2}{r^2}$, definisco il raggio di inversione del moto tramite $\frac{c(r_t)}{r_t}=\frac{\omega}{L}$. Le regione di propagazione dei modi g sono definite da $\omega<N$: i modi g sono confinati nelle regioni pi\'u interne del Sole. Le onde di gravit\'a sono presenti nelle regioni in cui il gas \'e neutro o completamente ionizzato ($N^2$ grande) mentre sono riflesse dalle regioni dove $N$ \'e piccolo o immaginario: ionizzazione parziale, instabilit\'a convettiva, centro del Sole; i modi g sono confinati tra la la parte centrale dove $g\to0$ e il fondo della zona convettiva dove $N^2<0$.
@@ -1463,12 +1509,9 @@ I modi p e g sono confinati in regioni dell'interno solare determinate dalla var
 \end{frame}
 
 \begin{frame}{Cowling Approx: radial resonance}
-    
-Le frequenze dei modi sono determinate dalla condizione, per l fissato, che l'onda interferisca costruttivamente con se stessa: onda stazionaria in direzione radiale implica che l'integrale di $k_r$ nella regione di propagazione fra due zeri consecutivi sia un intero multiplo di $\pi$: $\omega\int_{r_1}^{r_2}\sqrt{1-\frac{\omega_c^2}{\omega^2}-\frac{S_l^2}{\omega^2}(1-\frac{N^2}{\omega^2})}\,\frac{dr}{c}\approx\pi(n-\frac{1}{2})$, tiene conto del numero dei nodi radiali e dello sfasamento $\alpha$ prodotto nelle regioni di riflessione.
-
+Le frequenze dei modi sono determinate dalla condizione, per l fissato, che l'onda interferisca costruttivamente con se stessa: onda stazionaria in direzione radiale implica che l'integrale di $k_r$ nella regione di propagazione fra due zeri consecutivi sia un intero multiplo di $\pi$: $\omega\int_{r_1}^{r_2}\sqrt{1-\frac{\omega_c^2}{\omega^2}-\frac{S_l^2}{\omega^2}(1-\frac{N^2}{\omega^2})}$, $\frac{dr}{c}\approx\pi(n-\frac{1}{2})$, tiene conto del numero dei nodi radiali e dello sfasamento $\alpha$ prodotto nelle regioni di riflessione.
 \begin{columns}[T]
     \begin{column}{0.25\textwidth}
-        
 \begin{figure}[!ht]
 \centering
 \includegraphics[keepaspectratio,width=0.99\textwidth]{dispersionDuvall}
@@ -1493,7 +1536,6 @@ dove $\mu_p=\frac{1}{\Gamma_1-1}$ \'e l'inidce politropico efficace della region
 \end{figure}
 
 \begin{table}[!ht]%{r}{0.7\textwidth}
-
 \pgfplotstabletypeset[
 math/.style={%
         preproc cell content/.append style={/pgfplots/table/@cell content/.add={$}{$}},
@@ -1531,4 +1573,141 @@ columns={comp,ZX,RCZ,YCZ,Y0},
      ]{CZvsZ.txt} %%%
 \end{table}
 
+\end{frame}
+
+\begin{frame}{SSM: reproduce obse rved Sun as cem/phys inputs inside error's range --check}
+\begin{columns}[T]
+\begin{column}{0.50\textwidth}
+\begin{tabular}{l|c}
+	$\agesun{}$&$\SI[separate-uncertainty=true]{4.566\pm0.005e9}{\year}$\\
+	\hline
+	$\rsun{}$&$\SI{695658+-140}{\kilo\meter}^I$\\
+	\hline
+	$G\msun$&$\num{132712440018+-8}\SI{e9}{\cubic\meter\per\square\second}$\\
+	\hline
+	$\lsun{}$&$\SI{3.8275+-0.0014e33}{\erg\per\second}$\\
+	\hline
+	
+	\hline
+\end{tabular}
+\begin{align*} 
+&\ln{L}=\ln{\lsun{}}+a(Y_0-Y_{0\odot})+b(\alpha-\alpha_{\odot})\\
+&\ln{r}=\ln{\rsun{}}+c(Y_0-Y_{0\odot})+d(\alpha-\alpha_{\odot})\\
+&a=\PDy{Y_0}{\ln{L}}=8.6,\ b=\PDy{\alpha}{\ln{L}}=0.02\\
+&c=\PDy{Y_0}{\ln{r}}=2.1,\ d=\PDy{\alpha}{\ln{r}}=-0.19\\
+&Y_0=0.256,\ \alpha_{ML}=
+\end{align*}
+Salaris: $Z_i=0.0198$, $Y_i=0.269$, $\alpha_{ML}\approx2.7$
+Stix: $Z_i=$, $Y_i=0.276$, $\alpha_{ML}\approx$
+\end{column}
+\begin{column}{0.42\textwidth}
+\begin{itemize}
+	\item A SSM reproduces withi uncertainties observed properties of Sun adopting chem/phys input chosen within uncertainties range
+	\item Evolve $1\msun$ starting from homogeneus composition (pre-MS phase) to present solar age - $Y_{in}$, $Z_{in}$, $\alpha_{ML}$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Helioseismology:  results -- check}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+$c_s^2=\Gamma_1\frac{P}{\rho}$ - Principio variazionale
+\begin{align*} 
+&-\omega^2\vec{\xi}=\frac{1}{\rho_0}\nabla p'-\vec{g}'-\frac{\rho'}{\rho_0}\vec{g}_0=L(\vec{\xi})\\
+&\frac{\Lvar{\omega}}{\omega}=-\frac{\int_V\rho_0\vec{\xi}\Lvar{L}\vec{\xi}\,d^3x}{2\omega^2\int_V\rho_0\scap{\xi}{\xi}d^3x}
+\end{align*}
+	\end{column}
+	\begin{column}{0.45\textwidth}
+		\begin{itemize}
+			\item Sound speed p rofile, depth of CZ ($\frac{R_{CZ}}{\rsun}=\num{0.713+-0.001}$), present surface He abundance $Y_s=\num{0.2485+-0.0034}$
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Problems with revised abundancies -- check}
+\begin{columns}[T]
+\begin{column}{0.65\textwidth}
+\begin{table}[!ht]%{r}{0.7\textwidth}
+	\tiny
+	\pgfplotstabletypeset[
+	math/.style={%
+		preproc cell content/.append style={/pgfplots/table/@cell content/.add={$}{$}},
+	},
+	every head row/.style={
+		before row={\toprule
+			%&\multicolumn{4}{c|}{Primordiale}
+		},
+		every last row/.style={after row=\bottomrule},
+		after row={\midrule}
+	},
+	every last row/.style={after row=\bottomrule},
+	every first column/.style={column type/.add={|}{}},
+	every last column/.style={column type/.add={}{|}},
+	%columns/0/.style = {column type/.add={|}{}},
+	display columns/0/.style={column name={}},
+	display columns/1/.style={column name={$Z/X$}},
+	display columns/2/.style={column name={$R_{CZ}$}},
+	display columns/3/.style={column name={$Y_{CZ}$}},
+	display columns/4/.style={column name={$Y_0$}},
+	create on use/comp/.style={create col/set list={
+			inversione,GS98,AGS05,AGSS09,C+11}},
+	columns/comp/.style = {column type/.add={|}{}},
+	columns/comp/.style={string type},
+	columns/ZX/.style={string type},
+	columns/ZX/.append style={math},
+	columns/RCZ/.style={string type},
+	columns/RCZ/.append style={math},
+	columns/YCZ/.style={string type},
+	columns/YCZ/.append style={math},
+	columns/Y0/.style={string type},
+	columns/Y0/.append style={math},
+	columns={comp,ZX,RCZ,YCZ,Y0},
+	%/pgf/number format/precision=4
+	]{CZvsZ.txt}%%%
+\end{table}
+\end{column}
+\begin{column}{0.20\textwidth}
+GS98-AGSS09: Reduction O/Ne: $40\%$, reduction $C/N$ about $20\%$, reduction refractories $10\%$
+\end{column}
+\end{columns}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+\begin{figure}[!ht]%{r}{0.5\textwidth}
+	\includegraphics[width=0.9\textwidth,keepaspectratio]{deltacwu}
+\end{figure}
+	\end{column}
+	\begin{column}{0.40\textwidth}
+Differenza relativa nel profilo di $c_s$ risultanei dall'inversione delle differenze in frequenza tra Sole e modello: linea chiara composzione GS98, linea scura composizione AGSS09. Banda chiara errore inerente inversione eliosismologica, banda scura incertezza a $1\sigma$ sul profilo di $c_s$ predetto dal modello.
+Low original He abundance $Y_i\approx0.25-0.265$ respect estimated primordial abundance $Y_p\approx0.25$: low He enrichment during galaxy history? Disagreement with He2Z enrichment for galactic stars $\Delta Y/\Delta Z\approx1-5$
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Confronto helioseismic inversion e SSM con metallicit\'a rivista -- check}
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]%{r}{0.5\textwidth}
+			\includegraphics[width=0.9\textwidth,keepaspectratio]{SSM-GS98AGSS09-inver}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.42\textwidth}
+Aumenta il disaccordo tra risultati inversione sismologica e risultati MSS con composizione aggiornata - Diminuisce Z a $T_e$ costante e raggio costante: diminuisce opacit\'a - zona convettiva meno profonda e 
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Solar neutrinos --check }
+\begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!ht]%{r}{0.5\textwidth}
+			\includegraphics[width=0.9\textwidth,keepaspectratio]{nutheoflux}
+				\includegraphics[width=0.9\textwidth,keepaspectratio]{nufluxcomp}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+
+	\end{column}
+\end{columns}
 \end{frame}
