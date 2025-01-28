@@ -856,7 +856,7 @@ dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $
         &\exv{\Omega}*2\exv{U}=0\tag{Virial}\\
         &\Rightarrow\Omega_c+\Omega_e\approx\const{}\\
         &\Omega\approx \frac{GM_c^2}{R_c}+\frac{GM_cM_e}{R_*}\tag{$M_e\ll M_c$ for UMS}\\
-        &\Rightarrow \frac{R_*}{R_c}\approx-\frac{M_c}{M_e}(\frac{R_*}{R_c})^2\ll-1\tag{Assumption: $M_c\approx\const{},\ M_e\approx\const{}$}
+        &\Rightarrow \frac{R_*}{R_c}\approx-\frac{M_c}{M_e}(\frac{R_*}{R_c})^2\ll-1\tag{Assumption: $M_c\approx\const{},\ M_e\approx\const{}$}\\
         &\Rightarrow \frac{R_*}{R_c}\approx-\frac{M_c}{M_e}(\frac{R_*}{R_c})^2\approx-1\tag{LMS: $M_e>M_c$}
     \end{align*}
 \end{frame}
@@ -866,70 +866,87 @@ dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $
 \begin{frame}{Polytropic relation}
     \framesubtitle{$P=K\rho^{\gamma}=K\rho^{1+\frac{1}{n}}$}
 Additional relation between T-P: ie $1^{st}$ law $\TDy{T}{Q}=\TDy{T}{U}+P\TDy{T}{V}=C=c_V+P(\TDy{T}{V})_P$ - ideal gas $c_P-c_V=\frac{R}{\mu}$: $\frac{dT}{T}+\frac{1}{n}\frac{dV}{V}=0$, $n=\frac{c_V-C}{c_P-c_V}$. \keyword{trasformazione politropa}: t. quasi-statica in  con $c=\TDy{Q}{T}$ (calore specifico) assegnato - K is free parameter.
+Polytropic relation in stars:
+\begin{itemize}
+    \item Equation of state is of the form $P=K\rho^{\gamma}$, K fixed.
+    \item EOS contains $T$ but exist additional relation between $P$ and $T$ yielding polytropic relation, $K$ is a free parameter
+\end{itemize}
 %$TV\expy{\gamma-1}=\const$, $PV\expy{\gamma}=\const$, $P\expy{1-\gamma}T\expy{\gamma}=\const$ ($0=dE-\frac{P}{\rho^2}d\rho$).
-	\begin{block}{Poisson eq.}
-		\begin{columns}[T]
-			\begin{column}{0.6\textwidth}
-				\begin{align*}
-				&\TDy{r}{P}=-\TDy{r}{\phi}\rho\\
-				&\frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\phi})=4\pi G\rho\\
-				&\TDy{r}{\phi}=-\gamma K\rho\expy{\gamma-2}\TDy{r}{\rho}:\ \rho=(\frac{-\phi}{(n+1)K})^n\\
-				&\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n
-				\end{align*}
-			\end{column}
-			\begin{column}{0.4\textwidth}
-				\begin{align*}
-				&\gamma=5/3, n=3/2\tag{NR deg}\\
-				&\gamma=4/3, n=3\tag{R deg}\\
-				&\gamma=1, n=\infty\tag{isot.}\\
-				&\nad\approx\frac{2}{5}\tag{conv}
-				\end{align*}
-		\end{column}\end{columns}
-	\end{block}
+                \begin{itemize}
+                    \item For completely degenerate gas EOS has polytropic form: NR($\gamma=\frac{5}{3}$, $n=\frac{3}{2}$), UR(\gamma=\frac{4}{3}$, $n=3$)
+                    \item $\gamma=5/3, n=3/2$: NR deg
+                    \item $\gamma=4/3, n=3$: R deg
+                    \item $\gamma=1, n=\infty$: isothermal sphere
+                    \item $\nad\approx\frac{2}{5}$: conv
+                \end{itemize}
 $w(0)=1$, $w'(0)\propto\TDy{r}{\phi}=|g|\to0$, $w(z\approx0)\approx1-\frac{1}{6}z^2+\ldots$
 \end{frame}
 
-\begin{frame}{Equazione Lane-Emden}
-	\begin{columns}[T]
-		\begin{column}{0.5\textwidth}
+\begin{frame}{Polytropic stellar model}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+				\begin{align*}
+                &\frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\phi})=4\pi G\rho\tag{Poiss.}\\
+                    &\TDy{r}{P}=-\TDy{r}{\phi}\rho\tag{HE}\\
+                &\TDy{r}{\phi}=-\gamma K\rho\expy{\gamma-2}\TDy{r}{\rho}:\\
+                &\rho=(\frac{-\phi}{(n+1)K})^n\tag{Const of integr.: $\phi=0$ at surf. $\rho=0$}\\
+                &\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n\tag{Above into Poisson}\\
+                &w(0)=1,\ \TDy{z}{w}=w'(0)=0\tag{At center: $z=0$}\\
+                &\rho(r)=\rho_cw^n,\ P(r)=P_cw^{n+1},\ P_c=K\rho_c^{\gamma}
+				\end{align*}
+        \end{column}
+        \begin{column}{0.45\textwidth}
 			\begin{align*}
 			&\rho=(\frac{-\phi}{(n+1)K})^n\tag{HE}\\
 			&\TtwoDy{r}{\phi}+\frac{2}{r}\TDy{r}{\phi}=4\pi G(\frac{-\phi}{(n+1)K})^n\tag{Poiss}\\
+            &z=Ar,\ w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})\expy{1/n}\tag{new adim. vars: z,w}\\
+			&A^2=\frac{4\pi G}{(n+1)^nK^n}(-\phi_c)\expy{n-1}=\frac{4\pi G}{(n+1)K}\rho_c\expy{\frac{n-1}{n}}\\
+			&w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})\expy{1/n}\ (\rho=\rho_cw^n)\\
 			&\TtwoDy{z}{w}+\frac{2}{z}\TDy{z}{w}+w^n=0\\
 			&\frac{1}{z^2}\TDof{z}(z^2\TDy{z}{w})+w^n=0\tag{Lane-Emden}
 			\end{align*}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\begin{align*}
-			&z=Ar\tag{new vars}\\
-			&A^2=\frac{4\pi G}{(n+1)^nK^n}(-\phi_c)\expy{n-1}\\
-			&=\frac{4\pi G}{(n+1)K}\rho_c\expy{\frac{n-1}{n}}\\
-			&w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})\expy{1/n}\\
-			&(\rho=\rho_cw^n)
-			\end{align*}
-	\end{column}\end{columns}
-Surface where $w(z_n)=0$ and $\rho=0$ ($\frac{r}{z}=\frac{1}{A}=\frac{R}{z_n}$)
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}{Equazione Lane-Emden: Properties of solutions $w(z)$}
+    LE has regular singularity at $z=0$: expansion $w(z)=1+a_1z+a_2z^2+a_3z^3+\ldots$, with $a_1=w'(0)$, $2a_2=w''(0)$, \ldots{}; since grav. accel. $|\vec{g}|=\TDy{r}{\phi}\approx\TDy{z}{w}$ must vanish at center: $a_1=0$. Inserting expansion near $z=0$ into LE eq. and comparing coeffs. we find $w(z)=1-\frac{1}{6}z^2+\frac{n}{120}z^4+\ldots$ (excluding $n=\infty$): $w(z)$ has max. at $z=0$.
+    Surface where $w(z_n)=0$ and $\rho=0$ ($\frac{r}{z}=\frac{1}{A}=\frac{R}{z_n}$): $z_0=\sqrt{6},\ z_1=\pi,\ldots,z_{5}=\infty$ (\xaumenta{n},\xaumenta{z_n}) also central concentration $\frac{\rho_c}{\bar{\rho}}$ increases. For non-complete polytrope, ie convective envelope, behaviour at center may be unimportant.
 \end{frame}
 
 \begin{frame}{Polytropic star model: given $n<5, M, R$}
 \begin{block}{Possible if K not fixed by eos}
-\begin{align*}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+    \begin{align*}
 &m(r)=\int_0^r4\pi\rho r^2\,dr=4\pi\rho_c\int_0^rw^nr^2\,dr=4\pi\rho_c\frac{r^3}{z^3}\int_0^zw^nz^2\,dz\\
 &=4\pi\rho_cr^3(-\frac{1}{z}\TDy{z}{w}),\ M=4\pi\rho_cR^3(-\frac{1}{z}\TDy{z}{w})_{z=z_n}\\
-&\frac{\exv{\rho}}{\rho_c}=[-\frac{3}{z}\TDy{z}{w}]_{z_n}\tag{model}\\
+&\frac{\exv{\rho}}{\rho_c}=[-\frac{3}{z}\TDy{z}{w}]_{z_n}\\
 &\rho=\rho_cw^n(z),\ P=K(A,\rho_c)\rho^{\frac{n+1}{n}}
 \end{align*}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{align*}
+            &w=\frac{\phi}{\phi_c}=(\frac{\rho}{\rho_c})^n\\
+            &\rho(r)=\rho_cw^n,\ \TDof{z}(z^2\TDy{z}{w})=-z^2w^n\\
+            &\frac{r}{z}=\frac{1}{A}=\frac{R}{z_n}
+            \end{align*}
+        \end{column}
+    \end{columns}
+    If n is given we solve LE: $w(z)$, $w'(z)$, $z_n$, $-\frac{z_n}{3\TDy{z}{w}|_{z_n}}$. Using $M,R$ we get $\bar{\rho}$ then $\rho_c$. On the other hand we know $A=\frac{z}{r}=\frac{z_n}{R}$: we get $K$ inverting definition of A. So $\rho(r)=\rho_cw^n(z)$, $P(r)=K\rho^{\frac{n+q}{n}}=K\rho_c^{\frac{n+1}{n}}w^{n+1}$
 \end{block}
 \begin{columns}[T]
-\begin{column}{0.55\textwidth}
+\begin{column}{0.30\textwidth}
 \begin{block}{ie radiative pressure}
 	\begin{align*}
-	&P=\frac{R\rho}{\mu}+\frac{a}{3}T^4=\frac{R}{\mu\beta}\rho T,\ \beta=\frac{P_{gas}}{P}\\
-	&1-\beta=\frac{P_r}{P}=\frac{aT^4}{3P}\Rightarrow P=(\frac{3R^4}{a\mu^4})^{\frac{1}{3}}(\frac{1-\beta}{\beta^4})^{\frac{1}{3}}\rho^{\frac{4}{3}}
+	&P=\frac{R\rho}{\mu}+\frac{a}{3}T^4=\frac{R}{\mu\beta}\rho T\\
+    &\beta=\frac{P_{gas}}{P},\ 1-\beta=\frac{P_r}{P}=\frac{aT^4}{3P}\\
+    &\Rightarrow P=(\frac{3R^4}{a\mu^4})^{\frac{1}{3}}(\frac{1-\beta}{\beta^4})^{\frac{1}{3}}\rho^{\frac{4}{3}}
 	\end{align*}
 \end{block}
 \end{column}
-\begin{column}{0.45\textwidth}
+\begin{column}{0.25\textwidth}
 \begin{block}{isothermal sphere: $\gamma=1, n\to\infty$}
 $K=\frac{RT}{\mu}$ free param - $\frac{\phi}{-K}=\ln{\rho}-\ln{\rho_c}$
 \begin{align*}
@@ -938,6 +955,16 @@ $K=\frac{RT}{\mu}$ free param - $\frac{\phi}{-K}=\ln{\rho}-\ln{\rho_c}$
 &w(0)=w'(0)=0
 \end{align*}
 \end{block}
+\end{column}
+\begin{column}{0.45\textwidth}
+    \begin{block}{Sun}
+        \begin{align*}
+            &n=3,\,M=\SI{1.989e33}{\gram},\,R=\SI{6.96e10}{\cm}\\
+            &z_3=6.897,\,\frac{\rho_c}{\bar{\rho}}=54.18:\\
+            &\bar{\rho}=\SI{1.41}{\gram\per\cubic\cm},\,\rho_c=\SI{76.39}{\gram\per\cubic\cm},\,A=\frac{z_3}{R}=\num{9.91e-11}\\
+            &K=\num{3.85e14},\,P_c=\SI{1.24e17}{\dyn\per\square\cm}
+        \end{align*}
+    \end{block}
 \end{column}
 \end{columns}
 \end{frame}

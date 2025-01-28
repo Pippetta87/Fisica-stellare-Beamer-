@@ -516,30 +516,80 @@ $S_{eff}$ \'e il risultato dell'espansione dell'integrando per $\invers{\tau}\ll
                 \item S-wave neutron may have not small energy
                 \item New reaction channel may becomes energetically accessible
                 \item Higher partial waves may contribute to neutron cross-section.
-            \end{enumerate}<++>
+            \end{enumerate}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Produzione energia reazioni nucleari}
 La funzione $\epsilon(\rho,T,X_i)$ \'e determinata dalla somma di tutti i contributi
 \begin{equation*}
-\epsilon_{ij}=Q_{ij}\frac{n_in_j}{\rho(1+\delta_{ij})}\lambda_{ij}=\frac{1}{1+\delta_{ij}}Q_{ij}\frac{\rho N_A^2X_jX_k}{{A_iA_j}}\exv{\sigma v}_{ij}\label{eq:energyrate}
+\epsilon_{ij}=Q_{ij}\frac{n_in_j}{\rho(1+\delta_{ij})}\lambda_{ij}=\frac{1}{1+\delta_{ij}}Q_{ij}\frac{\rho N_A^2X_jX_k}{A_iA_j}\exv{\sigma v}_{ij}
 \end{equation*}
-dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $\exv{\sigma v}_{ij}$ \'e il rate di reazione per coppia di particelle, mediata su MB- distro
-$f(E)dE\propto\frac{E\expy{\frac{1}{2}}}{(kT)\expy{\frac{3}{2}}}\exp{-\frac{E}{kT}}\,dE$:
-$S(E)\exp{-\frac{E}{kT}-\frac{b}{\sqrt{E}}}$
-ha forma approssimativamente gaussiana il cui massimo $E_G$, energia pi\'u probabile di reazione, e FWHM sono: $E_G=\SI{5.665}{\kilo\ev} A\expy{\frac{1}{3}}T_7\expy{\frac{2}{3}}$ $\Delta E=4.249\si{\kilo\ev}W\expy{\frac{1}{6}}T_7\expy{\frac{5}{6}}$
-posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$.
-Most of reactions occur at Gamow peak, in MB tail (except for $T>\SI{10}{\giga\kelvin}$, $E_0\ll V_c$); reaction with larger Coulomb barrier do not contribute significantly to energy production: \xaumenta{E_0}, \xaumenta{Z_i}, \xdiminuisce{\text{area picco}}
-\begin{equation*}
-E_0=[(\frac{\pi}{\hbar})^2(Z_0Z_1e^2)^2(\frac{m_{01}}{2})(KT)^2]^{\frac{1}{3}}=\num{0.1220}[Z_0^2Z_1^2 \frac{M_0M_1}{M_0+M_1}T_9^2]^{\frac{1}{3}}=\SI{5.665}{\kilo\ev}(Z_0^2Z_1^2 \frac{A_0A_1}{A_0+A_1})^{\frac{1}{3}}T_7^{\frac{2}{3}}
-\end{equation*}
-For increasing charges of projectile/target peak shifts toward higher energies and becomes wider
-\begin{equation*}
-\Delta E=\SI{4.249}{\kilo\ev}(Z_0^2Z_1^2 \frac{A_0A_1}{A_0+A_1})^{\frac{1}{6}}T_7^{\frac{5}{6}}
-\end{equation*}
-Q do not contains energy carried by non interacting neutrinos.
+dove $Q_{ij}$ \'e l'energia liberata per reazione tra nucleo di specie i e j e $\exv{\sigma v}_{ij}$ \'e il rate di reazione per coppia di particelle, mediata su MB- distro $f(E)dE\propto\frac{E\expy{\frac{1}{2}}}{(kT)\expy{\frac{3}{2}}}\exp{-\frac{E}{kT}}\,dE$: $S(E)\exp{-\frac{E}{kT}-\frac{b}{\sqrt{E}}}$ ha forma approssimativamente gaussiana il cui massimo $E_G$, energia pi\'u probabile di reazione, e FWHM sono: $E_G=\SI{5.665}{\kilo\ev} A\expy{\frac{1}{3}}T_7\expy{\frac{2}{3}}$ $\Delta E=4.249\si{\kilo\ev}W\expy{\frac{1}{6}}T_7\expy{\frac{5}{6}}$ posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$.
+Most of reactions occur at Gamow peak, in MB tail (except for $T>\SI{10}{\giga\kelvin}$, $E_0\ll V_c$); reaction with larger Coulomb barrier do not contribute significantly to energy production: \xaumenta{E_0}, \xaumenta{Z_i}, \xdiminuisce{\text{area picco}}.
 
+    Neutrinos crosssection $\sigma_{\nu}\approx(\frac{E_{\nu}}{m_ec^2})^2\SI{e-44}{\square\cm}$: in matter of density $\rho=n\mu m_u$ mean-free path $l_{\nu}=\frac{1}{n\sigma_{\nu}}=\frac{\mu m_u}{\rho\sigma_{\nu}}\approx \frac{\SI{2e20}{\cm}}{\rho(\si{\gram\per\cubic\cm})}$, $l_{\nu}=\left\{\begin{array}{l}
+            \SI{100}{\parsec} (\rho=1)\\
+            3000\rsun{} (\rho=\num{e6})\\
+            \SI{20}{\kilo\meter} (\rho=\num{e14})
+    \end{array}\right.$.
+
+    Electron $\nu$s produced via nuclear reactions: $\epsilon_n$ reduced by $Q_{\nu}$:
+                \begin{align*}
+                    &^1H+^1H\to^2H+\APelectron+\nu: Q_{\nu}=\SI{0.263}{\mega\ev}\tag{pp1,2,3}\\
+                    &^7Be+\Pelectron\to ^7Li+\nu: Q_{\nu}=\SI{0.8}{\mega\ev}\tag{pp2}\\
+                    &^8B\to ^8Be+\APelectron+\nu: Q_{\nu}=\SI{7.2}{\mega\ev}\tag{pp3}\\
+                    &^{13}N\to ^{13}C+\APelectron+\nu: Q_{\nu}=\SI{0.71}{\mega\ev}\tag{CNO}\\
+                    &^{15}O\to ^{15}N+\APelectron+\nu: Q_{\nu}=\SI{1}{\mega\ev}\tag{CNO}
+                \end{align*}
+\end{frame}
+
+\begin{frame}{Neutrinos Losses}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+    \begin{itemize}
+            \item Electron capture: $\Pelectron+(Z,A)\to(Z-1,A)+\nu$
+            \item URCA processes: \Pelectron-capture, followed by $\beta$-decay:
+                \begin{align*}
+                    &(Z,A)+\Pelectron\to(Z-1,A)+\nu\\
+                    &(Z-1,A)\to(Z,A)+\Pelectron+\APnu
+                \end{align*}
+                    \item Pair annihilation: $\Pelectron\APelectron\to\Pnu\APnu$ - At $T>\SI{1}{\giga\kelvin}$ photon produce \Pelectron\APelectron pair (not null equilibrium abundance of \APelectron): 1 over \num{e19} insted of annihilation into photons we have a pair \Pnu\APnu. Asymptotic expression $\epsilon_{\nu}^{pair}=\left\{
+                        \begin{array}{l}
+                                \frac{\num{4.9e8}}{\rho}T_9^3\exp{-11.86T_9}\ T_9<1\\
+                                \frac{\num{4.45e15}}{\rho}T_9^9\ T_9>3
+                        \end{array}
+                    \right.$
+                    \item Photo-$\nu$s: $\gamma\Pelectron\to\Pelectron\Pnu\APnu$ (Compton scattering in which photon replaced by $\nu$-pair), interpolation formula (in cgs):
+                        \begin{align*}
+                        &\epsilon_{\nu}^{(phot)}\approx\epsilon_1+\epsilon_2\invers{(\mu_e+\bar{\rho})}\\
+                        &\epsilon_1=\num{1.103e13}\invers{\rho}T_9^9\exp{-\frac{5.93}{T_9}}\\
+                        &\epsilon_2=\num{0.976e8}T_9^8\invers{1+4.2T_9}\\
+                        &\bar{\rho}=\num{6.446e-6}\rho\invers{T_9}\invers{(1+4.2T_9)}
+                        \end{align*}
+        \end{itemize}
+        \end{column}
+        \begin{column}{0.52\textwidth}
+    \begin{itemize}
+                    \item Plasma-$\nu$s: $\gamma_{pl}\to\Pnu\APnu$, plasma-freq $\omega_0$ given by
+                        \[\omega_0^2 \frac{m_e}{4\pi e^2n_e}\left\{
+                            \begin{array}{l}
+                                1:\ \text{NDEG}\\
+                                \{1+(\frac{\hbar}{m_ec})^2(3\pi^2n_e)^{\frac{2}{3}}\}^{-\frac{1}{2}}:\ \text{DEG}
+                        \end{array}
+                \right.\]
+                Dispersion $\omega^2=K^2c^2+\omega_0^2$: propagating wave for $\omega>\omega_0$ - plasmon with rest mass $\hbar\omega_0$; for energy rate $\epsilon_{\nu}^{(plasm)}=\epsilon_{\nu}^{(l)}\epsilon_{\nu}^{(t)}$ (cgs):
+                \begin{align*}
+                    &\gamma=\frac{\hbar\omega_0}{kT},\ \lambda=\frac{kT}{m_ec^2}\\
+                    &\epsilon_{\nu}^{plasm}=\num{3.356e19}\invers{\rho}\lambda^6(1+0.0158\gamma^2)T_9^3\tag{$\gamma\ll1$}\\
+                    &=\num{5.252e20}\invers{\rho}\lambda^{7.5}T_9^{1.5}\exp{-\gamma}\tag{$\gamma\gg1$}
+                \end{align*}
+                        Exponential decrease for large $\gamma$, ie increasing $\omega_0\propto\rho^{\frac{1}{2}}$ at const $T$, due to fact that few plasmons can be excited if $KT<\hbar\omega_0$.
+                    \item Bremsstrahlung-$\nu$s: Inelastic scattering (decell) of \Pelectron in Coul. field of nucleus emit \Pgamma (ff-emission), \Pgamma can be replaced by \Pnu\APnu: for very lorge $\rho$, $\epsilon_{\nu}^{(brems)}=\num{0.76}\frac{Z^2}{A}T_8^6$ (cgs); can dominates at low T and high $\rho$ as don't decreses with incresing deg (lack of free cells in PS compensated by incresed $\sigma$ for $\nu$-emission).
+                    \item Synchrotron-$\nu$: Strng magnetic Field - photon emitted by \Pelectron moving in the field is replaced by \Pnu\APnu
+        \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Periodic table}
@@ -758,7 +808,7 @@ Q do not contains energy carried by non interacting neutrinos.
 
 \begin{frame}{Ne-burning ($T\approx\SI{1.5}{\giga\kelvin}$, $\rho\approx\SI{5e6}{\gram\per\cubic\cm}$, $\tau_{Ne}\approx\SI{280}{\day}$)}
     \begin{columns}[T]
-        \begin{column}{0.55\textwidth}
+        \begin{column}{0.60\textwidth}
             \begin{align*}
                 &^{20}Ne(\gamma,\alpha)^{16}O\tag{$Q=\SI{-4.7}{\mega\ev}$}\\
                 &^{20}Ne(\alpha,\gamma)^{24}Mg(\alpha,\gamma)^{28}Si&\tag{$Q=\SI{9.3}{\mega\ev}$}\\
@@ -773,10 +823,10 @@ Q do not contains energy carried by non interacting neutrinos.
             \end{align*}
             Approx factor 3 less energy produced for same amount of consumed fuel comp. to C-Burning
         \end{column}
-        \begin{column}{0.45\textwidth}
+        \begin{column}{0.40\textwidth}
             At end of C-burning core is made of $^{16}O$, $^{20}Ne$, $^{23}Na$, $^{24}Mg$: p,n,$\alpha$ separation energy is \SIrange{7}{17}{\mega\ev}, while for $^{20}Ne$ is \SI{4.7}{\mega\ev} - $\lambda_{\gamma}(^{20}Ne)\approx\SI{1.5e-6}{\per\second}$: $^{20}Ne$ will photodisintegrate and liberated $\alpha$ will induce secondary reactions.
 \begin{figure}[!ht]
-    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.32\textheight]{NeBurning-RR}\label{fig:NeBurning-RR}
+    \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.9\textwidth]{NeBurning-RR}\label{fig:NeBurning-RR}
 \end{figure}
         \end{column}
     \end{columns}
@@ -885,7 +935,7 @@ Quasi-equilibrium clusters: several pairs at equil. between forw./reverse photod
                 \item Thermally excited levels have big effect on decay const. for weak interactions and rates of many for./rever. reactions.
                 \item Quasiequilibrium clusters: $A=25-40$, $A=46-64$
                 \item At end of Si-burning stellar matter is $^{56}Fe$ ($X_f=0.56$), $^{52}Cr(X_f=0.19)$, $^{54}Fe(X_f=0.11)$, $^{55}Fe(X_f=0.05)$, $^{53}Mn(X_f=0.034)$
-                \item Neutron excess remains almost constant until iron peak is reached then increases sign.: $^{53}Mn(\Pelectron,\nu)^{53}Cr$, $^{54}Fe(\Pelectron,\nu)^{54}Mn$, $^{55}Fe(\Pelectron,\nu)^{55}Mn$, $^{55}Co(\Pelectron,\nu)^{55}Fe$. At end $\eta_f\approx0.067$<++>
+                \item Neutron excess remains almost constant until iron peak is reached then increases sign.: $^{53}Mn(\Pelectron,\nu)^{53}Cr$, $^{54}Fe(\Pelectron,\nu)^{54}Mn$, $^{55}Fe(\Pelectron,\nu)^{55}Mn$, $^{55}Co(\Pelectron,\nu)^{55}Fe$. At end $\eta_f\approx0.067$
             \end{itemize}
         \end{column}
     \end{columns}

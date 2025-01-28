@@ -8,7 +8,7 @@
 %
 \subtitle{Cosa sono le stelle: formazione, fenomenologia evolutiva, popolazioni stellari.}
 
-\date{2023 settembre, \today}
+\date{2025 Febbraio, \today}
 
 \subject{Modelli stellari ed input fisici. Evoluzione stellare. Star formation and star populations}
 
@@ -248,7 +248,7 @@
 \setbeamertemplate{section page}
 {
 \begin{beamercolorbox}[sep=10pt,center,rounded=true,shadow=true]{part title}
-    \usebeamerfont{section title}\insertsection\par
+    \usebeamerfont{section title}\insertpartnumber.\insertsectionnumber-\insertsection\par
 \end{beamercolorbox}
 }
 %
@@ -256,11 +256,11 @@
 {
 \begingroup
 \begin{beamercolorbox}[sep=2pt,center,rounded=true,shadow=true]{section title}% sep= vertical space around text (between text and box border)
-    \usebeamerfont{section title}\insertsection\par
+    \usebeamerfont{section title}\insertpartnumber.\insertsectionnumber-\insertsection\par
 \end{beamercolorbox}
 \vspace*{-1.pt}%    \vspace*{10pt}
 \begin{beamercolorbox}[sep=6pt,center,rounded=true,shadow=true]{subsection title}
-    \usebeamerfont{subsection title}\insertsubsection\par
+    \usebeamerfont{subsection title}\insertpartnumber.\insertsectionnumber.\insertsubsectionnumber-\insertsubsection\par
 \end{beamercolorbox}
 \endgroup
 }
@@ -291,6 +291,11 @@
 \c@tocdepth=-1\relax
 }
 %
+\makeatletter
+\@addtoreset{section}{part}
+\@addtoreset{subsection}{part}
+\@addtoreset{subsection}{section}
+\makeatletter
 \AtBeginPart{%
     \linkdest{linkpart-\thepart}
 %\addtocontents{toc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
