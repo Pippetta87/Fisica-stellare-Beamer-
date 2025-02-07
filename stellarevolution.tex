@@ -12,17 +12,19 @@
 
 \begin{frame}{Traccia d'Hayashi: protostar can be described by SSE}
 	\begin{columns}[T]
-		\begin{column}{0.5\textwidth}
-			\begin{figure}[!ht]\includegraphics[trim={0.6cm 0cm 1.1cm 0},clip, keepaspectratio,width=1.05\textwidth]{hayatrack}
+		\begin{column}{0.50\textwidth}
+            \begin{figure}[!ht]\includegraphics[trim={0.6cm 0cm 1.1cm 0},clip, keepaspectratio,width=0.95\textwidth]{hayatrack}
 			\end{figure}
 		\end{column}
-		\begin{column}{0.4\textwidth}
-		$\log{T_e}=A\log{L}+B\log{M}+\const{}$: $\TDly{T_e}{L}=\frac{1}{A}\gg1$ HL almost vertical, HL shift to left as \xaumenta{M}.
-		Extension of superadiabatic layer and ionization zones varies with $L$: $A>0$ for low L and changes sign at $L\approx\lsun$.
-		Fully convective star model as contracting polytrope with no nuclear source: close to HL $\exv{\nabla}=\invers{(1+n)}$, $\PDy{n}{\log{T_e}}>0$ star move to right as $n$ decreases ($\exv{\nabla}$ increases).
+		\begin{column}{0.50\textwidth}
+            \begin{itemize}
+                    \item $\log{T_e}=A\log{L}+B\log{M}+\const{}$: $\TDly{T_e}{L}=\frac{1}{A}\gg1$ HL almost vertical, HL shift to left as \xaumenta{M}.
+                    \item Extension of superadiabatic layer and ionization zones varies with $L$: $A>0$ for low L and changes sign at $L\approx\lsun$: see effects of superadiabatic convection and depression of $\nabla_{Ad}$ in next.
+                    \item Fully convective star model as contracting polytrope with no nuclear source, $n=\frac{1}{\nabla_{Ad}}-1=\frac{3}{2}$, $P=CT^{n+1}$: on HL $\exv{\nabla}=\nabla_{Ad}$, close to HL $\exv{\nabla}=\invers{(1+n)}$, $\PDy{n}{\log{T_e}}>0$ star move to right as $n$ decreases ($\exv{\nabla}$ increases, in a model to the left of HL the radiative part decreases average value $\exv{\nabla}<\nabla_{Ad}$).
+                \end{itemize}
 		\end{column}
 	\end{columns}
-Since $\nrad\propto\frac{\kappa l P}{T^4m}\propto\frac{L}{M}C^{1+a}T^{b-4+2.5(1+a)}$, approx $\frac{l}{m}=\frac{L}{M}$, Kramers opacity $a=1$, $b=-4.5$, $T\approx T_c\approx\frac{M}{R}$, $R\propto L^{1/2}$, for any $M$ L reaches minimum if at center $0.4=\nrad\propto L^{1.25}M^{-5.5}$ so  down to $L_{min}\propto M^{4.4}$ star is full convective.
+    Considering contracting polytrope, energy generation rate prop. to $T$, for ideal monoatomic gas in homologous contraction $\epsilon_g=-\frac{3}{5}c_PT \frac{\dot{R}}{R}$; assuming $\frac{l}{m}=\frac{L}{M}=\const{}$, $n=1.5$ ($\nabla=\nabla_{Ad}=0.4$), opacity law $\kappa=\kappa_0P^aT^b$ for Kramer's opacity $a=1$, $b=-4.5$: $\nrad\propto\frac{\kappa l P}{T^4m}\propto\frac{L}{M}C^{1+a}T^{b-4+2.5(1+a)}$ so $\nrad{}\propto T^{-3.5}$. For reas.op. $\nrad{}$ has minimum at center and increases outward: is first point where $\nrad{<\nad{}}$ if L decreases below a $L_{min}$; as $C=C'R^{-\frac{3}{2}}M^{-\frac{1}{2}}$ and $T\propto T_c\propto \frac{M}{R}$: $\nrad{}\propto LM^{b-5+2(1+a)}R^{-b+4-4(1+a)}\to LM^{-5.5}R^{0.5}$. For model on HL $T_e\approx\const{}$ so $R\propto L^{\frac{1}{2}}$: $\nrad{}\propto L^{1.25}M^{-5.5}$, for any given M $L=L_{min}$ when $\nad{}=0.4$ at center and $L_{min}\propto M^{4.4}$: this minimum luminosity down to which fully convective and very small mass star can cross main sequence without reaching $L_{min}$
 \end{frame}
 
 \begin{frame}[fragile]{HL: stelle completamente convettive. Fitting interior to photosphere conditions}
@@ -47,7 +49,7 @@ Since $\nrad\propto\frac{\kappa l P}{T^4m}\propto\frac{L}{M}C^{1+a}T^{b-4+2.5(1+
 
 \begin{frame}{Burning of light elements in pre-MS (Hartmann97, Tognelli 2017)}
     \begin{columns}[T]
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.5\textwidth}
     Contrazione su $\tau\approx\tkh{}$ fino a innesco reazioni nucleari, in cui $L\propto t^{-\frac{2}{3}}$; nel caso si raggiungano le temperature di soglia per elementi leggeri si arresta contrazione ($\tau\approx\tau_n$).
             \begin{align*}
                 &p(^2H,\APelectron\nu)^3He\tag{$T\approx\SI{e6}{\kelvin}$}\\
@@ -59,14 +61,16 @@ Since $\nrad\propto\frac{\kappa l P}{T^4m}\propto\frac{L}{M}C^{1+a}T^{b-4+2.5(1+
             \end{align*}
             $T_{Th}(X_i)>T_{bcz}$: Elemento $X_i$ non viene bruciato.
         \end{column}
-        \begin{column}{0.4\textwidth}
+        \begin{column}{0.5\textwidth}
 			\begin{figure}[!ht]
-                \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.90\textwidth]{preMS-Tbcz}\label{fig:preMS-Tbcz}
-                \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.90\textwidth]{preMS-L}\label{fig:preMS-L}
+                \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.45\textheight]{preMS-Tbcz}\label{fig:preMS-Tbcz}
 			\end{figure}
         \end{column}
     \end{columns}
     
+			\begin{figure}[!ht]
+                \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.45\textheight]{preMS-L}\label{fig:preMS-L}
+			\end{figure}
 \end{frame}
 
 \subsection{Evoluzione di sequenza principale}\linkdest{MS}
@@ -158,15 +162,16 @@ ZAMS: first MS model fully supported by H-burning in which secondary elements ar
     \[\TDy{t}{N_{^3He}}=N_{^1H}N_D\exv{\sigma v}_{^1HD}-2\frac{(N_{^3He})^2}{2}\exv{\sigma v}_{^3He^3He}-N_{^3He}N_{^4He}\exv{\sigma v}_{^3He^4He}\]
     Assuming $N_{^3He}\gg N_{^3He}^{eq}$ we can estimate time scale for $^3He$ equilibrium.
 \end{itemize}
-\begin{columns}[T]\begin{column}{0.4\textwidth}
+\begin{columns}[T]\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{HRD-LMS}\label{fig:HRD-LMS}
 \end{figure}
 \end{column}\begin{column}{0.50\textwidth}
-La stella continua a contrarsi fino alla partenza della reazione $^3He(^3He,2^1H)^4He$ e il core convettivo svanisce con l'espandersi della regione in cui \'e prodotto $^3He$
-Struttura: H-burn in central radiative core (Small T-dep of $\epsilon_{PP}$), convective envelope (large opacity associated to partial ionized H, He)
-Evoluzione: $\#$ free particles $\downarrow$, \xaumenta{\mu} per HE \xaumenta{T}
-, \xdiminuisce{R} quindi $L^*$ aumenta lentamente.
-TO is hottest point in evolutionary track: H exhausted 
+    \begin{itemize}
+        \item La stella continua a contrarsi fino alla partenza della reazione $^3He(^3He,2^1H)^4He$ e il core convettivo svanisce con l'espandersi della regione in cui \'e prodotto $^3He$
+        \item Struttura: H-burn in central radiative core (Small T-dep of $\epsilon_{PP}$), convective envelope (large opacity associated to partial ionized H, He)
+        \item Evoluzione: $\#$ free particles $\downarrow$, \xaumenta{\mu} per HE \xaumenta{T}, \xdiminuisce{R} quindi $L^*$ aumenta lentamente.
+        \item TO is hottest point in evolutionary track: H exhausted 
+\end{itemize}
 \end{column}\end{columns}
 \end{frame}
 
@@ -251,7 +256,7 @@ Star is brighter and hotter
 \begin{itemize}
     \item $\alpha_{ML}$ calibrated using Sun.
     \item $\alpha_{ML}$ does not affect L
-    \item $\alpha_{ML}$ radius and $T_e$: \xaumenta{\alpha},\xdiminuisce{\nabla},\xaumenta{T_e},\xdiminuisce{R_s}
+    \item $\alpha_{ML}$ affects radius and $T_e$: \xaumenta{\alpha},\xdiminuisce{\nabla},\xaumenta{T_e},\xdiminuisce{R_s}
 \end{itemize}
 \end{column}
 \end{columns}
@@ -309,7 +314,7 @@ In radiative region the retracting convective core leave chem composition gradie
 \begin{frame}{M-L relation}
 Near ZAMS $L\propto M^3$:
 \begin{align*}
-    &\TDy{m_r}{T}=-\frac{3\kappa_R}{64\pi^2ac}\frac{L_r}{r^4}\Rightarrow L\propto \frac{R^4}{M}T_c^4\\
+    &T^3\TDy{m_r}{T}=-\frac{3\kappa_R}{64\pi^2ac}\frac{L_r}{r^4}\Rightarrow L\propto \frac{R^4}{M}T_c^4\\
     &\TDy{m_r}{P}=-\frac{Gm_r}{4\pi r^4}\Rightarrow P\propto \frac{M^2}{R^4}\\
     &P\propto\rho T\propto \frac{M}{R^3}T\Rightarrow T_c\propto \frac{M}{R}
 \end{align*}
@@ -322,38 +327,29 @@ Near ZAMS $L\propto M^3$:
 Relazione osservativa
 \begin{equation*}
 L\propto\begin{array}{l}
-M,\ M>10\msun{}\\
 M\expy{3.6},\ \numrange{2}{20}\msun{}\\
 M\expy{4.5},\ \numrange{0.5}{2}\msun{}\\
 M\expy{2.6},\ \numrange{0.2}{0.5}\msun{}\\
 \end{array}
 \end{equation*}
+For $M,\ M>10\msun{}$ relation becomes less steep $L\propto M$: due to increasing contribution of radiation pressure in massive stars.
 \end{column}\end{columns}
 \end{frame}
 
-\subsection{Post-MS: SGB, RGB??}\linkdest{postMS}
+\subsection{Post-MS: SGB(const L, move Blue to Red), RGB (const T, L increases)}\linkdest{postMS}
 %SC [160]
 
-\begin{frame}{Int-massive stars}
-    \begin{itemize}
-        \item $M_{He,core}$ maggiore del limite SC
-        \item SGB: Structure move from blue to red side at almost constant surface L. $\tkh{}\approx\SI{12}{\mega\year}$ for $3\msun{}$, $\tkh{}\approx\SI{1}{\mega\year}$ for $6\msun{}$.
-        \item RGB: Point D - constant effective T while L increases; point E where He burning is efficient marks the end of RG phase.
-    \end{itemize}
-\end{frame}
+%\begin{frame}{Int-massive stars}
+%\begin{figure}[!ht]
+%\includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,height=0.42\textheight]{HRD-overshoot}\label{fig:HRD-overshoot}
+%\end{figure}
+%    \begin{itemize}
+%        \item $M_{He,core}$ maggiore del limite SC
+%        \item SGB: Structure move from blue to red side at almost constant surface L. $\tkh{}\approx\SI{12}{\mega\year}$ for $3\msun{}$, $\tkh{}\approx\SI{1}{\mega\year}$ for $6\msun{}$.
+%        \item RGB: Point D - constant effective T while L increases; point E where He burning is efficient marks the end of RG phase.
+%    \end{itemize}
+%\end{frame}
 
-\begin{frame}{Low-mass stars}
-    \begin{itemize}
-        \item $M_{He,core}$ below SC limit and even when H-burning in shell produce bigger He-core the electron degeneracy provide support against contraction.
-        \item $M_{cHe}-L$ relation.
-        \item Lower mass RGB stars at given L have larger radii and lower $T_{eff}$: mass loss shift star toward lower values.
-        \item First dredge-up: Surface abundance of He monotonically increses as convection goes deeper; also $^3He$ and CNO elements are mixed.
-        \item RGB bump: along RGB convection receeds as H-burning shell moves outward and when H-burning shell encounter discontinuity have peculiar behaviour in that region of HRD - stars stay $20\%$ of RGB lifetime in region of HRD.
-        \item Max T moves outside center in He core
-        \item He ignited when $M_{cHe}\approx0.5\msun{}$.
-        \item Thermal runaway at Tip of RGB: He-flash.
-    \end{itemize}
-\end{frame}
 
 \begin{frame}{Condizione Core per fusione: Virial theorem}
     \begin{columns}[T]
@@ -391,8 +387,8 @@ M\expy{2.6},\ \numrange{0.2}{0.5}\msun{}\\
         \item Electron degeneracy: $3(\gamma-1)$ is 2 (NR) or 1 (R) for degenerate \Pelectron; for mixture \Pelectron-ions $\gamma>\frac{4}{3}$. Case NR \Pelectron deg. $3(\gamma-1)=2$  (NR: $\gamma=\frac{5}{3}$): $\Omega=-2E=2E_{Tot}$, if $L=-\frac{1}{2}\TDy{t}{\Omega}$, $\Omega\propto \frac{1}{R}\propto\rho^{\frac{1}{3}}$ implica $\frac{1}{\Omega}\TDy{t}{\Omega}=\frac{1}{3}\frac{1}{\rho}\TDy{t}{\rho}$     
             \begin{align*}
                 &n_e=\frac{\rho}{\mu_em_H}=\frac{8\pi p_F^3}{3h^3}\Rightarrow\rho\propto E_F^{\frac{3}{2}}\\
-                &E=\frac{1}{\rho}\int_0^{E_F}\frac{8\sqrt{2}\pi m_e^{\frac{3}{2}}}{h^3}E_{kin}^{\frac{3}{2}}\,dE_{kin}\propto \frac{1}{\rho}E_F^{\frac{5}{2}}\propto \frac{\rho^{\frac{5}{3}}}{\rho}\propto\rho^{\frac{2}{3}}\\
-                &\Rightarrow \frac{1}{E_e}\TDy{t}{E_e}=\frac{2}{3}\frac{1}{\rho}\TDy{t}{\rho}\Rightarrow\TDy{t}{E_e}\approx2 \frac{E_e}{\Omega}\TDy{t}{\Omega}
+                &E=\int_0^{E_F}n(E_{kin}\,dE_{kin}=\frac{1}{\rho}\int_0^{E_F}\frac{8\sqrt{2}\pi m_e^{\frac{3}{2}}}{h^3}E_{kin}^{\frac{3}{2}}\,dE_{kin}\propto \frac{1}{\rho}E_F^{\frac{5}{2}}\propto \frac{\rho^{\frac{5}{3}}}{\rho}\propto\rho^{\frac{2}{3}}\tag{Internal Energy}\\
+                &\Rightarrow \frac{1}{E_e}\TDy{t}{E_e}=\frac{2}{3}\frac{1}{\rho}\TDy{t}{\rho}\Rightarrow\TDy{t}{E_e}\approx2 \frac{E_e}{\Omega}\TDy{t}{\Omega}\\
         &\Omega=-2E, E=E_I+E_E\Rightarrow \Omega\approx-2E_e\tag{High degeneracy}\\
         &\TDy{t}{E_e}\approx2 \frac{E_e}{\Omega}\TDy{t}{\Omega}\Rightarrow\TDy{t}{E_e}\approx-\TDy{t}{\Omega}\\
         &L=-\TDy{t}{E_{tot}}=-\TDy{t}{E_e}-\TDy{t}{E_i}-\TDy{t}{\Omega}\approx-\TDy{t}{E_i}
@@ -401,20 +397,23 @@ M\expy{2.6},\ \numrange{0.2}{0.5}\msun{}\\
     Half gravitational energy not radiated away increases electron internal energy (Fermi energy), whereas ions thermal energy decreases. Evolution of degenerate object (WD) can be considered at constant radius $\Delta\Omega=\frac{\Delta R}{R^2}\approx L$
 \end{frame}
 
-\begin{frame}{SC-mass limit} 
-$L=0$ implica formazione core di He isotermo: se la massa del core di elio \'e maggiore del $10\%$ della massa totale della stella il core si contrae - le stelle della LMS hanno core pi\'u piccolo, stelle di massa $M\geq2.5-3\msun{}$  hanno core pi\'u grande.
+\begin{frame}{SC-mass limit: upper limit to $M_c/M_{tot}$} 
+$\epsilon_n=0$ e gradiente radiativo implica formazione core di He isotermo: se la massa del core di elio \'e maggiore del $10\%$ della massa totale della stella il core si contrae - le stelle della LMS hanno core pi\'u piccolo, stelle di massa $M\geq2.5-3\msun{}$  hanno core pi\'u grande.
 \begin{equation*} 
 \frac{M_c}{M}>(\frac{M_c}{M})_{SC}=0.37(\frac{\mu_{env}}{\mu_c})^2\xrightarrow{\parbox{2.5cm}{$\mu_e=\mu_{\odot}=0.6$\\$\mu_c=\mu(He)=1.3$}}0.08
 \end{equation*}
 il core si contrae su $\tkh{}$.
 Virial theorem for non-vanishing pressure surface pressure $P_0$ and $M_c$, $R_c$ and $T_c$:
-\begin{align*} 
+\begin{align*}  
 &(2U_i+\Omega+S_p=0,\ S_p=-\int\exv{v^2}\Vec{r}\cdot\hat{n}\,dS=P_0V)\\
-&P_0=K_1\frac{M_cT_c}{R_c^3}-K_2\frac{M_c^2}{R_c^4}\\
+&P_0=K_1\frac{M_cT_c}{R_c^3}-K_2\frac{M_c^2}{R_c^4}\tag{first term comes from Tot internal energy of core, second from grav. pot.}\\
+&\frac{3}{2}\frac{K}{\mu m_u}T_cM\tag{total internal energy of core}\\
 &P_{0,m}=K_3T_c^4/M_c^2
 \end{align*}
 For equilibrium $P_{0,m}\geq P_e\propto M_t^2/R^4=T_c^4/M_t^2$ ($T_c\propto M_t/R$)
 \end{frame}
+
+\subsection{Intermediate, massive stars}
 
 \begin{frame}{Int-massive stars: from SG to RG}
 \begin{columns}[T]\begin{column}{0.5\textwidth}
@@ -436,8 +435,23 @@ For equilibrium $P_{0,m}\geq P_e\propto M_t^2/R^4=T_c^4/M_t^2$ ($T_c\propto M_t/
 \end{itemize}
 \end{frame}
 
-%trim: LBRT
+\subsection{Low-mass stars: He-flash and Dredge-up}
+
 \begin{frame}{Low-mass stars}
+    \begin{itemize}
+        \item $M_{He,core}$ below SC limit and even when H-burning in shell produce bigger He-core the electron degeneracy provide support against contraction.
+        \item $M_{cHe}-L$ relation: L provided by H-burning shell whose thermal prop are determined by He-core radius and mass.
+        \item If evolving  at constant mass, Lower mass RGB stars at given L have larger radii and lower $T_{eff}$: mass loss shift star $T_e$ toward lower values.
+        \item First dredge-up: as \xdiminuisce{T_e} during envelope expansion the convection goes deeper; Surface abundance of He monotonically increses as convection goes deeper; also $^3He$ and CNO elements are mixed.
+        \item RGB bump: along RGB convection receeds as H-burning shell moves outward and when H-burning shell encounter discontinuity have peculiar behaviour in that region of HRD - stars stay $20\%$ of RGB lifetime in region of HRD.
+        \item Max T moves outside center in He core
+        \item He ignited when $M_{cHe}\approx0.5\msun{}$.
+        \item Thermal runaway at Tip of RGB: He-flash.
+    \end{itemize}
+\end{frame}
+
+%trim: LBRT
+\begin{frame} {Low-mass stars}
 \begin{columns}[T]\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{HDRtipRGB}\label{fig:HDRtipRGB}
@@ -451,7 +465,7 @@ For equilibrium $P_{0,m}\geq P_e\propto M_t^2/R^4=T_c^4/M_t^2$ ($T_c\propto M_t/
 \end{column}\end{columns}
 \begin{itemize}
 \item $M_{cHe}-L$ relation: \xaumenta{M_{cHe}}, \xaumenta{L}. L is almost fully provided by H-burning shell whose thermal properties are determined $R_c$, $M_c$ ($P_e$ is OM lower)
-\item RGB stars evolve at constant L and radius re-adjust to stellar mass: mass loss shift $T_e$ toward lower values.
+%\item RGB stars evolve at constant L and radius re-adjust to stellar mass: mass loss shift $T_e$ toward lower values.
 \end{itemize}
 \end{frame}
 
@@ -479,7 +493,7 @@ For equilibrium $P_{0,m}\geq P_e\propto M_t^2/R^4=T_c^4/M_t^2$ ($T_c\propto M_t/
 \end{figure}
 \end{column}
 \begin{column}{0.43\textwidth}
-In RG phase: H-burning increases $M_{cHe}$ and \xaumenta{\rho_c}. In inner part $M_r<0.3M_t$ when $\epsilon_g+\epsilon_{\nu}<0$: $\TDy{r}{L}<0$ resulting in T-inversion. \xaumenta{\rho_c}, grado di degenerazione aumenta, \xdiminuisce{\kappa_{cond}}, \xdiminuisce{T_c}; while \xaumenta{T_c^M} due to $\epsilon_g>0$ at boundary between D/ND matter. At $T_c^M\approx\SI{e8}{\kelvin}$ we have He ignition ($M_{cHe}\approx0.48-0.5\msun{}$): end of RGB phase.
+    In RG phase: H-burning increases $M_{cHe}$ and \xaumenta{\rho_c}. In inner part $M_r<0.3M_t$ when $\epsilon_g+\epsilon_{\nu}<0$: $\TDy{r}{L}<0$ resulting in T-inversion. \xaumenta{\rho_c}, grado di degenerazione aumenta, \xdiminuisce{\kappa_{cond}}, \xdiminuisce{T_c} (strong degeneracy: $\kappa_{cd}\propto\rho^{-2}T^2$); while \xaumenta{T_c^M} due to $\epsilon_g>0$ at boundary between D/ND matter. At $T_c^M\approx\SI{e8}{\kelvin}$ we have He ignition ($M_{cHe}\approx0.48-0.5\msun{}$): end of RGB phase.
 \end{column}\end{columns}
 He ignition at strong partial-relativistic-D ($\rho_x\approx\SI{e6}{\gram\per\cubic\cm}$, $T\approx\SI{8e7}{\kelvin}$), $P$ is insensitive to $T$ changes, rate of $3\alpha$-burning increases much: thermal runaway $\num{e10}\lsun{}$ in few seconds are absorbed by above ND layers: expansion and convection (large jump in P/S prevent mixing with above H-burning). So \xaumenta{T} at constant $\rho$ but no time for heat diffuse the whole core: this need many successive He-flashes, $\tau_{flash}\approx\SI{e6}{\year}$ and $5\%$ He converted to C
 \end{frame}

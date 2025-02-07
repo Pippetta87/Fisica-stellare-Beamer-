@@ -111,23 +111,28 @@
 \listofcherryframesname\phantomsection: \listofcherryframesbasic}
 \makeatother
 \usepackage{LocalF}
+%%The \newif macro creates three new macros from the argument \if<name>:
+%%    \if<name>, a switch to be used in tests;
+%%    \<name>true, which sets the switch logically true;
+%%    \<name>false, which sets the switch logically false;
+
 \makeatletter%frameinlbf
 \newif\ifframeinlbf
 %\frameinlbftrue
-%%frameintoc
-%\ifframeinlbf
-%\mode<presentation>{%
-%        \only<1>{%
-%            %\hypertarget{\protect\insertframetitle}{}%
-%            %        \addcontentsline{cherryframes}{subsection}{%
-%                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
-%                       % \normalsize
-%           %            \protect\insertframetitle%
-%                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \insertframetitle}}{}{}}
-%        }%
-%    }%
-%             \else\fi%
-%{}%from addbeamertemplate{frametitle}?
+%frameintoc
+\ifframeinlbf
+\mode<presentation>{%
+        \only<1>{%
+            %\hypertarget{\protect\insertframetitle}{}%
+            %        \addcontentsline{cherryframes}{subsection}{%
+                    %\protect\makebox[1em][l]{\normalsize\insertframenumber\hfill}
+                       % \normalsize
+           %            \protect\insertframetitle%
+                    \addtocontents{cherryframes}{\protect\mycontentsline{section}{\parbox{0.48\textwidth}{\protect$\bullet$ \protect\insertframetitle}}{}{}}
+        }%
+    }%
+             \else\fi%
+{}%from addbeamertemplate{frametitle}?
 \makeatother
 \addtobeamertemplate{frame end}{\frameinlbffalse
 }{}
@@ -137,6 +142,7 @@
 
 % Let's get started
 \begin{document}
+\frameinlbffalse
 %\input{tikzdir}%%contain tikz files as filecontents
 \addtolength{\textheight}{-0pt}
 \addtolength{\headheight}{0pt}
@@ -173,10 +179,17 @@
    % \end{columns}
 \end{frame}
 
+\frameinlbffalse
 \begin{frame}{Fisica stellare: i frames pi\'u importanti}%label={}
      \listofcherryframes
-\end{frame}
+%\ifframeinlbf
+%    true
+%\else
+%    false
+%\fi
+ \end{frame}
 
+\frameinlbffalse
 \begin{frame}{Meta}
     argomenti del corso: toc parts a sinistra e important frames a destra
     todo, must: before reglez; frame importanti

@@ -1,9 +1,11 @@
 %! TEX root = main.tex
 \section{Star formation and pre MS}\linkdest{starformation}
 
-\begin{wordonframe}{da fare: }
+\begin{wordonframe}{da fare/ref}
 \begin{itemize}
-    \item Rev Larson 2003:
+    \item Rev Larson 2003: The physics of star formation
+    \item Evans 1999 - Physical Conditions in Regions of Star Formation
+    \item Bate 2011 - Collapse of a molecular cloud core to stellar densities: the formation and evolution of pre-stellar discs
     \item Onset of star formation: kippenhahn wiegert 248'-255' (131-134) -26.1: isothermal plane parallel and spherical object in HE
     \item Formation of protostars: kippenhahn wiegert 256'-265' (135-139)
     \item Star formation and early evolution: salaris cassisi 105' (119)
@@ -23,7 +25,7 @@
 \begin{frame}{Molecular Clouds: density and clumps formation}
 \begin{itemize}
 \item clouds equilibrium shape: Observed cloud mass greater than Jeans mass; Rotation and magnetic field support increases Jeans mass
-\item $H_2$ molecules formation: dust grains enhance $H_2$ formation which increases with density and column density of at least $20\msun{}\si{\per\square\parsec}$ (Column density: Mangus shirly 2015) is required to shield from UV, where typical column density is $100\msun\si{\per\square\parsec}$ (Elmegreen 85, 93); column density of cold $H_2$ is hard to measure directly infact is measured indirectly by collisional excitation of other molecules and by relative decrese of 21-cm emission/absorption line strenght from deplition of atomic H.
+\item $H_2$ molecules form ation: dust grains enhance $H_2$ formation which increases with density and column density of at least $20\msun{}\si{\per\square\parsec}$ (Column density: Mangus shirly 2015) is required to shield from UV, where typical column density is $100\msun\si{\per\square\parsec}$ (Elmegreen 85, 93); column density of cold $H_2$ is hard to measure directly infact is measured indirectly by collisional excitation of other molecules and by relative decrese of 21-cm emission/absorption line strenght from deplition of atomic H. ($\msun/pc^2\approx 2*10^{-4}gr/cm^2$).
 \item Collisional excitation cooling by molecular/atomic lines emission increases with density while external heating decreases: MC are very cold (\SIrange{10}{20}{\kelvin}); far IR emission of CO; in densest regions gas is thermally coupled to dust mantaining $T\approx10K$.
 \item Inefficient conversion of MC into stars: turbulence, magnetic fields.
 \item Almost all MC are star forming: short lifetime, young age - $\tau_{MC}$ approx crossing time of internal turbulent motion $<\SI{1}{\mega\year}$
@@ -34,7 +36,7 @@
 
 \begin{frame}{Spherical collapse}
     \begin{itemize}
-        \item At low $\rho$: \xaumenta{\rho} \xdiminuisce{T} (increases atomic/molecular lines cooling); At higher $\rho$: gas becomes thermally coupled to gas which controls T with its thermal emission - T is \SIrange{6}{12}{\kelvin} while $\rho$ spans many OM as long as core remains optically thin to dust thermal radiation ($n_{H_2}<\SI{e10}{\per\cubic\cm}$).
+        \item At low $\rho$: \xaumenta{\rho} \xdiminuisce{T} (increases atomic/molecular lines cooling); At higher $\rho$: gas becomes thermally coupled to dust which controls T with its thermal emission - T is \SIrange{6}{12}{\kelvin} while $\rho$ spans many OM as long as core remains optically thin to dust thermal radiation ($n_{H_2}<\SI{e10}{\per\cubic\cm}$).
         \item Most collapse calculation assume early stages isothermal at \SI{10}{\kelvin} (whitworth 98) and a universal result of isothermal collapse is runaway growth of central density peak (Penston 66, Bodenheimer Sweigart 68, Larson 69)
         \item In absence of pressure gradient the collapse of uniform sphere happens in $t_{ff}\approx\sqrt{\frac{3\pi}{32G\rho}}$: denser inner regions collapse faster (Larson 73, Tohline 82). Numerics show that $\rho\propto r\expy{-2}$ for collapsing isothermal sphere asymptotically for smaller radii as long as isothermal approx holds (Larson 69, Ogino 99); peak width at any stage of order of Jeans length $\propto\rho\expy{-1/2}$.
         \item Calculations: small fraction of collapsing cloud core attains density to form a star; in SIS model envelope is at rest instead of falling at approx twice $c_s$ as in dynamical collapse.
@@ -44,6 +46,7 @@
     \end{itemize}
 \end{frame}
 
+\frameinlbftrue
 \begin{frame}{Optically Thick Phase}
     \begin{itemize}
         \item Always central density peak is realize in spite of thermal pressure never being negligible near central regions; spherical symmetry at later stage when optical depth of central regions becomes large and radiative cooling unimportant and T rises (3D calculation partially support spherical Approx: Bate 98): rotational flattening may eventually becomes important and transient spiral appears (gravitational torque transfer enough angular momntum outward to allow growth of central mass.
@@ -54,28 +57,38 @@
             \item When rotation is present materials from first hydrostatic core has significant angular momentum and sets into disk (Yorke Bodenheimer 99), outward angular momentum transfer is needed to have predicted accretion rate (Mercer Smith 84).
     \end{itemize}
 \end{frame}
+\frameinlbffalse
 
 \begin{frame}{Onset of cloud formation ($\tau_{ff}\gg\tau{KH}$). Jeans Criterion}
 \begin{columns}[T]
-\begin{column}{0.65\textwidth}
-perturbazioni densit\'a uniforme costante (for small $\lambda$ as isothermal sphere in HE)
+\begin{column}{0.55\textwidth}
+    \begin{itemize}
+        \item Infinite homogeneous gas at rest: not well defined state, ie for symmetry reasons also g. potential $\phi$ must be const but from Poiss. we have $\nabla^2\phi=4\pi G\rho$ hence $\rho=0$; but if we apply periodic perturb. of suff. small wavelength the single perturbation will behave like one with same $\lambda$ in isothermal sphere at static equilibrium
+        \item Gas obeys to:
 \begin{align*}
-&\PDy{t}{\vec{v}}+(\vec{v}\cdot\nabla)\vec{v}=-\frac{1}{\rho}\nabla P-\nabla\phi\\
-&\PDy{t}{\rho}+\vec{v}\cdot\nabla\rho+\rho\nabla\cdot\vec{v}=0\\
-&\nabla^2\phi=4\pi G\rho,\ P=\frac{R}{\mu}\rho T=v_s^2\rho
-\end{align*}
+    &\PDy{t}{\vec{v}}+(\vec{v}\cdot\nabla)\vec{v}=-\frac{1}{\rho}\nabla P-\nabla\phi\tag{EOM/Euler}\\
+    &\PDy{t}{\rho}+\vec{v}\cdot\nabla\rho+\rho\nabla\cdot\vec{v}=0\tag{cont. eq.}\\
+    &\nabla^2\phi=4\pi G\rho,\ P=\frac{R}{\mu}\rho T=v_s^2\rho\tag{Poiss.}\\
+    &P=\frac{R}{\mu}\rho T=v_s^2\rho\tag{EOS}
+\end{align*} 
 $T=T_0=\const$, $\rho=\rho_0=\const$, $\nabla^2\phi_0=4\pi G\rho_0$
+    \end{itemize}
 \end{column}
-\begin{column}{0.35\textwidth}
-Perturbazioni:
+\begin{column}{0.45\textwidth}
+    \begin{itemize}
+        \item Perturbazioni:
 \begin{align*}
+    &\rho=\rho_0+\rho_1,P=P_0+P_1,\phi=\phi_0+\phi_1,\vec{v}=\vec{v}_1\\
 &\PDy{t}{\vec{v}_1}=-\nabla(\phi_1+v_s^2\frac{\rho_1}{\rho_0})\\
 &\PDy{t}{\rho_1}+\rho_0\nabla\cdot\vec{v}_1=0\\
 &\nabla\phi_1=4\pi G\rho_1
 \end{align*}
+Homogeneous ODE system with constant coeffs.
+\item Assuming isothermal pertur. ($v_s$ unperturbed) and taking only linear terms
+\item Solutions prop.to $\exp{i(kx+\omega t)}$: $\PDof{x}=ik$, $\PDof{y}=\PDof{z}=0$, $\PDof{t}=i\omega$
+    \end{itemize}
 \end{column}
 \end{columns}
-Homogeneous ODE system with constant coeffs: $\PDof{x}\to ik$, $\PDof{y}=\PDof{z}\to0$, $\PDof{x}\to i\omega$:
 \begin{columns}[T]
 	\begin{column}{0.3\textwidth}
 		\begin{align*}
@@ -88,7 +101,7 @@ Homogeneous ODE system with constant coeffs: $\PDof{x}\to ik$, $\PDof{y}=\PDof{z
 Non trivial solution
 		\begin{align*}
 		&\begin{vmatrix}
-		\omega&kv_s^2\rho_0&k\\
+            \omega&\frac{kv_s^2}{\rho_0}&k\\
 		k\rho_0&\omega&0\\
 		0&4\pi G&k^2\\
 		\end{vmatrix}=0\\
@@ -96,20 +109,40 @@ Non trivial solution
 		\end{align*}
 	\end{column}
 	\begin{column}{0.4\textwidth}
-$k$ large: $\omega$ real (oscillations). Stability $\lambda>\lambda_J=\sqrt{\frac{\pi}{G\rho_0}}v_s$, unstable $k<k_J=\frac{4\pi G\rho_0}{v_s^2}$
+$k$ large: $\omega$ real (oscillations). 
+\begin{align*}
+    &\lambdar<\lambda_J=\frac{2\pi}{k_J}=\sqrt{\frac{\pi}{G\rho_0}}v_s\tag{Stable}\\
+    &k<k_J=\frac{4\pi G\rho_0}{v_s^2}\tag{Unstable}
+\end{align*}
 \end{column}
 \end{columns}
 Collapsing plane-parallel slab: $i\omega\approx\sqrt{G\rho_0}$
 \end{frame}
 
 \begin{frame}{Jeans instability in isothermal sphere}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item $P*>0$: we get the structure fro ma solution of LE equation for isothermal polytrope
+                \item Virial T: Internal energy $E_i=c_VMT$, for g. energy $E_g=\Theta \frac{GM^2}{R}$ ($\Theta$ can be obtained from LE iqu.)
+                \item Using virial t. $\zeta E_i+E_h=4\pi R^3P_0$: per $\zeta=2$ si ha $P_0=\frac{c_VMT}{2\pi R^3}-\frac{\Theta GM^2}{4\pi R^4}$
+                \item For small $R$ $P_0<0$, changes sign for increasing $R$, $P_0\to0$ for $R\to\infty$ and reaches a max. at $R_m$
+                \item Differentiating eq for $P_0$ we found $R_M=\frac{4\Theta}{9}\frac{G\mu M}{RT}$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Stability of LE solution - Starting at equilibrium at $P^*=P_0$: for $R<R_m$ (unstable config.) equilibrium pressure $P_0$ decreses with decreasing $R$, therefore after slight compression $P^*>P_0$ and sphere compress more, for $R>R_m$ $P_0$ (stable)increses during slight compression and sphere will expand back to equilibrium.
+                \item Same as Jeans Stability crit.: $M=\frac{4\pi}{3}r_m^3\bar{\rho}$. $R_m^2=\frac{27}{16\pi\Theta}\frac{RT}{G\mu\bar{\rho}}$ where $R_m$ is critical radius of gas with mean density $\bar{\rho}$ and T which is marg. stable - comparing with critical Jeans wavelength, $\lambda_J=\sqrt{\frac{\pi}{G\rho_0}}v_s$: they are same OoM.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    Expression for critical mass (Jeans mass): $M>M_J$ are unstable:
 	\begin{align*}
-&M_J=\frac{4\pi}{3}\exv{\rho}R_m^3:\ M_J\propto(\frac{T}{\mu})^{\frac{3}{2}}(\frac{1}{\exv{\rho}})^{\frac{1}{2}}\tag{sper. instab.}\\
+        &M_J=\frac{4\pi}{3}\exv{\rho}R_m^3:\ M_J=\frac{27}{16}\sqrt{\frac{3}{\pi}}(\frac{R}{\Theta G})^{\frac{3}{2}}(\frac{T}{\mu})^{\frac{3}{2}}(\frac{1}{\exv{\rho}})^{\frac{1}{2}}\tag{Virial/LE eq}\\
 &M_J=\num{1.2e5}\msun{}(\frac{T}{\SI{100}{\kelvin}})^{\frac{3}{2}}(\frac{\rho}{\SI{e-24}{\gram\per\cubic\cm}})^{-\frac{1}{2}}\mu^{-\frac{3}{2}}\tag{pertub.}
 	\end{align*}
 \end{frame}
-
-
 
 \begin{frame}{End of Fragmentation: Transition to adiabatic collapse.}
 	Cooling processes: $E_g\approx\frac{GM^2}{R}$ has to be radiated at rate $A\approx\frac{GM^2}{R}(G\exv{\rho})^{\frac{1}{2}}\propto\frac{G^{\frac{3}{2}}M^{\frac{5}{2}}}{R^{\frac{5}{2}}}$; radiation emission as fraction f of radiation emitted from black body $B=4\pi f\sigma T^4R^2$
@@ -159,8 +192,8 @@ Collapse calculation:
 \end{column}
 \begin{column}{0.45\textwidth}
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{collapsingdensity}\label{fig:collapsingdensity}
-\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{collapsedensitystructure}\label{fig:collapsedensitystructure}
+\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{collapsingdensity}\label{fig:collapsingdensity}
+\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{collapsedensitystructure}\label{fig:collapsedensitystructure}
 \end{figure}
 \end{column}
 \end{columns}
@@ -177,7 +210,7 @@ Collapse calculation:
 	\end{column}
 	\begin{column}{0.45\textwidth}
 	\begin{figure}[!ht]
-	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{centralcollapseevolution}\label{fig:centralcollapseevolution}
+	\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{centralcollapseevolution}\label{fig:centralcollapseevolution}
 	\end{figure}
 	\end{column}
 \end{columns}

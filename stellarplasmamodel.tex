@@ -13,21 +13,22 @@ Come illustrato in figura, per entrambe $\Gamma_1\approx\midfrac{5}{3}$ nell'int
 \end{wordonframe}
 
 \begin{wordonframe}{Relazione tra $P(\rho, T)$: approx zero gas perfetto di atomi completamente ionizzati}
-\begin{columns}[]%
-    \hspace{-19pt}\relax
+\begin{columns}[T]%
+% \hspace{-19pt}\relax
 \begin{column}{0.55\textwidth}%
 EOS gas perfetto di ioni ed elettroni 
 \begin{align*}
-&P_G=P_I+P_e=\frac{\rho}{\mu}\gasconstant{}T\\
-&\frac{d\rho}{\rho}=\frac{dP}{P}-\frac{dT}{T}+\frac{d\mu}{\mu}
+    &P_G=P_I+P_e=\frac{\rho}{\mu}\gasconstant{}T=nKT=\frac{\rho}{\mu m_u}KT\tag{$\rho=N_AK$}\\
+&\frac{d\rho}{\rho}=\frac{dP}{P}-\frac{dT}{T}+\frac{d\mu}{\mu}\\
+&(\frac{d\rho}{\rho}=\alpha\frac{dP}{P}-\delta\frac{dT}{T}+\phi\frac{d\mu}{\mu})
 \end{align*}
 Energia interna per unit\'a di massa: somma delle energie traslazionali delle particelle pesate secondo la distribuzione di equilibrio di Maxwell-Boltzmann per grammo di materia
-\begin{align*}
+ \begin{align*}
 &u=\frac{1}{\rho}\sum_i\int f^{(0)}(\vec{p}_i)\frac{p^2_i}{2m_i}\,d^3p_i\\
 &=\frac{3}{2}\frac{P}{\rho}=\frac{3}{2}\frac{\gasconstant T}{\mu}
 \end{align*}
 \end{column}
-    \hspace{-22pt}\relax
+ %   \hspace{-22pt}\relax
 \begin{column}{0.45\textwidth}
 Peso molecolare medio: massa media in amu per particella libera
 \begin{align*}
@@ -53,19 +54,91 @@ $f^{(0)}(\vec{p}_i)$: numero di particelle della specie i per unit\'a di volume 
 \end{wordonframe}
 
 \begin{frame}{degenerazione completa: casi limite NR e R}
+    Quantum cell of volume in P.S. $d^3pd^3x=h^3$ each with $g_e=2$: in shell $[p,p+dp]$ there are $\frac{4\pi p^2dpdV}{h^3}$ so $f(p)dpdV\leq \frac{2*4\pi p^2\,dpdV}{h^3}$. Complete degeneracy: $f(p)=\left\{align\begin{array}{l}
+            \frac{4\pi p^2}{h^3}:\ p\leq p_F\\
+            0\\
+    \end{array}\right.$, so $n_edV=dV\int_0^{p_F}\frac{8\pi p^2}{h^3},dp=\frac{8\pi}{3h^3}p_F^3dV$. Given $n_e$ we get $p_F\propto n_e^{\frac{1}{3}}$
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            NR: $E_F=\frac{p_F^2}{2m_e}\propto n_e^{\frac{2}{3}}$        
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            R: If $n_e$ such that $p_F$ relativistic
+            \begin{align*}
+                &p=\frac{m_ev}{\sqrt{1-(\frac{v}{c})^2}},E_T=\frac{m_ec^2}{\sqrt{1-(\frac{v}{c})^2}}=m_ec^2\sqrt{1+\frac{p^2}{m_e^2c^2}}\\
+                &\Rightarrow \frac{1}{c}\TDy{p}{E_T}=\frac{\frac{p}{m_ec}}{\sqrt{1+\frac{p^2}{m_e^2c^2}}}\\
+                &E=E_T-m_ec^2\\
+            \end{align*}
+        \end{column}
+    \end{columns}
+    For EOS we need pressure (flux of momentum per unit surf per second: surf $d\sigma$, normal $\vec{n}$).Let's determine number of electrons goin through $d\sigma$ into small solid angle $d\Omega_s$ around dir $\vec{s}$ with $[p,p+dp]$: $f(p)\,dp \frac{d\Omega_s}{4\pi}$ electrons per unit volume with right p and dir, having $f(p)\,dpv(p)\cos{\theta}\,d\sigma \frac{d\Omega_s}{4\pi}$ electrons going through the surface per sec into $d\Omega_s$; total flux of momentum in dir $\vec{n}$ is
+    \begin{align*}
+        &P_e=\int_{2\pi}\frac{d\Omega_s}{4\pi}\int_0^{\infty}f(p)v(p)p\cos^2{\theta}\,dp=\frac{8\pi}{3h^3}\int_0^{p_F}p^3v(p)\,dp\tag{$\frac{4\pi}{3}$ int of $\cos^2{\theta}$ over hemisphere}\\
+        &
+    \end{align*}
+\end{frame}
+
+\begin{frame}{EOS complete degenerate electron gas}
 \begin{align*}
-&P_e=\int_{2\pi}\frac{d\Omega}{4\pi}\intzi{}dpf(p)v(p)p^2\cos{\theta}=\frac{8\pi}{3h^3}\int_0^{P_F}p^3v(p)\,dp\\
-&=\frac{8\pi c}{3h^3}\int_0^{P_F}\frac{p/(m_ec)}{\sqrt{1+p^2/(m_ec)^2}}=\frac{\pi m_e^4c^5}{3h^2}f(x)\\
-&U_e=\int_0^{P_F}f(p)E(p)\,dp=\frac{8\pi}{h^3}\int_0^{P_F}E(p)p^2\,dp=\frac{\pi m_e^4c^5}{3h^3}g(x)\
+    &P_e=\frac{8\pi c}{3h^3}\int_0^{P_F}\frac{p/(m_ec)}{\sqrt{1+p^2/(m_ec)^2}}=\frac{8\pi c^5 m_e^4}{3h^3}\int_0^x \frac{\xi^4\,d\xi}{\sqrt{1+\xi^2}}\tag{$\xi=\frac{p}{m_ec}$, $x=\frac{p_F}{m_ec}$: $n_e=\frac{\rho}{\mu_em_u}=\frac{8\pi m_e^3c^3}{3h^3}x^3$}\\
+    &P_e=\frac{\pi m_e^4c^5}{3h^2}f(x),\ \int_0^x \frac{\xi^4\,d\xi}{\sqrt{1+\xi^2}}=\frac{1}{8}[x(2x^2-3)\sqrt{1+x^2}+3\sinh^{-1}{x}]\\
+    &U_e=\int_0^{P_F}f(p)E(p)\,dp=\frac{8\pi}{h^3}\int_0^{P_F}E(p)p^2\,dp=\frac{\pi m_e^4c^5}{3h^3}g(x),\ g(x)=8x^3[\sqrt{x^2+1}-1]-f(x)\\
 \end{align*}
+x measures importance of rel. effect for electrons with high mom., $x=\frac{p_F}{m_ec}=\frac{\frac{v_F}{c}}{\sqrt{1-(\frac{v_f}{c})^2}}$ or $\frac{v_F^2}{c^2}=\frac{x^2}{1+x^2}$: if $x\ll1$ then $\frac{v_F}{c}\ll1$ (NR), if $x\gg1$ then $\frac{v_F}{c}\approx1$
 \begin{align*}
-&n_e=\frac{\rho}{\mu_em_H}=\frac{8\pi m_ec^3}{3h^3}x^3\\
-&x=\frac{P_F}{m_ec}\ll1:\quad&x\gg1:\\
-&P_e=\frac{8\pi m_e^4c^5}{15h^3}x^5=\frac{2}{3}U_e&P_e=\frac{2\pi m_e^4c^5}{3h^3}x^4=\frac{1}{3}U_e\\
-&=\num{1.0036e13}(\frac{\rho}{\mu_e})\expy{5/3}&=\num{1.2435e15}(\frac{\rho}{\mu_e})\expy{4/3}
+    &x\to0: f(x)\to \frac{8}{5}x^5,\ g(x)\to \frac{12}{5}x^5\\
+    &x\to\infty:\ f(x)\to 2x^4,\ g(x)\to6x^4\\
+    &\Rightarrow P_e=\frac{8\pi m_e^4c^5}{15h^3}x^5=\frac{2}{3}U_e\tag{$x\ll1$}\\
+    &P_e=\frac{1}{20}(\frac{3}{\pi})^{\frac{2}{3}}\frac{h^2}{m_e}n_e^{\frac{5}{3}}=\frac{1}{20}(\frac{3}{\pi})^{\frac{2}{3}}\frac{h^2}{m_em_u^{\frac{5}{3}}}(\frac{\rho}{\mu_e})^{\frac{5}{3}}=\num{1.0036e13}(\frac{\rho}{\mu_e})\expy{5/3}\cgs{}\tag{EOS comp-deg-NR-\Pelectron}\\
+    &\Rightarrow P_e=\frac{2\pi m_e^4c^5}{3h^3}x^4=\frac{1}{3}U_e\tag{$x\gg1$}\\
+    &=(\frac{3}{\pi})^{\frac{1}{3}}\frac{hc}{8}n_e^{\frac{4}{3}}=(\frac{3}{\pi})^{\frac{1}{3}}\frac{hc}{8m_u^{\frac{4}{3}}}(\frac{\rho}{\mu_e})^{\frac{4}{2}}=\num{1.2435e15}(\frac{\rho}{\mu_e})\expy{4/3}\cgs{}\tag{EOS comp-deg-UR-\Pelectron}
 \end{align*}
 \end{frame}
 
+\begin{frame}{Partial degeneracy of electron gas}
+    \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+    For finite T not all \Pelectron will be in cell of lowest poss. moment: most prob. occupation of phase cells of shell $[p,p+dp]$ is determined by $f(p)\,dp\,dV=\frac{8\pi p^2\,dpdV}{h^3}\frac{1}{1+\exp{\frac{E}{KT}-\psi}}$, $\psi$ deg. param.
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{align*}
+                &n_e=\frac{8\pi}{h^3}\int_0^{\infty}\frac{p^2\,dp}{1+\exp{\frac{E}{KT}-\psi}}\\
+                &P_e=\frac{8\pi}{3h^3}\int_0^{\infty}p^3v(p)\frac{p^2\,dp}{1+\exp{\frac{E}{KT}-\psi}}\\
+                &U_e=\frac{8\pi}{h^3}\int_0^{\infty}\frac{Ep^2\,dp}{1+\exp{\frac{E}{KT}-\psi}}\\
+            \end{align*}
+        \end{column}
+    \end{columns}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            NR: $E=\frac{p^2}{2m}$
+            \begin{align*}
+                &n_e=\frac{8\pi}{h^3}\int_0^{\infty}\frac{p^2\,dp}{1+\exp{\frac{E}{KT}-\psi}}=\frac{8\pi}{h^3}(2m_eKT)^{\frac{3}{2}}a(\psi)\\
+                &a(\psi)=\int_0^{\infty}\frac{\eta^2\,d\eta}{1+\exp{\eta^2-\psi}},\ \eta=\frac{p}{\sqrt{2m_eKT}}\\
+                &\Rightarrow \psi=\psi(\frac{n_e}{T^{\frac{3}{2}}})\\
+                &\exp{\psi}=\frac{h^3n_e}{2(2\pi m_eKT)^{\frac{3}{2}}}\tag{$\psi\to-\infty$, large T, $f(p)$ becomes Boltzman}\\
+                &\psi=\frac{E_0}{KT}\tag{$\psi\to\infty$}\\
+                &\frac{1}{1+\exp{\frac{E}{KT}-\psi}}=\frac{1}{1+\exp{\psi(\frac{E}{E_0}-1)}}\approx\left\{\begin{array}{l}
+                        1:\ E<E_0\\
+                        0:\ E>E_0\\
+                    \end{array}\\
+            \end{align*}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{align*}
+                    &n_e=\frac{\rho}{\mu_em_u}\\
+                    &=\frac{4\pi}{h^3}(2m_eKT)^{\frac{3}{2}}F_{\frac{1}{2}}(\psi)\tag{moderate $\psi$}\\
+                    &P_e=\frac{8\pi}{3h^3}(2m_eKT)^{\frac{3}{2}}KTF_{\frac{3}{2}}(\psi)\\
+                    &U_e=\frac{4\pi}{h^3}(2m_eKT)^{\frac{3}{3}}KTF_{\frac{3}{2}}(\psi)=\frac{3}{2}P_e
+            \end{align*}
+            moderate $\psi$, UR: $p\to \frac{E}{c}$, $v\to c$
+            \begin{align*}
+                &n_e=8\pi(\frac{KT}{hc})^3F_2(\psi)\\
+                &P_e=\frac{8\pi}{3h^3c^3}(KT)^4F_3(\psi)
+            \end{align*}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
 \begin{wordonframe}{Elettrostatic screening of ions: weak screening}
 La principale correzione che tiene conto dell'interazioni tra particelle \'e dovuta alle interazioni coulombiane: influence EOS and nuclear rection rates.
 
