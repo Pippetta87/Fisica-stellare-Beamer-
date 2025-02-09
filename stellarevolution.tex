@@ -782,7 +782,7 @@ Parametro R per determinazione He
 	\begin{column}{0.65\textwidth}
 	\begin{itemize}
 	\item stable radial pulsation : $\kappa$-mechanism - star energy flow fixes the radius - stability implies variation in energy flux and thus in R - opacity increases during compression/decreases in expansionat same level in stellar envelope: He/H ionization ragions
-        \item Boundary of IS - cool boundary: \xdiminuisce{T_e}, convection set in - hot boundary: \xaumenta{T_e}, \xdiminuisce{M_{ion}}, \xaumenta{R_{ion}}
+    \item Boundary of IS - cool boundary: \xdiminuisce{T_e}, convection set in - hot boundary: \xaumenta{T_e}, \xdiminuisce{M_{ion}} (\xdiminuisce{\rho_{ion}}), \xaumenta{R_{ion}}
     \item Adiabatic pulsation with period $\Pi\sqrt{\rho}=Q$, slightly deps on M: $\Pi\propto \sqrt{\frac{R}{g}}\propto \frac{R^3}{M}$ as $g\propto \frac{M}{R^2}$. P-L relation: scale-distance of universe
 \end{itemize}
 \begin{block}{RR-Lyrae}
@@ -794,16 +794,15 @@ Parametro R per determinazione He
 \end{block}
 \begin{block}{Classical Cepheids}
     \begin{itemize}
-        \item $L\approx300-2500\lsun$, $\Pi\approx1-50\si{\day}$. Topology of cepheids IS is very diff from RR-Lyrae ([18])
-        \item \xaumenta{Z}, \xdiminuisce{T_e}, steeper IS. Int-mass stars going through He-burning with B-loop extends to IS.
+        \item $L\approx300-2500\lsun$, $\Pi\approx1-50\si{\day}$. Topology of cepheids IS is very diff from RR-Lyrae ([18]); \xaumenta{Z}, \xdiminuisce{T_e}: steeper IS. Int-mass stars going through He-burning with B-loop extends to IS.
         \end{itemize}
 \end{block}
     \end{column}
 	\begin{column}{0.35\textwidth}
 	\begin{figure}[!ht] 
 	%\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.37\textheight]{ffiig}\label{fig:ffiigg}
-	\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.45\textheight]{HBPulsation-RRIS}\label{fig:HBPulsation-RRIS}
-	\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.45\textheight]{HBPulsation-CIS}\label{fig:HBPulsation-CIS}
+	\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.43\textheight]{HBPulsation-RRIS}\label{fig:HBPulsation-RRIS}
+	\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.43\textheight]{HBPulsation-CIS}\label{fig:HBPulsation-CIS}
 	\end{figure}
 \end{column}\end{columns}
 \end{frame}
@@ -1049,7 +1048,7 @@ Per CO-core $\mu_e=\approx2$ ($n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum\
 
 \begin{frame}{Simplified WD model: $L-T_c$ relation and envelope size}
 \begin{block}{$L-T_c$ relation}
-m-continuity + HE - $\frac{M}{R^3}\propto\exv{\rho}$ - considering radiative envelope: $\frac{HE}{RT}=P\,dP=\frac{4ac}{3}\frac{4\pi GMk}{\kappa_0L\mu m_H}T\expy{7.5}\,dT$ (EOS: perfect gas, opacity: $\kappa=\kappa_0\rho T\expy{-3.5}$, $m_r\approx M$) - integrating from surface we have enevelope $P(T)$ and via EOS: $\rho=\sqrt{\frac{32\pi acGM\mu_{env}m_H}{8.5*3\kappa_0Lk}}T\expy{3.25}$ - at envelope/degenerate boundary $P_e^d=P_e^{perf}$: $\frac{\rho_bkT_b}{\mu_em_H}=\num{1.0036e13}(\frac{\rho_b}{\mu_e})\expy{5/3}$ (cgs) quindi $\frac{L}{\lsun}=\num{6.4e-3}\frac{\mu}{\mu_e}\frac{M}{\msun}\frac{T_b\expy{3.5}}{\kappa_0}$. CO WD deg.-core is isothermal $T_b\approx T_c$ - $L\approx\numrange{e-3}{e-4}\lsun$ so $T_c<\SI{e7}{\kelvin}$ - detailed $L-T_c$ relation [177]
+m-continuity + HE - $\frac{M}{R^3}\propto\exv{\rho}$ - considering radiative envelope: $\frac{HE}{RT}=P\,dP=\frac{4ac}{3}\frac{4\pi GMk}{\kappa_0L\mu m_H}T\expy{7.5}\,dT$ (envelope EOS: perfect gas, envelope opacity: $\kappa=\kappa_0\rho T\expy{-3.5}$, $m_r\approx M$) - integrating from surface we have enevelope $P(T)$ and via EOS: $\rho=\sqrt{\frac{32\pi acGM\mu_{env}m_H}{8.5*3\kappa_0Lk}}T\expy{3.25}$ - at envelope/degenerate boundary $P_e^d=P_e^{perf}$: $\frac{\rho_bkT_b}{\mu_em_H}=\num{1.0036e13}(\frac{\rho_b}{\mu_e})\expy{5/3}$ (cgs) quindi $\frac{L}{\lsun}=\num{6.4e-3}\frac{\mu}{\mu_e}\frac{M}{\msun}\frac{T_b\expy{3.5}}{\kappa_0}$. CO WD deg.-core is isothermal $T_b\approx T_c$ - $L\approx\numrange{e-3}{e-4}\lsun$ so $T_c<\SI{e7}{\kelvin}$ - detailed $L-T_c$ relation [177]
 \end{block}
 \begin{block}{Envelope size}
 Rad+Kramers - $\TDy{r}{T}=-\frac{3\kappa_0\rho^2}{4acT\expy{6.5}}\frac{L}{4\pi r^2}$ -+above $\rho$: $\frac{dr}{r^2}=4.25\frac{k}{\mu Gm_H}\frac{dT}{M}$ - Integrata da s a $r_b$: $T_b=\frac{1}{4.25}\frac{\mu Gm_H}{k}\frac{M}{R}(\frac{R}{r_b}-1)$ - $T_b\approx\SIrange{e6}{e7}{\kelvin}$ cio\'e $r_b\approx0.99R$
