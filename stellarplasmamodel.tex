@@ -33,6 +33,7 @@ Energia interna per unit\'a di massa: somma delle energie traslazionali delle pa
 Peso molecolare medio: massa media in amu per particella libera
 \begin{align*}
 &\mu=\frac{1}{\bar{n}_HX+\bar{n}_{He}Y+\bar{n}_{Z}Z}\\
+&\invers{\mu}=\sum_i X_i \frac{1+f_i}{A_i}\\
 &\mu_0=\frac{1}{X+\midfrac{Y}{4}+\midfrac{Z}{\bar{A}}},\ \mu_e\approx\frac{2}{1+X}
 \end{align*}
 con $\bar{n}_i=\frac{1+f_i}{A_i}$ numero medio di particelle libere per unit\'a di massa atomica dovute alla specie i di peso atomico $A_i$ e $f_i$ numero medio di elettroni liberati da ione della specie i; peso atomico medio per ione $\mu_0$ ed elettrone libero (ionizzato) $\mu_e$.
@@ -54,7 +55,7 @@ $f^{(0)}(\vec{p}_i)$: numero di particelle della specie i per unit\'a di volume 
 \end{wordonframe}
 
 \begin{frame}{degenerazione completa: casi limite NR e R}
-    Quantum cell of volume in P.S. $d^3pd^3x=h^3$ each with $g_e=2$: in shell $[p,p+dp]$ there are $\frac{4\pi p^2dpdV}{h^3}$ so $f(p)dpdV\leq \frac{2*4\pi p^2\,dpdV}{h^3}$. Complete degeneracy: $f(p)=\left\{align\begin{array}{l}
+    Quantum cell of volume in P.S. $d^3pd^3x=h^3$ each with $g_e=2$: in shell $[p,p+dp]$ there are $\frac{4\pi p^2dpdV}{h^3}$ so $f(p)dpdV\leq \frac{2*4\pi p^2\,dpdV}{h^3}$. Complete degeneracy: $f(p)=\left\{\begin{array}{l}
             \frac{4\pi p^2}{h^3}:\ p\leq p_F\\
             0\\
     \end{array}\right.$, so $n_edV=dV\int_0^{p_F}\frac{8\pi p^2}{h^3},dp=\frac{8\pi}{3h^3}p_F^3dV$. Given $n_e$ we get $p_F\propto n_e^{\frac{1}{3}}$
