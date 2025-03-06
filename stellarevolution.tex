@@ -80,13 +80,22 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 \end{frame}
 
 \begin{frame}{Yield of H-burning star analysis}
-\begin{itemize}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+    \begin{itemize}
 \item Longest evolutionary phase: larger number of observed stars
 \item central/shell-H-burning determine successive phases
 \item most important clock is central H-burning termination
 \item Final shell H-burning phase in low mass, low-Z star provide distance indicator for old stellar pop
 \item count of stars evolving through central H-burning give insight on IMF
 \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}[!ht]\includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.95\textwidth]{burninglifetime}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    
 \end{frame}
 
 \begin{frame}[fragile]{Major H burning reaction: PP chains}
@@ -119,7 +128,7 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 \end{align*} 
 \end{comment}
 \begin{itemize}
-\item $Q=\SI{26.73}{\mega\ev}$ - energy release per gram $Q/m(^4He)=\SI{6.4e18}{\erg\per\gram}$
+    \item $Q=4*\massexcess{H}-\massexcess{^4He}=4*\SI{7288.97}{\kilo\ev}-\SI{2424.92}{\kilo\ev}=\SI{26.731}{\mega\ev}$ - energy release per gram $Q/m(^4He)=\SI{6.4e18}{\erg\per\gram}$
 \item Neutrino releases: PPI - \SI{0.5}{\mega\ev} per He
 \item Neutrino releases: PPII - \SI{0.81}{\mega\ev} per He
 \item Neutrino releases: PPI - \SI{6.71}{\mega\ev} per He
