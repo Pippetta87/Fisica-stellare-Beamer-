@@ -219,6 +219,285 @@ $F=U-TS$: processo isotermo rev., $\Delta Q$ system, $\Delta W=P\Delta V$ work t
     \end{itemize}
 \end{frame}
 
+
+\section{Opacity}\linkdest{opacitysources}
+
+\subsection{Time-dependent perturbation: EM transition}
+
+\begin{frame}{Time-dep perturbation: EM wave first order perturbation}
+\begin{align*}
+    &i\hbar\TDy{t}{\psi(t)}=H\psi(t)\\
+    &H\psi_n=E_n\psi_n\tag{energy eigenstates}\\
+    &\psi(t)=\sum_nc_n\exp{(-\frac{i}{\hbar}E_nt)}\psi_n: c_n=\braket{\psi_n|\psi(t_0)}\exp{(\frac{i}{\hbar}E_nt_0)}\\
+    &H=H_0+V(t):\tag{perturb. EM pulse}\\
+    &\psi(t)=\sum_nc_n(t)\Exp{(-\frac{i}{\hbar}E_n^{(0)}t)}\psi_n^{(0)}\\
+    &c_s(t)\approx1\gg c_k(t): i\hbar\TDy{t}{c_k}=V_{ks}\exp{i\omega_{ks}t}\tag{Pert. short,weak: no mixin in initial state s}\\
+    &c_k(+\infty)=-\frac{i}{\hbar}\int_{-\infty}^{+\infty}V_{ks}\exp{i\omega_{ks}t}\,dt\tag{V transient-$|c_k|^2$ prob transition to k}\\
+    &H=\frac{[\vec{p}+\frac{e}{c}\vec{A}]^2}{2m}+V_c-e\phi=H_0 +\frac{e\scap{A}{p}}{mc}+\frac{e^2A^2}{2mc^2},\ \phi=0, \nabla\cdot\vec{A}=0, \nabla^2\vec{A}-\frac{1}{c^2}\TtwoDy{t}{\vec{A}}=0\tag{atom-e pert. by emwav-NoSorg}
+\end{align*}
+Final term gives much smaller effect than second: pertutbing potential for atoms is $V=\frac{e}{mc}\scap{A}{p}$, term in $A^2$ is important for scattering of EM-waves from free \Pelectron (to be considered if $\scap{A}{p}$ gives no first-order transition).
+\end{frame}
+
+\begin{frame}{Transition probability: emission/absorption}
+    \begin{align*}
+        &\vec{A}(\vec{r},t)=\int_{-\infty}^{+\infty}\vec{A}(\omega)\Exp{[-i\omega(t-\frac{\hat{n}\cdot\vec{r}}{c})]}\,d\omega\tag{Decomp. arb pulse into harmonic pw}\\
+        &\vec{A}^*(\omega)=\vec{A}(-\omega), \nabla\cdot\vec{A}=0\Rightarrow\hat{n}\cdot\vec{A}(\omega)=0\tag{$\vec{A}$ real, transverse wave}\\
+        &V=\frac{e}{mc}\int_{-\infty}^{+\infty}\Exp{-i\omega(t-\frac{\hat{n}\cdot\vec{r}}{c})}\vec{A}(\omega)\cdot\vec{p}\,d\omega: V_{ks}=\frac{e}{mc}\int_{-\infty}^{+\infty}\braket{k|\Exp{(i \frac{\omega}{c}\hat{n}\cdot\vec{r})}\vec{p}|s}\exp{-i\omega t}\vec{A}(\omega)\,d\omega\\
+        &c_k(+\infty)=-\frac{ie}{\hbar mc}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\braket{k|\Exp{i\frac{\omega}{c}\hat{n}\cdot\vec{r}}\vec{p}|s}\cdot\vec{A}(\omega)\exp{i(\omega_{ks}-\omega)t}\,dtd\omega\\
+        &=-\frac{2\pi ie}{\hbar mc}\braket{k|\Exp{i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r}}\vec{p}|s}\cdot\vec{A}(\omega_{ks}): \hbar\omega_{ks}=E_k-E_s\tag{Absorption at $\omega_{ks}$}\\
+        &\tag{Stimulated emission at $\omega_{ks}$: excit $s\to k$}\\
+        &\omega_{sk}=-\omega_{ks}, \int\psi_k^*V\psi_s=\int(V\psi_k)^*\psi_s: c_{k\to s}=c_{s\to k}^*\tag{Stimul. emiss. trans $k\to s$,V is Herm.}\\
+        &\frac{B_{ks}}{B_{sk}}=\frac{2J_s+1}{2J_k+1}=\frac{g_s}{g_k}\tag{detailed bal(spin, state degeneracy) ratio transitio prob}\\
+        &|c_k(+\infty)|^2=\frac{4\pi^2e^2}{\hbar^2m^2c^2}|A(\omega_{ks})|^2|\braket{k|\Exp{i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r}}\vec{p}\cdot\hat{e}|s}|^2\tag{transition probability - Polariz $\hat{e}$: $\vec{A}(\omega)=A(\omega)\hat{p}$}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Absorption crosssection}
+    Mass absorption coeff deps on absorption crosssection which is ratio of number of photons in freq $d\omega$ absorbed per atom to total number in freq $d\omega$ per unit area incident onto atoms; but since radiation is treated classic. we consider average energy absorbed per atom
+    \begin{align*}
+        &\vec{S}=\frac{c}{4\pi}\vecp{E}{H}, \vec{E}=-\frac{1}{c}\TDy{t}{\vec{A}}, \vec{H}=\nabla\wedge\vec{A}\tag{Poynting's vec: energy flux in pulse}\\
+        &\vec{S}=-\frac{1}{4\pi}\int_{-\infty}^{+\infty}-i\omegaA(\omega)\hat{e}\Exp{[-i\omega(t-\frac{\hat{n}\cdot\vec{r}}{c})]}\,d\omega\wedge\frac{1}{c}\int_{-\infty}^{+\infty}i\omega'A(\omega')(\hat{n}\wedge\hat{e})\Exp{[-i\omega'(t-\frac{\hat{n}\cdot\vec{r}}{c})]d\omega'}\\
+        &=-\frac{\hat{n}}{4\pi c}\iint\,d\omega d\omega' \omega\omega'A(\omega)A(\omega')\Exp{[-i(\omega+\omega')(t-\frac{\hat{n}\cdot\vec{r}}{c})]}\tag{transverse wave $\hat{e}\cdot\vec{n}=0$: $\hat{e}\wedge(\hat{n}\wedge\hat{e})=\hat{n}$}\\
+        &E=\int_{-infty}^{+\infty}\vec{S}(t)\cdot\hat{n}\,dt=\frac{1}{c}\int_0^{+\infty}\omega^2|A(\omega)|^2\,d\omega=\int E(\omega)\,d\omega\tag{ener. carried by pulse per unit area}\\
+        &\hbar\omega_{ks}|c_k(+\infty)|^2=\frac{4\pi^2e^2E(\omega_{ks})}{\hbar m^2c\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vet{r})\vec{p}\cdot\hat{e}}|s}|^2
+    \end{align*}
+    Absorption crosssection $\sigma(\omega)=\frac{\text{energy abs }/\text{initial state s at freq $\omega$}}{\text{Inc ener}/\text{unit area at freq $\omega$}}$
+\end{frame}
+
+\subsection{BB opacity}
+
+\begin{frame}{Bound-Bound Abs.: finite lifetime \Pelectron state/oscillator strenght perspect.}
+    \begin{itemize}
+            \item Finite electron state lifetime:
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\int E(\omega)\sigma(\omega)\,d\omega\tag{pulse energy absorbed}\\
+                &\sigma(\omega)=\frac{4\pi^2\alpha}{m^2\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r})}\vec{p}\cdot\hat{e}|s}|^2\delta(\omega-\omega_{ks})\\
+                &\tau\Delta E=\tau\Gamma=\hbar\tag{Initial/final \Pelectron states are not inf sharp}\\
+                &E_{\frac{1}{2}}=E_k^{(0)}\pm \frac{\hbar}{2\tau}: \Gamma=\frac{\hbar}{\tau}\tag{Full-Width Half Max}\\
+                &\sigma(E)=\frac{4\pi^2\alpha}{m^2\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r})}\vec{p}\cdot\hat{e}|s}|^2*\\
+                &*\frac{\frac{\Gamma}{2\pi\hbar}}{(\omega-\omega_{ks})^2+(\frac{\Gamma}{2\hbar})^2}\tag{line-abs cross-sec}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\int_{\Delta\omega}\sigma(\omega)\,d\omega=\frac{4\pi^2\alpha}{m^2\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r})}\vec{p}\cdot\hat{e}|s}|^2\\
+                &\hbar\Delta\omega\approx\hbar, E(\omega)\approx E(\omega_{ks})\\
+                &\psi_k(t)\approx\Exp{(-\frac{t}{2\tau})}\psi_k^{(0)}\Exp{(-\frac{i}{\hbar}E_k^{(0)}t)}:\\
+                &\int|\psi_k|^2\,dV=\Exp{(-\frac{t}{\tau})}\\
+                &E_{op}=-\frac{\hbar}{i}\PDof{t}: \psi(t)=\int_{-\infty}^{+\infty}\phi(E)\Exp{(-\frac{i}{\hbar}Et)}\,dE\\
+                &|\phi(E)|^2\tag{probability state has energy E}\\
+                &\Rightarrow\phi(E)\propto\int_0^{+\infty}\Exp{[\frac{i}{\hbar}(E-E_k^{(0)})t-\frac{t}{2\tau}]}\\
+                &P(E)\,dE=\frac{\hbar}{2\pi\tau}\frac{dE}{(E-E_k^{(0)})^2+(\frac{\hbar}{2\tau})^2}\tag{norm prob}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\item Oscillator strengths of transition: for linear harmonic osc parallel to pol $\hat{e}$ $\int_{\Delta\omega}\sigma(\omega)\,d\omega=\frac{2\pi^2e^2}{mc}=\frac{2\pi^2\hbar\alpha}{m}$, lines are ref to this standard mult osc crosssec by o.s. f: $\sigma(\omega)=\frac{2\pi^2e^2}{mc}f_{ks}\frac{\frac{\Gamma}{2\pi\hbar}}{(\omega-\omega_{ks})^2+(\frac{\Gamma}{2\hbar})^2}$ so $f_{ks}=\frac{2}{\hbar m\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r})}\vec{p}\cdot\hat{e}|s}|^2$; interior opacity is rel insens. to uncert. in line widths and shapes.
+    implification for eval of matrix-element: wavelenght of incident light is usually long comp. to absorber size, $\lambda=\frac{2\pi c}{\omega_{ks}}\gg\bar{r}$, $\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r})}\approx1+i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r}+\ldots$ and matrix-el $\braket{k|\vec{p}\cdot\hat{e}|s}+\braket{k|i \frac{\omega_{ks}}{c}(\hat{n}\cdot\vec{r})\vec{p}\cdot\hat{e}|s}$, rapidity conv. $\hbar\omega_{ks}\approx \frac{Z^2e^2}{a_0}$, BE, whereas $\bar{r}\approx \frac{a_0}{Z}$: $\frac{\omega_{ks}\bar{r}}{c}=\frac{Z^2e^2}{\hbar ca_0}\frac{a_0}{Z}=Z\frac{e^2}{\hbar c}=\alpha Z=\frac{Z}{137}$; first term el-dipole (allow), second term if first zero are el-quadrupole/magn-dipole (''forbidd''): only allow. trans are important for stellar opacity (forbidd. important for low density)
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Electric dipole transition: $\braket{k|\vec{p}|s}$}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &[H_0,\vec{r}]=-\frac{i\hbar}{m}\vec{p}\\
+                &\braket{k|\vec{p}|s}=\frac{im}{\hbar}\braket{k|H_0\vec{r}-\vec{r}H_0|s}\\
+                &=\frac{im}{\hbar}(E_k^{(0)}-E_s^{(0)})\braket{k|\vec{r}|s}=im\omega_{ks}\braket{k|\vec{r}|s}\\
+                &\exv{|\braket{k|\vec{r}\cdot\hat{e}|s}|^2}=\frac{1}{3}|\braket{k|\vec{r}|s}|^2\tag{iso $\hat{r}$, $\hat{p}$}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\int_{\Delta\omega}\sigma(\omega)\,d\omega=4\pi^2\alpha\omega_{ks}|\braket{k|\vec{r}\cdot\hat{e}|s}|^2\\
+                &f_{ks}=\frac{2m\omega_{ks}}{\hbar}|\braket{k|\vec{r}\cdot\hat{e}}|^2
+            \end{align*}
+        \end{column}
+    \end{columns}
+    For BB abs k,s are wave functions $\psi_k=R_{klm}Y_{lm}(\theta,\phi)$, for hydrogen-like $V=-\frac{Ze^2}{r}$ and $R_{klm}$ are Laguerre pol. Selection rules for el-dipole transition: $l-l'=\pm1$, $m-m'=0,\pm1$.
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\frac{B_{ll'}}{B_{l'l}}=\frac{2l'+1}{2l+1}\tag{abs rate per state l/induced-em. rate per state l'}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &f_{ks}=\frac{2m\omega_{ks}}{3\hbar}|\braket{k|\vec{r}|s}|^2=\frac{2m\omega_{ks}}{3\hbar}(R_{10}^{21})^2\tag{Ly\alpha: $1s\to2p$}\\
+                &\hbar\omega_{ks}=1-\frac{1}{2^2}\Ryd{}=\frac{3}{4}\frac{e^2}{2a_0}, a_0=\frac{\hbar^2}{me^2}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{BF opacity}
+
+\begin{frame}[allowframebreaks]{BF-absorption: Born Approx}
+    \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+            \begin{align*}
+                &\hbar\omega_{ks}=\chi+\frac{p^2}{2m}\\
+                &[\sigma]=\frac{\si{\per\second}}{\si{\per\square\cm\per\second}}\tag{Prob. of \Pphoton abs per u.t./flux \Pphoton}\\
+                &dI=-\sigma \frac{N_0\rho}{A}I\,dx, \kappa=\frac{N_0}{A}\sigma\\
+                &\sigma\approx\left\{\begin{array}{l}C_KZ^4\lambda^3+b_K\ \lambda<\lambda_K\\C_{L_1}Z^4\lambda^3+b_{L_1}\ \lambda_K<\lambda<\lambda_{L_1}\\
+            \end{array}\right.\tag{between shell edges abs increses as $\lambda^3$}\\
+            &\frac{hc}{\lambda_K}=\chi_K, C_K=\SI{2.25e-2}{\per\cm}, C_{L_1}=\SI{0.33e-2}{\per\cm}\\
+            &
+            \end{align*}
+            Saha eq.: at moderate density no bound level except if $\chi\geq kT$; since in Rosseland op. most important freq. corr. to few times $KT$ absorption dominate near th. - for photon energy ($E=h\nu=\frac{hc}{\lambda}$) slightly in eccess to threshold emitted electron has low velocity so is influenced by Coulomb potential of ion: for accurate calculations $\psi_k$ has to be coulomb functions (free wave functions describing a particle moving in a Coulomb field). For $\frac{hc}{\lambda}\gg\chi$, but non-rel, boundstate wavefunction is H-like:
+            \begin{align*}
+                &|C_k(+\infty)|^2\tag{continuum trans prob}\\
+                &d\sigma(\omega)=\frac{4\pi^2\alpha}{m^2\omega}|\braket{k|\exp{i \frac{\omega}{c}\hat{n}\cdot\vec{r}}\vec{p}\cdot\hat{e}|s}|^2 \frac{\Delta n}{\Delta \omega}\tag{photoejection into $d\omega$}\\
+                &\frac{\Delta n}{\Delta \omega}\tag{number of cont. eig.states in $d\Omega$ in energy band about $E_k=\hbar\omega-\chi=\hbar\omega+E_s$}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{figure}[!ht]
+                \includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.95\textwidth]{BF-abs}\label{fig:BF-abs}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    \begin{align*}
+        &\psi_k=L^{-\frac{3}{2}}\Exp{i\scap{k}{r}}, E_k=\frac{\hbar^2k^2}{2m}: \Delta n= \frac{L^3\Delta p_x\Delta p_y\Delta p_z}{h^3}=\frac{L^34\pi p^2\,dp}{h^3}, \frac{\Delta n}{\Delta E}=\frac{m^{\frac{3}{2}}\sqrt{E}L^3}{\sqrt{2}\pi^2\hbar^2}
+    \end{align*}
+    
+    \begin{align*}
+        &\frac{\Delta n}{\Delta\omega}=\frac{d\Omega}{4\pi}\frac{m^{\frac{3}{2}}\sqrt{E}L^3}{\sqrt{2}\pi^2\hbar^2}\\
+        &\psi_s=R_{1s}Y_{00}=\frac{1}{\sqrt{\pi}}(\frac{Z}{a})^{\frac{3}{2}}\exp {-\frac{Zr}{a}}\tag{photoejection from K-shell}\\
+        &\TDy{\Omega}{\sigma(\omega)}=\frac{32\alpha\hbar k(\hat{e}\cdot\vec{k})^2}{m\omega}(\frac{Z}{a})^5(\frac{Z^2}{a^2}+q^2)^{-4}, q=\vec{k}-\frac{\omega}{c}\hat{n}\tag{$\hbar q$ momentum transfer - agree with obs for $\hbar\omega\gg\chi$}
+    \end{align*}
+    \begin{columns}[T]
+        \begin{column}{0.7\textwidth}
+                $\theta$: photon direction/ejected electron dir,$\psi$:polarization/plane photon and electron momenta
+            \begin{align*}
+                &(\frac{Z}{a})^2+q^2=(\frac{Z}{a})^2+k^2+(\frac{\omega}{c})^2-2k\frac{\omega}{c}\cos{\theta}=2 \frac{m\omega}{\hbar}(1-\frac{\hbar k}{mc}\cos{\theta}+\frac{\hbar\omega}{2mc^2})\\
+                &\frac{\hbar^2k^2}{2m}=\hbar\omega-\chi=\hbar\omega-\frac{Z^2e^2}{2a}\tag{energy conservation}\\
+                &\TDy{\Omega}{\sigma(\omega)}=2\alpha k(\hat{e}\cdot\vec{k})^2(\frac{\hbar}{m\omega})^5(\frac{Z}{a})^5(1-\beta\cos{\theta})^{-4}\tag{\Pelectron v is NR, ignore photon energy vs \Pelectron rest-mass en.}\\
+                &=2\alpha k^3(\frac{\hbar}{m\omega})^5(\frac{Z}{a})^5 \frac{\sin^2{\theta}\cos^2{\phi}}{(1-\beta\cos{\theta})^4}: \sigma(\omega)\approx \frac{8\pi\alpha}{3}(\frac{Z}{a})^5(\frac{\hbar}{m\omega})^5k^3\\
+                &\sigma(\hbar\omega\gg\chi)\approx \frac{2}{3}\frac{\alpha^{\frac{9}{2}}}{\pi^{\frac{5}{2}}a^{\frac{3}{2}}}Z^5\lambda^{\frac{7}{2}}\tag{High freq approx: $k^2\approx \frac{2m\omega}{\hbar}$}\\
+                &\lambda^{\frac{7}{2}}\approx\lambda^3\lambda_k^{\frac{1}{2}},\frac{hc}{\lambda_k}=\frac{Z^2e^2}{2a}\Rightarrow Z^5\lambda^{\frac{7}{2}}\propto Z^4\lambda^3\tag{Near edge: wrong approx/right behaviour}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \begin{figure}[!ht]
+                \includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.95\textwidth]{photoejection-kin}\label{fig:photoejection-kin}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}{BF absorption: most important frequencies near edge $\hbar\omega\approx\chi$}
+    Replacing free-electron wave function by plane wave (Born Approx) is inadequate near threshold where electron wavefunction is strongly perturbed by Coulomb interaction: these are the most important frequencies for stellar opacity problem we have to use exact Coulomb waves for $\psi_k$:
+    \begin{align*}
+        &\sigma_{BF}=\frac{64\pi^4me^{10}}{3\sqrt{3}ch^6}\frac{Z^4}{n^5}\frac{g(\nu,n,l,Z)}{\nu^3}=\num{2.82e29}\frac{Z^4}{n^5\nu^3}g(\nu,n,l,Z)\si{\square\cm}
+    \end{align*}
+\end{frame}
+
+\subsection{FF opacity}
+
+\begin{frame}{FF Absorption: Inverse bremsstrahlung}
+    \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+    \begin{align*}
+        &\frac{p_k^2}{2m}=\frac{p_s^2}{2m}+\hbar\omega, H_{tot}=H_{free}+V_c+H_{int}\tag{Heavy Z absorbs negl. kin ener.}
+    \end{align*}
+    \begin{itemize}
+        \item If we take unpert. $H_0=H_f+V_c$, zeroth order wave function $\psi_k^{(0)}$ are coulomb wf - \Pelectron scattering by ion. Perturbation at first order in interaction with em field.
+    \item Born Approx: $H_0=H_{free}$, 0th order wf are plane waves, perturbed H is $V_c+V_{int}$. Transition probability propto $|V_{ks}|^2$ if is null $V_{ks}\to\sum_m \frac{V_{km}V_{ms}}{E_s-E_m}$ - virtual transition $s\to m \to k$ (energy don't have to be conserved as m has short lifetime). Two possibility: 1) Electron absorbs photon ($H_{int}$) and its momentum becomes $\vec{k}_m=\vec{k}_s+\frac{\omega}{c}\hat{n}$ then $V_c$ causes scattering transition $\vec{k}_m\to\vec{k}_k$. 2) $V_c$ causes transition $\vec{k}_s\to\vec{k}_m$, such that $H_{int}$ has a momentum conserving matrix element for absorption of photon: $\vec{k}_k=\vec{k}_m+\frac{\omega}{c}\hat{n}$. The sum is on both intermediate states.
+        \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{figure}[!ht]
+                \includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.95\textwidth]{FF-feynman}\label{fig:FF-feynman}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    \begin{align*}
+        &r=\frac{2\pi}{\hbar}|\sum_m \frac{V_{km}V_{ms}}{E_s-E_m}|^2\rho(E_k)\tag{$\rho$ density of final states - GoldenRules: transition prob per unit time}\\
+        &d\sigma_{ff}(Z,\nu,v)=\frac{4\pi Z^2e^6g_{ff}(v,\nu)}{3\sqrt{3}hcm^2v\nu^3}n_e(v)\,dv\tag{$n_e(v)$ \Pelectron density with $[v,v+dv]$ }\\
+        &n_e(v)dv=4\pi n_e(\frac{m}{2\pi kT})^{\frac{3}{2}}\Exp{-\frac{mv^2}{2kT}}v^2\,dv, \bar{\sigma}_{ff}(Z,\nu)=\int_0^{\infty}d\sigma(Z,\nu,v):\\
+        &\bar{\sigma}_{ff}(Z,\nu,T)=\num{3.69e8}\frac{Z^2n_e\bar{g}_{ff}}{T^{\frac{1}{2}}\nu^3}\si{\cm}\Rightarrow\kappa_{ff}(\nu)=\sum \frac{X_zN_0}{A_z}\bar{\sigma}_{ff}(Z,\nu)
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Rosseland Mean for FF opacity - Kramer's op.: $\propto\rho T^{-3.5}$}
+    FF opacity dominate total opacity in important regions of $\rho$-T plane
+    \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+            \begin{align*}
+                &u=\frac{h\nu}{kT}: \frac{1}{\kappa}=\frac{2\pi k^4}{ac^3h^3}\int_0^{\infty}\frac{u^4\exp{2u}}{\kappa(u)[\exp{u}-1]^3}\,du\tag{all true abs}\\
+                &\kappa_{ff}(\nu)\approx K\nu^{-3}=K(\frac{h}{kT})^3u^{-3}, \exv{g_{ff}}\approx\bar{g}_{ff}(u_{max}(=7))\tag{ignoring deps g on $\nu$}\\
+                &\Rightarrow \frac{1}{\kappa}=\frac{1}{K\exv{\nu^{-3}}}, \exv{\nu^{-3}}\approx[197(\frac{kT}{h})^3]^{-1}:(h\nu)_{eff}\approx5.82kT\\
+                &\exv{\sigma_{ff}}=\num{2.07e-25}\frac{Z^2n_e}{T^{3.5}}\bar{g}_{ff}(u=7)\si{\square\cm}=\num{1.25e-1}\frac{Z^2\bar{g}_{ff}}{\mu_e}\frac{\rho}{T^{3.5}}\si{\square\cm}\\
+                &\approx\num{6.25e-2}(1+X)Z^2\bar{g}_{ff}\rho T^{-3.5}\si{\square\cm}\\
+                &\Rightarrow\exv{\kappa_{ff}}=\num{7.53e22}\frac{\rho}{\mu_eT^{3.5}}\sum_Z \frac{Z^2\bar{g}_{ff}(Z,u=7)X_Z}{A_Z}\si{\square\cm\per\gram}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{figure}[!ht]
+                \includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.95\textwidth]{rhoTplane-kappa}\label{fig:rhoTplane-kappa}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\subsection{Electron opacity}
+
+\begin{frame}{Scattering of photons by free electrons}
+    Scattering opacity by free lectrons so small that is dominated by BF opacity until ionization is complete and by FF opacity until T is suff. great: in high T range electron scattering is main opacity source. In quantum electrodyn. vector potential $\vec{A}$ is expanded linearly  in terms of creation/destruction operators for single photons - the term $\scap{p}{A}$ in BF, FF, BB gives rise to single photon absorption - but matrix element for scattering must involve destruction of initial photon/creation of scattered: must be quadratic in vector potential $\vec{A}$.
+            \begin{align*}
+                &H_{int}=\frac{e}{mc}\scap{p}{A}+\frac{e^2}{2mc^2}\scap{A}{A}=H_{int}^{(1)}+H_{int}^{(2)}: \braket{k|H_{int}|s}=\sum_m \frac{\braket{k|H^{(1)|m}\braket{m|H^{(1)}_{int}|s}}}{E_s-E_m}+\braket{k|H^{(2)}_{int}|s}\propto e^2
+            \end{align*}
+            \begin{columns}[T]
+        \begin{column}{0.65\textwidth}
+            second order part of $H^{(1)}_{int}$ and hitherto neglected $H_{int}^{(2)}$ - for photon's $E\ll m_ec^2$ answer con be obtained from classical EM. When free electron is invested by EM radiation accelerates so radiates in direction other than incident (scattering), for photon energy $\ll m_ec^2$ scattering radiation has same freq as incident. Power radiated into solid angle $d\Omega$ at angle $\psi$ to direction of accel $\vec{a}$ for NR particles: $dP=\frac{e^2}{4\pi c^3}a^2\sin^2{\psi}\,d\Omega$, scattered waves are pol in plane of $\vec{a}$ and in viewer dir. ($\sin^2{\psi}=1-\sin^2{\theta}\cos^2{\phi}$)
+            \begin{align*}
+                &\vec{E}(z,t)=\hat{\epsilon}E_0\cos{(kz-\omega t)}\Rightarrow\vec{a}=-\hat{\epsilon}\frac{e}{m}E_0\cos{(kz-\omega t)}\\
+                &\bar{a^2}=\frac{1}{2}\frac{e^2}{m^2}E_0^2:\TDy{\Omega}{P}=\frac{e^2}{4\pi c^3}\frac{1}{2}\frac{e^2}{m^2}E_0^2\sin^2{\psi}=\frac{c}{8\pi}E_0^2(\frac{e^2}{mc^2})^2\sin^2{\psi}\\
+                &\TDy{\Omega}{\sigma}=\frac{\text{power radiated/unit solid angle}}{\text{incident power/unit area}}, S=\frac{\text{power}}{\text{area}}=\frac{c}{4\pi}\bar{E^2}=\frac{c}{8\pi}E_0^2:\\
+                &\TDy{\Omega}{\sigma}=(\frac{e^2}{mc^2})^2\sin^2{\psi}(\propto (H_{int}^{(2)}))^2\\
+                &r_0=\frac{e^2}{mc^2}=\SI{2.818e-13}{\cm}\tag{$r_0$ radius of shell charge e of energy $m_ec^2$}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{figure}[!ht]
+                \includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.75\textwidth]{kappa-electronscattering-kin}\label{fig:kappa-electronscattering-kin}
+                \includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.9\textwidth]{kappa-electronscattering-diag}\label{fig:kappa-electronscattering-diag}
+			\end{figure}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}{Thomson and Klein-Nishina crosssection}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+            \begin{align*}
+                &\overline{\sin^2{\psi}}=1-\sin^2{\theta}\overline{cos^2{\phi}}=1-\frac{1}{2}\sin^2{\theta}\tag{unpol.}\\
+                &\TDy{\Omega}{\sigma}=(\frac{e^2}{mc^2})^2 \frac{1}{2}(1+\cos^2{\theta})\tag{Thomson}\\
+                &d\sigma=\frac{8\pi}{3}(\frac{e^2}{mc^2})^2p(\cos{\theta})\frac{d\Omega}{4\pi}\tag{Norm. scat. phase function}\\
+                &=\sigma_T[p(\cos{\theta})\frac{d\Omega}{4\pi}],\sigma_T=\frac{8\pi}{3}(\frac{e^2}{mc^2})^2=\SI{0.665e-24}{\square\cm}\\
+                &\kappa_{es}=\frac{0.4}{\mu_e}\approx0.2(1+X_H)\tag{complete ioniz.}\\
+                &
+            \end{align*}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            Thomson: not valid for rel. energy or $E_{\gamma}\geq mc^2$ ($T>\SI{e9}{\kelvin}$) - $\TDy{\Omega}{\sigma}\propto \frac{\1}{m^2}$ so electron scatterin far more important than scattering from nuclei.
+            Other type of scattering occurs in cooler part of stars - Rayleigh scattering, by from ions (harmonically bounded electrons) and molecules where ionization is incomplete. In He-H gas ionized electron scattering opacity dominate FF only if $T>\num{4.5e6}\rho^{0.286}$. Scattering phase function propto $1+\cos^2{\theta}$ cancellation made in diffusion theory of rad-transf is satisfied.
+        \end{column}
+    \end{columns}
+    Klein-Nishina formula: when photon energy becomes sign. fraction of $mc^2$, $\epsilon=\frac{h\nu}{mc^2}$
+    \begin{align*}
+        &d\sigma=\frac{d\Omega}{4\pi}\frac{\sigma_T \frac{3}{4}(1+\cos^2{\theta})}{(1+2\epsilon\sin^2{\frac{\theta}{2}})}[1+\frac{4\epsilon^2\sin^4{\frac{\theta}{2}}}{(1+\cos^2{\theta})(1+2\epsilon\sin^2{\frac{\theta}{2}})}]\\
+        &\sigma=\frac{3}{4}\sigma_T\{\frac{1+\epsilon}{\epsilon^2}[\frac{2+2\epsilon}{1+2\epsilon}-\frac{\ln{(1+2\epsilon)}}{\epsilon}]+\frac{\ln{(1+2\epsilon)}}{2\epsilon}-\frac{1+3\epsilon}{(1+2\epsilon)^2}\}
+    \end{align*}
+    At high temperature $\sigma<\sigma_T$, scattering phase function contains odd power of $\cos{\theta}$ (scattering of photons into/out no longer cancels), energy of scattered photon is reduced in prop to $\frac{\Delta\nu}{\nu}\approx \frac{h\nu}{mc^2}$.
+    High energy photons may create \Pelectron\APelectron pair in nucleus's field: $\gamma+Z\to Z+\APelectron+\Pelectron$ if $h\nu>2mc^2$, $\sigma_{pair}\approx Z^2\num{e-3}\sigma_T$ (not important opacity source, but created electron increase scatterers and its annihilation produce neutrinos).
+\end{frame}
+
 \section{Radiative transfer equation}
 
 \begin{frame}{Derivation of transfer equation}

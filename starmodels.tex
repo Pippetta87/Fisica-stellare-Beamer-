@@ -415,6 +415,39 @@ stima opacit\'a per conduzione gas degenere NR
 Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione H-
 \end{frame}
 
+\begin{frame}{Total Radiative opacity}
+    At low T where atoms are part. ionized opacity is dominated by BB, BF by bound electrons. As ionization nears completion opacity due to FF becomes dominant but because Rosseland mean  $\kappa_{ff}$ decreases with increasing T there is a T where electron scattering becomes dominant. All forms of opacity contribute sim.: sum freq dependent opacity, correct true absorption for induced emission, $[\kappa_{bb}(\nu)+\kappa_{bs}(\nu)+\kappa_{ff}(\nu)](1-\exp{-\frac{h\nu}{kT}})+\kappa_s$, then form Rosseland mean. In general $\exv{\kappa_1}+\exv{\kappa_2}=\exv{\kappa_1+\kappa_2}$ (Two Rosseland mean are additive if are true absorption opacity and have same freq. dependence).
+\end{frame}
+
+\begin{frame}{Deps of L from composition (using Kramer's opacity)}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\TDy{r}{P_r}=-\frac{\kappa\rho}{4\pi cr^2}L(r), \TDy{r}{P}=-\frac{GM(r)}{r^2}\rho\\
+                &P_r(r)=\frac{L}{4\pi cGM}\int_0^{P(r)}\kappa(r)\eta(r)\,dP\\
+                &=\frac{L}{4\pi cGM}P(r)\exv{\kappa\eta}_{r=r-0}\\
+                &\eta\kappa\approx\const{}:\beta\approx\const{}:n=3\tag{standard model}\\
+                &\xincreases{r}:\xincreases{\kappa},\xdecreases{\eta}\tag{variazione sev.om si compensano: sm approx real *}\\
+                &\kappa\approx\kappa_0\rho T^{-3.5}\Rightarrow\overline{\kappa\eta}=\kappa_0\eta_c\rho_cT_c^{-3.5}\\
+                &\overline{\kappa\eta}=\kappa_0\eta_c \frac{a}{3}\frac{\mu}{N_0k}\frac{\beta_c}{1-\beta_c}T_c^{-\frac{1}{2}}\\
+                &\Rightarrow \frac{L}{\lsun{}}=\num{1.8e25}\frac{1}{\kappa_0\eta_c}(\frac{M}{\msun{}})^{5.5}(\frac{\rsun{}}{R})^{0.5}(\mu\beta_c)^{7.5}\\
+                &\Rightarrow\frac{L}{\lsun{}}\propto \frac{M}{\msun{}}\tag{steeper than observed}\\
+                &\Rightarrow L\propto \frac{\mu^{7.5}}{\kappa_0}\tag{Deps of L on composition}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &\TDy{r}{L}=4\pi r^2\rho\epsilon, \eta(r)=\frac{\exv{\eta(r)}}{\eta}=\frac{L(r)/M(r)}{L/M}:\\
+                &L=\frac{4\pi cGM(1-\beta_c)}{\exv{\kappa\eta}_*}\tag{T.Stromgren}\\
+                &L(r)=4\pi r^2 \frac{4ac}{3\kappa\rho}T^3\TDy{r}{T}\\
+                &\exv{\rho}\propto \frac{M}{R^3},T_c\propto M^{\frac{2}{3}}\exv{\rho}^{\frac{1}{3}}: T_c\propto \frac{M}{R}\tag{Standard Model}\\
+                &\TDy{r}{T}\propto \frac{T_c}{R}\Rightarrow L\propto R^2\frac{(M/R)^3}{M/R^3}\frac{M/R}{R}=M^3
+            \end{align*}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
 \begin{frame}{Andamento opacit\'a: electron scattering e Kramer's opacity (FF)}
 \begin{itemize}
 \item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2=0.2(1+X)\si{\square\cm\per\gram}$ - $\sigma_T=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source - Compton scattering $h\nu|_M\gtrsim0.1 m_ec^2$, $h\nu|_M\approx4.96kT$: Compton scattering reduces opacity about $20\%$ for $T>\SI{e8}{\kelvin}$
