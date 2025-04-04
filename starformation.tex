@@ -3,12 +3,14 @@
 
 \begin{wordonframe}{da fare/ref}
 \begin{itemize}
+    \item SIS: shu 1977
     \item Rev Larson 2003: The physics of star formation
     \item Evans 1999 - Physical Conditions in Regions of Star Formation
     \item Bate 2011 - Collapse of a molecular cloud core to stellar densities: the formation and evolution of pre-stellar discs
     \item Onset of star formation: kippenhahn wiegert 248'-255' (131-134) -26.1: isothermal plane parallel and spherical object in HE
     \item Formation of protostars: kippenhahn wiegert 256'-265' (135-139)
     \item Star formation and early evolution: salaris cassisi 105' (119)
+        \item Stahler chap 9: Cloud equilibrium and stability
 \end{itemize}
 \end{wordonframe}
 
@@ -20,12 +22,102 @@
 \listoftodos
 \end{frame}
 
+\subsection{Clouds Properties}
+
+\begin{frame}{Clouds Zoology}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            \begin{itemize}
+                \item Clouds: contains $80\%$ MW's $H_2$ (\num{2e9}$\msun{}$ in galactic disk): $3\%$ converted into stars, $\tau\approx\SI{3e7}{\year}$, MW's star formation rate now \SI{4}{\solarmass\per\year}
+                    \item Collapse of dense core into protostars: Ambipolar diffusion, inside-out collapse, magnetized infall, Rotational effects
+                \end{itemize}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{cloudsprops}\label{fig:cloudsprops}
+\end{figure}
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+                    \item OB-association are correlated to giant molecular clouds: observations in \SI{2.6}{\milli\meter} of $^{12}C^{16}O$  - $^{13}C^{16}O$ lines to probe interior 
+                    \item GMC are composed by clumps - clump (mass: \SI{250}{\solarmass},radius: \SI{1.5}{\parsec}, num dens: \SI{550}{\per\cubic\cm} ) - clump mass distro: $N=N_0(\frac{M}{M_{min}})^{-1.5}$, for $M>M_{min}\approx$\SI{30}{\solarmass}. Smallest entities: dense cores and Bok globules (harbour infrared sources: star formation).
+                    \item Extended massive atomic H envelope: comparable mass of enclosed complex, several times its linear size. Observations: excess \SI{21}{\cm} line, $T\approx$\SIrange{50}{150}{\kelvin}.
+                    \item Virial-T: $\frac{1}{2}\TtwoDy{t}{I}=2T+2U+W+M$ - moment of inertia $I=\int\rho|\vec{r}|^2\,d^3r$, total kin energy $T=\frac{1}{2}\int\rho|\vec{u}|^2\,d^3x$, total thermal energy $U=\frac{3}{2}\int nKT\,d^3x=\frac{3}{2}\int P\,d^3r$, gravitational potential energy $W=\frac{1}{2}\int\rho\phi_g\,d^3x$, Magnetic Energy $M=\frac{1}{8\pi}\int|\vec{B}|^2\,d^3x$.
+        \end{itemize}
+Free-fall time:
+\begin{align*}
+&R=L/2, W\approx-\frac{GM^2}{R}, \frac{1}{2}\TtwoDy{t}{I}\approx-\frac{GM^2}{R}\\
+&I\approx MR^2\Rightarrow t_{ff}\approx(\frac{R^3}{GM})^{1/2}\approx\SI{7e6}{\year}(\frac{M}{\num{e5}\msun{}})^{-1/2}(\frac{R}{\SI{25}{\parsec}})^{3/2}\\
+&\rho=\frac{M}{R^3}: t_{ff}\approx(\frac{3\pi}{32G\rho})^{-\frac{1}{2}}: \tau_{MC}\approx\tau_{ff}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Support of giant complexes: force balance $2T+2U+W+M=0$}
+    \begin{itemize}
+        \item Thermal pressure $U\approx \frac{MRT}{\mu}$: $\frac{U}{|W|}\approx \frac{MRT}{\mu}(\frac{GM^2}{R})^{-1}=\num{3e-3}(\frac{M}{\num{e5}\msun{}<++>})^{-1}(\frac{R}{\SI{25}{\parsec}})(\frac{T}{\SI{15}{\kelvin}})$ - Giant complexes not sustained by thermal pressure
+        \item Magnetic field (Zeeman split of HI \SI{21}{\cm} or OH \SI{18}{\cm} lines): $\frac{M}{|W|}=\frac{|B|^2R^3}{6\pi}(\frac{GM^2}{R})^{-1}=0.3(\frac{B}{\SI{20}{\micro\gauss}})^2(\frac{R}{\SI{25}{\parsec}})^4$ - any selfgrav. mainly supported by ordered magneti field settles into planar config. BUT this is in contrast with obs. - random component of $\vec{B}$ coexistin with smooth background: MHD can provide isotropic support preventin flattening.
+        \item Kin. ener. from random motion of clumps: $\frac{T}{|W|}=\frac{1}{2}M\Delta V^2(\frac{GM^2}{R})^{-1}=0.5(\frac{\Delta V}{\SI{4}{\kilo\meter\per\second}})^2(\frac{M}{\num{e5}\msun{}})^{-1}(\frac{R}{\SI{25}{\parsec}})$ - Rosetta line-of-sight dispersion is \SI{2.3}{\kilo\meter\per\second}, multiplied by $\sqrt{3}$ for random 3D velocity field, gives $\Delta V\approx V_{vir}=\sqrt{\frac{GM}{R}}$ (speed of gas parcel traversin cloud in $t_{ff}$).
+        \item Line broadening: Thermal and bulk motion of emitting gas. Larson's law: $\Delta V=\Delta V_0(\frac{L}{L_0})^n$, $\Delta V_0\approx\SI{1}{\kilo\meter\per\second}$, $L_0=\SI{1}{\parsec}$, $n\approx0.5$
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Birthline}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+    \begin{itemize}
+        \item Accreting stars: as gas falls onto star it lower potential energy onto the star $\Delta W\approx -\frac{GM_*\Delta m}{R}$, and gas brings its internal energy $\Delta U=\epsilon\frac{GM_*\Delta M}{R}$, $\epsilon=1$: all energy converted into heat, $\epsilon<1$: bound orbit, $\epsilon=0$: gas tot cold
+        \item Birthline is locus in HDR of pre-MS stars with protostellar radius: surface L and $T_e$ are set by infalling dynamics, R is determined by internal structure
+        \end{itemize}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{align*}
+                &\tkh{}=\frac{GM_*^2}{RL}: \dot{R}_*=-n_1 \frac{R_*}{\tkh{}}\\
+                &L=4\piR_*^2\sigma T_e^4: \dot{L}_*=-n_2 \frac{L_*}{\tkh{}}\\
+                &\Rightarrow\tkh{}\propto L_*^{-3/2}\tag{fixed mass}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Isothermal clouds: Density Structure}
+    \begin{align*}
+        &-\frac{1}{\rho}\nabla P-\nabla\phi_g=0, P=\rho a_T^2\Rightarrow \ln{\rho}+\frac{\phi_g}{a_T^2}=\const{}: \rho(r)=\rho_c\exp{-\frac{\phi_g}{a_T^2}}\tag{Spherical}\\
+        &\nabla^2\phi_g=4\pi G\rho\Rightarrow \frac{1}{r^2}\TDof{r}(r^2\TDy{r}{\phi_g})=4\pi G\rho=4\pi G\rho_c\exp{-\frac{\phi_g}{a_T^2}}\\
+        &\frac{1}{\xi^2}\TDof{\xi}(\xi^2\TDy{\xi}{\psi}=\exp{-\psi}),\xi=\sqrt{\frac{4\pi G\rho_c}{a_T^2}}r,\psi=\frac{\phi_g}{a_T^2}\tag{isothermal Lane-Emden}\\
+        &\psi(0)=0,\psi'(\xi)\xrightarrow{\xi\to0}0\tag{Boundary conditions}\\
+        &\frac{\rho}{\rho_c}\to\frac{2}{\xi^2}\Rightarrow\psi=\ln{\frac{\xi^2}{2}}, \rho(r)=\frac{a_T^2}{2\pi Gr^2}\tag{SIS: not satisfy conditions at 0 - large distance}\\
+        &\rho_0=\frac{P_0}{a_T^2},r_0=\frac{\xi_0}{\sqrt{\frac{4\pi G\rho_c}{a_T^2}}}\tag{Specifying $P_0$,$a_T$ - $\frac{\rho_c}{\rho_0}$ gives non-dim radius $\xi_0$}\\
+        &M=4\pi\int_0^{r_0}\rho r^2\,dr=4\pi\rho_c(\frac{a_T^2}{4\pi G\rho_c})^{\frac{3}{2}}\int_0^{\xi_0}\exp{-\psi}\xi^2\,d\xi,m=\frac{P_0^{\frac{1}{2}}G^{\frac{3}{2}}M}{a_T^4}=(4\pi \frac{\rho_c}{\rho_0})^{-\frac{1}{2}}(\xi^2\TDy{\xi}{\psi})_{\xi_0}
+        \end{align*}
+        At beginning sequence $\frac{\rho_c}{\rho_0}=1$: $\xi_0=0$, $m=0$; with increasing density contrast m first rises to maximum $m_1=1.18$ at $\frac{\rho_c}{\rho_0}=14.1$, then decreses to minimum $m_2=0.695$, eventually approachin to $m_{\infty}=\sqrt{\frac{2}{\pi}}=0.798$: non dimensional mass of SIS.
+    \end{frame}
+
+    \begin{frame}{Gravitational stability of SIS}
+        \begin{align*}
+            &m=\frac{P_0^{\frac{1}{2}}G^{\frac{3}{2}}M}{a_T^4}: \xincreases{P_0},\xincreases{m}\Rightarrow\xincreases{\frac{\rho_c}{\rho_0}}(\xincreases{\xi_0})\Rightarrow \xincreases{P_c},\xincreases{\exv{P}}\tag{M fixed, $a_t$ fixed, low $\rho$ contrast, $\frac{\rho_c}{\rho_0}<14.1$}\\
+            &M_{BE}=\frac{m_1a_T^4}{P_0^{\frac{1}{2}}G^{\frac{3}{2}}}\tag{For $\frac{\rho_c}{\rho_0}>14.1$ instability - critical value $M_{BE}$ where fundamental modes becomes unstab.}\\
+            &\psi(\xi)=\exp{-\psi}\approx1-\frac{\xi_0^2}{6}\tag{Small $\xi$: $\psi(\xi)=\frac{\xi^2}{6}+O(\xi^4)$ - Density contrast for cloud of nonDim radius $\xi_0$}\\
+            &m=(4\pi \frac{\rho_c}{\rho_0})^{-\frac{1}{2}}(\xi^2\TDy{\xi}{\psi})_{\xi_0}: M\approx \frac{\xi_0^3}{6\pi^{\frac{3}{2}}}\frac{a_T^4}{P_0^{\frac{1}{2}}G^{\frac{3}{2}}}\tag{DenseCore, BokGlobule are on edge of g.i.}\\
+            &\xi=\sqrt{\frac{4\pi G\rho_c}{a_T^2}}r,\xi_0=\sqrt{\frac{4\pi G\rho_c}{a_T^2}}r_0: \xi_0^3=(4\pi)^{\frac{3}{2}}(\frac{\rho_c}{\rho_0})^{\frac{3}{2}}\frac{P_0^{\frac{3}{2}}G^{\frac{3}{2}}}{a_T^6}\tag{$\frac{\rho_c}{\rho_0}\approx1$}\\
+            &\Rightarrow r_0^3\approx\frac{3Ma_T^2}{4\pi P_0},\xdecreases{r_0},\xincreases{P_0},P_0\frac{4\pi r_0^3}{3}\approx\const{}\tag{Boyle's law}\\
+            &\rho(x,t)=\rho_0+\delta\exp{i(kx-\omega t)},\rho \frac{D\vec{u}}{Dt}=\rho[\TDy{t}{\vec{u}}+\scap{u}{\nabla}\vec{u}]=-\nabla P-\rho\nabla\phi_g\tag{stability against linear perturb}\\
+            &-i\omega\delta\rho+ik\rho_0\delta u=0\tag{cont}\\
+            &\delta P=\delta\rho a_T^2\tag{EOS}\\
+            &-k^2\delta\phi_g=4\pi G\delta\rho\tag{Poiss.}\\
+            &-i\omega\rho_0\delta u=-ik\delta P-ik\rho_0\delta\phi_g\tag{EOM}\\
+            &\Rightarrow-\omega^2\delta\rho=-k^2\delta P-k^2\rho_0\delta\phi_g=-k^2a_T^2\delta\rho-k^2\rho_0\delta\phi_g\Rightarrow\omega^2=k^2a_T^2-4\pi G\rho_0\tag{dispersion relation}\\
+            &\lambda_J=\sqrt{\frac{\pi a_T^2}{G\rho_0}}=\SI{0.19}{\parsec}\sqrt{\frac{T}{\SI{10}{\kelvin}}}(\frac{n_{H_2}}{\SI{e4}{\per\cubic\cm}})^{-\frac{1}{2}}, M_{BE}=M_J=\frac{m_1a_T^3}{\rho_0^{\frac{1}{2}}G^{\frac{3}{2}}}=1\msun{}(\frac{T}{\SI{10}{\kelvin}})^{\frac{3}{2}}(\frac{n_{H_2}}{\SI{e4}{\per\cubic\cm}})^{-\frac{1}{2}}
+        \end{align*}
+        Perturbation with $\lambda>\lambda_J$ grow exponentially: uniform sphere of diameter $\lambda_J$ has mass $2M_{BE}$.
+    \end{frame}
+
 \subsection{From clouds to proto-stars}\linkdest{protostellar}
 
 \begin{frame}{Molecular Clouds: density and clumps formation}
 \begin{itemize}
+        \item Calculations: small fraction of collapsing cloud core attains density to form a star; in SIS model envelope is at rest instead of falling at approx twice $c_s$ as in dynamical collapse.
 \item clouds equilibrium shape: Observed cloud mass greater than Jeans mass; Rotation and magnetic field support increases Jeans mass
-\item $H_2$ molecules form ation: dust grains enhance $H_2$ formation which increases with density and column density of at least $20\msun{}\si{\per\square\parsec}$ (Column density: Mangus shirly 2015) is required to shield from UV, where typical column density is $100\msun\si{\per\square\parsec}$ (Elmegreen 85, 93); column density of cold $H_2$ is hard to measure directly infact is measured indirectly by collisional excitation of other molecules and by relative decrese of 21-cm emission/absorption line strenght from deplition of atomic H. ($\msun/pc^2\approx 2*10^{-4}gr/cm^2$).
+\item $H_2$ molecules formation: dust grains enhance $H_2$ formation which increases with density and column density of at least $20\msun{}\si{\per\square\parsec}$ (Column density: Mangum shirley 2015) is required to shield from UV, where typical column density is $100\msun\si{\per\square\parsec}$ (Elmegreen 85, 93); column density of cold $H_2$ is hard to measure directly infact is measured indirectly by collisional excitation of other molecules and by relative decrese of 21-cm emission/absorption line strenght from deplition of atomic H. ($\msun/pc^2\approx 2*10^{-4}gr/cm^2$).
 \item Collisional excitation cooling by molecular/atomic lines emission increases with density while external heating decreases: MC are very cold (\SIrange{10}{20}{\kelvin}); far IR emission of CO; in densest regions gas is thermally coupled to dust mantaining $T\approx10K$.
 \item Inefficient conversion of MC into stars: turbulence, magnetic fields.
 \item Almost all MC are star forming: short lifetime, young age - $\tau_{MC}$ approx crossing time of internal turbulent motion $<\SI{1}{\mega\year}$
@@ -34,12 +126,12 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Spherical collapse}
+\begin{frame}{Inside-out Spherical collapse: formation and accretion onto protostar} 
     \begin{itemize}
+        \item Equilibrium model with margin-stable $M_{BE}=\frac{1.18a_T^4}{\sqrt{P_O}G^{\frac{3}{2}}}$. Transition to ff collapse $V_{ff}\approx a_T$, ie $\frac{G\dot{M}t}{R_{ff}}\approx a_T^2$, $\dot{R}_{ff}\approx \frac{R}{t}$; for $\dot{M}>0$: $\dot{R}_{ff}>0$, region of ff spreads.
         \item At low $\rho$: \xaumenta{\rho} \xdiminuisce{T} (increases atomic/molecular lines cooling); At higher $\rho$: gas becomes thermally coupled to dust which controls T with its thermal emission - T is \SIrange{6}{12}{\kelvin} while $\rho$ spans many OM as long as core remains optically thin to dust thermal radiation ($n_{H_2}<\SI{e10}{\per\cubic\cm}$).
         \item Most collapse calculation assume early stages isothermal at \SI{10}{\kelvin} (whitworth 98) and a universal result of isothermal collapse is runaway growth of central density peak (Penston 66, Bodenheimer Sweigart 68, Larson 69)
         \item In absence of pressure gradient the collapse of uniform sphere happens in $t_{ff}\approx\sqrt{\frac{3\pi}{32G\rho}}$: denser inner regions collapse faster (Larson 73, Tohline 82). Numerics show that $\rho\propto r\expy{-2}$ for collapsing isothermal sphere asymptotically for smaller radii as long as isothermal approx holds (Larson 69, Ogino 99); peak width at any stage of order of Jeans length $\propto\rho\expy{-1/2}$.
-        \item Calculations: small fraction of collapsing cloud core attains density to form a star; in SIS model envelope is at rest instead of falling at approx twice $c_s$ as in dynamical collapse.
         \item Rotation. Forming cloud core rotate as expected due to turbulence in MC (Burket Bodenheimer 00) - ''Angular Momentum Problem'': much more angular momentum in MC than rotating stars - magnetic field can't dispose excess angular momentum: formation of multiple system. Narita 84: competition between pressure and gravity near center - centrifugal force never become strong enough there to halt condensation (rather the material with higher angular momentum produce a disk). Also for SIS model rotation could produce disk then spiral density fluctuation could cause inward mass transfer or disk fragmentation.
         \item Collapse with Magnetic Field. Timescale Ambipolar Diffusion \SI{e7}{\year} which is one OM greater then ff timescale; as in the central part gravity force become dominant the core becomes more flattened along field lines, when central part becomes unstable runaway collapse begins (flattened, collapse speed approx sound speed). Ambipolar Diffusion may solve ''Magnetic flux problem'' for star formation
 
@@ -119,26 +211,26 @@ $k$ large: $\omega$ real (oscillations).
 Collapsing plane-parallel slab: $i\omega\approx\sqrt{G\rho_0}$
 \end{frame}
 
-\begin{frame}{Jeans instability in isothermal sphere}
+\begin{frame}{Jeans inst ability in isothermal sphere}
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item $P*>0$: we get the structure fro ma solution of LE equation for isothermal polytrope
                 \item Virial T: Internal energy $E_i=c_VMT$, for g. energy $E_g=\Theta \frac{GM^2}{R}$ ($\Theta$ can be obtained from LE iqu.)
-                \item Using virial t. $\zeta E_i+E_h=4\pi R^3P_0$: per $\zeta=2$ si ha $P_0=\frac{c_VMT}{2\pi R^3}-\frac{\Theta GM^2}{4\pi R^4}$
+                \item Using  virial t. $\zeta E_i+E_h=4\pi R^3P_0$: per $\zeta=2$ si ha $P_0=\frac{c_VMT}{2\pi R^3}-\frac{\Theta GM^2}{4\pi R^4}$
                 \item For small $R$ $P_0<0$, changes sign for increasing $R$, $P_0\to0$ for $R\to\infty$ and reaches a max. at $R_m$
                 \item Differentiating eq for $P_0$ we found $R_M=\frac{4\Theta}{9}\frac{G\mu M}{RT}$
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
-                \item Stability of LE solution - Starting at equilibrium at $P^*=P_0$: for $R<R_m$ (unstable config.) equilibrium pressure $P_0$ decreses with decreasing $R$, therefore after slight compression $P^*>P_0$ and sphere compress more, for $R>R_m$ $P_0$ (stable)increses during slight compression and sphere will expand back to equilibrium.
-                \item Same as Jeans Stability crit.: $M=\frac{4\pi}{3}r_m^3\bar{\rho}$. $R_m^2=\frac{27}{16\pi\Theta}\frac{RT}{G\mu\bar{\rho}}$ where $R_m$ is critical radius of gas with mean density $\bar{\rho}$ and T which is marg. stable - comparing with critical Jeans wavelength, $\lambda_J=\sqrt{\frac{\pi}{G\rho_0}}v_s$: they are same OoM.
+                \item Stab ility of LE solution - Starting at equilibrium at $P^*=P_0$: for $R<R_m$ (unstable config.) equilibrium pressure $P_0$ decreses with decreasing $R$, therefore after slight compression $P^*>P_0$ and sphere compress more, for $R>R_m$ $P_0$ (stable)increses during slight compression and sphere will expand back to equilibrium.
+                \item Same as Jeans Stability crit.: $M=\frac{4\pi}{3}r_m^3\bar{\rho}$. $R_m^2=\frac{27}{16\pi\Theta}\frac{RT}{G\mu\bar{\rho}}$ where $R_m$ is critical radius of gas with mean density $\bar{\rho}$ and T which is marg. stable - comparing with critical Jeans wavelength, $\lambda_J=\sqrt{\frac{\pi} {G\rho_0}}v_s$: they are same OoM.
             \end{itemize}
         \end{column}
     \end{columns}
     Expression for critical mass (Jeans mass): $M>M_J$ are unstable:
-	\begin{align*}
+	\begin{align*} 
         &M_J=\frac{4\pi}{3}\exv{\rho}R_m^3:\ M_J=\frac{27}{16}\sqrt{\frac{3}{\pi}}(\frac{R}{\Theta G})^{\frac{3}{2}}(\frac{T}{\mu})^{\frac{3}{2}}(\frac{1}{\exv{\rho}})^{\frac{1}{2}}\tag{Virial/LE eq}\\
 &M_J=\num{1.2e5}\msun{}(\frac{T}{\SI{100}{\kelvin}})^{\frac{3}{2}}(\frac{\rho}{\SI{e-24}{\gram\per\cubic\cm}})^{-\frac{1}{2}}\mu^{-\frac{3}{2}}\tag{pertub.}
 	\end{align*}
