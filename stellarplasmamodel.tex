@@ -1,4 +1,4 @@
-\section{From micro-physics to thermodynamics: Equazione di stato}
+\section{From micro-physics to thermodynamics: Equazione di stato per ioni ed elettroni}
 
 %\begin{multicols}{2}%https://newbedev.com/how-to-explicitly-split-long-toc-in-beamer
 %   \tableofcontents[currentsection]{cherryframes}
@@ -211,14 +211,39 @@ For $\rho>\SI{4e11}{\gram\per\cubic\cm}$ we have inverse $beta$-decay:nuclei cap
         $W=\exp{\frac{S}{k}}$ numero di stati microscopici tra $E$,$E+\Delta E$, $U=\exv{H}=E(S,V,N)$.
     \item Canonical: fixed T, partition function $Z(\beta)=\sum_{\substack{k\text{ microstates}:\\\text{V,N fixed}}}\exp{-\beta E_k}=\sum_{\text{Energies }i}g_i\exp{-\beta E_i}$.
         \begin{align*}
-            &\exv{U}=-\PDof{\beta}\ln{Z_{CAN}}=\sum_s\frac{\sum_{n_s}n_sh\nu_s\exp{-\theta\sum_sn_sh\nu_s}}{\sum_{n_s}\exp{-\theta\sum_sn_sh\nu_s}}=-\sum_s\PDof{\theta}\ln{\sum_{n_s}\exp{-\theta n_sh\nu_s}}\\
-&=\sum_s\frac{h\nu_s}{\exp{\theta h\nu_s}-1}\xrightarrow{\vec{k}=\frac{2\pi}{L}\vec{n}}\frac{8\pi V}{c^3}\int_0^{\infty}\frac{h\nu^3}{\exp{\frac{h\nu}{kT}}-1}\,d\nu\\
+            &\exv{U}=-\PDof{\beta}\ln{Z_{CAN}}=\sum_s\frac{\sum_{n_s}n_sh\nu_s\exp{-\beta\sum_sn_sh\nu_s}}{\sum_{n_s}\exp{-\beta\sum_sn_sh\nu_s}}=-\sum_s\PDof{\beta}\ln{\sum_{n_s}\exp{-\beta n_sh\nu_s}}\\
+&=\sum_s\frac{h\nu_s}{\exp{\beta h\nu_s}-1}\xrightarrow{\vec{k}=\frac{2\pi}{L}\vec{n}}\frac{8\pi V}{c^3}\int_0^{\infty}\frac{h\nu^3}{\exp{\frac{h\nu}{kT}}-1}\,d\nu\\
 &\frac{U}{V}=\frac{4\sigma}{c}T^4=aT^4
 \end{align*}
 $F=U-TS$: processo isotermo rev., $\Delta Q$ system, $\Delta W=P\Delta V$ work to world; $\Delta U=\Delta Q-P\Delta V$, $\Delta S=\frac{\Delta Q}{T}$ quindi $P=-\frac{\Delta U-T\Delta S}{\Delta V}\to-\frac{\Delta F}{\Delta V}|_{T,N}$, $F=-\frac{4\sigma}{3c}VT^4=-kT\ln{Z}=KT\sum_{\vec{k},\gamma}\ln{[1-\exp{-\beta\omega\hbar}]}$
     \end{itemize}
 \end{frame}
 
+
+\frameinlbftrue
+\begin{frame}{Plank Distro: energy density StefanBoltzmann law}
+    \begin{itemize}
+        \item Density of states, free wave confined into cube of edge L: $\psi=\frac{1}{\sqrt{V}}\exp{i\scap{k}{x}}$, $k_i=\frac{2\pi}{L}n_i$, $E=\hbar\omega=c\hbar\omega$
+            \begin{align*}
+                &\sum_{\vec{n}}\to\int\,d^3\vec{n}=\frac{V}{(2\pi)^3}\int\,d^3k=\frac{4\pi V}{(2\pi)^3}\int_0^{\infty}k^2\,dk\\
+                &g(E)=\frac{VE^2}{\pi^2\hbar^3c^3}: g(E)\,dE=g(\omega)\,d\omega=\frac{V\omega^2}{\pi^2c^3}\,d\omega\tag{2 for polarizations}
+            \end{align*}
+            \item Partition function for fixed $\omega$: indep partition function multiplies:
+            \begin{align*}
+                &Z_{\omega}=\sum_N\exp{-\beta N \hbar\omega}=1+\exp{-\beta\hbar\omega}+\exp{-2\beta\hbar\omega}+\ldots=\frac{1}{1-\exp{-\beta\hbar\omega}}\tag{fixed $\omega$, summing over energies $E=N\hbar\omega$ - N photons}\\
+                &\ln{Z}=\int_0^{\infty}g(\omega)\ln{Z_{\omega}}\,d\omega=-\frac{V}{\pi^2c^3}\int_0^{\infty}d\omega\omega^2\ln{(1-\exp{-\beta\hbar\omega})}\tag{Indep partition function mult(log adds)}
+            \end{align*}
+\item Energy density and flux
+            \begin{align*}
+                &E=-\PDof{\beta}\ln{Z}=\frac{V\hbar}{\pi^2c^3}\int\,d\omega\frac{\omega^3}{\exp{\beta\hbar\omega}-1}\\
+                &\epsilon=\frac{E}{V}=\frac{\pi^2K^4}{15\hbar^3c^3}\tag{Energy Density}\\
+                &\frac{\epsilon c}{4}=\sigma T^4\tag{Energy Flux}\\
+                &(\frac{1}{4\pi}\int_0^{2\pi}d\phi\int_0^{\frac{\pi}{2}}d\theta\sin{\theta}(c\cos{\theta})=\frac{c}{4})
+            \end{align*}
+        \item Plank function: $B(\omega,T)=\epsilon(\omega)*\frac{c}{4\pi}=\frac{\hbar\omega^3}{4\pi^3c^2}\frac{1}{\exp{\beta\hbar\omega}-1}$.
+    \end{itemize}
+\end{frame}
+\frameinlbffalse
 
 \section{Opacity}\linkdest{opacitysources}
 

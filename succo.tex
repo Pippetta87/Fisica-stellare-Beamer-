@@ -1,4 +1,32 @@
 %! TEX root = main.tex
+\subsection{Radiation}
+
+\begin{frame}{Radiation}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+    \begin{align*}
+        &F=\int I(\theta)\cos{\theta}\,d\Omega=2\pi\int_{-1}^1I(\mu)\mu\,d\mu\si{\erg\per\second\per\square\cm}\tag{Tot Flux along z}\\
+        &\TDy{s}{I}=0, I=\frac{j}{\kappa}=\frac{c}{4\pi}aT^4=\frac{\sigma}{\pi}T^4, U=\frac{2\pi}{c}\int_{-1}^1I\,d\mu=\frac{4\pi}{c}I\tag{LTE}\\
+        &\mu\PDy{r}{I_{\nu}}+\PDof{\mu}[(1-\mu^2)\PDy{\mu}{I_{\nu}}]=j_{\nu}-\kappa_{\nu}I_{\nu}\tag{Rad.Transf}\\
+        &\TDof{s}=\mu\PDof{r}+\frac{1-\mu^2}{r}\PDof{\mu}
+    \end{align*}
+            
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Mass emission coeff. $j(\theta)$ (\si{\erg\per\second\per\gram}): Put into $\theta$ - $dI=j(\theta)\rho\,ds$
+                \item Absorption coeff $\kappa$: Taken out of $\theta$ - $dI=-\kappa\rho I(\theta)\,ds$
+                \item BlackBody: $B_{\nu}$: BlackBody Intensity, $\pi B_{\nu}$: BlackBody Flux
+                \end{itemize}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}{BlackBody}
+    
+\end{frame}
+
 \subsection{Energies}
 
 \begin{frame}{Q-valore, Mass excess - PP chain}
