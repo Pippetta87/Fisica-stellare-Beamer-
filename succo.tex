@@ -121,7 +121,68 @@
     \end{columns}
 \end{frame}
 
-\subsection{Nuclear states}
+\subsection{EOS}
+
+\begin{frame}{Gas perfetto, elettroni degeneri}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &P_g=P_I+P_e=\frac{\rho}{\mu}RT=nKT\\
+                &\frac{d\rho}{\rho}=\frac{dP}{P}-\frac{dT}{T}+\frac{d\mu}{\mu}\\
+                &\mu=\frac{1}{\exv{n_H}X+\exv{n_{He}}+\exv{n_Z}Z}\tag{massa media free part}\\
+                &\invers{\mu}=\sum_iX_i\frac{1+f_i}{A_i}\\
+                &\mu_0=\frac{1}{X+\frac{Y}{4}+\frac{Z}{\exv{A}}}\\
+                &\mu_e\approx(\frac{1}{1}X+\frac{2}{4}Y)^{-1}=\frac{2}{1+X}\tag{full ion.}\\
+                &u=\frac{1}{\rho}\sum\int f^{(0)}(p_i)\frac{p_i^2}{2m_i}d^3p_i\tag{internal ener. per unit mass}\\
+                &=\frac{3}{2}\frac{P}{\rho}=\frac{3}{2}\frac{RT}{\mu}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            Degenerazione elettronica
+            \begin{align*}
+                &f(\vec{p})=\left\{\begin{array}
+                        \frac{4\pi p^2}{h^3}: p\leq p_F\\
+                        0: p>p_F\\
+                \end{array}\\\right.
+                    &n_edV=dV\int_0^{p_F}\frac{8\pi}{h^3}p^2dp=\frac{8\pi}{3h^3}p_F^3\,dV\\
+                    &\Rightarrow p_F\propro n_e^{\frac{1}{3}}, E_F=\frac{p_F^2}{2m_e}\propto n_e^{\frac{2}{3}}\\
+                    &P_e=\int \frac{d\Omega_s}{4\pi}\int_0^{\infty}f(p)v(p)p\cos^2{\theta}dp\\
+                    &=\frac{8\pi}{3h^3}\int_0^{p_F}p^3v(p)dp=\frac{8\pi c}{3h^3}\int_0^{p_F}\frac{\frac{p}{m_ec}dp}{\sqrt{1+\frac{p^2}{m_e^2c}}}\\
+                    &=\frac{\pi m_e^4c^5}{3h^3}f(x)=\left\{\begin{array}{l}
+                            x\ll1: \frac{8\pi m_e^4c^5}{15h^3}x^5=\frac{2}{3}U_e\\
+                            x\gg1: \frac{2\pi m_e^4c^5}{3h^3}x^4=\frac{1}{3}U_e\\
+                    \end{array}\right.
+            \end{align*}
+        \end{column}
+    \end{columns}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+    \begin{align*}
+                    &U_e=\int_0^{p_F}f(p)E(p)d^3p=\frac{8\pi}{h^3}\int_0^{p_F}E(p)p^2dp=\frac{\pi m_e^4c^5}{3h^3}g(x)\\
+                    &x=\frac{p_F}{m_ec}, x\ll1:\left\{\begin{array}{l}
+                            f(x)\approx \frac{8}{5}x^5\\
+                            g(x)\approx \frac{12}{5}x^5\\
+                    \end{array}\right.,\  x\gg1:\left\{\begin{array}{l}
+                            f(x)\approx 2x^4\\
+                            g(x)\approx 6x^4\\
+                    \end{array}\right.
+    \end{align*}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{align*}
+            &P_e= \left\{\begin{array}{l}
+                    x\ll1: \frac{1}{20}(\frac{3}{\pi})^{\frac{2}{3}}\frac{h^2}{m_e}n_e^{\frac{5}{3}}\\
+                            x\gg1: (\frac{3}{\pi})^{\frac{1}{3}}\frac{hc}{8}n_e^{\frac{4}{3}}\\
+                    \end{array}\right.\\
+            &\left\{\begin{array}{l}
+                            \frac{1}{20}(\frac{3}{\pi})^{\frac{2}{3}}\frac{h^2}{m_em_u^{\frac{5}{3}}}(\frac{\rho}{\mu_e})^{\frac{5}{3}}=\num{1.0036e13}(\frac{\rho}{\mu_e})^{\frac{5}{3}}\si{\cgs}\\
+                            (\frac{3}{\pi})^{\frac{1}{3}}\frac{hc}{8m_u^{\frac{4}{3}}}(\frac{\rho}{\mu_e})^{\frac{4}{3}}=\num{1.2435e15}(\frac{\rho}{\mu_e})^{\frac{4}{3}}\si{\cgs{}}\\
+                    \end{array}\right.
+                \end{align*}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
 
 \subsection{CrossSection}
 
@@ -349,7 +410,37 @@
 
 \subsection{Stellar model}
 
-\subsection{stars formation}
+\subsection{Stars Formation}
+
+\begin{frame}{Phenomenology}
+    \begin{itemize}
+        \item GMC: $A_V(\si{\mag}=2$)$, $n_T=\SI{100}{\per\cubic\cm}$, $L=\SI{50}{\parsec}$, $T=\SI{15}{\kelvin}$, $M=\SI{e5}{\solarmass}$
+            \item OB associtiation correlated with GMC: obs \SI{2.6}{\milli\meter} line of $^{12}C^{16}O$.
+            \item Dense core/Bok Globules: $A_V(\si{\mag}=10$)$, $n_T=\SI{e4}{\per\cubic\cm}$, $L=\SI{0.1}{\parsec}$, $T=\SI{10}{\kelvin}$, $M=10\msun{}$ - Collapse of dense core into protostars
+            \item Virial: $\frac{1}{2}\PtwoDy{t}{I}=-\frac{GM^2}{R}$ - $\Omega=-\frac{GM^2}{R}$, $I\approx MR^2$ quindi $t_{ff}\propto\sqrt{\frac{R^3}{GM}}\approx\sqrt{\frac{3\pi}{32G\rho}}$: $t_{ff}\approx\SI{7e6}{\year}(\frac{M}{\num{e5}\msun{}})^{-\frac{1}{2}}(\frac{R}{\SI{25}{\parsec}})^{\frac{3}{2}}$
+            \item Birthline - Protostar becomes detectable in visible - Locus in HDR of pre-MS stars with protostellar radius: Surface $L,T_e$ are set by infalling materials dynamics, R is determined by internal structure: $\tkh{}\approx\frac{GM^2}{RL}$, $\dot{R}\approx-\frac{R_*}{\tkh{}}$, $\dot{L}\propto-\frac{L_*}{\tkh{}}$
+            \item Dust and $H_2$ formation: $20\msun{}\si{\per\square\cm}$ column density needed to shield $H_2$ from UV (obs: $100\msun{}\si{\per\square\cm}$) - $T\approx \SIrange{10}{20}{\kelvin}$ - thermal radiation by dust increases cooling efficiency - dust increases $H_2$ formation: density of $H_2$ measured indirect. via coll. exc. of other species or decreses of \SI{21}{\cm} line abs/em from depletion of atomic H - \item Inside-out collapse: denser inner regions - $t_{ff}\propto\invers{\rho}$
+                \item Rotation: angular momentum problem
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Isothermal cloud structure}
+    \begin{align*}
+        &-\frac{1}{\rho}\nabla P-\nabla\phi_g=0, P=\rho a_T^2\Rightarrow \ln{\rho}+\frac{\phi_g}{a_T^2}=\const{}:\rho=\rho_c\exp{-\frac{\phi_g}{a_T^2}}\\
+        &\xi=\sqrt{\frac{4\pi G\rho_c}{a_T^2}}r, \psi=\frac{\phi_g}{a_T^2}\Rightarrow \frac{1}{\xi^2}\TDof{\xi}(\xi^2\TDy{\xi}{\psi})=\exp{-\psi}\\
+        &\xi\gg1: \frac{\rho}{\rho_c}\to \frac{2}{\xi}\Rightarrow \psi=\ln{\frac{\xi^2}{2}}, \rho(r)=\frac{a_T^2}{2\pi Gr^2},\rho_0=\frac{P_0}{a_T^2}, r_0=\frac{\xi_0}{\sqrt{\frac{4\pi G\rho_c}{a_T^2}}}\tag{SIS: large distance}\\
+        &M=4\pi\int_0^{r_0}\rho r^2\,dr= 4\pi\rho_c(\frac{a_T^2}{4\pi G\rho_c})^{\frac{3}{2}}\int_0^{\xi_0}\exp{-\psi}\xi^2\,d\xi\\
+        &\omega^2=k^2a_T^2-4\pi G\rho_0\Rightarrow \lambda_J=\sqrt{\frac{\pi a_T^2}{G\rho_0}}=\SI{0.19}{\parsec}\sqrt{\frac{T}{\SI{10}{\kelvin}}}(\frac{n_{H_2}}{\SI{e4}{\per\cubic\cm}})^{-\frac{1}{2}}: M_J=M_{BE}=\frac{\overbrace{m_1}^{1.18} a_T^4}{P_0^{\frac{1}{2}}G^{\frac{3}{2}}}\tag{G. stability}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{Protostars: structure}
+    
+\end{frame}
+
+\begin{frame}{Protostars: deuterium thermostat}
+    
+\end{frame}
 
 \subsection{Model computation}
 
@@ -489,6 +580,12 @@ R\end{frame}
     \begin{itemize}
         \item Lithium but not berylium burn s at bottom of convective zone for less massive yhen $1.3\msun{}$.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Sub-Giant, RGB}
+    \begin{itemize}
+        \item Low mass star ignite He in \Pelectron-degenerate core: $M_*\leq2.3\msun{}$
+        \end{itemize}
 \end{frame}
 
 \subsection{Equazioni da ricordare}

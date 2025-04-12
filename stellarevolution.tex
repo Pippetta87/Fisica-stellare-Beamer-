@@ -146,7 +146,7 @@ Ciclo CN-NO
 &^{13}C+^1H\to^{14}N+\gamma\\
 &^{14}N+^1H\to^{15}O+\gamma\\
 &^{15}O\to^{15}N+\APelectron+\Pnue\\
-&^{15}N+^1H\to^{12}+^4He\tag*{CN}\\
+&^{15}N+^1H\to^{12}C+^4He\tag*{CN}\\
 &T\geq\SI{20e6}{\kelvin}\tag*{Branching Ratio: \num{e-4}}\\
 &^{15}N+^1H\to^{16}O+\gamma\\
 &^{16}O+^1H\to^{17}F+\gamma\\
@@ -318,22 +318,34 @@ In radiative region the retracting convective core leave chem composition gradie
 \end{column}\end{columns}
 \end{frame}
 
-\subsection{Mass-Luminosity relations}\linkdest{malure}
+\subsection{Mass-Luminosity relations: $L\propto M^3$}\linkdest{malure}
 
 \begin{frame}{M-L relation}
+\begin{columns}[T]\begin{column}{0.4\textwidth}
 Near ZAMS $L\propto M^3$:
 \begin{align*}
     &T^3\TDy{m_r}{T}=-\frac{3\kappa_R}{64\pi^2ac}\frac{L_r}{r^4}\Rightarrow L\propto \frac{R^4}{M}T_c^4\\
     &\TDy{m_r}{P}=-\frac{Gm_r}{4\pi r^4}\Rightarrow P\propto \frac{M^2}{R^4}\\
     &P\propto\rho T\propto \frac{M}{R^3}T\Rightarrow T_c\propto \frac{M}{R}
 \end{align*}
-\begin{columns}[T]\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 0cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{ML-01-10}\label{fig:ML-01-10}
 \end{figure}
 \end{column}
-\begin{column}{0.5\textwidth}
-Relazione osservativa
+\begin{column}{0.6\textwidth}
+Scilla's Version:
+\begin{align*}
+    &\exv{\rho}\propto \frac{M}{R^3},\TDy{r}{P}=-\frac{\rho GM}{r^2}\Rightarrow \frac{P_e-P_c}{R-0}\propto-\frac{GM}{R^2}\frac{M}{R^3}\\
+    &\Rightarrow P_c\propto\frac{M^2}{R^4},\ P\approx P_g=\frac{\rho}{\mu m_u}KT:\\
+    &T_c\propto \frac{P_c\mu_c}{\rho_c}\propto \frac{P_c\exv{\mu}}{\exv{\rho}}\propto\frac{M^2}{R^4}\frac{R^3}{M}\exv{\mu}\Rightarrow T_c\propto \frac{M}{R}\exv{\mu}\\
+    &\TDy{r}{T}|_{Rad}=-\frac{3}{4\pi ac}\frac{\exv{\kappa}\rho}{T^3}\frac{L(r)}{4\pi r^2}: L\propto-\frac{T^3}{\exv{\kappa}\rho}\TDy{r}{T}r^2\\
+    &\Rightarrow L\propto \underbrace{\frac{M}{R^2}\mu}_{\TDy{r}{T}}\underbrace{\frac{M^3}{R^3}\exv{\mu}^3}_{T^3}\frac{1}{\exv{\kappa}}\underbrace{\frac{R^3}{M}}_{\frac{1}{\exv{\rho}}}R^2\propto \frac{\exv{\mu}^4M^3}{\exv{\kappa}}\tag{M-L relation}\\
+    &\TDy{r}{L}=4\pi r^2\exv{\rho}\epsilon: \frac{L}{R^3}\propto\exv{\rho}\epsilon\Rightarrow\exv{\rho}\propto \frac{L}{R^3}\frac{1}{\epsilon}\\
+    &T_c\propto \frac{M}{R}\Rightarrow R\propto \frac{M}{T}: \exv{\rho}\propto \frac{L}{M^3}\frac{T^3}{\epsilon}, L\propto M^3: \exv{\rho}\propto \frac{T^3}{\epsilon}\\
+    &\epsilon\propto\rho^mT^n\tag{H fusion: $m=1$, PP: $n\approx4$, CN-NO: $n\approx\numrange{15}{17}$}\\
+    &\Rightarrow\rho\propto \frac{T^3}{\rho^mT^n}: \rho^{m+1}\propto T^{3-n}\Rightarrow\rho^2\propto T^{3-n}
+\end{align*}
+    Relazione osservativa
 \begin{equation*}
 L\propto\begin{array}{l}
 M\expy{3.6},\ \numrange{2}{20}\msun{}\\
@@ -358,7 +370,6 @@ For $M,\ M>10\msun{}$ relation becomes less steep $L\propto M$: due to increasin
 %        \item RGB: Point D - constant effective T while L increases; point E where He burning is efficient marks the end of RG phase.
 %    \end{itemize}
 %\end{frame}
-
 
 \begin{frame}{Condizione Core per fusione: Virial theorem}
     \begin{columns}[T]
@@ -422,24 +433,24 @@ Virial theorem for non-vanishing pressure surface pressure $P_0$ and $M_c$, $R_c
 For equilibrium $P_{0,m}\geq P_e\propto M_t^2/R^4=T_c^4/M_t^2$ ($T_c\propto M_t/R$)
 \end{frame}
 
-\subsection{Intermediate, massive stars}
+\subsection{Intermediate, massive stars: He-ignition in non degenerate core ($M>2.3\msun{}$)}
 
-\begin{frame}{Int-massive stars: from SG to RG}
+\begin{frame}{Int-massive($M_*>2.3\msun{}$) stars: from SG to RG}
 \begin{columns}[T]\begin{column}{0.5\textwidth}
 \begin{figure}[!ht]
 %trim: LBRT
-\includegraphics[trim={3.5cm 2cm 3.5cm 2.5cm},clip, keepaspectratio,width=0.99\textwidth]{HRD-overshoot}\label{fig:HRD-overshoot}
+\includegraphics[trim={2.5cm 2cm 3.5cm 2.5cm},clip, keepaspectratio,width=0.99\textwidth]{HRD-overshoot}\label{fig:HRD-overshoot}
 \end{figure}
 \end{column}
 \begin{column}{0.45\textwidth}
 \begin{itemize}
-    \item $M_c>M_{SC}$ ($M\approx2.3-3$ dopo H-burning in shell): He core contract
+    \item $M_c>M_{SC}$ (per $M\approx2.3-3$ limite superato dopo H-burning in shell): He core contract
     \item broad shell of CNO H-burning: $\epsilon_g$ changes sign at max $\epsilon_{CNO}$ - envelope expand: \xdiminuisce{T_e}, \xaumenta{\kappa_e} quindi inviluppo diventa convettivo.
     \item Star move from B to R at constant L - Hertzsprung gap: $\begin{array}{c}\tkh{}(3\msun{})\approx\SI{12}{\mega\year}\\\tkh{}(6\msun{})\approx\SI{1}{\mega\year}\end{array}$
 \end{itemize}
 \end{column}\end{columns}
 \begin{itemize}
-    \item In (D) star reaches Hayashi track where begins RG phase: $T_e$ costante, \xaumenta{L}
+    \item In (D) star reaches Hayashi track where begins RG phase: $T_e$ costante, \xaumenta{L}. In (D) the stellar envelope becomes convective as it has cooled down during expansion: since it very efficient energy transport mechanism prevent slow down expansion.
     \item $\rho_c$ suff. low such onset of \Pelectron degeneracy is avoided: in (E) contracting core reaches $T\approx\SI{e8}{\kelvin}$ for efficient He-burning. \xaumenta{M_c} (VT: \xaumenta{T_c}) \xdiminuisce{\tau_{RG}}
 \end{itemize}
 \end{frame}
