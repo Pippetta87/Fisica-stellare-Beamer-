@@ -99,7 +99,7 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 \end{frame}
 
 \begin{frame}[fragile]{Major H burning reaction: PP chains}
-\begin{columns}[T]\begin{column}{0.45\textwidth}
+\begin{columns}[T]\begin{column}{0.35\textwidth}
 \begin{align*} 
 &T\geq\SI{5e6}{\kelvin}\\
 &^1H+^1H\to^2D+\APelectron+\Pnue\\
@@ -114,7 +114,7 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 &^8B\to^8Be+\APelectron+\Pnue\\
 &^8Be\to2^4He\tag*{PPIII}
 \end{align*}
-\end{column}\begin{column}{0.55\textwidth}
+\end{column}\begin{column}{0.65\textwidth}
 \begin{comment} 
 \begin{align*}
 &r_{pp}=\num{11.5e10}\rho^2X_H^2T_6\expy{-2/3}\\
@@ -128,7 +128,9 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 \end{align*} 
 \end{comment}
 \begin{itemize}
-    \item $Q=4*\massexcess{H}-\massexcess{^4He}=4*\SI{7288.97}{\kilo\ev}-\SI{2424.92}{\kilo\ev}=\SI{26.731}{\mega\ev}$ - energy release per gram $Q/m(^4He)=\SI{6.4e18}{\erg\per\gram}$
+    \item $Q=4*\massexcess{H}-\massexcess{^4He}=4*\SI{7288.97}{\kilo\ev}-\SI{2424.92}{\kilo\ev}=\SI{26.731}{\mega\ev}$ - energy release per gram $Q/m(^4He)=\SI{6.4e18}{\erg\per\gram}$ (Mass-excess: $\Delta m(A,Z)=M(A,Z)-A*u$)
+    \item Energia nucleare: $n_p\approx \frac{\msun{}X}{m_p}\approx \frac{\num{2e33}*0.7}{\num{1.67e-24}}\approx\num{e57}$ protons, $E_{nucl}\approx \frac{\num{e57}\SI{26.1}{\mega\ev}}{4}\approx\SI{6e57}{\mega\ev}$
+    \item Neutrino's Flux: $\Phi_{\nu}=\frac{n_{\nu}}{4\pi D^2}=\frac{2 \frac{\lsun{}}{\SI{26.1}{\mega\ev}}}{4\pi D^2}=\frac{\num{1.9e38}\nu/s}{\num{2.82e27}}\approx \frac{\num{6.7e10}\nu}{\si{\square\cm\second}}$, $\lsun{}\approx\SI{2.5e39}{\mega\ev\per\second}$
 \item Neutrino releases: PPI - \SI{0.5}{\mega\ev} per He
 \item Neutrino releases: PPII - \SI{0.81}{\mega\ev} per He
 \item Neutrino releases: PPI - \SI{6.71}{\mega\ev} per He
@@ -138,8 +140,8 @@ dipendenza della ZAMS dall'abbondanza originale di He e metalli; metodo determin
 \end{frame}
 
 \begin{frame}{H burning: CN-NO cycle}
-\begin{columns}[T]\begin{column}{0.5\textwidth}
-Ciclo CN-NO
+\begin{columns}[T]\begin{column}{0.4\textwidth}
+        Ciclo CN-NO: $T\geq\SI{1.5e7}{\kelvin}$
 \begin{align*}
 &^{12}C+^1H\to^{13}N+\gamma\\
 &^{13}N\to^{13}C\APelectron+\Pnue\\
@@ -151,12 +153,20 @@ Ciclo CN-NO
 &^{15}N+^1H\to^{16}O+\gamma\\
 &^{16}O+^1H\to^{17}F+\gamma\\
 &^{17}F\to^{17}O+\APelectron+\Pnue\\
-&^{17}O+^1H\to^{14}N+^4He
+&^{17}O+^1H\to^{14}N+^4He\\
+&^{17}O(p,\gamma)^{18}F\tag{$1\%$}\\
+&^{18}F\to^{18}O\APelectron\Pnue\\
+&^{18}O(p,\alpha)^{15}N\\
+&^{18}O(p,\gamma)^{19}F\\
+&^{19}F(p,\alpha)^{16}O\\
+&^{19}F(p,\gamma)^{20}Ne
 \end{align*} 
-\end{column}\begin{column}{0.5\textwidth}
-\begin{align*}
+\end{column}\begin{column}{0.6\textwidth}
+    Chemical changes: (CN) \xdiminuisce{C},\xaumenta{N}; (CNO) \xdiminuisce{C}, \xaumenta{N}, \xdiminuisce{O}.
+    \begin{align*}
 &\epsilon_{CN}(T_6)=\epsilon_{CN}(25)(\frac{T_6}{25})^{16.7}\\
-&\epsilon_{CNO}\propto XX_{14}\rho T^{18}
+&\epsilon_{CNO}\propto XX_{14}\rho T^{18}\\
+&
 \end{align*}
 Matter processed by CN: \xdiminuisce{C}, \xaumenta{N}; by CNO: \xdiminuisce{C}, \xaumenta{N}, \xdiminuisce{O}.
 \end{column}\end{columns}

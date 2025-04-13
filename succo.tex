@@ -140,8 +140,8 @@
         \begin{column}{0.5\textwidth}
             Degenerazione elettronica
             \begin{align*}
-                &f(\vec{p})=\left\{\begin{array}
-                        \frac{4\pi p^2}{h^3}: p\leq p_F\\
+                &f(\vec{p})=\left\{\begin{array}{l}
+                        \frac{8\pi p^2}{h^3}: p\leq p_F\\
                         0: p>p_F\\
                 \end{array}\\\right.
                     &n_edV=dV\int_0^{p_F}\frac{8\pi}{h^3}p^2dp=\frac{8\pi}{3h^3}p_F^3\,dV\\
@@ -574,17 +574,47 @@ R\end{frame}
 \end{block}
 \end{frame}
 
-\subsection{evolution}
+\subsection{Pre-MS}
 
 \begin{frame}{Pre-MS}
     \begin{itemize}
-        \item Lithium but not berylium burn s at bottom of convective zone for less massive yhen $1.3\msun{}$.
+        \item Lithium but not berylium burn s at bottom of convective zone for less massive then $1.3\msun{}$.
     \end{itemize}
 \end{frame}
 
+\subsection{Sub-Giant, RGB}
+
 \begin{frame}{Sub-Giant, RGB}
     \begin{itemize}
-        \item Low mass star ignite He in \Pelectron-degenerate core: $M_*\leq2.3\msun{}$
+        \item Tip-RGB: He-ignition ($3\alpha$)
+        \item Hertzsprung-gap: int/massive stars move blue to red at const L - $\tkh{}$ few milion years.
+        \item Low mass: ignite He in \Pelectron-degenerate core: $M_*\leq2.3\msun{}$
+        \item $(\frac{M_c}{M_*})_{SC}=0.37(\frac{\mu_{env}}{\mu_{core}})^2$ (typical $0.37(\frac{0.6}{1.3})^2$) core mass approx $10\%$ total mass.
+        \item Low mass: $L-M_{cHe}$ relation since L is provided by H-burning shell whose thermal properties are determined by He-core radius and mass.
+        \item Low-mass: first dredge-up: As envelope expands convection goes deeper - Surf abundance of He increases monot.
+        \item Low mass: RGB Bump. Convection receeds as H-burning shell moves outward and when encounters chemical disc. at max depth convection star have peculiar behaviour in HDR ($L_H\propto\mu^7$)
+        \item Low mass-rgb: due to low density of convective envelope thermal gradient is largely superadiabatic.
+        \item Low-mass: Thermal runaway - helium flash: He ignited when $M_{cHe}\approx0.48-0.5\msun{}$ at $T\approx\SI{e8}{\kelvin}$ in shell around deg core (ie when $T_{ion}$ \SI{e8}{\kelvin}??).
+        \item Low-mass: as X exhaust in central regions max of $\epsilon_H$ move off-center.
+        \item Low-mass - He-flash: $10^{10\lsun}$ absorbed by ND layers above: expansion and convection but mixing with H-burning shell is prevented - many flash to remove core degeneracy: $\tau_{flash}\approx\SI{e6}{\year}$, $5\%$ He converted into C.
+        \item Location of RGB on HDR - Deps on params affecting size of convective envelope (as Hayashi track). Highly Z dependent: Z indicator for galaxies/star clusters. Computation shows (\xdiminuisce{M_*},\xdiminuisce{T_e}) - Changes in chemical composition causes changes in low T opacity: \xaumenta{Y} opacity decreases so extension of convective envelope decreases and star star is hotter. Metallicity is the param that most affect morphology of rgb: \xaumenta{Z}, \xdiminuisce{T_e}.
+        \item RGB-phase transition: Luminosity deps on $M_{cHe}$ at Tip of rgb - for $M_*\leq1.8\msun$ L approx const (as $M_{cHe}$ at tip const: same level of electron degeneracy require same $M_{cHe}$ to ignite He) then decreases with increasing stellar mass as degeneracy of the core is at lower level (higher T, lower density), then increases again.
+        \item Luminosity RGB bump: (\xaumenta{M_*},\xaumenta{L_{bump}}); (\xaumenta{Z},\xdiminuisce{L_{bump}}) opacity increases, convection goes deeper, H-burning shell find earlier chem disc; (\xaumenta{Y},\xaumenta{L_{bump}}): $L_H\propto\mu^7$ prevails; (\xaumenta{\alpha_{ml}},\xaumenta{L_{bump}}) decreases thermal gradient.
+        \item Deps on params of tip-rgb:
+            \item Low-mass star in rgb phase: mass loss causes structure readjust to new mass
+        \end{itemize}
+\end{frame}
+
+\subsection{ZAHB e HB}
+
+\begin{frame}{ZAHB e HB}
+    \begin{itemize}
+        \item He-burning - $3\alpha$ (\SI{1.2e8}{\kelvin}), ($^{16}O$ $^{20}Ne$ $^{24}Mg$ $^{28}Si$). $\frac{Q}{m(^{12}C)}=\SI{5.9e17}{\erg\per\gram}$ ($10\%$ di quella per H-burning) - $Q=\SI{7.27}{\mega\ev}$, $\tau_H\approx 100\tau_{He}$.
+        \item low mass-ZAHB: L drops 1co.m. from tip rgb as core heating/expanding causes H-burning shell to cools down.
+        \item low-mass star ZAHB: model where He is burned in chemical homogeneous core and H-burning in shell, He enriched by first dredge-up, C production during He-flashes.
+        \item low mass - ZAHB morphology in HDR: spread in $T_e$ due to spread in $M_{env}$ - the higher the envelope's mass the cooler the star, slightly oblique as \xaumenta{\epsilon_H} (L is fixed by $M_{cHe}$ then by $M_e$), \xaumenta{M_e} - \SIrange{3500}{4000}{\kelvin}-$M_e\approx$\SIrange{e-4}{0.4}{\solarmass}.
+        \item HB Brightness standard candles for popII stars: L fixed by $M_{cHe}$.
+        \item ZAHB deps on composition: \xaumenta{Y_{in}}, (\xaumenta{\mu},\xaumenta{T}) \xdiminuisce{M_{cHe}}, \xaumenta{L_H}, \xdiminuisce{L_{cHe}}: $L^{ZAHB}$ approx const - blue (low mass envelope) part of ZAHB becomes fainter, R part brighter (massive envelope has more efficient shell). Increase in Z at fixed Y yield fainter ZAHB: \xaumenta{Z_{in}} -\xdiminuisce{M_{cHe}^{Flash}}/\xaumenta{\kappa}: \xdiminuisce{L^{ZAHB}}($L_H$ more efficient: less degenerate core)/\xdiminuisce{T_e^{ZAHB}}
         \end{itemize}
 \end{frame}
 
