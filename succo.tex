@@ -607,15 +607,146 @@ R\end{frame}
 
 \subsection{ZAHB e HB}
 
-\begin{frame}{ZAHB e HB}
+\begin{frame}{ZAHB}
     \begin{itemize}
-        \item He-burning - $3\alpha$ (\SI{1.2e8}{\kelvin}), ($^{16}O$ $^{20}Ne$ $^{24}Mg$ $^{28}Si$). $\frac{Q}{m(^{12}C)}=\SI{5.9e17}{\erg\per\gram}$ ($10\%$ di quella per H-burning) - $Q=\SI{7.27}{\mega\ev}$, $\tau_H\approx 100\tau_{He}$.
+        \item He-burning - $3\alpha$ (\SI{1.2e8}{\kelvin}), ($^{16}O$ $^{20}Ne$ $^{24}Mg$ $^{28}Si$). $\frac{Q}{m(^{12}C)}=\SI{5.9e17}{\erg\per\gram}$ ($10\%$ di quella per H-burning) - $Q=\SI{7.27}{\mega\ev}$, $\tau_H\approx 100\tau_{He}$. Steep T dep: extensive convective core.
         \item low mass-ZAHB: L drops 1co.m. from tip rgb as core heating/expanding causes H-burning shell to cools down.
         \item low-mass star ZAHB: model where He is burned in chemical homogeneous core and H-burning in shell, He enriched by first dredge-up, C production during He-flashes.
         \item low mass - ZAHB morphology in HDR: spread in $T_e$ due to spread in $M_{env}$ - the higher the envelope's mass the cooler the star, slightly oblique as \xaumenta{\epsilon_H} (L is fixed by $M_{cHe}$ then by $M_e$), \xaumenta{M_e} - \SIrange{3500}{4000}{\kelvin}-$M_e\approx$\SIrange{e-4}{0.4}{\solarmass}.
         \item HB Brightness standard candles for popII stars: L fixed by $M_{cHe}$.
         \item ZAHB deps on composition: \xaumenta{Y_{in}}, (\xaumenta{\mu},\xaumenta{T}) \xdiminuisce{M_{cHe}}, \xaumenta{L_H}, \xdiminuisce{L_{cHe}}: $L^{ZAHB}$ approx const - blue (low mass envelope) part of ZAHB becomes fainter, R part brighter (massive envelope has more efficient shell). Increase in Z at fixed Y yield fainter ZAHB: \xaumenta{Z_{in}} -\xdiminuisce{M_{cHe}^{Flash}}/\xaumenta{\kappa}: \xdiminuisce{L^{ZAHB}}($L_H$ more efficient: less degenerate core)/\xdiminuisce{T_e^{ZAHB}}
         \end{itemize}
+\end{frame}
+
+\begin{frame}{Evolution from ZAHB: low mass stars ($M<2.3\msun{}$)}
+    \begin{itemize}
+        \item Core He burning in low mass stars - H-burning shell efficiency monot. decreases while core he-burning increases
+        \item Autotrascinamento: as $^4He\to^{12}C$ \xaumenta{\kappa_{ff}}($\propto X_iZ_i^2$) so $\xaumenta{nrad{}}$ - we have discontinuity in $\nrad{}$ at He-burning core boundary. Selfdriving mechanism (overshoot) causes extension of convective instable region with boundaries where $\nad{}=\nrad{}$.
+        \item Semiconvection - $\nrad{}$ has minimum inside convective core-partial mixing: Decouplin between semiconvective shell outside $\nrad{}$ minimum and convective core - He-burning last longer, more extended loop in HDR, mass of He-depleted core is larger.
+        \item Breathing pulses: Final phases He-burning, when in  convective core $Y\approx0.1$ $^{16}O$ production dominate over $3\alpha$: opacity of oxygen is larger so semiconvection region enlarges - begins a loop where \xaumenta{Y}, \xaumenta{3\alpha}, \xaumenta{L}, \xaumenta{\narad{}} -  3 breathing pulses exhaust He in core. BP in HDR: loops in hdr at each BP. Effect on stellar evolution: He-burning time increses, mass CO core increases, $R2=\frac{t_{AGB}}{t_{HB}}=\frac{N_{AGB}}{N_{HB}}$ params decreases with BP. 
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Evolution from ZAHB: int-massive stars $M>2.3\msun{}$}
+    \begin{itemize}
+        \item Long lasting phase: large obs.prob. in young galactic cluster.
+        \item Blue loop - RGB climbing is reversed: star moves toward Blue and lower Luminosity - \xaumenta{\epsilon_H} until $L_{3\alpha}\approx20\%$ then \xdiminuisce{\epsilon_H} and model comes back toward hayashi track.
+        \item $M>8\msun{}$ ignite He before RGB: star moves toward R and He burns He in growing convective core, $L_s$ mainly provided by H-burning shell. At End of He burning have the condition to burn He.
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pulsation of He-core burning - Standard candles for PopI/PopII}
+    \begin{itemize}
+        \item Adiabatic Pulsation - Period $\Pi\propto\sqrt{\frac{R}{g}}=\sqrt{\frac{R^3}{M}}$ ($g\propto\frac{M}{R^2}$) so $\Pi\sqrt{\rho}=Q(M)$
+        \item $\kappa$-mechanism: opacity increases during compression at H/He ionization level.
+        \item Period-Luminosity relation:
+            \begin{columns}[T]
+                \begin{column}{0.5\textwidth}
+                    Classical Cepheid
+                    \begin{align*}
+                        &\log{\Pi}=0.987-3.108\log{T_e}-0.767\log{\frac{M}{\msun{}}}+0.942\log{\frac{L}{\lsun{}}}\\
+                        &\exv{M_A}=a+b\log{\Pi}+c(CI)
+                    \end{align*}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    RR-Lyrae
+                    \begin{align*}
+                        &\log{\Pi}=11.627+0.823\log{\frac{L}{\lsun{}}}-0.582\log{\frac{M}{\msun{}}}-3.506\log{T_e}\\
+                        &=11.627+0.823*A-3.506\log{T_e}
+                    \end{align*}
+                \end{column}
+            \end{columns}
+    \end{itemize}
+\end{frame}
+
+\subsection{Ramo Asintotico (AGB)}
+
+\begin{frame}{End of He-burning - EarlyAGB and TPAGB}
+    \begin{itemize}
+        \item Y in He-core low enough that star move in HDR to lower $T_e$ and larger $L$; asynt. for $M_*<2.5\msun{}$ - $T_e-L$ relation similar to RGB (H. track)
+        \item Early-AGB: He burning in shell around CO-core of increasing mass due this burning; H-burning shell turn off due to expansion caused by He-burning shell.
+        \item AGB clump: in low mass-star He-burning shell switch off H-burning shell causing luminosity $L$ to decrease the increases as \xaumenta{M_{cCO}} - well pop. in old galactic stellar system.
+        \item Second dredge-up: $M_*>3-5\msun{}$ (lower mass have efficient H-burnoing shell preventing convection penetration) large flux due to He-burning shell causes expansion of above layers and cooling - convection penetrate H-depleted region, up to $1\msun{}$ material dredged-up (He, $(^{12}C,^{16}O)\to^{14}N$) - reduction of H-depleted region avoid formation af massive WD
+        \item Thermally-pulsating AGB: When He-burning shell encounters He/H discontinuity dies off, then after contraction phase H-burning shell turns on providing energy needed - He is accreted on CO-core and compressed/heated until critical mass (\SI{e-3}{\solarmass} for \SI{0.8}{\solarmass} CO-core) is reached: He ignited in runway manner (stable burning require $4 \frac{s}{r}>\alpha$) generating $L_{peak}\approx\numrange{e7}{e8}\lsun{}$. H-burning shell turned off by expansion due to He burning, and convective enevelope establishes from He-burning shell up to H/He discontinuity. Repeat\ldots During inter-pulses phases $\epsilon_H$ is determined by mass of H-exhausted core: $M_{cHe}-L$ relationship (as in RGB).
+        \item As He-burning shell expands conditions for runway burning cease: He-burning shell cools and $\epsilon_{He}$ suddenly drops - for massive enough stars (ie $M_{cCO}>0.7\msun{}$) convective shell disappears, for less massive stars base of convective shell reaches into regions of incomplete He burning eventually reaching steady-state burning.
+        \item Third Dredge-up: the more intense is the pulse the more the convection penetrate in H-exhausted region, greater density of accrete material greater strenght's pulse, slower H-burning: bringing to surface products of He-burning (carbon and heavy s-elements). Dredged-up mass increses as $M_c$ increases until reaches max then decreses due to $M_e$ decreases (wind/H-burning); \xdiminuisce{Z} then DUIII penetrates deeper: galactic AGB vs metal poor AGB.
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{AGB: CO core ignition or termination}
+    \begin{itemize}
+        \item $M_{up}$: limit mass where \Pelectron-degeneracy prevent CO-core ignition (deps strongly on initial comp.: solar comp. $M_{up}=8\msun{}$,  minimum at $Z=0.001$ with $M_{up}=4\msun{}$)
+        \item CO core condition:
+                \begin{columns}[T]
+                    \begin{column}{0.5\textwidth}
+                        $M_*<M_{up}$: highly degenerate CO-core - $\rho_c\approx\SIrange{e5}{e8}{\gram\per\cubic\cm}$ plasma neutrino loss (max at center) is balanced by contraction and cooling
+                    \end{column}
+                    \begin{column}{0.5\textwidth}
+                        $M_*>M_{up}$: CO-core ignite quitely/flashy
+                    \end{column}
+                \end{columns}
+            \item Stars igniting He in non-degenerate He-core but developing degenerate CO-core at end of central He-burning are intermediate mass stars.
+            \item AGB termination - $M_{cCO}>M_{Ch}$: C-ignition (AGB ends), we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
+            \item When $M_e<$\SI{e-3}{\solarmass}: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end \SI{e-4}{\solarmass\per\year}). Large amplitude pulsation (mira variable) enhance mass loss.
+            \item From TPAGB to WD: thin H-burning shell until Bluest point at const. L; then H-burning switch-off and He/H-rich envelope contract rapidly and we can have following channels: star cools down to WD; Born-again AGB (FG Sagittae): He-burning; Self-induced nova: runaway H-burning (DB: expulsion of H-rich envelope)
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{AGB: chemical evolution}
+    \begin{itemize}
+            \item AGB surface enriched by s-element produced via slow neutron capture. Neutron sources - Fowler mechanism: $^{22}Ne(\alpha,n)^{25}Mg$, $^{13}(\alpha,n)^{16}O$.If during TP at intershell base $T>\SI{3.5e8}{\kelvin}$ (as in intermediate mass AGB, for $M_*<3\msun{}$ $T<\SI{3e8}{\kelvin}$) n production goes via first reaction, if $T\approx\SI{9e7}{\kelvin}$ n production goes via second reaction.
+
+                \item During first intershell mixing $^{14}N\to^{22}Ne$
+                \item Tasca $^{13}C$ - Produzione/distruzione $^{13}C$: $^{12}C(H,\gamma)^{13}N(\beta^+\nu)^{13}C$/$^{13}C(H,\gamma)^{14}N$ - In intershell there is $^{12}C$ but not $^{14}N$: to produce $^{13}C$ we need right amount of H, ie after DUIII at sharp discontinuity H rich envelope and He/C rich intershell until H-shell reignition H diffuse/other mixing  into underlying layers and then heated up form $^{13}C$.
+                \item Hot-bottom burning - For $M_*>6-7\msun{}$ at base convective zone ($T\approx\SI{8e7}{\kelvin}$): significant burning, \xaumenta{L_s}, s composition affected $C\to N$, Li production via Cameron-Fowler mechanism when $T\approx\SI{e8}{\kelvin}$ $^7Li$ is produced via $^3He+^4He\to^7Be+\gamma$, $^7Be+\Pelectron\to^7Li+\Pnue$, since Li can survive for $T<\SI{2.5e6}{\kelvin}$: amount of survived Li after envelope retreats determined by balance of $^7Be$ transported toward surface and Li produce at $T<T_b$.
+        \end{itemize}
+\end{frame}
+
+\subsection{Nane Bianche}
+
+\begin{frame}{Massa limite $M_{Ch}$}
+    \begin{itemize}
+        \item EOS: $n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum \frac{X_iZ_i}{A_i}$, $P_e=K_{NR}(\frac{\rho}{\mu_e})^{\frac{5}{3}}$ (NR), $P_e=K_R(\frac{\rho}{\mu_e})^{\frac{4}{3}}$ (R), $M_{Ch}=1.459(\frac{2}{\mu_e})^2\msun{}$
+        \item $R=\num{0.012}M^{-\frac{1}{3}}(\frac{\mu_e}{2})^{-\frac{5}{3}}$
+        \item $M-R$ (NR): $P_c\approx P_e\propto(\frac{\rho}{\mu_e})^{\frac{5}{3}}$: $\frac{M^{\frac{5}{3}}}{R^5\mu_e^{\frac{5}{3}}}\propto \frac{GM^2}{R^4}$, ie $R\propto \frac{1}{G\mu_e^{\frac{5}{3}}}M^{-\frac{1}{3}}$.
+        \item $M-R$ (R) - $\frac{M^{\frac{4}{3}}}{R^4\mu_e^{\frac{4}{3}}}$: $M\propto \frac{1}{G^{\frac{3}{2}}\mu_e^2}$ - if $M>M_{ch}$: no equilibrium, if $M<M_{Ch}$ expands until NR
+        \item \xaumenta{M_*} \xaumenta{\tau_{cool}}: per $L\approx\num{e-3}\lsun{}$ $\tau_{cool}\approx\SI{e9}{\year}$
+        \item He-WD: RGB star that has lost envelope, $M_{WD}\approx\numrange{0.15}{0.5}\msun{}$, \xdiminuisce{\mu}, \xaumenta{L} at fixed age;O/Ne WD: endpoint of $M_*\approx\numrange{8}{11}\msun{}$ at end of C-burning, $M_{WD}^{ONe}\approx\numrange{1}{1.2}\msun{}$, $X_O\approx65\%$, $X_{Ne}\approx25\%$; CO-WD: $M_{CO}^{WD}\approx$\SIrange{0.55}{0.6}{\solarmass}. $M_{He}^{env}\approx\num{e-2}M_*$, $M_H^{env}\approx\num{e-4}M_*$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Mestel-law: cooling}
+    \begin{itemize}
+        \item $R\propto M^{-\frac{1}{3}}$, $\rho\propto M^2$: $\rho\approx\exv{\rho}\approx \frac{M}{R^3}$, $\TDy{r}{P}=-\frac{Gm\rho}{r^2}$ ($P\propto \frac{M^2}{R^5}$), $P=K_{NR}\rho^{\frac{5}{3}}\propto K_1 \frac{M^{\frac{5}{3}}}{R^5}$ so $\frac{M^2}{R^4}\propto \frac{M^{\frac{5}{3}}}{R^5}$, ie $R\propto M^{-\frac{1}{3}}$, instead with $R=(\frac{M}{\rho})^{\frac{1}{3}}$, ie $\rho\propto M^2$.
+        \item Andamento luminosit\'a-tempo: legge di Mestel. $\exv{\kappa}=\kappa_0\rho T^{-3.5}$ ($\TDy{r}{T}|_{amb}=\TDy{r}{T}|_{rad}$: trascuriamo il fatto che l'inviluppo diventa convettivo), $P_{ion}=\frac{\rho}{\mu_im_p}KT$ (ioni ideali nell'inviluppo e interno):
+    \end{itemize}
+    \begin{columns}[T]
+        \begin{column}{0.55\textwidth}
+            \begin{align*}
+                &\TDy{r}{T}|_{rad}=\frac{3}{4ac}\frac{\exv{\kappa}\rho}{T^3}\frac{L(r)}{4\pi r^2}\\
+                &\TDy{r}{P}=-\frac{GM(r)}{R^2}\rho\\
+                &\rho=\frac{P\mu m_p}{KT}\\
+                &P\,dP=\frac{4ac}{3}\frac{4\pi}{\kappa_0}\frac{GMK}{L\mu m_p}T^{7.5}\,dT\tag{integrated from $P=0$, $T=0$}\\
+                &\rho=\sqrt{\frac{32\pi acGM\mu m_p}{8.5*3\kappa_0LK}}T^{3.25}\\
+                &\frac{\rho_bKT_b}{\mu_e m_p}=\num{1.0036e13}(\frac{\rho_b}{\mu_e})^{\frac{5}{3}}\\
+            \end{align*}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{align*}
+                &\frac{L}{\lsun{}}=\num{6.4e-3}\frac{\mu}{\mu_e^2}\frac{M}{\msun{}}\frac{1}{\kappa_0}T_b^{3.5}\\
+                &T_b\approx T_c,L\numrange{e-3}{e-4}\lsun{}\\
+                &T_c\approx\SI{e7}{\kelvin}, c_vT=\frac{3}{2}KT\\
+                &E_{th}=\frac{3}{2} KT \frac{M}{\mu_im_p}\approx\SI{e48}{\erg}\\
+                &L=\alpha MT^{\frac{7}{2}=\TDy{t}{E_{th}}}: \alpha T^{\frac{7}{2}}=-\TDy{t}{T}(\frac{3}{2}\frac{K}{\mu_i m_p})\\
+                &\Rightarrow(t-t_0)=\frac{3K}{5\alpha\mu_im_p}(T^{-\frac{5}{2}}-T_0^{-\frac{5}{2}})\\
+                &\Rightarrow\Delta t=(t-t_0)\approx \frac{3KT^{-\frac{5}{2}}}{5\alpha\mu_i m_p}\tag{($T\ll T_0$)}\\
+                &\Rightarrow\Delta t\propto(\frac{L}{M})^{-\frac{5}{7}}\approx \frac{\num{4.537}}{\mu_i}(\frac{L}{\lsun{}}\frac{M}{\msun{}})^{-\frac{5}{7}}
+            \end{align*}
+            
+        \end{column}
+    \end{columns}
+            \xaumenta{M}: WD evolve pi\'u lentamente, \xaumenta{\mu_i}: WD raffredda pi\'u velocemente - tipicamente: $\Delta t\approx\SI{e9}{\year}$, $L\approx\num{e-3}\lsun{}$.
 \end{frame}
 
 \subsection{Equazioni da ricordare}
