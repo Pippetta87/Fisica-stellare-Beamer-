@@ -1023,6 +1023,35 @@ Empirical mass loss-$\Pi$ relation:
 
 \subsection{Evoluzione di nane bianche}\linkdest{WD}
 
+\begin{frame}{Caratteristiche WD}
+    \begin{columns}[T]
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Upper limit for Relativistic Degenerate matter in Hydrostatic equilibrium: $M_{Ch}=(\frac{2}{\mu_e})^2\num{1.459}\msun{}$. $M>M_{Ch}$: neutron stars.
+                \item $M>M_{up}\approx\numrange{6}{8}\msun{}$: maximum mass such that electron degeneracy prevent non-explosive ignition of carbon.
+                \item $75\%$ post-AGB end as WD
+                \item $\log{g}\approx 8$ (cgs): efficient sedimentation - pure H atmosphere (DA)
+                \item CO core: $\mu_e=2$
+                \item ONe ($64\%$ O, $25\%$ Ne) WD have as progenitors $M_*\approx 8-11\msun{}$, efficient mass loss keeps $M<M_{ch}$: $M_{WD}\approx 1-1.2\msun{}$ - more rapid cooling than CO-WD due to reduce heat content of core; average charge is higher so crystallization at higher T.
+                \item He-WD: electron degenerate He core of RGB that have lost envelope - $M_{WD}\approx0.15-0.5\msun{}$; lower atomic weight than C/O by factor 3/4: He-WD has more heat at given T (brighter at fixed age); don't crystalize.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.99\textwidth]{optical-spectrum}\label{fig:optical-spectrum}
+\end{figure}
+\begin{itemize}
+    \item DO: HeII lines dominant
+    \item DA: H Balmer's lines ($n\to2$) dominant
+    \item DB: HeI lines dominant
+    \item DC: continuous spectrum
+\end{itemize}
+            
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
 \begin{frame}{Chandrasekhar limit-mass e CO-core close to $M_{up}$}
 $M_{Ch}$ upper mass limit for fully relativistic degenerate core in HE [59] - $M_*>M_{up}$ don't develop degenerate CO-core
 \begin{columns}[T]
@@ -1030,13 +1059,15 @@ $M_{Ch}$ upper mass limit for fully relativistic degenerate core in HE [59] - $M
 \begin{block}{Equazione di stato elettroni degeneri}
 \begin{align*}
 &P_e=K_{NR}(\frac{\rho}{\mu_e})\expy{\frac{5}{3}}\\
+&R\propto \frac{1}{G\mu_e^{\frac{5}{3}}}M^{-\frac{1}{3}}\\
 &P_e=K_R(\frac{\rho}{\mu_e})\expy{\frac{4}{3}}
 \end{align*}
 \end{block}
 \begin{block}{Massa limite per CO-core}
 Per CO-core $\mu_e=\approx2$ ($n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum\frac{X_iZ_i}{A_i}$)
 \begin{align*}
-&M_{Ch}=1.459(\frac{2}{\mu_e})^2\msun=1.46\msun
+&M_{Ch}=1.459(\frac{2}{\mu_e})^2\msun=1.46\msun\\
+&\mu_e=\invers{\sum_i\frac{X_iZ_i}{A_i}}
 \end{align*}
 \end{block}
 \end{column}
@@ -1046,8 +1077,7 @@ Per CO-core $\mu_e=\approx2$ ($n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum\
 \item WD most commond end of stellar evolution ($95\%$ of galaxy's stars)
 \item Evolution of CO-core similar to degenerate He-core in RGB for low-$M_*$
 \item Prop of CO-core unaffected by envelope as long as has not enough mass to nuclear burning
-\item \xaumenta{M_{CO}}, \xaumenta{\rho_c} as He-burning in shell [pg 89']: flusso di plasma neutrini dalla parte centrale \xaumenta{\epsilon_{\nu}}(segno meno nel energy equation) - $\epsilon_C\to\epsilon_{\nu}$ per $M_*\to M_{Ch}$
-\item \xaumenta{M_{CO}} \xaumenta{\epsilon_C} - Explosive CO-burning: \keyword{SN-I-1/2}
+\item \xaumenta{M_{CO}}, \xaumenta{\rho_c} as He-burning in shell [pg 89']: flusso di plasma neutrini dalla parte centrale \xaumenta{\epsilon_{\nu}}(segno meno nel energy equation) - $\epsilon_C\to\epsilon_{\nu}$ per $M_*\to M_{Ch}$. As \xaumenta{M_{CO}}, \xaumenta{\epsilon_C}: Explosive CO-burning is possible if $\psilon_C>\epsilon_{\nu}$ near center of star (\keyword{SN-I-1/2}).
 
 \item If C-burning start in shell far enough from center (after flashes) C-burning settles quitely in center: final fate of O-Ne WD (after thermal pulses?).
 \end{itemize}
@@ -1057,18 +1087,18 @@ Per CO-core $\mu_e=\approx2$ ($n_e=\frac{\rho}{\mu_em_H}$, $\invers{\mu_e}=\sum\
 
 \begin{frame}{Caratteristiche WD}
 \begin{columns}[T]
-	\begin{column}{0.40\textwidth}
+	\begin{column}{0.55\textwidth}
 		\begin{itemize}
            % \item $\exv{M}_WD\approx\numrange{0.55}{0.6}\msun$, faintest $L\approx\num{e-4.5}\msun$, $\frac{R}{\rsun}\approx0.01(\frac{\msun}{M})\expy{1/3}$: large $\exv{\rho}$, $\large{g_s}$, low $L_s$
 		\item Uncertainty in progenitor mass is due to uncertainty in mass loss
-        \item M-R rel: $P_c\approx P_e$ NR-deg ($P_e\propto(\frac{\rho}{\mu_e})^\frac{5}{3}$) - $\frac{M\expy{5/3}}{R^5\mu_e\expy{5/3}}\propto\frac{GM^2}{R^4}$ quindi $R\propto\frac{1}{G\mu_e\expy{5/3}}M\expy{-1/3}$
+        \item M-R rel: $P_c\approx P_{el}$ NR-deg ($P_{el}\propto(\frac{\rho}{\mu_e})^\frac{5}{3}$) - $\frac{M\expy{5/3}}{R^5\mu_e\expy{5/3}}\propto\frac{GM^2}{R^4}$ quindi $R\propto\frac{1}{G\mu_e\expy{5/3}}M\expy{-1/3}$
         \item Relativistic \Pelectron deg.:  $\frac{M^{\frac{4}{3}}}{R^4\mu_e^{\frac{4}{3}}}$ so $M\propto \frac{1}{G^{3/2}\mu_e^2}$ - $M_{Ch}=(\frac{2}{\mu_e})^21.459\msun{}$: if $M>M_{Ch}$ no equilibrium if less expand until NR.
         \item \xaumenta{M_{WD}}, \xaumenta{\tau_{cool}}: per $L\approx\num{e-3}\lsun$ $\tau_{cool}\approx\SI{e9}{\year}$
  		\item He-WD: RGB stars that have lost envelope (mass loss, mass transfer) - $M_{WD}\approx\numrange{0.15}{0.5}\msun$ - brighter at fixed age as \xdiminuisce{\mu}
 		\item O-Ne WD endpoint of $M_*\approx8-11\msun$ at end of C-burning ($M_{WD}^{ONe}\approx\numrange{1}{1.2}\msun$)[78] - shorter cooling due to \xaumenta{\mu}; cryst. at higher T [91]
 		\end{itemize}
 	\end{column}
-	\begin{column}{0.55\textwidth}
+	\begin{column}{0.45\textwidth}
 		\begin{figure}[!ht]
 			\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.38\textheight]{WD-ML}\label{fig:WD-ML}
 			\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.38\textheight]{WD-MR}\label{fig:WD-MR}
