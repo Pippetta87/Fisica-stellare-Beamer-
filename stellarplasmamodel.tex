@@ -281,10 +281,10 @@ Final term gives much smaller effect than second: pertutbing potential for atoms
     Mass absorption coeff deps on absorption crosssection which is ratio of number of photons in freq $d\omega$ absorbed per atom to total number in freq $d\omega$ per unit area incident onto atoms; but since radiation is treated classic. we consider average energy absorbed per atom
     \begin{align*}
         &\vec{S}=\frac{c}{4\pi}\vecp{E}{H}, \vec{E}=-\frac{1}{c}\TDy{t}{\vec{A}}, \vec{H}=\nabla\wedge\vec{A}\tag{Poynting's vec: energy flux in pulse}\\
-        &\vec{S}=-\frac{1}{4\pi}\int_{-\infty}^{+\infty}-i\omegaA(\omega)\hat{e}\Exp{[-i\omega(t-\frac{\hat{n}\cdot\vec{r}}{c})]}\,d\omega\wedge\frac{1}{c}\int_{-\infty}^{+\infty}i\omega'A(\omega')(\hat{n}\wedge\hat{e})\Exp{[-i\omega'(t-\frac{\hat{n}\cdot\vec{r}}{c})]d\omega'}\\
+        &\vec{S}=-\frac{1}{4\pi}\int_{-\infty}^{+\infty}-i\omega A(\omega)\hat{e}\Exp{[-i\omega(t-\frac{\hat{n}\cdot\vec{r}}{c})]}\,d\omega\wedge\frac{1}{c}\int_{-\infty}^{+\infty}i\omega'A(\omega')(\hat{n}\wedge\hat{e})\Exp{[-i\omega'(t-\frac{\hat{n}\cdot\vec{r}}{c})]d\omega'}\\
         &=-\frac{\hat{n}}{4\pi c}\iint\,d\omega d\omega' \omega\omega'A(\omega)A(\omega')\Exp{[-i(\omega+\omega')(t-\frac{\hat{n}\cdot\vec{r}}{c})]}\tag{transverse wave $\hat{e}\cdot\vec{n}=0$: $\hat{e}\wedge(\hat{n}\wedge\hat{e})=\hat{n}$}\\
         &E=\int_{-infty}^{+\infty}\vec{S}(t)\cdot\hat{n}\,dt=\frac{1}{c}\int_0^{+\infty}\omega^2|A(\omega)|^2\,d\omega=\int E(\omega)\,d\omega\tag{ener. carried by pulse per unit area}\\
-        &\hbar\omega_{ks}|c_k(+\infty)|^2=\frac{4\pi^2e^2E(\omega_{ks})}{\hbar m^2c\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vet{r})\vec{p}\cdot\hat{e}}|s}|^2
+        &\hbar\omega_{ks}|c_k(+\infty)|^2=\frac{4\pi^2e^2E(\omega_{ks})}{\hbar m^2c\omega_{ks}}|\braket{k|\Exp{(i \frac{\omega_{ks}}{c}\hat{n}\cdot\vec{r})\vec{p}\cdot\hat{e}}|s}|^2
     \end{align*}
     Absorption crosssection $\sigma(\omega)=\frac{\text{energy abs }/\text{initial state s at freq $\omega$}}{\text{Inc ener}/\text{unit area at freq $\omega$}}$
 \end{frame}
@@ -350,7 +350,7 @@ Final term gives much smaller effect than second: pertutbing potential for atoms
         \begin{column}{0.5\textwidth}
             \begin{align*}
                 &f_{ks}=\frac{2m\omega_{ks}}{3\hbar}|\braket{k|\vec{r}|s}|^2=\frac{2m\omega_{ks}}{3\hbar}(R_{10}^{21})^2\tag{Ly\alpha: $1s\to2p$}\\
-                &\hbar\omega_{ks}=1-\frac{1}{2^2}\Ryd{}=\frac{3}{4}\frac{e^2}{2a_0}, a_0=\frac{\hbar^2}{me^2}
+                &\hbar\omega_{ks}=1-\frac{1}{2^2}\si{\ryd}=\frac{3}{4}\frac{e^2}{2a_0}, a_0=\frac{\hbar^2}{me^2}
             \end{align*}
         \end{column}
     \end{columns}
@@ -510,7 +510,7 @@ Final term gives much smaller effect than second: pertutbing potential for atoms
             \end{align*}
         \end{column}
         \begin{column}{0.4\textwidth}
-            Thomson: not valid for rel. energy or $E_{\gamma}\geq mc^2$ ($T>\SI{e9}{\kelvin}$) - $\TDy{\Omega}{\sigma}\propto \frac{\1}{m^2}$ so electron scatterin far more important than scattering from nuclei.
+            Thomson: not valid for rel. energy or $E_{\gamma}\geq mc^2$ ($T>\SI{e9}{\kelvin}$) - $\TDy{\Omega}{\sigma}\propto \frac{1}{m^2}$ so electron scatterin far more important than scattering from nuclei.
             Other type of scattering occurs in cooler part of stars - Rayleigh scattering, by from ions (harmonically bounded electrons) and molecules where ionization is incomplete. In He-H gas ionized electron scattering opacity dominate FF only if $T>\num{4.5e6}\rho^{0.286}$. Scattering phase function propto $1+\cos^2{\theta}$ cancellation made in diffusion theory of rad-transf is satisfied.
         \end{column}
     \end{columns}
@@ -867,7 +867,7 @@ Continuum depression: $\chi_Z=\chi_Z-\frac{Ze^2}{R_D}$ (pressure ionization)
 \end{frame}
 
 \begin{frame}{Approfondimento fattore astrofisico}
-    \todo{chiarire $S_{eff}: $S(0)$ vs $S(E_0)$}
+    \todo{chiarire $S_{eff}$: $S(0)$ vs $S(E_0)$}
 $S(E)$ descrive l'interazione a livello nucleare: debolmente dipendente dall'energia in assenza di risonanze.
 La probabilit\'a di attraversamento della barriera coulombiana: $P_0(E)=\exp{-2\pi\eta},\ \eta=\sqrt{\frac{m}{2}}\frac{Z_1Z_2e^2}{\hbar E\expy{\frac{1}{2}}}$
 Per i nuclei di carica $Z_1$, $Z_2$ e m massa ridotta: $\sigma(E)=\frac{S(E)}{E}\exp{-2\pi\eta}$

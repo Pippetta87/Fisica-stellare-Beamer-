@@ -1,8 +1,29 @@
 %! TEX root = main.tex
-\subsection{Stellar structure: euristic}
+\subsection{Stellar structure}
 
-\begin{frame}{Relazioni euristiche propriet\'a stellari}
+\begin{frame}{Relazioni euris tiche propriet\'a stellari}
     Differentiation goes macroscopic (why not integrating?)
+\end{frame}
+
+\begin{frame}{Radiative transport - Radiative gradient}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            Diffusion Approx:
+            \begin{align*}
+            &(\vec{j}=-D\nabla n)\\
+            &D=\frac{1}{3}vl_p\to \frac{1}{3}\frac{c}{\kappa\rho}\\
+            &F=-D\PDy{r}{U}=-D4aT^3\PDy{r}{T}\\
+&
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            BB: radianza spettrale ($\approx \frac{P_{\nu}}{A\Omega\cos{\theta}}$), $P_{\nu}$ energia emessa per unit\'a di tempo a frequenza $\nu$
+            \begin{align*}
+                &U_{\nu}=\frac{4\pi}{c}B_{\nu}=\frac{8\pi h}{c^3}\frac{\nu^3}{\exp{\frac{h\nu}{kT}}-1}
+            \end{align*}<++>
+        \end{column}
+    \end{columns}
+    <++>
 \end{frame}
 
 \subsection{Radiation}
@@ -50,7 +71,7 @@
             \begin{align*}
                 &I_{\nu}^{out}(\tau_{\nu},\mu)=\int_{\tau_{\nu}}^{\infty}[B_{\nu}(\tau_{\nu})+\TDy{\tau_{\nu}}{B_{\nu}}(t-\tau_{\nu})]\exp{-\frac{(t-\tau_{\nu})}{\mu}}\frac{dt}{\mu}\\
                     &=\int_0^{\infty}[B_{\nu}(\tau_{\nu})+\TDy{\tau_{\nu}}{B_{\nu}}\mu u]\exp{-u}\,du\\
-                    &\RightarrowI(\tau,\mu\geq0)=B(\tau)+\mu(\PDy{\tau}{B})_{\tau}\\
+                    &\Rightarrow I(\tau,\mu\geq0)=B(\tau)+\mu(\PDy{\tau}{B})_{\tau}\\
                     &H_{\nu}=\frac{F_{\nu}}{4}=\frac{1}{2}\int_{-1}^1\mu I_{\nu}\,d\mu=\frac{1}{3}\TDy{\tau_{\nu}}{B_{\nu}}\\
                     &=-\frac{1}{3}\frac{1}{\kappa_{\nu}}\TDy{\tau_{\nu}}{B_{\nu}}=-\frac{1}{3\kappa_{\nu}}\TDy{T}{B_{\nu}}\TDy{x}{T}
             \end{align*}
@@ -151,7 +172,7 @@
                         0: p>p_F\\
                 \end{array}\\\right.
                     &n_edV=dV\int_0^{p_F}\frac{8\pi}{h^3}p^2dp=\frac{8\pi}{3h^3}p_F^3\,dV\\
-                    &\Rightarrow p_F\propro n_e^{\frac{1}{3}}, E_F=\frac{p_F^2}{2m_e}\propto n_e^{\frac{2}{3}}\\
+                    &\Rightarrow p_F\propto n_e^{\frac{1}{3}}, E_F=\frac{p_F^2}{2m_e}\propto n_e^{\frac{2}{3}}\\
                     &P_e=\int \frac{d\Omega_s}{4\pi}\int_0^{\infty}f(p)v(p)p\cos^2{\theta}dp\\
                     &=\frac{8\pi}{3h^3}\int_0^{p_F}p^3v(p)dp=\frac{8\pi c}{3h^3}\int_0^{p_F}\frac{\frac{p}{m_ec}dp}{\sqrt{1+\frac{p^2}{m_e^2c}}}\\
                     &=\frac{\pi m_e^4c^5}{3h^3}f(x)=\left\{\begin{array}{l}
@@ -418,17 +439,6 @@
 
 \subsection{Stars Formation}
 
-\begin{frame}{Phenomenology}
-    \begin{itemize}
-        \item GMC: $A_V(\si{\mag}=2$)$, $n_T=\SI{100}{\per\cubic\cm}$, $L=\SI{50}{\parsec}$, $T=\SI{15}{\kelvin}$, $M=\SI{e5}{\solarmass}$
-            \item OB associtiation correlated with GMC: obs \SI{2.6}{\milli\meter} line of $^{12}C^{16}O$.
-            \item Dense core/Bok Globules: $A_V(\si{\mag}=10$)$, $n_T=\SI{e4}{\per\cubic\cm}$, $L=\SI{0.1}{\parsec}$, $T=\SI{10}{\kelvin}$, $M=10\msun{}$ - Collapse of dense core into protostars
-            \item Virial: $\frac{1}{2}\PtwoDy{t}{I}=-\frac{GM^2}{R}$ - $\Omega=-\frac{GM^2}{R}$, $I\approx MR^2$ quindi $t_{ff}\propto\sqrt{\frac{R^3}{GM}}\approx\sqrt{\frac{3\pi}{32G\rho}}$: $t_{ff}\approx\SI{7e6}{\year}(\frac{M}{\num{e5}\msun{}})^{-\frac{1}{2}}(\frac{R}{\SI{25}{\parsec}})^{\frac{3}{2}}$
-            \item Birthline - Protostar becomes detectable in visible - Locus in HDR of pre-MS stars with protostellar radius: Surface $L,T_e$ are set by infalling materials dynamics, R is determined by internal structure: $\tkh{}\approx\frac{GM^2}{RL}$, $\dot{R}\approx-\frac{R_*}{\tkh{}}$, $\dot{L}\propto-\frac{L_*}{\tkh{}}$
-            \item Dust and $H_2$ formation: $20\msun{}\si{\per\square\cm}$ column density needed to shield $H_2$ from UV (obs: $100\msun{}\si{\per\square\cm}$) - $T\approx \SIrange{10}{20}{\kelvin}$ - thermal radiation by dust increases cooling efficiency - dust increases $H_2$ formation: density of $H_2$ measured indirect. via coll. exc. of other species or decreses of \SI{21}{\cm} line abs/em from depletion of atomic H - \item Inside-out collapse: denser inner regions - $t_{ff}\propto\invers{\rho}$
-                \item Rotation: angular momentum problem
-        \end{itemize}
-\end{frame}
 
 \begin{frame}{Isothermal cloud structure}
     \begin{align*}
@@ -629,7 +639,7 @@ R\end{frame}
         \item Core He burning in low mass stars - H-burning shell efficiency monot. decreases while core he-burning increases
         \item Autotrascinamento: as $^4He\to^{12}C$ \xaumenta{\kappa_{ff}}($\propto X_iZ_i^2$) so $\xaumenta{nrad{}}$ - we have discontinuity in $\nrad{}$ at He-burning core boundary. Selfdriving mechanism (overshoot) causes extension of convective instable region with boundaries where $\nad{}=\nrad{}$.
         \item Semiconvection - $\nrad{}$ has minimum inside convective core-partial mixing: Decouplin between semiconvective shell outside $\nrad{}$ minimum and convective core - He-burning last longer, more extended loop in HDR, mass of He-depleted core is larger.
-        \item Breathing pulses: Final phases He-burning, when in  convective core $Y\approx0.1$ $^{16}O$ production dominate over $3\alpha$: opacity of oxygen is larger so semiconvection region enlarges - begins a loop where \xaumenta{Y}, \xaumenta{3\alpha}, \xaumenta{L}, \xaumenta{\narad{}} -  3 breathing pulses exhaust He in core. BP in HDR: loops in hdr at each BP. Effect on stellar evolution: He-burning time increses, mass CO core increases, $R2=\frac{t_{AGB}}{t_{HB}}=\frac{N_{AGB}}{N_{HB}}$ params decreases with BP. 
+        \item Breathing pulses: Final phases He-burning, when in  convective core $Y\approx0.1$ $^{16}O$ production dominate over $3\alpha$: opacity of oxygen is larger so semiconvection region enlarges - begins a loop where \xaumenta{Y}, \xaumenta{3\alpha}, \xaumenta{L}, \xaumenta{\nrad{}} -  3 breathing pulses exhaust He in core. BP in HDR: loops in hdr at each BP. Effect on stellar evolution: He-burning time increses, mass CO core increases, $R2=\frac{t_{AGB}}{t_{HB}}=\frac{N_{AGB}}{N_{HB}}$ params decreases with BP. 
         \end{itemize}
 \end{frame}
 
@@ -674,30 +684,30 @@ R\end{frame}
         \item Early-AGB: He burning in shell around CO-core of increasing mass due this burning; H-burning shell turn off due to expansion caused by He-burning shell.
         \item AGB clump: in low mass-star He-burning shell switch off H-burning shell causing luminosity $L$ to decrease the increases as \xaumenta{M_{cCO}} - well pop. in old galactic stellar system.
         \item Second dredge-up: $M_*>3-5\msun{}$ (lower mass have efficient H-burnoing shell preventing convection penetration) large flux due to He-burning shell causes expansion of above layers and cooling - convection penetrate H-depleted region, up to $1\msun{}$ material dredged-up (He, $(^{12}C,^{16}O)\to^{14}N$) - reduction of H-depleted region avoid formation af massive WD
-        \item Thermally-pulsating AGB: When He-burning shell encounters He/H discontinuity dies off, then after contraction phase H-burning shell turns on providing energy needed - He is accreted on CO-core and compressed/heated until critical mass (\SI{e-3}{\solarmass} for \SI{0.8}{\solarmass} CO-core) is reached: He ignited in runway manner (stable burning require $4 \frac{s}{r}>\alpha$) generating $L_{peak}\approx\numrange{e7}{e8}\lsun{}$. H-burning shell turned off by expansion due to He burning, and convective enevelope establishes from He-burning shell up to H/He discontinuity. Repeat\ldots During inter-pulses phases $\epsilon_H$ is determined by mass of H-exhausted core: $M_{cHe}-L$ relationship (as in RGB).
+        \item Thermally-pulsating AGB: When He-burning shell encounters He/H discontinuity dies off, then after contraction phase H-burning shell turns on providing energy needed - He is accreted on CO-core and compressed/heated until critical mass (\SI{e-3}{\solarmass} for \SI{0.8}{\solarmass} CO-core) is reached: He ignited in runway manner (stable burning require $4 \frac{s}{r}>\alpha$) generating $L_{peak}\approx\numrange{e7}{e8}\lsun{}$. H-burning shell turned off by expansion due to He burning, and convective enevelope establishes from He-burning shell up to H/He discontinuity. Repeat$\ldots$ During inter-pulses phases $\epsilon_H$ is determined by mass of H-exhausted core: $M_{cHe}-L$ relationship (as in RGB).
         \item As He-burning shell expands conditions for runway burning cease: He-burning shell cools and $\epsilon_{He}$ suddenly drops - for massive enough stars (ie $M_{cCO}>0.7\msun{}$) convective shell disappears, for less massive stars base of convective shell reaches into regions of incomplete He burning eventually reaching steady-state burning.
         \item Third Dredge-up: the more intense is the pulse the more the convection penetrate in H-exhausted region, greater density of accrete material greater strenght's pulse, slower H-burning: bringing to surface products of He-burning (carbon and heavy s-elements). Dredged-up mass increses as $M_c$ increases until reaches max then decreses due to $M_e$ decreases (wind/H-burning); \xdiminuisce{Z} then DUIII penetrates deeper: galactic AGB vs metal poor AGB.
         \end{itemize}
 \end{frame}
 
-\begin{frame}{AGB: CO core ignition or termination}
-    \begin{itemize}
-        \item $M_{up}$: limit mass where \Pelectron-degeneracy prevent CO-core ignition (deps strongly on initial comp.: solar comp. $M_{up}=8\msun{}$,  minimum at $Z=0.001$ with $M_{up}=4\msun{}$)
-        \item CO core condition:
-                \begin{columns}[T]
-                    \begin{column}{0.5\textwidth}
-                        $M_*<M_{up}$: highly degenerate CO-core - $\rho_c\approx\SIrange{e5}{e8}{\gram\per\cubic\cm}$ plasma neutrino loss (max at center) is balanced by contraction and cooling
-                    \end{column}
-                    \begin{column}{0.5\textwidth}
-                        $M_*>M_{up}$: CO-core ignite quitely/flashy
-                    \end{column}
-                \end{columns}
-            \item Stars igniting He in non-degenerate He-core but developing degenerate CO-core at end of central He-burning are intermediate mass stars.
-            \item AGB termination - $M_{cCO}>M_{Ch}$: C-ignition (AGB ends), we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
-            \item When $M_e<$\SI{e-3}{\solarmass}: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end \SI{e-4}{\solarmass\per\year}). Large amplitude pulsation (mira variable) enhance mass loss.
-            \item From TPAGB to WD: thin H-burning shell until Bluest point at const. L; then H-burning switch-off and He/H-rich envelope contract rapidly and we can have following channels: star cools down to WD; Born-again AGB (FG Sagittae): He-burning; Self-induced nova: runaway H-burning (DB: expulsion of H-rich envelope)
-        \end{itemize}
-\end{frame}
+%\begin{frame}{AGB: CO core ignition or termination}
+%    \begin{itemize}
+%        \item $M_{up}$: limit  mass where \Pelectron-degeneracy prevent CO-core ignition (deps strongly on initial comp.: solar comp. $M_{up}=8\msun{}$,  minimum at $Z=0.001$ with $M_{up}=4\msun{}$)
+%        \item CO core condition:
+%                \begin{columns}[T]
+%                    \begin{column}{0.5\textwidth}
+%                        $M_*<M_{up}$: highly degenerate CO-core - $\rho_c\approx\SIrange{e5}{e8}{\gram\per\cubic\cm}$ plasma neutrino loss (max at center) is balanced by contraction and cooling
+%                    \end{column}
+%                    \begin{column}{0.5\textwidth}
+%                        $M_*>M_{up}$: CO-core ignite quitely/flashy
+%                    \end{column}
+%                \end{columns} 
+%            \item Stars igniting He in non-degene rate He-core but developing degenerate CO-core at end of central He-burning are intermediate mass stars.
+%            \item AGB termination - $M_{cCO}>M_{Ch}$: C-ignition (AGB ends), we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
+%            \item When $M_e<$\SI{e-3}{\solarmass}: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end \SI{e-4}{\solarmass\per\year}). Large amplitude pulsation (mira variable) enhance mass loss.
+%            \item From TPAGB to WD: thin H-burning shell until Bluest point at const. L; then H-burning switch-off and He/H-rich envelope contract rapidly and we can have following channels: star cools down to WD; Born-again AGB (FG Sagittae): He-burning; Self-induced nova: runaway H-burning (DB: expulsion of H-rich envelope)
+%        \end{itemize}
+%\end{frame}
 
 \begin{frame}{AGB: chemical evolution}
     \begin{itemize}
