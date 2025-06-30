@@ -437,6 +437,188 @@
 
 \subsection{Stellar model}
 
+\begin{frame}{Homologous Stars: h. mass shell, $\frac{m}{M}=\frac{m'}{M'}$, are at h. points, $\frac{r}{R}=\frac{r'}{R'}$}
+    \begin{columns}[T]
+        \begin{column}{0.50\textwidth}
+            \begin{align*}
+            &\xi=\frac{m}{M}=\frac{m'}{M'}: \frac{r(\xi)}{r'({\xi})}=\frac{R}{R'}\\
+                &\begin{array}{l}
+                \frac{r}{r'}=z=\frac{R}{R'},\frac{P}{P'}=p=\frac{P_c}{P_c'}\\
+                \frac{T}{T'}=t=\frac{T_c}{T_c'},\frac{l}{l'}=s=\frac{L}{L'}
+            \end{array}\tag{Ansaz}\\
+            &\begin{array}{l}
+                \TDy{\xi}{r}=c_1 \frac{M}{r^2\rho},c_1=\frac{1}{4\pi}\\
+                \TDy{\xi}{P}=c_2 \frac{\xi M^2}{r^4},c_2=-\frac{G}{4\pi}\\
+                \TDy{\xi}{l}=\epsilon M,\TDy{\xi}{T}=c_4 \frac{\kappa lM}{r^4T^3},c_4=-\frac{3}{64\pi^2ac}
+            \end{array}\\
+            &\begin{array}{l}
+                \TDy{\xi}{r'}=c_1 \frac{M'}{r'^2\rho'}[\frac{x}{z^3d}],\TDy{\xi}{P'}=c_2 \frac{\xi M'^2}{r'^4}[\frac{x^2}{z^4p}]\\
+                \TDy{\xi}{l'}=\epsilon'M'[\frac{ex}{s}],\TDy{\xi}{T'}=c_4 \frac{\kappa'l'M'}{r'^4T'^3}[\frac{ksx}{z^4t^4}]
+            \end{array}\\
+            &\frac{x}{z^3d}=1, \frac{x^2}{z^4p}=1, \frac{ex}{s}=1, \frac{ksx}{z^4t^4}=1\\
+            &\begin{psmallmatrix}
+                -3&-\alpha&\delta&0\\
+                -4&-1&0&0\\
+                0&\lambda\alpha&(\nu-\lambda\delta)&-1\\
+                -4&a&(b-4)&1\\
+            \end{psmallmatrix}
+            \begin{psmallmatrix}
+                z_1\\p_1\\t_1\\s_1\\
+            \end{psmallmatrix}=\begin{psmallmatrix}
+                -1\\-2\\-1\\-1\\
+            \end{psmallmatrix}\tag{x}\\
+            &\begin{psmallmatrix}\setlength\arraycolsep{-10pt}
+                -3&-\alpha&\delta&0\\
+                -4&-1&0&0\\
+                0&\lambda\alpha&(\nu-\lambda\delta)&-1\\
+                -4&a&(b-4)&1\\
+            \end{psmallmatrix}
+            \begin{psmallmatrix}
+                z_2\\p_2\\t_2\\s_2\\
+            \end{psmallmatrix}=\begin{psmallmatrix}
+               \phi\\0\\-\lambda\phi\\0\\
+            \end{psmallmatrix}\tag{y}
+             \end{align*}
+        \end{column}
+        \begin{column}{0.50\textwidth}
+            \begin{itemize}
+                \item exponents solutions:
+    \begin{align*}
+            &z_1=\frac{1}{2}(1+A),p_1=-2A,t_1=\frac{1}{2\delta}[1+(3-4\alpha)A],\\
+            &s_1=1+\frac{4-b}{2\delta}+[2+2a+\frac{3-4\alpha}{2\delta}(4-b)]A\\
+            &z_2=\phi B,p_2=-4\phi B,t_2=\frac{\phi}{\delta}[1+(3-4\alpha)B],\\
+            &s_2=\frac{\phi}{\delta}(4-b)+\phi[4+4a+\frac{3-4\alpha}{\delta}(4-b)]B\\
+            &A=\invers{[\frac{4\delta(1+a+\lambda a)}{\nu+b-4-\lambda\delta}+4\alpha-3]},\\
+            &B=A\invers{(1-\frac{\lambda\delta}{\nu+b-4})}\\
+            &\frac{x}{z^3d}=1\Rightarrow \frac{\rho}{\rho'}=\frac{M/M'}{(R/R')^3},\frac{x^2}{z^4p}=1\\
+            &\Rightarrow \frac{P}{P'}=\frac{(M/M')^2}{(R/R')^4}
+    \end{align*}
+    
+\end{itemize}    
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+    \item $\delta=0$ polytropic: $n=\frac{\alpha}{1-\alpha}$, $A=\invers{(4\alpha-1)}$, $z_1=\frac{2\alpha-1}{4\alpha-3}$, $R\propto M^{z_1} (MR-rel, $y=1$, $\alpha=\frac{3}{5}$ (NR \Pelectron gas): $z_1=-\frac{1}{3}$
+        \item Ideal gas, const $\kappa$ - $\alpha=\delta=\phi=1$, $a=b=0$ - $ML$, $L\mu$ rel: $\frac{L}{L'}=(\frac{M}{M'})^3(\frac{\mu}{\mu'})^4$: $z_1=\frac{\nu+\lambda-2}{\nu+3\lambda}$, $z_2=\frac{\nu-4}{\nu+3\lambda}$, $p_1=2-4z_1$, $p_2=-4z_2$, $t_1=1-z_1$, $t_2=1-z_2$, $s_1=3$, $s_2=4$; $\frac{R}{R'}=(\frac{M}{M'})^{z_1}$ ($\frac{\mu}{\mu'})^{z_2}$ ($z_1\in\numrange{0.4}{0.8}$).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Solution for exponents of x,y and applications to simple material functions}
+    \begin{align*}
+            &z_1=\frac{1}{2}(1+A),p_1=-2A,t_1=\frac{1}{2\delta}[1+(3-4\alpha)A],s_1=1+\frac{4-b}{2\delta}+[2+2a+\frac{3-4\alpha}{2\delta}(4-b)]A\\
+            &z_2=\phi B,p_2=-4\phi B,t_2=\frac{\phi}{\delta}[1+(3-4\alpha)B],s_2=\frac{\phi}{\delta}(4-b)+\phi[4+4a+\frac{3-4\alpha}{\delta}(4-b)]B\\
+            &A=\invers{[\frac{4\delta(1+a+\lambda a)}{\nu+b-4-\lambda\delta}+4\alpha-3]},B=A\invers{(1-\frac{\lambda\delta}{\nu+b-4})}\\
+            &\frac{x}{z^3d}=1\Rightarrow \frac{\rho}{\rho'}=\frac{M/M'}{(R/R')^3},\frac{x^2}{z^4p}=1\Rightarrow \frac{P}{P'}=\frac{(M/M')^2}{(R/R')^4}\tag{H. points: $\frac{r}{r'}=z$, $\xi=\frac{m}{M}=\frac{m'}{M'}$, $\frac{r(\xi)}{r'(\xi)}=\frac{R}{R'}$}
+    \end{align*}
+For all h. points density changes as mean density while $P\propto M^2R^{-4}$.
+\begin{columns}[T]
+    \begin{column}{0.3\textwidth}
+        \begin{block}{$\delta=0$: polytropic}
+            \begin{align*}
+                &n=\frac{\alpha}{1-\alpha}\\
+                &A=\invers{(4\alpha-1)}\\
+                &z_1=\frac{2\alpha-1}{4\alpha-3}\\
+                &R\propto M^{z_1}\tag{MR-rel, $y=1$}\\
+                &\alpha=\frac{3}{5}:\tag{NR \Pelectron gas}\\
+                &z_1=-\frac{1}{3}
+            \end{align*}
+        \end{block}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+        \begin{block}{Ideal gas, const $\kappa$: $\alpha=\delta=\phi=1$, $a=b=0$}
+            \begin{align*}
+                &z_1=\frac{\nu+\lambda-2}{\nu+3\lambda},z_2=\frac{\nu-4}{\nu+3\lambda}\\
+                &p_1=2-4z_1,p_2=-4z_2\\
+                &t_1=1-z_1,t_2=1-z_2\\
+                &s_1=3,s_2=4\\
+                &\Rightarrow \frac{L}{L'}=(\frac{M}{M'})^3(\frac{\mu}{\mu'})^4\tag{$ML$,$L\mu$ rel}\\
+                &\frac{R}{R'}=(\frac{M}{M'})^{z_1}(\frac{\mu}{\mu'})^{z_2}\tag{$z_1\in\numrange{0.4}{0.8}$}
+            \end{align*}
+
+        \end{block}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+        \begin{block}{Approx constant $P_{rad}$}
+                If material functions don't contain only product: 
+            \begin{align*}
+                &\rho=(\mu\beta)\frac{P}{T},\beta=\frac{P_g}{P}=1-\frac{P_r}{P}\\
+                &R\propto\beta^{z_2},P\propto\beta^{p_2}\\
+                &T\propto\beta^{t_2},L\propto\beta^{s_2}\tag{$\beta$ det. by $P,T$}\\
+                &1-\beta=\frac{P_r}{P}\propto \frac{T^4}{P}\propto\frac{M^{4t_1}}{M^{p_1}}\frac{\beta^{4t_2}}{\beta^{p_2}}\\
+                &\frac{1-\beta}{\beta^4}\propto M^2\tag{replacing expression for exponent}
+            \end{align*}
+        \end{block}
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Homologous contraction (poly index n)}
+    Consecutive models are h. to each others, ie contraction of polytrope that doesn't change polytropic index; $z\propto\frac{r}{R}$ dim-less radius var: LE eqs gives $m(z)$ so mass elements at homologous points, mass elements ($\xi=\frac{m}{M}=\const{}$) remains at h. points, since their value of z do not change in time.
+\begin{align*}
+&r'=r+\dot{r}\Delta t\Rightarrow\frac{r}{r'}=1+\frac{\dot{r}}{r}\Delta t\\
+&\frac{r'}{r}=\frac{R'}{R}=\const{}\Rightarrow\frac{\dot{r}}{r}=\frac{\dot{R}}{R}=\const{}\ (\PDof{m}\PDy{t}{\ln{r}})=0\\
+&\PDof{t}(\frac{1}{r}\PDy{m}{r})=0=\PDof{t}(\frac{1}{4\pi r^3\rho})\Rightarrow\frac{\dot{\rho}}{\rho}=-3\frac{\dot{r}}{r}\\
+&P=\int_m^M\frac{Gm}{4\pi r^4}\,dm:\ \dot{P}=\int_m^M\PDof{t}(\frac{1}{r^4})\frac{Gm}{4\pi}\tag{HE}\\
+&\rho\propto P^{\alpha}T^{-\delta}\Rightarrow\frac{\dot{\rho}}{\rho}=\alpha\frac{\dot{P}}{P}-\delta\frac{\dot{T}}{T}\tag{EOS}\\
+&\frac{\dot{T}}{T}=-\frac{4\alpha-3}{\delta}\frac{\dot{r}}{r}\\
+&\epsilon_g=c_PT(\nad\frac{\dot{P}}{P}-\frac{\dot{T}}{T})=c_PT[-4\nad+\frac{4\alpha-3}{\delta}]\frac{\dot{R}}{R}\\
+&\to-\frac{3}{5}c_PT\frac{\dot{R}}{R}\tag{ideal mono $\nad=\frac{2}{5}$, $\alpha=\delta=1$}\\
+\end{align*}
+\end{frame}
+
+\subsection{Fato Finale}
+
+\begin{frame}{Post AGB}
+    \begin{itemize}
+        \item $M_*>\numrange{8}{10}\msun{}$: core He-burning produces compact CO core - Limit $M_{up}$ is largest mass where electron degeneracy of CO core prevent C-burning; $M>M_{up}$ massive stars, stars igniting He-burning in non-deg core but developing deg CO core are int-mass star.
+        \item $M<_{up}$: thermally pulsating AGB. TPAGB terminated when CO mass exceds limit $M_{ch}\approx1.4\msun{}$ and Carbon ignites, or mass H-rich envelope is exhausted. Due to mass loss is not expected CO core reaches Ch. limit in TPAGB phase.
+        \item AGB mass loss obs: \numrange{e-8}{e-4}$\msun{}\si{\per\year}$. Mira variables-radiation driven wind;
+            \begin{columns}[T]
+                \begin{column}{0.5\textwidth}
+                    \begin{align*}
+                        &\log{(\TDy{t}{M})}=-11.4+0.0123\log{P}\tag{$P<\SI{500}{\day}$}\\
+                        &\TDy{t}{M}=\num{6.07023e-3}\frac{L}{cv_e}\tag{$P>\SI{500}{\day}$}
+                    \end{align*}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{align*}
+                        &v_e=-13.5+0.056P\tag{term.vel.stellar wind \si{\kilo\meter\per\second}}\\
+                        &\log{P}=-2.07+1.94\log{R}-0.9\log{M}\tag{\si{\day}}
+                    \end{align*}
+                \end{column}
+            \end{columns}
+            
+        \item Evolution of low mass stars after TPAGB/formation of Planetary Nebula (when $T_e\approx \SI{30000}{\kelvin}$ ejected materials is ionized): once mass H-rich envelope below critical value star evolve rapidly toward hotter $T_e$: burn H until bluest point in thin shell at almost const L, then H-burning switch off and both H-,He-rich envelopes contract rapidly. Dep on thermal condition of envelope: nuclear burning dies and remnant cools as WD; Heating of He-rich layers leads to He-runaway-burning bringing back to AGB (born-again AGB: FG sagittae) and moving to blu side until WD; heatin of H-rich envelope induce H-burning in runaway manner (selfinduced nova), violent explosion of H-rich envelope (DB WD), if only part of H-rich envelope is lost we may have more H-flashes ending again with non-DA WD.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{WD cooling}
+    <++>
+\end{frame}
+
+\begin{frame}{Massive stars: $M>M_{up}$ - neutrino mediated KH contraction of CO core}
+    \begin{itemize}
+        \item Similar evolution but sensitivity of location on HDR to mass-loss and convection (Sch vs Ledoux: affects ratio between time spent on blu/red side of HDR).
+        \item Mass of He core is fixed by mass-size of convective core during central H-burning and amount of hydrogen processed in H-burning shell during central He-burning stage: mass of CO core quite fixed size of convective core during central He-burning phase (H-burning phase is fast, chem profile of C/O are flat in core as result of efficient mixing in He-burning phase).
+        \item C abundance in core affects successive phase: sensitive to cross section of $^{12}C(\alpha,\gamma)^{16}O$
+        \item At central He exhaustion CO begins contract; $T_c\geq\SI{5e8}{\kelvin}$ entering region of $\rho_c-T_c$ plane where neutrino losses from pair annihilation dominates stellar energy budget - radiative/convective energy transport are still important for stellar structure but is neutrino luminosity that balance energy by contraction and nuclear burning.
+        \item For $M=\numrange{15}{30}\msun{}$ C-burning ignites when $T_c=\SIrange{0.3e9}{1.2e9}{\kelvin}$ via $^{12}C+^{12}C\to^{24}Mg$ highly excited, decaying as $^{24}Mg\to^{23}Mg+n$ or $\to^{20}Ne+\alpha$ or $^{23}Na+p$. Abundance of C determine whether convective core is formed: nuclear rate minus neutrino luminosity must be positive ($\PDy{m}{l}=\epsilon_n+\epsilon_g-\epsilon_{\nu}$). Decrease of CC-mass with increasing stellar mass: \xaumenta{M}, \xaumenta{T_c}, \xaumenta{\epsilon_{\nu}}, so for large stellar mass CC disappears (could break corr. between CC-mass and central $X_C$). Once C is exhausted C-burning shift quitely in shell (we have one or more convective episode in C burning regions??); during C-burning (part. in shell) sign. fractioin of s-el are produced(most eff. neutron source in this phase is $^{22}Ne(\alpha,n)^{25}Mg$).
+        \item Ne-Burning:
+        \item O-Burning:
+        \item Si-Burning:
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Massive stars: $M>M_{up}$ - Ne,O,Si-burning}
+    \begin{itemize}
+        \item Ne-Burning:
+        \item O-Burning:
+        \item Si-Burning:
+    \end{itemize}
+\end{frame}
+
 \subsection{Stars Formation}
 
 
@@ -690,24 +872,24 @@ R\end{frame}
         \end{itemize}
 \end{frame}
 
-%\begin{frame}{AGB: CO core ignition or termination}
-%    \begin{itemize}
-%        \item $M_{up}$: limit  mass where \Pelectron-degeneracy prevent CO-core ignition (deps strongly on initial comp.: solar comp. $M_{up}=8\msun{}$,  minimum at $Z=0.001$ with $M_{up}=4\msun{}$)
-%        \item CO core condition:
-%                \begin{columns}[T]
-%                    \begin{column}{0.5\textwidth}
-%                        $M_*<M_{up}$: highly degenerate CO-core - $\rho_c\approx\SIrange{e5}{e8}{\gram\per\cubic\cm}$ plasma neutrino loss (max at center) is balanced by contraction and cooling
-%                    \end{column}
-%                    \begin{column}{0.5\textwidth}
-%                        $M_*>M_{up}$: CO-core ignite quitely/flashy
-%                    \end{column}
-%                \end{columns} 
-%            \item Stars igniting He in non-degene rate He-core but developing degenerate CO-core at end of central He-burning are intermediate mass stars.
-%            \item AGB termination - $M_{cCO}>M_{Ch}$: C-ignition (AGB ends), we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
-%            \item When $M_e<$\SI{e-3}{\solarmass}: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end \SI{e-4}{\solarmass\per\year}). Large amplitude pulsation (mira variable) enhance mass loss.
-%            \item From TPAGB to WD: thin H-burning shell until Bluest point at const. L; then H-burning switch-off and He/H-rich envelope contract rapidly and we can have following channels: star cools down to WD; Born-again AGB (FG Sagittae): He-burning; Self-induced nova: runaway H-burning (DB: expulsion of H-rich envelope)
-%        \end{itemize}
-%\end{frame}
+\begin{frame}{AGB: CO core ignition or termination}
+    \begin{itemize}
+        \item $M_{up}$: limit  mass where \Pelectron-degeneracy prevent CO-core ignition (deps strongly on initial comp.: solar comp. $M_{up}=8\msun{}$,  minimum at $Z=0.001$ with $M_{up}=4\msun{}$)
+        \item CO core condition:
+                \begin{columns}[T]
+                    \begin{column}{0.5\textwidth}
+                        $M_*<M_{up}$: highly degenerate CO-core - $\rho_c\approx\SIrange{e5}{e8}{\gram\per\cubic\cm}$ plasma neutrino loss (max at center) is balanced by contraction and cooling
+                    \end{column}
+                    \begin{column}{0.5\textwidth}
+                        $M_*>M_{up}$: CO-core ignite quitely/flashy
+                    \end{column}
+                \end{columns} 
+            \item Stars igniting He in non-degene rate He-core but developing degenerate CO-core at end of central He-burning are intermediate mass stars.
+            \item AGB termination - $M_{cCO}>M_{Ch}$: C-ignition (AGB ends), we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
+            \item When $M_e<$\SI{e-3}{\solarmass}: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end \SI{e-4}{\solarmass\per\year}). Large amplitude pulsation (mira variable) enhance mass loss.
+            \item From TPAGB to WD: thin H-burning shell until Bluest point at const. L; then H-burning switch-off and He/H-rich envelope contract rapidly and we can have following channels: star cools down to WD; Born-again AGB (FG Sagittae): He-burning; Self-induced nova: runaway H-burning (DB: expulsion of H-rich envelope)
+        \end{itemize}
+\end{frame}
 
 \begin{frame}{AGB: chemical evolution}
     \begin{itemize}
