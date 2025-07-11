@@ -1,4 +1,37 @@
 %! TEX root = main.tex
+\subsection{Sun}
+
+\begin{frame}{Present observations}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            \begin{align*}
+                &\frac{Z_s}{X_s}=0.0275\tag{AG89}\\
+                &\frac{Z_s}{X_s}=0.0245\tag{GN93}\\
+                &\frac{Z_s}{X_s}=0.0231\tag{GS98}\\
+                &\frac{Z_s}{X_s}=0.0165\tag{AGS05}\\
+                &\frac{Z_s}{X_s}=0.0181\tag{AGS09}\\
+                &\frac{Z_s}{X_s}=0.0209\tag{C11}
+            \end{align*}
+            Tramite eliosismologia si determina $Y_s=\num{0.2485\pm0.0034}$; i valori fotosferici, che sono quelli della zona convettiva, devono essere corretti per l'effetto della diffusione.
+            \begin{align*}
+                &\tsun{}\approx\SI{4.66}{\giga\year}\\
+                &\msun{}\approx\SI{1.989e33}{\gram}\\
+                &\rsun{}\approx\SI{6.957e10}{\cm}\\
+                &\lsun{}\approx\SI{3.826e33}{\erg\per\second}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            Model calibration: initial abundances $(X_0,Z_0)$ and efficiency of convection $\alpha$:
+            \begin{align*}
+                &p_i=\{X_0,Z_0,\alpha_{ML}\}\tag{parametri da calibrare}\\
+                &O_k=\{L_s,\frac{Z_s}{X_s},R\}\tag{Osservabili del modello}\\
+                &O_k^{\odot}=\{L_{s\odot},(\frac{Z_s}{X_s})_{\odot},\rsun{}\}\tag{Sole da riprodurre}\\
+                &\delta p_i=\sum_k(O_k^{\odot}-O_k)\PDy{O_k}{p_i}\tag{correzioni}
+            \end{align*}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
 \subsection{Stellar structure}
 
 \begin{frame}{Relazioni euris tiche propriet\'a stellari}
@@ -499,7 +532,7 @@
     \end{columns}
     \begin{itemize}
     \item $\delta=0$ polytropic: $n=\frac{\alpha}{1-\alpha}$, $A=\invers{(4\alpha-1)}$, $z_1=\frac{2\alpha-1}{4\alpha-3}$, $R\propto M^{z_1} (MR-rel, $y=1$, $\alpha=\frac{3}{5}$ (NR \Pelectron gas): $z_1=-\frac{1}{3}$
-        \item Ideal gas, const $\kappa$ - $\alpha=\delta=\phi=1$, $a=b=0$ - $ML$, $L\mu$ rel: $\frac{L}{L'}=(\frac{M}{M'})^3(\frac{\mu}{\mu'})^4$: $z_1=\frac{\nu+\lambda-2}{\nu+3\lambda}$, $z_2=\frac{\nu-4}{\nu+3\lambda}$, $p_1=2-4z_1$, $p_2=-4z_2$, $t_1=1-z_1$, $t_2=1-z_2$, $s_1=3$, $s_2=4$; $\frac{R}{R'}=(\frac{M}{M'})^{z_1}$ ($\frac{\mu}{\mu'})^{z_2}$ ($z_1\in\numrange{0.4}{0.8}$).
+    \item Ideal gas, const $\kappa$ - $\alpha=\delta=\phi=1$, $a=b=0$ - $ML$, $L\mu$ rel: $\frac{L}{L'}=(\frac{M}{M'})^3(\frac{\mu}{\mu'})^4$: $z_1=\frac{\nu+\lambda-2}{\nu+3\lambda}$, $z_2=\frac{\nu-4}{\nu+3\lambda}$, $p_1=2-4z_1$, $p_2=-4z_2$, $t_1=1-z_1$, $t_2=1-z_2$, $s_1=3$, $s_2=4$; $\frac{R}{R'}=(\frac{M}{M'})^{z_1}$ ($\frac{\mu}{\mu'})^{z_2}$ ($z_1\in\numrange{0.4}{0.8}$).
     \end{itemize}
 \end{frame}
 
@@ -550,7 +583,6 @@ For all h. points density changes as mean density while $P\propto M^2R^{-4}$.
         \end{block}
     \end{column}
 \end{columns}
-
 \end{frame}
 
 \begin{frame}{Homologous contraction (poly index n)}
@@ -594,7 +626,7 @@ For all h. points density changes as mean density while $P\propto M^2R^{-4}$.
 \end{frame}
 
 \begin{frame}{WD cooling}
-    <++>
+    
 \end{frame}
 
 \begin{frame}{Massive stars: $M>M_{up}$ - neutrino mediated KH contraction of CO core}
@@ -631,7 +663,7 @@ For all h. points density changes as mean density while $P\propto M^2R^{-4}$.
 \begin{frame}{Type Ia SN: progenitors}
     \begin{itemize}
         \item SN Ia comes from CO WD accreting mass from companion until mass is enough to trigger runaway thermonuclear reaction; type Ib,Ic SN are thought as explosive ending of massive stars that have lost whole H-rich envelope.
-        \item Spectral classification. Type I: no H features (upper limit to H abundance is \SI{e-4}{\sloarmass}); Ia: SiII absorption line \SI{6150}{\angstrom}, late spectra shows many Fe emission lines; Ib,Ic: no SiII absorption lines, presence/not of strong He I lines at \SI{5876}{\angstrom}.
+        \item Spectral classification. Type I: no H features (upper limit to H abundance is \SI{e-4}{\solarmass}); Ia: SiII absorption line \SI{6150}{\angstrom}, late spectra shows many Fe emission lines; Ib,Ic: no SiII absorption lines, presence/not of strong He I lines at \SI{5876}{\angstrom}.
 \item SN Ia progenitors - For $M<M_{up}$ star develop degenerate CO core turning into WD and if has a companion will accretes materials and we'll have different channel as different initial mass, chemical composition and accretion rate: a) DD-scenario. Accretion of H-rich materials (also classical/symbiontic nova) within system formed by 2 int-mass star, ie Double Degenerate scenario, evolving through episode of common envelope, and a system of two CO WD finally forming object with $M>M_{Ch}$ which can't be in hydrostatic equilibrium - Lack of observed DD systems. b) Single Degenerate scenario: accretion of H-/He-rich materials at appropriate rate - i) Accretion of H-rich matter on massive WD $\approx 1\msun{}$ with as low accretion as $\TDy{t}{M}\leq \num{e-9}\msun{}\si{\per\year}$ increasing mass of WD through strong He-pulses above $M_{Ch}$ but much mass is ejected so take Hubble time to reach $M_{Ch}$ (H-burning on top of He layer is so slow that He-shell develop strong degeneracy); at larger accretion rate star can explode: peculiar explosive nucleosynthesis and large H abundance should  be observable in early spectra, which is incompatible with SN Ia observation (however it's improb. to observe WD with initial mass larger than $1.1\msun{}$: progenitors could ignite CO core-WD config.); c) Sub-Chandrasekhar scenario. Considering low-mass CO WD accreting H-rich materials $\approx\num{3e-8}\msun{}\si{\per\year}$ can deliver thermon. explosion delivering \SI{e51}{\erg}, typical of SNIa (violent He-ignition after accretion of $0.15\msun{}$, ie when a very cold accreting WD reaches \SIrange{0.65}{0.8}{\solarmass}: if WD initially massive enough  He-burning could result in detonation and inward moving compression wave could lead to detonation of carbon in core); d) for H-accretion rate near Eddington limit accreted materials achieve expanded configuration typic. of RGB stars (Eddington Luminosity: max surface luminosity of star with outer layers in rad-equil: $L_{Edd}\propto \frac{M}{\kappa}$).
     \end{itemize}
 \end{frame}
@@ -640,7 +672,7 @@ For all h. points density changes as mean density while $P\propto M^2R^{-4}$.
     \begin{itemize}
 \item SN type Ia have same spectrum and light curve; big distance standard candle.
         \item SN Ia comes from CO WD accreting mass from companion until mass is enough to trigger runaway thermonuclear reaction; type Ib,Ic SN are thought as explosive ending of massive stars that have lost whole H-rich envelope.
-        \item Spectral classification. Type I: no H features (upper limit to H abundance is \SI{e-4}{\sloarmass}); Ia: SiII absorption line \SI{6150}{\angstrom}, late spectra shows many Fe emission lines; Ib,Ic: no SiII absorption lines, presence/not of strong He I lines at \SI{5876}{\angstrom}.
+        \item Spectral classification. Type I: no H features (upper limit to H abundance is \SI{e-4}{\solarmass}); Ia: SiII absorption line \SI{6150}{\angstrom}, late spectra shows many Fe emission lines; Ib,Ic: no SiII absorption lines, presence/not of strong He I lines at \SI{5876}{\angstrom}.
         \item Comm. used feature of type Ia SN light curves is max brightness in optical B band - steep rise approx \SI{0.5}{\mag\per\day} in about \SIrange{10}{18}{\day}; then becomes slowly in near-UV and optical B-band, at longer wavelength is different: in V band fading slows down after \SI{20}{\day}, in R-band plateau, in IJHK-bands a secondary maximum occurs, after \SI{50}{\day} SN fades away monot. in all bands.
         \item Significative deps. of light curves characteristic on p-band is evidence of interaction between ejecta and radiative flux.
         \item SN Ia as distance indicators - Constance of max B magnitude (almost: scatter \SIrange{0.2}{0.4}{\mag}). Invariance: a) linear corr. between abs. mag at max and decline rate $\Delta m_{15}$, magnitude diff max-max+15d: $M_B=-21.726+2.698\Delta m_{15}(B)$, $\cdots$. Above and similar allowed usage of SN Ia as distance indicator.
@@ -660,7 +692,6 @@ For all h. points density changes as mean density while $P\propto M^2R^{-4}$.
 \end{frame}
 
 \subsection{Stars Formation}
-
 
 \begin{frame}{Isothermal cloud structure}
     \begin{align*}
@@ -926,7 +957,7 @@ R\end{frame}
                 \end{columns} 
             \item Stars igniting He in non-degene rate He-core but developing degenerate CO-core at end of central He-burning are intermediate mass stars.
             \item AGB termination - $M_{cCO}>M_{Ch}$: C-ignition (AGB ends), we don't expect $M_{CO}$ becomes suff. larger during TPAGB (mass loss)
-            \item When $M_e<$\SI{e-3}{\solarmass}: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end \SI{e-4}{\solarmass\per\year}). Large amplitude pulsation (mira variable) enhance mass loss.
+            \item When $M_e<\num{e-3}\msun{}$: $\epsilon_H\to0$, no more TP and \xaumenta{T_e} at constant L - extreme mass loss terminates AGB (at end $\num{e-4}\msun{}\si{\per\year}$). Large amplitude pulsation (mira variable) enhance mass loss.
             \item From TPAGB to WD: thin H-burning shell until Bluest point at const. L; then H-burning switch-off and He/H-rich envelope contract rapidly and we can have following channels: star cools down to WD; Born-again AGB (FG Sagittae): He-burning; Self-induced nova: runaway H-burning (DB: expulsion of H-rich envelope)
         \end{itemize}
 \end{frame}
