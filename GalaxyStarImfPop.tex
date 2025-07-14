@@ -1,9 +1,79 @@
 %! TEX root = main.tex
 \section{Galaxies-Universe}
 
+\subsection{BBN (Cooke'24)}
+
+\begin{frame}{Proton/Neutron in hot expanding universe}
+    \begin{itemize}
+        \item Numerical density of particles in thermal equilibrium $n_X=g(\frac{m_XKT}{2\pi\hbar^2})^{\frac{3}{2}}\exp{\frac{\mu-m_Xc^2}{KT}}$, g internal dof of X.
+        \item Primordial plasma in chemical equilibrium.
+            \begin{columns}[T]
+                \begin{column}{0.4\textwidth}
+                    Rel. number of protons/neutrons is determined by
+                    \begin{align*}
+                        &\Pneutron+\APelectron\leftrightarrow\Pproton+\APnue\\
+                        &\Pproton+\Pelectron\leftrightarrow\Pneutron+\Pnue\\
+                        &\Pneutron\leftrightarrow\Pproton+\Pelectron+\APnue\\
+                        &(m_n-m_p)c^2\approx\SI{1.293}{\mega\ev}
+                    \end{align*}
+                    For $KT\gg\SI{1}{\mega\ev}$: $n_n\approx n_p$
+                \end{column}
+                \begin{column}{0.6\textwidth}
+                    If these rates are rapid enough compared to expansion primordial plasma is in chemical equilibrium: $\mu_n+\mu_{\nu_e}=\mu_p+\mu_{e^-}$:
+                    \begin{equation*}
+                        \frac{n_n}{n_p}=(\frac{m_n}{m_p})^{\frac{3}{2}}\exp{-\frac{(m_n-m_p)c^2}{KT}}, \mu_n-\mu_p\approx\mu_{e^-}-\mu_{\nu_e}\approx0
+                    \end{equation*}
+                    To first order $\frac{\mu_{e^-}}{KT}\approx \frac{n_{e^-}}{n_{\gamma}}$ and for neutrality $\frac{n_{e^-}}{n_{\gamma}}\approx \frai{n_p}{n_{\gamma}}\leq\num{e-9}$ and same for $\mu_{\nu_e}$.
+                \end{column}
+            \end{columns}
+        \item If weak interaction rate were  efficient $\frac{n_n}{n_p}$ would drop as universe cools: reaction rate per neutron $\Gamma=n_{\nu_e}c\exv{\sigma}$, weak interaction crossection in this T regime $\sigma\propto \frac{T}{\tau_n}$, $n_{\nu_e}\propto T^3$, $\tau_n\approx\SI{880}{\second}$ so weak interaction rate falls off as $T^4$, on the other hand $\frac{\dot{a}}{a}=H=\sqrt{\frac{8\pi G\rho}{3}}\propto T^2$ as $\rho$ is dominated by radiation ($\rho\propto T^4$): weak interaction rate suddenly drops below expansion rate of universe and weak interaction rate cease to be important for $KT\approx\SI{0.8}{\mega\ev}$. Freeze-out neutron abundance $\frac{n_n}{n_p}\approx \frac{1}{5}$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{First BBN reactions}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            \begin{align*}
+                &d+p\to^3He+\gamma\tag{$^3He$}\\
+                &d+d\to^3He+n\\
+                &d+d\to^3H+p\tag{$^3H$}\\
+                &^3He+n\to^3H+p\\
+                &d+d\to^4He+\gamma\tag{$^4He$}\\
+                &d+^3He\to^4He+p\\
+                &d+^H\to^4He+n\\
+                &^3H+^4He\to^7Li+\gamma\tag{7-mass}\\
+                &^3He+^4He\to^7Be+\gamma\\
+                &^7Be+n\to^7Li+p\\
+                &^7Li+p\to2^4He
+            \end{align*}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item pp has to overcomes coulomb barrier, nn has to be with opposite spin but then nuclear binding is weak. First reaction is $n+p\to d+\gamma$, $B(d)=\SI{2.224}{\mega\ev}$
+                \item Deuteron is destroyed by high energy tail of BB radiation (barions approx \num{e-9} photons): creation/distruction rate od deuteron equals at $KT\approx\SI{0.06}{\mega\ev}$. 
+                \item If nuclear reaction rate much greater than universe expansion: NSE. BBN close to NSE: their abundance $\propto\exp{-\frac{E_B}{KT}}$, so $^4He$ is dominant ($B(^4He)=\SI{28.3}{\mega\ev}$).
+                \item We'll estime numeric abundance of $^4He$ assuming all available neutrons into $^4He$.
+                \end{itemize}
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+                \item $^4He$ made by 2B reactions: $^3He$, d, $^3H$ required. $^4He$ can attains NSE when suff. deuteron available: this occurs for $KT\approx \SI{0.06}{\mega\ev}$, roughly \SI{300}{\second} after neutrons freeze-out at \SI{0.8}{\mega\ev}.
+                \item Fraction of neutron converted into proton from freeze-out: $N(t)=N_0\exp{-\lambda t}$, $\lambda=-\frac{\TDy{t}{N}}{N}$ prob. decay per unit time, so the fraction of neutron remaining is $\exp{-\frac{t}{\tau_n}}\approx\exp{-\frac{300}{880}}\approx0.7$, number of neutrons decrease by $30\%$.
+                \item primordial fraction of p,n. $\left\{\begin{array}{l}n_f=0.7n_i\\p_f=p_i+0.3n_i\\\end{array}\right.$ so $\frac{n_f}{p_f}\approx0.14$; $\left.\begin{array}{l}n_{^4He}=\frac{n}{2}\\n_{^1H}=n_p-n_n\\\end{array}\right\}$ so $\frac{n_{^4He}}{n_{^1H}}=y_p\approx0.08$, and mass fraction $Y=\frac{4y_p}{1+4y_p}\approx0.24$.
+                    \item There are no stable nuclides with mass 5,8: heavier elements can't be made
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Measure primordial $H/He$ fraction}
+    
+\begin{figure}[!ht]
+    \includegraphics[trim={0cm 0cm 0 0},clip,keepaspectratio,width=0.8\textwidth]{measureprimordiaHHE}\label{fig:measureprimordiaHHE}
+\end{figure}
+\end{frame}
+
 \subsection{Observations}
 
-\begin{frame}{Redshift Z}
+\begin{frame}{Redshift Z} 
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             $Z=\frac{\lambda_0-\lambda_e}{\lambda_0}$, $\lambda_0$ osservata in O a $t_0$, $\lambda_e$ emessa a $t$ in $r$.
@@ -18,7 +88,7 @@
     
 \end{frame}
 
-\begin{frame}{Primordial composition and nucleosynthesis}\linkdest{BBN}
+\begin{frame}{Primordial composition and n ucleosynthesis}\linkdest{BBN}
     \begin{columns}[T]
         \begin{column}{0.6\textwidth}
 \begin{figure}[!ht]

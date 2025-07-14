@@ -700,6 +700,7 @@ cubic equation for $(\nabla-\nabla_e)$
 
 \section{Nuclear Burning}\linkdest{nuclearburning}
 
+\subsection{Sunto reazioni fusione}
 \begin{frame}{Sezione d'urto fusione nucleare}
 $E$ l'energia cinetica nel centro di massa dei nuclei: $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$
 prodotto della sezione d'urto geometrica (nel riferimento del CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$
@@ -735,6 +736,53 @@ posto $W=Z_i^2Z_j^2A=Z_i^2Z_j^2\frac{A_iA_j}{A_i+A_j}$.
 %\begin{equation*}
 %\exv{\sigma v}\propto b\expy{1/3}T\expy{-2/3}\exp{-\frac{b\expy{2/3}}{t\expy{1/3}}}
 %\end{equation*}
+\end{frame}
+
+\subsection{Stability of nuclear burning}
+
+\begin{frame}{Gravothermal specific heat}
+    \begin{itemize}
+        \item Sphere at center in HE: $m_s, r_s$ - Suppose adding heat to sphere expands homolog., ie any mass shell will be shifted $r\to r+dr=r(1+x)$, x const for all mass shell 
+            \begin{columns}[T]
+                \begin{column}{0.3\textwidth}
+                    For homol. contractin $\frac{r'}{r}=1+\frac{\dot{r}}{r}\Delta t$, $\theta_c=\frac{dT_c}{T_c}$
+                    \begin{align*}
+                        &\frac{d\rho_c}{\rho_c}=-3x\\
+                        &p_c=\frac{dP_c}{P_c}=-4x\\
+                        &\frac{d\rho_c}{\rho_c}=\alpha p_c-\delta\theta_c\tag{EOS}
+                    \end{align*}
+                \end{column}
+                \begin{column}{0.7\textwidth}
+                    Ricavando $\frac{d\rho_c}{\rho_c}$ da EOS e x da equazione per $p_c$ ho $p_c=\frac{4\delta}{4\alpha-3}\theta_c$; according to first law of thermodynanmics:
+                    \begin{align*}
+                        &dq=du+Pdv=c_PT_c(\theta_c-\nad{}p_c)=c^*T_c\theta_c\tag{heat per unit mass added to sphere}\\
+                        &dq=c_PdT-\frac{\delta}{\rho}dP, \nad{}=(\frac{P}{T}\TDy{T}{P})_s=\frac{P\delta}{T\rho c_P}\\
+                        &c^*=c_P(1-\nad{}\frac{4\delta}{4\alpha-3}): dT=\frac{dq}{c^*}
+                    \end{align*}
+                    For ideal monoatomic gas, $\alpha=\delta=1$, $\nad{}=\frac{2}{5}$: $c^*<0$ so if a random $dq>0$ temperatura decreases (stabilizer) and $x=-\frac{\delta\theta_c}{4\alpha-3}>0$. For non relativistic degenerate gas, $\alpha=\frac{3}{5},\delta=0$ gives $c^*=0$.
+                \end{column}
+            \end{columns}
+            
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{Secular stability of nuclear burning}
+    \begin{itemize}
+    \item From $dq$ for sphere: energy by nuclear reaction, transported out by radiation: steady state $\epsilon m_s-l_s=0$
+    \item Perturb on timescale $\tau$ much larger than $\thyd{}$ but short compared to thermal adjust. time of the sphere: HE is mantained but thermal balance is perturbed.
+        \begin{align*}
+            &m_s\,d\epsilon-dl_s=m_s\TDy{t}{q}=m_sc^*\TDy{t}{T_c}\tag{$dq$ heat gain per unit mass, perturbing radiative heat transfer $l\propto \frac{T^3r^4}{\kappa}\TDy{m}{T}$}\\
+        &\frac{dl_s}{l_s}=4\theta_c+4x-\kappa_Pp_c-\kappa_T\theta_c\tag{$\theta=dT/T=\const{}$: $d(\TDy{m}{T})=\TDy{m}{T\theta}=\theta\TDy{m}{T}$, $(\TDly{T}{\kappa})_P=\kappa_T$, $(\TDly{P}{\kappa})_T=\kappa_P$}\\
+        &=\theta_c[4-\kappa_T-\frac{4\delta}{4\alpha-3}(1+\kappa_P)]\tag{into $m_s\,d\epsilon-l_s=m_s\TDy{t}{q}=m_sc^*\TDy{t}{T_c}$}\\
+        &\Rightarrow \frac{m_s}{l_s}\TDy{t}{q}=\frac{m_s\,d\epsilon-dl_s}{l_s}=\epsilon_T\theta_c+\epsilon_Pp_c-\frac{dl_s}{l_s}=\theta_c[(\epsilon_T+\kappa_T-4)+\frac{4\delta}{4\alpha-3}(\epsilon_P+\kappa_P+1)]=\frac{m_sc^*T_c}{l_s}\TDy{t}{\theta_c}\\
+        &\Rightarrow \frac{m_sc^*T_c}{l_s}\TDy{t}{\theta_c}=\theta_c[(\epsilon_T+\kappa_T-4)+\frac{4\delta}{4\alpha-3}(1+\epsilon_P+\kappa_P)]\tag{}
+        \end{align*}
+    \item Sign of $[]$ tell us if for $dT_c>0$ additional energy prod. exceed add. energy loss ($[\ldots]>0$); sign of $c^*$ whether, in this case, sphere heats up ($c^*>0$) or cools down ($c^*<0$). Normally $\epsilon_T$ is the leading term so $[\ldots]>0$.
+    \item Assuming ideal gas ($\alpha=\delta=1$, $c^*<0$): $\frac{m_sc^*T_c}{l_s}\TDy{t}{\theta_c}=[\epsilon_T+\kappa_T+4(\epsilon_P+\kappa_P)]\theta_c$
+    \item Since $c^*<0$ we have $\frac{1}{\theta_c}\TDy{t}{\theta_c}<0$: perturbation $dT_c$ decay (stability) if $\epsilon_T+\kappa_T+4(\epsilon_P+\kappa_P)>0$. For Kramers opacity when $\kappa_T\approx-4.5$ we are closest to instab. (even for PP $\epsilon_T=5$ $[\ldots]>0$. For $dT_c>0$: large energy overprod $\epsilon_0\epsilon_T \frac{dT_c}{T_c}$ but $dT_c<0$ as $c^*<0$.
+        \item Considering  $\TDy{t}{\theta_c}=\frac{l_s\epsilon_T}{m_sT_cc^*}\theta_c=\frac{1}{D}\theta_c$: $D<0$ indicates stab., $D>0$ instab. - for ideal gas $c^*<0$, D is negative: nuclear burning stab.
+        \item Non relativistic Degenerate Gas ($\delta=0$, $\alpha=\frac{3}{5}$): $c^*>0$, $D>0$ so any nuclear burning with suff.strong T-depwill be unstable; but where $\epsilon_n=0$, $\epsilon_{\nu}>0$, burning shell provide for luminosity and neutrino-losses: $l_s<0$ so $c^*>0$ stab (deg), $c^*<0$ instab. (ideal gas).
+\end{itemize}
 \end{frame}
 
 \subsection{Catena PP}\linkdest{epsilonpp}
