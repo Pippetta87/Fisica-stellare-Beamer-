@@ -825,17 +825,29 @@ Radiative transition $i\to j$: $h\nu_{ij}=\epsilon_j-\epsilon_i$, stat. weight $
         A differenza di stato stazionario, la condizione di equilibrio non implica $N_0,N_3$ costanti: refers to near equality of forward/reverse abundance flow between pair nuclei; when a group of severals pairs comes into equilibrium the resulting solution of reaction network is of quasi-equilibrium (Arnett96).
 \end{frame}
 
-\begin{frame}{Sezione d'urto fusion nucleare}
+\begin{frame}{Sezione d'urto fusion nucleare $\sigma(E)= \pi\lambdabar^2*P_0(E)*S(E)$}
     \begin{itemize}
-        \item Sezione d'urto: $\sigma(E)=\pi\lambdabar^2*P_0(E)*S(E)$, $E$ l'energia cinetica nel centro di massa dei nuclei. Prodotto sezione d'urto geometrica (nel riferimento del CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$ - per energie tipiche interni stellari approx onda S), della probabilit\'a di attraversamento della barriera coulombiana $P_0$ e del fattore astrofisico $S(E)$. \todo{$R\ll\lambdabar$??}
-            La lunghezza d'onda di de Broglie relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$: $\pi\lambdabar^2\propto \frac{1}{p^2}\propto \frac{1}{E}$; geometrical cross-section for \si{\kilo\ev} nucleons $\pi\lambdabar^2=657\invers{E}\si{\barn}$ where E is in \si{\kilo\ev} and reduced mass in amu.
-\item Probability crossing coulomb barrier: $\widehat{T}=\widehat{T}_1\ldots\widehat{T}_n\approx\exp{[-\frac{2}{\hbar}\sqrt{2m(V_i-E)}(R_{i+1}-R_i)]}\xrightarrow{n large}\exp{[-\frac{2}{\hbar}\int_{R_0}^{R_c}\sqrt{2m[V(r)-E]}\,dr]}$. The leading term of expansion of $\widehat{T}$ for $\frac{E}{V_C}\ll1$: $\widehat{T}\approx\exp{(-\frac{2\pi}{\hbar}\sqrt{\frac{m}{2E}Z_0Z_1e^2})}=\Exp{-2\pi\eta}=P_0(E)$. Sommerfeld parameter $\eta$, numerically $2\pi\eta=\num{0.989534}Z_0Z_1\sqrt{\frac{1}{E}\frac{M_0M_1}{M_0+M_1}}$, $M_i$ in units of u.
-\item Astrophysical factor $S(E)$: $S(E)=\sigma(E)E\exp{\frac{2\pi Z_1Z_0e^2}{\hbar v}}$.
-    Slow variation with E (non resonant case): expansion around $E=0$ $S(E)=S(0)+S'(0)E+\frac{2}{2}S''(0)E^2$ is suff.
-    \begin{equation*}
-        N_A\exv{\sigma v}=(\frac{4}{3})^{\frac{3}{2}}\frac{\hbar}{\pi}\frac{N_A}{m_{01}Z_0Z_1e^2}S_{eff}\tau^2\exp{-\tau}
-    \end{equation*}
-    $\tau=\frac{3E_0}{KT}$, $S_{eff}$ accounts for energy dependence of astrophysical factor and asymmetry of Gamow Peak
+        \item $E$ energia cinetica nel CM dei nuclei. Prodotto sezione d'urto geometrica (nel riferimento CM: $\sigma\approx\sum_{l=0}^{\frac{R}{\lambdabar}}(2l+1)\pi\lambdabar^2=\pi(R+\lambdabar)^2$ - energie stellari: approx onda S), della prob. attraversamento della barriera coulombiana $P_0$ e del fattore astrofisico $S(E)$. \todo{prova sezione d'urto pg.200}
+            $\lambdabar$ relativa delle particelle descrive l'indeterminazione sulla posizione nell'urto di due particelle con momento relativo p $\lambdabar=\frac{\hbar}{p}=\frac{\hbar}{\sqrt{2mE}}$: $\pi\lambdabar^2\propto \frac{1}{p^2}\propto \frac{1}{E}$; geometrical cross-section for \si{\kilo\ev} nucleons $\pi\lambdabar^2=657\invers{E}\si{\barn}$ where E is in \si{\kilo\ev} and reduced mass in amu.
+        \item Prob. cross c-barrier: expansion of $\widehat{T}$ for $\frac{E}{V_C}\ll1$, $\eta=\frac{Z_1Z_2\alpha}{v}$ sommerfeld param. - $P_B=\frac{R_0^2|\psi_0(R_0)|^2}{R_E^2|\psi_0(R_E)|^2}$
+            \begin{columns}[T]
+                \begin{column}{0.45\textwidth}
+                    \begin{align*}
+                        &\widehat{T}=\widehat{T}_1\ldots\widehat{T}_n\approx\exp{[-\frac{2}{\hbar}\sqrt{2m(V_i-E)}(R_{i+1}-R_i)]}\\
+                        &\to\exp{[-\frac{2}{\hbar}\int_{R_0}^{R_c}\sqrt{2m[V(r)-E]}\,dr]}\\
+                        &\widehat{T}\approx\exp{(-\frac{2\pi}{\hbar}\sqrt{\frac{m}{2E}Z_0Z_1e^2})}=\Exp{-2\pi\eta}=P_0(E)\\
+                        &2\pi\eta=\num{0.989534}Z_0Z_1\sqrt{\frac{1}{E}\frac{M_0M_1}{M_0+M_1}}
+                    \end{align*}
+                \end{column}
+                \begin{column}{0.55\textwidth}
+                    \begin{align*}
+                    &\psi_0=\frac{\exp{\chi(r)}}{r}: \TtwoDy{r}{\chi}+(\TDy{r}{\chi})^2=\frac{2m}{\hbar^2}[U(r)-E]\\
+                    &|\TtwoDy{r}{\chi}|\ll|\TDy{r}{\chi}|^2: \frac{\sqrt{2m}}{\hbar}\int_{R_0}^{R_E}\sqrt{\frac{Z_1Z_2e^2}{r}-E}\,dr\\
+                    &=\frac{\sqrt{2mE}}{\hbar}R_E\int_{\frac{R_0}{R_E}}^1dx\sqrt{\frac{1}{x}-1}\approx\pi\sqrt{\frac{Z_1^2Z_2^2e^4m}{2E\hbar}}=\pi \Z_1Z_2\frac{e^2}{\hbar c}\frac{c}{v_{\infty}}
+                    \end{align*}
+                \end{column}
+            \end{columns}
+\item Astrophysical factor $S(E)$: $S(E)=\sigma(E)E\exp{\frac{2\pi Z_1Z_0e^2}{\hbar v}}$. Slow variation with E (non resonant case): expansion around $E=0$ $S(E)=S(0)+S'(0)E+\frac{1}{2}S''(0)E^2$ is suff. $N_A\exv{\sigma v}=(\frac{4}{3})^{\frac{3}{2}}\frac{\hbar}{\pi}\frac{N_A}{m_{01}Z_0Z_1e^2}S_{eff}\tau^2\exp{-\tau}$. $\tau=\frac{3E_0}{KT}$, $S_{eff}$ accounts for energy dependence of astrophysical factor and asymmetry of Gamow Peak
 \item Gamow peak - Gauss Approx. $\PDof{E}[\frac{2\pi}{\hbar}\sqrt{\frac{m_{01}}{2E}Z_0Z_1e^2-\frac{E}{KT}}]_{E_0}=0=\PDof{E}(\frac{E}{KT}+bE^{-\frac{1}{2}})_{E_0}=\frac{1}{KT}-\frac{1}{2}bE_0^{-\frac{3}{2}}$:
     \begin{align*}
         &\exp{(-\frac{E}{KT}-bE^{-\frac{1}{2}})}\approx C\exp{-(\frac{E-E_0}{\Delta/2})^2},\ \Delta=\frac{4}{\sqrt{3}}\sqrt{E_0KT}=\num{0.75}(Z_0^2Z_1^2AT_6^5)^{\frac{1}{6}}\si{\kilo\ev}\tag{match 2nd der}\\
@@ -909,15 +921,16 @@ Weak Screening regime: Condition of weak Coulomb energy compared to thermal.
 Continuum depression: $\chi_Z=\chi_Z-\frac{Ze^2}{R_D}$ (pressure ionization)
 \end{frame}
 
-\begin{frame}{Approfondimento fattore astrofisico}
-    \todo{chiarire $S_{eff}$: $S(0)$ vs $S(E_0)$}
-$S(E)$ descrive l'interazione a livello nucleare: debolmente dipendente dall'energia in assenza di risonanze.
-La probabilit\'a di attraversamento della barriera coulombiana: $P_0(E)=\exp{-2\pi\eta},\ \eta=\sqrt{\frac{m}{2}}\frac{Z_1Z_2e^2}{\hbar E\expy{\frac{1}{2}}}$
-Per i nuclei di carica $Z_1$, $Z_2$ e m massa ridotta: $\sigma(E)=\frac{S(E)}{E}\exp{-2\pi\eta}$
-Il rate per coppia di particelle
-\begin{equation*}
-\exv{\sigma v}=\num{1.3005e-15}[\frac{Z_1Z_2}{AT_6^2}]\expy{\frac{1}{3}}fS_{eff}\exp{-\tau}\si{\cubic\cm\per\second},\ \tau=\frac{3E_G}{kT}\approx\num{42.487}(Z_1^2Z_2^2AT_6\expy{-1})\expy{\frac{1}{3}}
-\end{equation*}
+\begin{frame}{Approfondimento fattore astrofisico: }
+    \begin{itemize}
+        \item S isn't constant (expansion in $\invers{\tau}=3\frac{E_0}{KT}$): $\exv{\sigma v}\approx S_{eff}\sqrt{\frac{32E_G}{3m}}(\frac{1}{KT})^{\frac{3}{2}}\exp{-\frac{3E_G}{KT}}$, neglecting terms of higher order than $\frac{KT}{E_G}$:
+            \begin{equation*}
+                S_{eff}=S(E_G)(1+\frac{5KT}{36E_G})+S'(E_G)(E_G+\frac{35KT}{36})+\frac{1}{2}S''(E_G)E_G(E_G+\frac{89KT}{36})
+            \end{equation*}
+\item Correction for gaussian approx
+    \item partial shielding coulomb potential
+        \item Strong E deps for resonant reactions
+        \end{itemize}
 $S_{eff}$ \'e il risultato dell'espansione dell'integrando per $\invers{\tau}\ll1$ ed estrapolato a $E_G$ a partire dal valore $S(0)$ determinato dalla fisica nucleare.
 %\begin{equation*}
 %\exv{\sigma v}\propto b\expy{1/3}T\expy{-2/3}\exp{-\frac{b\expy{2/3}}{t\expy{1/3}}}

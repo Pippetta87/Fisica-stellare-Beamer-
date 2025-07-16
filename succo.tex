@@ -1,10 +1,43 @@
 %! TEX root = main.tex
 \subsection{Relativit\'a, urti, etc}
+
 \begin{frame}{Cinematica Relativistica}
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             \begin{align*}
                 &v=\frac{p/m}{\sqrt{1+\frac{(p/m)^2}{c^2}}}
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Usefull relation}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &m_uc^2=\SI{931.1}{\mega\ev}\\
+                &\SI{1}{\kilo\ev}\approx\SI{1.1605e7}{\kelvin}\\
+                &
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &E_{coul}(r_0)\approx Z_1Z_2\si{\mega\ev}\tag{coulomb barrier height}\\
+                &\hbar c\approx\SI{197.3}{\mega\ev\femto\meter}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Maxwell-Boltzmann distribution}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                &P(v)\,dv=(\frac{m}{2\pi KT})^{\frac{3}{2}}\exp{-\frac{mv^2}{2KT}}4\pi v^2\,dv\\
+                &P(E)\,dE=\frac{2}{\sqrt{\pi}}\frac{\sqrt{E}}{(KT)^\frac{3}{2}}\exp{-\frac{E}{KT}}\,dE
             \end{align*}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -49,8 +82,8 @@
 \end{frame}
 \subsection{Stellar structure}
 
-\begin{frame}{Relazioni euris tiche propriet\'a stellari}
-    Differentiation goes macroscopic (why not integrating?)
+\begin{frame}{Relazioni euristiche propriet\'a stellari}
+
 \end{frame}
 
 \begin{frame}{Radiative transport - Radiative gradient}
@@ -71,7 +104,39 @@
             \end{align*}
         \end{column}
     \end{columns}
+\end{frame}
+
+\begin{frame}{Gamow Peak: area of peak is ReactionRate}
     
+    \begin{columns}[T]
+        \begin{column}{0.75\textwidth}
+            \begin{itemize}
+                    \item Coul. barrier at nuclear radius ($\approx\SI{e-13}{\cm}$): $E_c\approx \frac{Z_1Z_2e^2}{r_0}\approx Z_1Z_2\si{\mega\ev}$ while $E_k\approx \frac{3}{2}KT\approx\SI{130}{\kilo\ev}T_6$
+                    \item E is energy CM: $E=\frac{1}{2}\frac{m_1m_2}{m_1+m_2}v^2=\frac{1}{2}Am_uv^2$
+                    \item Energy release in $A(a,b)B$: $Q=c^2[m(A)+m(a)-m(b)-m(B)]=c^2[\Delta m(A)+\Delta m(a)-\Delta m(b)-\Delta m (B)]$ ($\Delta m=m-m_u(Z+N)$ massexcess)
+                    \item reaction rate per unit volume $r_{aA}=\frac{N_aN_A}{1+\delta_{Aa}}\exv{\sigma v}$
+                    \item Maxwell: $f(v)\,dv=4\pi(\frac{m}{2\pi KT})^{\frac{3}{2}}\exp{-\frac{mv^2}{2KT}}v^2\,dv=\phi(E)\,dE=\frac{2}{\sqrt{\pi}}\frac{E^{\frac{1}{2}}}{(KT)^{\frac{3}{2}}}\exp{-\frac{E}{KT}}\,dE$
+                    \item rr per pair $\lambda=\exv{\sigma v}=(\frac{8}{m\pi})^{\frac{1}{2}}\frac{1}{(KT)^{\frac{3}{2}}}\int_0^{\infty}S(E)\exp{-\frac{E}{KT}-\frac{b}{E^{\frac{1}{2}}}}\,dE$
+                    \item Gaussiam approx: $\exp{-\frac{E}{KT}-\frac{b}{E^{-\frac{1}{2}}}}\approx\exp{-\frac{3E_0}{KT}}\exp{-(\frac{E-E_0}{\Delta/2})^2}$, width $\Delta=4(\frac{E_0KT}{3})^{\frac{1}{2}}$ (second deriv. matches at $E_0$).
+                    \item $\exv{\sigma v}=\sqrt{\frac{2}{\mu KT}}\frac{\Delta}{KT}f_0S_{eff}\exp{-\frac{3E_0}{KT}}$: integral done (steep descent?), $f_0$ e-screen, extrapolation $S(0)$ to stellar energy(??)
+                    \item T-deps $\exv{\sigma v}\approx\exv{\sigma v}_0(\frac{T}{T_0})^n$
+                    \item Energy generation $\epsilon_{aA}=Q_{aA}\frac{X_aX_A}{A_aA_Am_u^2}\rho\exv{\sigma v}$
+                    \item Chemical evolution: $\TDy{t}{X_A}=-\exv{\sigma v}\frac{X_aX_A}{A_am_u}\rho\approx-\frac{X_A}{\tau_{aA}}$
+                \end{itemize}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+    \begin{figure}[!ht]\includegraphics[trim={0.0cm 0cm 0.0cm 0},clip, keepaspectratio,width=0.8\textwidth]{GamowPeak}\label{fig:GamowPeak}
+	\end{figure}
+    \begin{itemize}
+                    \item Probability crossing Coulomb barrier: $P_0(E)=\exp{-\frac{2\pi Z_1Z_2e^2}{\hbar v}}$
+                    \item geometrical crosssection $\pi\lambda^2\propto p^{-2}\propto\invers{E}$
+                    \item definendo il fattore astrofisico $S(E)$: $\sigma(E)=\frac{S(E)}{E}\exp{-\frac{2\pi Z_1Z_2e^2}{\hbar v}}$
+                    \item G-peak: max $\exp{-\frac{E}{KT}-\frac{b}{E^{-\frac{1}{2}}}}$ is $E_0=(\frac{bKT}{2})^{\frac{2}{3}}$
+        \end{itemize}
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+        \end{itemize}
 \end{frame}
 
 \subsection{Radiation}
