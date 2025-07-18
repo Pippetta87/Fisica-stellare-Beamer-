@@ -20,7 +20,7 @@
 \begin{align*}
 &\TDy{r}{m}=4\pi r^2\rho\\
 &\TDy{r}{P}=-\frac{\rho Gm}{r^2}\overbrace{[-\rho\PtwoDy{t}{r}]}^{\tau_{hyd}=\frac{1}{2}(G\exv{\rho})\expy{-1/2}}\\
-&\TDy{r}{T}\nabla\frac{T}{P}\TDy{r}{P}
+&\TDy{r}{T}=\nabla\frac{T}{P}\TDy{r}{P}
 \end{align*}            
         \end{column}
         \begin{column}{0.7\textwidth}
@@ -456,7 +456,12 @@ Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione
 \end{frame}
 
 \begin{frame}{Total Radiative opacity}
-    At low T where atoms are part. ionized opacity is dominated by BB, BF by bound electrons. As ionization nears completion opacity due to FF becomes dominant but because Rosseland mean  $\kappa_{ff}$ decreases with increasing T there is a T where electron scattering becomes dominant. All forms of opacity contribute sim.: sum freq dependent opacity, correct true absorption for induced emission, $[\kappa_{bb}(\nu)+\kappa_{bs}(\nu)+\kappa_{ff}(\nu)](1-\exp{-\frac{h\nu}{kT}})+\kappa_s$, then form Rosseland mean. In general $\exv{\kappa_1}+\exv{\kappa_2}=\exv{\kappa_1+\kappa_2}$ (Two Rosseland mean are additive if are true absorption opacity and have same freq. dependence).
+    \begin{itemize}
+        \item $\rho\kappa(\nu)=n\sigma(\nu)$
+        \item At low T where atoms are part. ionized opacity is dominated by BB, BF by bound electrons. 
+        \item As ionization nears completion opacity due to FF becomes dominant but because Rosseland mean  $\kappa_{ff}$ decreases with increasing T there is a Temperature where electron scattering becomes dominant.
+        \item All forms of opacity contribute sim.: sum freq dependent opacity, correct true absorption for induced emission, $[\kappa_{bb}(\nu)+\kappa_{bs}(\nu)+\kappa_{ff}(\nu)](1-\exp{-\frac{h\nu}{kT}})+\kappa_s$, then form Rosseland mean. In general $\exv{\kappa_1}+\exv{\kappa_2}=\exv{\kappa_1+\kappa_2}$ (Two Rosseland mean are additive if are true absorption opacity and have same freq. dependence).
+        \end{itemize}
 \end{frame}
 
 \begin{frame}{Deps of L from composition (using Kramer's opacity)}
@@ -490,19 +495,25 @@ Scattering elettronico, processi ff, fotoionizzazione; opacit\'a atmosfera: ione
 
 \begin{frame}{Andamento opacit\'a: electron scattering e Kramer's opacity (FF)}
 \begin{itemize}
-\item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2=0.2(1+X)\si{\square\cm\per\gram}$ - $\sigma_T=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source - Compton scattering $h\nu|_M\gtrsim0.1 m_ec^2$, $h\nu|_M\approx4.96kT$: Compton scattering reduces opacity about $20\%$ for $T>\SI{e8}{\kelvin}$
+    \item Electron scattering $\rho\kappa_{\nu}=n_e\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2=0.2(1+X)\si{\square\cm\per\gram}$ - $\sigma_T=\frac{8\pi}{3}(\frac{e^2}{m_ec^2})^2=\SI{0.66e-24}{\square\cm}$ - for $T$ maggiore di few milion K is dominant source - Compton scattering $h\nu|_M\gtrsim0.1 m_ec^2$, $h\nu|_M\approx4.96kT$: Compton scattering reduces opacity about $20\%$ for $T>\SI{e8}{\kelvin}$
     \begin{align*}
         &\sigma_T=\frac{8\pi}{3}r_e^2\approx\SI{6.7e-25}{\square\cm},\ \kappa_{\nu}=\sigma_T \frac{n_e}{\rho},\ \mu_e=\frac{2}{1+X},\ \mu_em_u=\frac{\rho}{n_e}:\ \kappa_{\nu}=\frac{\sigma_T}{\mu_em_u}
     \end{align*}
 \item Kramers opacity: $T<\SI{e7}{\kelvin}$ -when FF, BF dominates: $\kappa_R\propto\rho T\expy{-7/2}$
 \end{itemize}
 \begin{block}{Free-free: radiation boost free-\Pelectron from lower to higher state}
-Fully ionized-$Z_i$ mixture: 
+    \begin{itemize}
+\item $\tau_{\Pelectron-int}\propto\frac{1}{v}\propto T\expy{-1/2}$: \Pelectron experience sharp acceleration $\approx\delta$ resulting in constant emission frequency, two body ion-\Pelectron encounter $\propto n_in_e$, \Pelectron have thermal distro $\propto\exp{-\epsilon/kT}$: $\rho j_{\nu}=n_en_iT\expy{-1/2}\exp{-\frac{h\nu}{kT}}$ - dalla legge di Kirchhoff, $j_{\nu}=4\pi\kappa_{\nu}^{abs}B_{\nu}(T)$, we have $\kappa_{\nu}^{abs}\propto\rho T\expy{-1/2}\nu\expy{-3}[1-\expy{-h\nu/kT}]$
+        \item Fully ionized-$Z_i$ mixture: $\rho\kappa_{\nu}(ff)=\sum_in_{Z_i}ne\sqrt{\frac{2m_e}{3\pi kT}}[\frac{4\pi Z_i^2e^6}{3m_e^2ch\nu^3}]g_{ff}(\nu)(1-\exp{-h\nu/kT})=\num{3.8e22}\overbrace{(X+1)}^{\propto n_e}\overbrace{[X+Y+B]}^{\propto\frac{X}{m_u}+\frac{4Y}{4m_u}+\sum_i\frac{X_iZ_i^2}{A_i}}\ [\si{\cgs}]$
+                \item 
 \begin{align*}
-&\rho\kappa_{\nu}(ff)=\sum_in_{Z_i}ne\sqrt{\frac{2m_e}{3\pi kT}}[\frac{4\pi Z_i^2e^6}{3m_e^2ch\nu^3}]g_{ff}(\nu)(1-\exp{-h\nu/kT})\\
-&=\num{3.8e22}\overbrace{(X+1)}^{\propto n_e}\overbrace{[X+Y+B]}^{\propto\frac{X}{m_u}+\frac{4Y}{4m_u}+\sum_i\frac{X_iZ_i^2}{A_i}}\ [\si{\cgs}]
+    &d\sigma_{ff}=\frac{4\pi}{3\sqrt{3}hc}\frac{Z^2e^6}{m_e^2}\frac{1}{v_e\nu^3}n_ef(v_e)g_{ff}(v_e,\nu)\,dv_e: \bar{\sigma}_{ff}=\num{3.69e8}\frac{Z^2n_e\bar{g}_{ff}}{T^{\frac{1}{2}\nu^3}}\si{\square\cm}\propto \frac{Z^2n_e}{\sqrt{KT}}\frac{\bar{g}_{ff}}{\nu^3}\\
+    &\kappa_{ff}(\nu)\rho=\sum_A^Nn(A,Z_A)\exv{\sigma_{ff}(Z_A,\nu)}=\sum_A \frac{X_A\rho}{Am_u}\exv{\sigma_{ff}(Z_A,\nu)}
 \end{align*}
-$\tau_{\Pelectron-int}\propto\frac{1}{v}\propto T\expy{-1/2}$: \Pelectron experience sharp acceleration $\approx\delta$ resulting in constant emission frequency, two body ion-\Pelectron encounter $\propto n_in_e$, \Pelectron have thermal distro $\propto\exp{-\epsilon/kT}$: $\rho j_{\nu}=n_en_iT\expy{-1/2}\exp{-\frac{h\nu}{kT}}$ - dalla legge di Kirchhoff, $j_{\nu}=4\pi\kappa_{\nu}^{abs}B_{\nu}(T)$, we have $\kappa_{\nu}^{abs}\propto\rho T\expy{-1/2}\nu\expy{-3}[1-\expy{-h\nu/kT}]$
+\item Per ionizzazione totale $n_e\approx \frac{\rho}{m_p}\frac{1+X}{2}$: $\bar{\kappa}_{ff}=\num{4e22}(X+Y)(1+X)\rho T^{-3.5}\si{\cm\per\gram}$
+        \end{itemize}
+
+
 \end{block}
 \end{frame}
 
@@ -510,7 +521,7 @@ $\tau_{\Pelectron-int}\propto\frac{1}{v}\propto T\expy{-1/2}$: \Pelectron experi
 \begin{block}{BF}
 Hydrogenic atom with charge Z and one \Pelectron in bound state n:
 \begin{align*}
-&\sigma_{\nu}(Z)=n\expy{-5}\frac{8\pi}{3\sqrt{3}}\frac{Z^4m_ee\expy{10}}{c\hbar^3(h\nu)^3}:\ h\nu>\chi=\frac{Ze^2}{2a_Z}\\
+    &\sigma_{\nu}(Z)=n\expy{-5}\frac{64\pi^4}{3\sqrt{3}}\frac{(Z')^4m_ee\expy{10}g_{bf}}{ch^3(h\nu)^3}:\ h\nu>\chi=\frac{Ze^2}{2a_Z}\\
 &\rho\kappa_{\nu}(bf)=\sum_in_{Z_i}\sigma_{\nu}(Z_i)(1-\exp{-h\nu/kT})\\
 &\kappa_R(bf)=\num{3e25}\underbrace{(1-X-Y)}_{n_{\exv{Z}}}\underbrace{(1+X+\frac{3}{4}Y)}_{n_e}\rho T\expy{-7/2}
 \end{align*}
@@ -850,16 +861,16 @@ Modalit\'a combustione H in He: sequenza principale inferiore/superiore
 
 \begin{frame}{CNOF Network reactions: $4^1H\to^4He+2\APelectron+2\Pnue$}
 \begin{columns}[T]
-\begin{column}{0.5\textwidth}
+\begin{column}{0.45\textwidth}
 \begin{itemize}
 \item CNOF elements acts as catalyst: relative initial CNOF abundance are important - produced in previous gen stars at He-burning stages ($^{12}C$, $^{16}O$, less $^{14}N$: solar $^{12}C:^{14}N:^{16}O=10:3:24$)
 \item 4 cycle: active cycle influences heavy element abundance - $(p,\gamma)$ compete with $(p,\alpha)$ on $^{15}N$, $^{17}O$, $^{18}$, $^{19}F$: $(p,\alpha)$ faster over entire T-range except $^{17}O$/$^{18}O$ at $T<\SI{20}{\mega\kelvin}$
 \item At hydro-burning ($T<\SI{55}{\mega\kelvin}$) much faster than p-induced reactions, at $T>\SI{100}{\mega\kelvin}$ also other reactions are important (HCNO)
 \end{itemize}
 \end{column}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.55\textwidth}
 	\begin{figure}[!ht]
-	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.28\textheight]{CNO}
+	\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,height=0.28\textheight]{CNO}
 	\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.28\textheight]{HCNO}
 \end{figure}
 \end{column}
@@ -904,28 +915,29 @@ Modalit\'a combustione H in He: sequenza principale inferiore/superiore
 
 \begin{frame}{Combustion He}
 \begin{columns}[T]
-	\begin{column}{0.5\textwidth}
+	\begin{column}{0.65\textwidth}
 	\begin{itemize}
 	\item Deps $M_*$ amd $Z$: hydrostatic He burning in massive star $\rho=\SIrange{e2}{e5}{\gram\per\cubic\cm}$, $T=\SIrange{0.1}{0.4}{\giga\kelvin}$
-	\item Reactiona during He-buring
+    \item Reactiona during He-buring ($\alpha+\alpha\leftrightarrow^8Be$, $Q=-\SI{92}{\kilo\ev}$)
 	\begin{align*}
-&^4He(\alpha\alpha,\gamma)^{12}C\ Q=\SI{7274.7}{\kilo\ev}\\
+        &^4He(\alpha\alpha,\gamma)^{12}C\ Q=\SI{7274.7}{\kilo\ev}, \frac{N_{\alpha}}{3\tau_{3\alpha}}\\
 &^{12}C(\alpha,\gamma)^{16}O\ Q=\SI{7161.9}{\kilo\ev}\\
 &^{16}O(\alpha,\gamma)^{20}Ne\ Q=\SI{4729.8}{\kilo\ev}\\
-&^{20}Ne(\alpha,\gamma)^{24}Mg\ Q=\SI{9316.6}{\kilo\ev}
+&^{20}Ne(\alpha,\gamma)^{24}Mg\ Q=\SI{9316.6}{\kilo\ev}\\
+&^{24}Mg(\alpha,\gamma)^{28}Si
 	\end{align*}
-\item Energy production by $3\alpha$:
+\item Cross-section of $^{12}C(\alpha,\gamma)^{16}O$: i) important for $C/O$ ratio in WD ii) when $^4He$ abundance become low competes with $3\alpha$ - has strong influence on He-burning phase lifetime.
+\item Energy production by $3\alpha$: 
 \begin{align*}
-&\epsilon_{3\alpha}=\frac{Q_{3\alpha}}{\rho}r_{3\alpha}=\frac{Q_{3\alpha}}{\rho}\frac{N_{\alpha}\lambda_{3\alpha}}{3}\\
-&=\num{3.1771e14}\frac{\rho^2X_{\alpha}^3}{T_9^3}\exp{-\frac{4.4040}{T_9}}\si{\mega\ev\per\gram\per\second}\\
+&\epsilon_{3\alpha}=\frac{Q_{3\alpha}}{\rho}r_{3\alpha}=\frac{Q_{3\alpha}}{\rho}\frac{N_{\alpha}\lambda_{3\alpha}}{3}=\num{3.1771e14}\frac{\rho^2X_{\alpha}^3}{T_9^3}\exp{-\frac{4.4040}{T_9}}\si{\mega\ev\per\gram\per\second}\\
 &\epsilon_{3\alpha}(T)=\epsilon_{3\alpha}(T_0)(\frac{T}{T_0})^{41}
 \end{align*}
 		\end{itemize}
 	\end{column}
-	\begin{column}{0.5\textwidth}
+	\begin{column}{0.35\textwidth}
 		\begin{figure}[!ht]
-			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.28\textheight]{Heburningelems}
-			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,height=0.28\textheight]{3alphalevels}
+			\includegraphics[trim={0cm 0cm 1cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{Heburningelems}
+			\includegraphics[trim={0cm 0cm 0cm 0cm},clip, keepaspectratio,width=0.8\textwidth]{3alphalevels}
 		\end{figure}
 	\end{column}
 \end{columns}

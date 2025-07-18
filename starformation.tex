@@ -54,7 +54,7 @@ Free-fall time:
 
 \begin{frame}{Support of giant complexes: force balance $2T+2U+W+M=0$}
     \begin{itemize}
-        \item Thermal pressure $U\approx \frac{MRT}{\mu}$: $\frac{U}{|W|}\approx \frac{MRT}{\mu}(\frac{GM^2}{R})^{-1}=\num{3e-3}(\frac{M}{\num{e5}\msun{}<++>})^{-1}(\frac{R}{\SI{25}{\parsec}})(\frac{T}{\SI{15}{\kelvin}})$ - Giant complexes not sustained by thermal pressure
+        \item Thermal pressure $U\approx \frac{MRT}{\mu}$: $\frac{U}{|W|}\approx \frac{MRT}{\mu}(\frac{GM^2}{R})^{-1}=\num{3e-3}(\frac{M}{\num{e5}\msun{}})^{-1}(\frac{R}{\SI{25}{\parsec}})(\frac{T}{\SI{15}{\kelvin}})$ - Giant complexes not sustained by thermal pressure
         \item Magnetic field (Zeeman split of HI \SI{21}{\cm} or OH \SI{18}{\cm} lines): $\frac{M}{|W|}=\frac{|B|^2R^3}{6\pi}(\frac{GM^2}{R})^{-1}=0.3(\frac{B}{\SI{20}{\micro\gauss}})^2(\frac{R}{\SI{25}{\parsec}})^4$ - any selfgrav. mainly supported by ordered magneti field settles into planar config. BUT this is in contrast with obs. - random component of $\vec{B}$ coexistin with smooth background: MHD can provide isotropic support preventin flattening.
         \item Kin. ener. from random motion of clumps: $\frac{T}{|W|}=\frac{1}{2}M\Delta V^2(\frac{GM^2}{R})^{-1}=0.5(\frac{\Delta V}{\SI{4}{\kilo\meter\per\second}})^2(\frac{M}{\num{e5}\msun{}})^{-1}(\frac{R}{\SI{25}{\parsec}})$ - Rosetta line-of-sight dispersion is \SI{2.3}{\kilo\meter\per\second}, multiplied by $\sqrt{3}$ for random 3D velocity field, gives $\Delta V\approx V_{vir}=\sqrt{\frac{GM}{R}}$ (speed of gas parcel traversin cloud in $t_{ff}$).
         \item Line broadening: Thermal and bulk motion of emitting gas. Larson's law: $\Delta V=\Delta V_0(\frac{L}{L_0})^n$, $\Delta V_0\approx\SI{1}{\kilo\meter\per\second}$, $L_0=\SI{1}{\parsec}$, $n\approx0.5$
@@ -206,9 +206,9 @@ $k$ large: $\omega$ real (oscillations).
     &\lambda<\lambda_J=\frac{2\pi}{k_J}=\sqrt{\frac{\pi}{G\rho_0}}v_s\tag{Stable}\\
     &k<k_J=\frac{4\pi G\rho_0}{v_s^2}\tag{Unstable}
 \end{align*}
+Collapsing plane-parallel slab: $i\omega\approx\sqrt{G\rho_0}$
 \end{column}
 \end{columns}
-Collapsing plane-parallel slab: $i\omega\approx\sqrt{G\rho_0}$
 \end{frame}
 
 \begin{frame}{Jeans inst ability in isothermal sphere}
@@ -234,6 +234,23 @@ Collapsing plane-parallel slab: $i\omega\approx\sqrt{G\rho_0}$
         &M_J=\frac{4\pi}{3}\exv{\rho}R_m^3:\ M_J=\frac{27}{16}\sqrt{\frac{3}{\pi}}(\frac{R}{\Theta G})^{\frac{3}{2}}(\frac{T}{\mu})^{\frac{3}{2}}(\frac{1}{\exv{\rho}})^{\frac{1}{2}}\tag{Virial/LE eq}\\
 &M_J=\num{1.2e5}\msun{}(\frac{T}{\SI{100}{\kelvin}})^{\frac{3}{2}}(\frac{\rho}{\SI{e-24}{\gram\per\cubic\cm}})^{-\frac{1}{2}}\mu^{-\frac{3}{2}}\tag{pertub.}
 	\end{align*}
+\end{frame}
+
+\begin{frame}{Jeans Mass and collapse: $-\frac{1}{2}E_g>E_k$. End free-fall phase}
+    \begin{itemize}
+        \item $E_k=\frac{3}{2}KT \frac{M}{\mu m_H}$, $E_g-\int_0^M \frac{Gm}{r}\,dm=-\frac{3}{5}$\frac{GM^2}{R}$: gravity wins if $-E_g>E_k$. This is the case when $\frac{3KT}{2\mu m_H}M>\frac{3}{10}\frac{GM^2}{R}$, ie when $M>M_J=\frac{5KT}{\mu m_H}\frac{R}{G}\approx100\sqrt{\frac{T^3}{\mu^4n}}\msun{}$.
+\item Collapse trigger: i) Cloud passing density wave of a spiral arm ii)Cloud compression by shockwave of SN iii)Cloud-Cloud collision\item Free-fall timescale: $\tff{}\approx(G\rho)^{-\frac{1}{2}}\approx\num{e8}(\mu n)^{-\frac{1}{2}}\si{\year}$\
+\item No cooling mechanism: adiabatic collapse $T\propto\rho^{\frac{2}{3}}$
+\item cooling mechanism: i) collisions between molecules excite roto7vibro level: the molecules emit photons in IR/submm that can leave as clouds are thin in IR ii) In high density, low T cloud dust can form: collision with molecules heat the dust that emit in IR.
+\item freefall ends when cooling mechanism stop working, conseq heating and hydrostic equilibrium achieved
+    \item At center of clump HE is reached first while surounding keeps freefalling - The clump is the protostar
+    \item Colling mechanism stop working when $H_2$ molecules dissociate, then H ionize ($\chi_{H_2}=\SI{4.5}{\ev}$, $\chi_H=\SI{13.6}{\ev}$); for cloud with $X=0.7$, $Y=0.3$:
+        \begin{align*}
+            &E_{dis}=\frac{MX}{m_H}[0.5\chi_{H_2}+\chi_H]=\num{1.3e58}(\frac{M}{\msun})\si{\ev}=\num{2e46}\frac{M}{\msun}\si{\erg}\\
+            &\Delta E_g=AGM^2[\frac{1}{R_{end}}-\frac{1}{R_{begin}}]\approx A \frac{GM^2}{R_{end}}\approx\num{4e48}A \frac{(M/\msun{})^2}{R_{end}/\rsun{}}\si{\erg}\tag{Energy provided by contraction}
+        \end{align*}
+        For const density $A=\frac{3}{5}$, since now we have a concentrated object assume $A\approx2$. Cloud loses most of gained energy in far-IR photons: only a fraction $f<1$ of $\Delta E_g$ is used for diss./ion. (if clump contract quasi-hydrostatically $f\approx0.5$ according to virial, detailed calculation show that $f\approx0.3$). Equating energy needed for diss/ioniz $E_{dis}=f\Delta E_g$ we found protostar ionized when $\frac{R}{\rsun}\approx100\frac{M}{\msun{}}$
+        \end{itemize}
 \end{frame}
 
 \begin{frame}{End of Fragmentation: Transition to adiabatic collapse.}
@@ -306,6 +323,10 @@ Collapse calculation:
 	\end{figure}
 	\end{column}
 \end{columns}
+\begin{itemize}
+    \item Mean T at end of collapse. Virial: $\frac{3}{2}\frac{M}{\mu m_H}K\bar{T}=\frac{A}{2}\frac{GM^2}{R}$ so $\bar{T}\approx \frac{A}{3}\frac{\mu m_H}{K}\frac{GM}{R}$.
+    \item Star is almost completely convective: $\rho\approx\SI{e-6}{\gram\per\cubic\cm}$: at such low T and $\rho$ abs coeff is high $\kappa\approx\SIrange{e2}{e3}{\square\cm\per\gram}$.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Evolution of protostar in HR}

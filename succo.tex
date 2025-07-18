@@ -80,6 +80,41 @@
     \end{columns}
     
 \end{frame}
+
+\subsection{Viriale}
+
+\begin{frame}{Virial-t: $\frac{1}{2}\TtwoDy{t}{I}=2K+\Omega$ - $2K=\sum\m_iv_i^2=\sum\vec{p}_i\cdot\vec{v}_i$ r. momentum transfer}
+    \begin{temize}
+    \item Virial: $\frac{1}{2}\TtwoDy{t}{I}=2K+\Omega$
+    \item What type of energy is $K$? $2K=\sum_i\vec{p_i}\cdot\vec{v}_i$, and since $P=\frac{1}{3}\int n(\vec{p})\vec{p}\cdot\vec{v}d^3p$:
+        \begin{equation}
+            2K=3\int_VP\,dV=3\int_M \frac{P}{\rho}\,dm(r)
+        \end{equation}
+    \item Virial theorem+kinetic theory: $\frac{1}{2}\TtwoDy{t}{I}=\int_M \frac{3P}{\rho}\m(r)+\Omega$
+    \item Reletion between pressure/internal energy of the form: $P=(\gamma-1)\rho E$ - monoatomic gas: $\gamma=\frac{c_P}{c_v}=\frac{5}{3}$ - $P=\frac{2}{3}\rho E$
+    \item $K=U$ only for $\gamma=\frac{5}{3}$: $2K=3(\gamma-1)\int E\,dm=3(\gamma-1)U$, ie total kinetic energy is the same as total internal energy only under certain circumst.
+    \item Virial t+kinetic teory+$\gamma$-law EOS: $\frac{1}{2}\TtwoDy{t}{I}=3(\gamma-1)U+\Omega=3(\gamma-1)W-(3\gamma-4)\Omega$
+    \item Stable star has $W<0$: $W=\frac{3\gamma-4}{3(\gamma-1)}\Omega$ so as $\Omega<0$ for stability $\gamma>\frac{4}{3}$.
+    \item general EOS $\zeta u=3 \frac{P}{\rho}$, $E_i=\int u\,dm$ (ideal gas $\zeta=3(\gamma-1)$)
+        \begin{columns}[T]
+            \begin{column}{0.5\textwidth}
+        \begin{align*}
+            &\zeta E_i+\Omega=0\tag{virial}\\
+            &W=E_i+E_g\tag{g-bound: $W<0$}\\
+            &\Rightarrow W=(1-\zeta)E_i=\frac{\zeta-1}{\zeta}E_g\\
+        \end{align*}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{align*}
+                    &\TDy{t}{W}+L=0\\
+                    &\Rightarrow L=(\zeta-1)\TDy{t}{E_i}=-\frac{\zeta-1}{\zeta}\TDy{t}{E_g}
+                \end{align*}
+            \end{column}
+        \end{columns}
+        
+    \end{temize}
+\end{frame}
+
 \subsection{Stellar structure}
 
 \begin{frame}{Relazioni euristiche propriet\'a stellari}
